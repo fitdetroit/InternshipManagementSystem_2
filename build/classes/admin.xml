@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts>
+
+	<package name="adminLogin" namespace="/Administrator" extends="struts-default">
+		<action name="AdminLogin">
+			<result>/jsp/AdminLogin.jsp</result>
+		</action>
+	</package>
+
+	<package name="admin" namespace="/Administrator" extends="struts-default">
+		<action name="CheckAdmin" class="ims.actions.AdminLogin"
+			method="login">
+			<result name="success">/jsp/Admin.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+		<action name="AdminLogOut" class="ims.actions.AdminLogin"
+			method="LogOut">
+			<result name="success">/jsp/AdminLogin.jsp</result>
+
+		</action>
+
+		<action name="AllStudent" class="ims.actions.ViewStudent"
+			method="allStudentToAdmin">
+			<result name="success">/jsp/views/AllStudentsToAdmin.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+
+
+		<action name="AllowedCompany" class="ims.actions.ViewCompany"
+			method="allowedCompanyToAdmin">
+			<result name="success">/jsp/views/AllowedCompanyToAdmin.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+
+		<action name="NotAllowedCompany" class="ims.actions.ViewCompany"
+			method="notAllowedCompanyToAdmin">
+			<result name="success">/jsp/views/NotAllowedCompanyToAdmin.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+
+		<action name="UnRegisterCompany" class="ims.actions.UpdatingCompany"
+			method="UnRegister">
+			<result name="success" type="redirect">AllowedCompany</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+
+		<action name="AllowCompany" class="ims.actions.UpdatingCompany"
+			method="AllowCompany">
+			<result name="success" type="redirect">NotAllowedCompany</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+
+		<action name="DeletCompanyAllowed" class="ims.actions.UpdatingCompany"
+			method="DeleteCompany">
+			<result name="success" type="redirect">AllowedCompany</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+
+		<action name="DeletCompanyNotAllowed" class="ims.actions.UpdatingCompany"
+			method="DeleteCompany">
+			<result name="success" type="redirect">NotAllowedCompany</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+
+		<action name="FullCompanyProfileToAdmin" class="ims.actions.ViewCompany"
+			method="FullProfileToAdmin">
+			<result name="success">/jsp/views/FullCompanyToAdmin.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+
+		<action name="GetImageCompanyToAdmin" class="ims.actions.GetProfilePicture">
+			<result name="success" type="stream">
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+
+
+	</package>
+
+
+</struts>
