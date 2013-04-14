@@ -78,6 +78,12 @@
 				<param name="inputName">inputStream</param>
 			</result>
 		</action>
+		
+				<action name="GetImageStudentToAdmin" class="ims.actions.GetProfilePicture">
+			<result name="success" type="stream">
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
 		<action name="AllowCvToCompany" class="ims.actions.UpdatingCompany"
 			method="AllowCvToCompany">
 			<result name="success" type="redirect">HaddleCv</result>
@@ -93,6 +99,11 @@
 		<action name="HaddleCv" class="ims.actions.HandleCv"
 			method="allowAndRemoveCv">
 			<result name="success">/jsp/AllowOrRemoveCvToComp.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+				<action name="StudentCvToAdmin" class="ims.actions.ViewStudent"
+			method="studentCvToAdmin">
+			<result name="success">/jsp/views/StudentCvToAdmin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
 	</package>

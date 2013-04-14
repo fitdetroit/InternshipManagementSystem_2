@@ -20,6 +20,7 @@
     <th width="100">Telephone</th>
     <th width="100">Email</th>
     <th width="100">Year of Admission</th>
+      <th width="150">View full profile</th>
 
 
     
@@ -36,6 +37,10 @@
         <td><s:property value="telephone"/></td>
          <td><s:property value="email"/></td>
         <td><s:property value="yearOfAdmission"/></td>
+                <td><s:form method="post" action="StudentCvToCompany" enctype="multipart/form-data" validate="true">
+        <td><s:hidden label="Company User Name" name="studentUserName" value="%{studentUserName}"></s:hidden></td>        
+        <td><s:submit value="View" ></s:submit></td> 
+        </s:form></td>
 
   
     </tr>

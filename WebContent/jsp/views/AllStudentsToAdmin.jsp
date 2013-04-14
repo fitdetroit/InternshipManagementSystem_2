@@ -25,6 +25,7 @@
     <th width="100">Applied Company 3</th>
     <th width="100">Applied Company 4</th>
     <th width="100">Applied Company 5</th>
+       <th width="150">View full profile</th>
 
     
     
@@ -45,6 +46,11 @@
         <td><s:property value="appliedCompany3"/></td>
         <td><s:property value="appliedCompany4"/></td>
         <td><s:property value="appliedCompany5"/></td>
+        
+        <td><s:form method="post" action="StudentCvToAdmin" enctype="multipart/form-data" validate="true">
+        <td><s:hidden label="Company User Name" name="studentUserName" value="%{studentUserName}"></s:hidden></td>        
+        <td><s:submit value="View" ></s:submit></td> 
+        </s:form></td>
   
     </tr>
 </s:iterator>

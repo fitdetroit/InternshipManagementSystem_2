@@ -19,6 +19,10 @@ import com.opensymphony.xwork2.ActionSupport;
 public class ViewStudent extends ActionSupport {
 
 	private List<Student> list = null;
+	
+	
+	// to get informatin to admin and company
+	private String studentUserName;
 
 	ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
 	ViewStudentDataSession viewStudentDataSession = (ViewStudentDataSession) context.getBean("ViewStudent");
@@ -94,9 +98,50 @@ public class ViewStudent extends ActionSupport {
 	}
 	
 	
+	public String studentCvToAdmin()
+	{
+		// to redirect direct access actions  without login
+		if (str==null) {
+			return ERROR;
+				
+		}
+		
+		setList(getViewStudentDataSession().studentCvToAdmin(getStudentUserName()));
+		return SUCCESS;
+	}
+	
+	public String studentCvToCompany()
+	{
+		// to redirect direct access actions  without login
+		if (str==null) {
+			return ERROR;
+				
+		}
+		
+		setList(getViewStudentDataSession().studentCvToCompany(getStudentUserName()));
+		return SUCCESS;
+	}
 	
 	
+	
+	
+
+
+
+
+
 	// getters and setters
+	
+	public String getStudentUserName() {
+		return studentUserName;
+	}
+
+
+
+
+	public void setStudentUserName(String studentUserName) {
+		this.studentUserName = studentUserName;
+	}
 	public List<Student> getList() {
 		return list;
 	}

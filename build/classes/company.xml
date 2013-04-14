@@ -53,21 +53,35 @@
 			<result name="error">/jsp/CompanyLogin.jsp</result>
 		</action>
 
-		<action name="CompanyLogOut" class="ims.actions.CompanyLogin" method="logOut">
+		<action name="CompanyLogOut" class="ims.actions.CompanyLogin"
+			method="logOut">
 			<result name="success">/jsp/CompanyLogin.jsp</result>
 
 		</action>
-		
-				<action name="GetImageCompany" class="ims.actions.GetProfilePicture">
+
+		<action name="GetImageCompany" class="ims.actions.GetProfilePicture">
 			<result name="success" type="stream">
 				<param name="inputName">inputStream</param>
 			</result>
 		</action>
-		
-				<action name="ViewStudentToCompany" class="ims.actions.ViewStudent"
+
+		<action name="GetImageStudentToCompany" class="ims.actions.GetProfilePicture">
+			<result name="success" type="stream">
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+
+		<action name="ViewStudentToCompany" class="ims.actions.ViewStudent"
 			method="appliedStudentToCompany">
 			<result name="success">/jsp/views/AppliedStudentToCompany.jsp</result>
 			<result name="NoAccess">/jsp/AllowedCompany.jsp</result>
+			<result name="error">/jsp/CompanyLogin.jsp</result>
+		</action>
+		
+		
+		<action name="StudentCvToCompany" class="ims.actions.ViewStudent"
+			method="studentCvToCompany">
+			<result name="success">/jsp/views/AppliedStudentCvToCompany.jsp</result>
 			<result name="error">/jsp/CompanyLogin.jsp</result>
 		</action>
 	</package>

@@ -46,6 +46,32 @@ public class ViewStudentDataSession {
 		return list;
 		
 	}
+	
+	public List<Student> studentCvToAdmin(String userName)
+	{
+		Session session = getSessionFactory().openSession();
+		String SQL_QUERY = "from Student as stu  where stu.studentUserName='"+userName+"'";
+		Query query = session.createQuery(SQL_QUERY);
+	
+		List<Student> list = ((org.hibernate.Query) query).list();
+		session.close();
+
+		return list;
+		
+	}
+	
+	public List<Student> studentCvToCompany(String userName)
+	{
+		Session session = getSessionFactory().openSession();
+		String SQL_QUERY = "from Student as stu  where stu.studentUserName='"+userName+"'";
+		Query query = session.createQuery(SQL_QUERY);
+	
+		List<Student> list = ((org.hibernate.Query) query).list();
+		session.close();
+
+		return list;
+		
+	}
 
 	
 	public List<Student> appliedStudentToCompany(String userName)
@@ -110,6 +136,9 @@ public class ViewStudentDataSession {
 			return students;
 			
 		}
+		
+		
+	
 
 		
 	}
