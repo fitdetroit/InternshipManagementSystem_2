@@ -19,13 +19,26 @@ public class Company {
 	private String companyWeb;
 	private String noOfVacancies;
 	private boolean allowed;
+	private boolean state;
+	private boolean receiveCv;
 	
 	
 	
 	
 	
 	//getters and setters
-
+	public boolean isState() {
+		return state;
+	}
+	public void setState(boolean state) {
+		this.state = state;
+	}
+	public boolean isReceiveCv() {
+		return receiveCv;
+	}
+	public void setReceiveCv(boolean receiveCv) {
+		this.receiveCv = receiveCv;
+	}
 	public boolean isAllowed() {
 		return allowed;
 	}

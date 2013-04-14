@@ -67,6 +67,33 @@ public class ViewStudent extends ActionSupport {
 	}
 	
 	
+	public String appliedStudentToCompany()
+	{
+		// to redirect direct access actions  without login
+		if (str==null) {
+			return ERROR;
+				
+		}
+		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String userName = (String) session.get("userName");
+		
+		if(viewStudentDataSession.appliedStudentToCompany(userName)==null)
+		{
+			return "NoAccess";
+		}
+		else
+		{
+			setList(viewStudentDataSession.appliedStudentToCompany(userName));
+		}
+		
+		
+		
+		return SUCCESS;
+	}
+	
+	
 	
 	
 	// getters and setters

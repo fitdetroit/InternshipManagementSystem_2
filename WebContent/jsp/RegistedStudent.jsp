@@ -8,7 +8,8 @@
 <title>Registed Student</title>
 </head>
 <body>
-<h2 align="center">Registed Student</h2>
+<h2 align="center">Internship Management System</h2>
+<p align="center">(registed Student)</p>
 <h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="StudentLogOut"/>">(logout)</a></h3>
 <br>
 <br>

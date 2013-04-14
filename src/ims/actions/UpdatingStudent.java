@@ -1,5 +1,8 @@
 package ims.actions;
 
+import java.util.List;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -7,6 +10,7 @@ import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 import ims.business.UpdateStudent;
@@ -15,6 +19,7 @@ import ims.data.User;
 
 public class UpdatingStudent extends ActionSupport {
 
+	
 	private String studentUserName;
 	private String nameInFull;
 	private String nameWithInitials;
@@ -49,6 +54,9 @@ public class UpdatingStudent extends ActionSupport {
 	private String password2;
 	private String conPassword;
 
+	private List<Student> list = null;
+
+
 	Student student = new Student();
 	User user = new User();
 
@@ -56,6 +64,10 @@ public class UpdatingStudent extends ActionSupport {
 	HttpServletRequest request = ServletActionContext.getRequest();
 	HttpSession session = request.getSession();
 	String str = (String) session.getAttribute("userName");
+	
+
+	ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
+	UpdateStudent updateStudent = (UpdateStudent) context.getBean("UpdateStudent");
 
 	public String updateStudent() {
 		
@@ -64,40 +76,73 @@ public class UpdatingStudent extends ActionSupport {
 			return ERROR;
 				
 		}
+		
+		
+		
 
+		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String userName = (String) session.get("userName");
+
+		setList(updateStudent.getDetails(userName));
+		
+		student=list.get(0);
+
+		if(getStudentUserName().length()!=0)
 		student.setStudentUserName(getStudentUserName());
+		if(getNameInFull().length()!=0)
 		student.setNameInFull(getNameInFull());
+		if(getNameWithInitials().length()!=0)
 		student.setNameWithInitials(getNameWithInitials());
+		if(getGender().length()!=0)
 		student.setGender(getGender());
+		if(getDateOfBirth().length()!=0)
 		student.setDateOfBirth(getDateOfBirth());
+		if(getMaritalStatus().length()!=0)
 		student.setMaritalStatus(getMaritalStatus());
+		if(getPermanentAddress().length()!=0)
 		student.setPermanentAddress(getPermanentAddress());
+		if(getMobile1().length()!=0)
 		student.setMobile1(getMobile1());
+		if(getMobile2().length()!=0)
 		student.setMobile2(getMobile2());
+		if(getTelephone().length()!=0)
 		student.setTelephone(getTelephone());
+		if(getEmail().length()!=0)
 		student.setEmail(getEmail());
+		if(getSchool().length()!=0)
 		student.setSchool(getSchool());
+		if(getAlSubject1().length()!=0)
 		student.setAlSubject1(getAlSubject1());
+		if(getAlSubject2().length()!=0)
 		student.setAlSubject2(getAlSubject2());
+		if(getAlSubject3().length()!=0)
 		student.setAlSubject3(getAlSubject3());
+		if(getAlResult1().length()!=0)
 		student.setAlResult1(getAlResult1());
+		if(getAlResult2().length()!=0)
 		student.setAlResult2(getAlResult2());
+		if(getAlResult3().length()!=0)
 		student.setAlResult3(getAlResult3());
+		if(getDigreeTitle().length()!=0)
 		student.setDigreeTitle(getDigreeTitle());
+		if(getYearOfAdmission()!=0)
 		student.setYearOfAdmission(getYearOfAdmission());
+		if(getGpaSemester1()!=0)
 		student.setGpaSemester1(getGpaSemester1());
+		if(getGpaSemester2()!=0)
 		student.setGpaSemester2(getGpaSemester2());
+		if(getGpaSemester3()!=0)
 		student.setGpaSemester3(getGpaSemester3());
+		if(getWorkingExperience().length()!=0)
 		student.setWorkingExperience(getWorkingExperience());
+		if(getProjects().length()!=0)
 		student.setProjects(getProjects());
-		student.setAppliedCompany1(getAppliedCompany1());
-		student.setAppliedCompany2(getAppliedCompany2());
-		student.setAppliedCompany3(getAppliedCompany3());
-		student.setAppliedCompany4(getAppliedCompany4());
-		student.setAppliedCompany5(getAppliedCompany5());
+
 
 		user.setUserName(getStudentUserName());
-		user.setType('c');
+		user.setType('s');
 
 		if (getPassword().length() == 0) {
 			user.setPassword(getPassword2());
@@ -105,10 +150,6 @@ public class UpdatingStudent extends ActionSupport {
 			user.setPassword(getPassword());
 		}
 
-		ApplicationContext context = new ClassPathXmlApplicationContext(
-				"Spring.xml");
-		UpdateStudent updateStudent = (UpdateStudent) context
-				.getBean("UpdateStudent");
 
 		updateStudent.updateStudent(getStudentUserName(), student, user);
 
@@ -130,6 +171,13 @@ public class UpdatingStudent extends ActionSupport {
 	}
 
 	// getters and setters
+	public List<Student> getList() {
+		return list;
+	}
+
+	public void setList(List<Student> list) {
+		this.list = list;
+	}
 	public String getStudentUserName() {
 		return studentUserName;
 	}

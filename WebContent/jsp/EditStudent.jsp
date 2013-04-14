@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<h2 align="center">Student Register Form</h2>
+<h2 align="center">Student Profile Updating Form</h2>
 <h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="StudentLogOut"/>">(logout)</a></h3>
 <br/>
 <table align="center">

@@ -8,7 +8,7 @@
 <title>Allowed Company Details</title>
 </head>
 <body>
-<h3 align="center">Allowed Company Details</h3>
+<h2 align="center">Company Details</h2>
 <h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="StudentLogOut"/>">(logout)</a></h3>
 <table border="1" align="center">
 <tr>
@@ -41,5 +41,6 @@
    
     </tr>
 </s:iterator>
+</table>
 </body>
 </html>

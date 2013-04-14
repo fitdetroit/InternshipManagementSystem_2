@@ -8,17 +8,21 @@
 <title>Administrator</title>
 </head>
 <body>
+<h2 align="center">Internship Management System</h2>
 <h2 align="center">Administrator</h2>
 <h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="AdminLogOut"/>">(logout)</a></h3>
 <br>
+
 <br>
+<p align="center"><a href="<s:url action="AllStudent"/>">View Student Details</a></p>
 <br>
-<a href="<s:url action="AllStudent"/>">View Student Details</a>
+
+<p align="center"><a href="<s:url action="AllowedCompany"/>">View Allowed Company Details</a></p>
 <br>
+
+<p align="center"><a href="<s:url action="NotAllowedCompany"/>">View Not Allowed Company Details</a></p>
 <br>
-<a href="<s:url action="AllowedCompany"/>">View Allowed Company Details</a>
-<br>
-<br>
-<a href="<s:url action="NotAllowedCompany"/>">View Not Allowed Company Details</a>
+
+<p align="center"><a href="<s:url action="HaddleCv"/>">To Allow And Reject CV</a></p>
 </body>
 </html>

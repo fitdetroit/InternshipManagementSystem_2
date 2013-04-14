@@ -63,5 +63,12 @@
 				<param name="inputName">inputStream</param>
 			</result>
 		</action>
+		
+				<action name="ViewStudentToCompany" class="ims.actions.ViewStudent"
+			method="appliedStudentToCompany">
+			<result name="success">/jsp/views/AppliedStudentToCompany.jsp</result>
+			<result name="NoAccess">/jsp/AllowedCompany.jsp</result>
+			<result name="error">/jsp/CompanyLogin.jsp</result>
+		</action>
 	</package>
 </struts>

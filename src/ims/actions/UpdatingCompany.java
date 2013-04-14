@@ -1,5 +1,8 @@
 package ims.actions;
 
+import java.util.List;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -11,9 +14,13 @@ import ims.business.UpdateCompany;
 import ims.data.Company;
 import ims.data.User;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class UpdatingCompany extends ActionSupport{
+	
+	private List<Company> list = null;
+	
 	private String companyUserName;
 	private String companyName;
 	private String companyTelephone;
@@ -28,14 +35,19 @@ public class UpdatingCompany extends ActionSupport{
 	
 	
 
-	Company company = new Company();
+	//Company company = new Company();
+	private Company company;
 	User user = new User();
+	
+	ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
+	UpdateCompany updateCompany = (UpdateCompany)context.getBean("UpdateCompany");
 	
 	// to redirect direct access actions  without login
 	HttpServletRequest request=ServletActionContext.getRequest();
 	HttpSession session=request.getSession();
 	String str=(String)session.getAttribute("userName");
 	
+
 	
 	public String updateCompany()
 	{
@@ -45,15 +57,29 @@ public class UpdatingCompany extends ActionSupport{
 				
 		}
 		
+	
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String userName = (String) session.get("userName");
+		setList(updateCompany.getDetails(userName));
 		
+		company = list.get(0);
+		System.out.println("its exeisting company"+getCompany().getCompanyName());
 		
 	
+		if(getCompanyUserName().length()!=0)
 		company.setCompanyUserName(getCompanyUserName());
+		if(getCompanyName().length()!=0)
 		company.setCompanyName(getCompanyName());
+		if(getCompanyTelephone().length()!=0)
 		company.setCompanyTelephone(getCompanyTelephone());
+		if(getContactPerson().length()!=0)
 		company.setContactPerson(getContactPerson());
+		if(getCompanyAddress().length()!=0)
 		company.setCompanyAddress(getCompanyAddress());
+		if(getCompanyWeb().length()!=0)
 		company.setCompanyWeb(getCompanyWeb());
+		if(getNoOfVacancies().length()!=0)
 		company.setNoOfVacancies(getNoOfVacancies());
 		company.setAllowed(true);
 		
@@ -71,8 +97,7 @@ public class UpdatingCompany extends ActionSupport{
 		
 		
 		
-		ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
-		UpdateCompany updateCompany = (UpdateCompany)context.getBean("UpdateCompany");
+
 		
 		updateCompany.updateCompany(getCompanyUserName(),company,user);
 		
@@ -80,6 +105,14 @@ public class UpdatingCompany extends ActionSupport{
 		
 	}
 	
+	public List<Company> getList() {
+		return list;
+	}
+
+	public void setList(List<Company> list) {
+		this.list = list;
+	}
+
 	public String AllowCompany()
 	{
 		// to redirect direct access actions  without login
@@ -87,12 +120,13 @@ public class UpdatingCompany extends ActionSupport{
 			return ERROR;
 				
 		}
-		ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
-		UpdateCompany updateCompany = (UpdateCompany)context.getBean("UpdateCompany");
+
 		
 		updateCompany.AllowCompany(getCompanyUserName());
 		return SUCCESS;
 	}
+	
+	
 	
 	public String UnRegister()
 	{
@@ -101,8 +135,7 @@ public class UpdatingCompany extends ActionSupport{
 			return ERROR;
 				
 		}
-		ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
-		UpdateCompany updateCompany = (UpdateCompany)context.getBean("UpdateCompany");
+
 		
 		updateCompany.UnRegister(getCompanyUserName());
 		return SUCCESS;
@@ -118,12 +151,39 @@ public class UpdatingCompany extends ActionSupport{
 			return ERROR;
 				
 		}
-		ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
-		UpdateCompany updateCompany = (UpdateCompany)context.getBean("UpdateCompany");
+
 		
 		updateCompany.DeleteCompany(getCompanyUserName());
 		return SUCCESS;
 		
+	}
+	
+	public String AllowCvToCompany()
+	{
+		// to redirect direct access actions  without login
+		if (str==null) {
+			return ERROR;
+				
+		}
+			
+		
+		updateCompany.AllowCvToCompany(getCompanyUserName());
+		
+		return SUCCESS;
+	}
+	
+	public String RemoveCvFromCompany()
+	{
+		// to redirect direct access actions  without login
+		if (str==null) {
+			return ERROR;
+				
+		}
+		
+			
+		updateCompany.RemoveCvFromCompany(getCompanyUserName());
+		
+		return SUCCESS;
 	}
 	
 	

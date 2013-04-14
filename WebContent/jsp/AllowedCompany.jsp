@@ -8,7 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2 align="center">Allowed company</h2>
+<h2 align="center">Internship Management System</h2>
+<P align="center">(allowed company)</P>
 <h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="CompanyLogOut"/>">(logout)</a></h3>
 
 <br>
@@ -16,6 +17,6 @@
 <br>
 <p align="center"><a href="<s:url action="ViewToUpdateCompany"/>">click here to update company</a></p>
 <br>
-
+<p align="center"><a href="<s:url action="ViewStudentToCompany"/>">click here view applied students</a></p>
 </body>
 </html>

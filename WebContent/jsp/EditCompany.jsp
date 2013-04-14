@@ -9,7 +9,7 @@
 <title>Company Details</title>
 </head>
 <body>
-<h3 align="center">Company Details</h3>
+<h2 align="center">Update Company Details Form</h2>
 <h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="CompanyLogOut"/>">(logout)</a></h3>
 
 <s:form method="post" action="UpdateCompany"  validate="true">
@@ -18,7 +18,7 @@
 
 
   
-     <tr><td><s:hidden label="Company User Name" name="companyUserName" value="%{companyUserName}"></s:hidden></td> </tr> 
+     <tr><td><s:hidden label="Company User Name" name="companyUserName" value="%{companyUserName}"></s:hidden></td> </tr>   
      <tr><td><s:hidden label="Company Hidden Name" name="companyName" value="%{companyName}" ></s:hidden></td> </tr> 
      <tr><td><s:textfield label="Company Name" name="companyName2" value="%{companyName}" disabled="true"></s:textfield></td> </tr> 
      <tr><td><s:textfield label="Telephone No" name="companyTelephone" value="%{companyTelephone}"></s:textfield></td> </tr> 

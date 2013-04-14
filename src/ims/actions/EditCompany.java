@@ -32,10 +32,8 @@ public class EditCompany extends ActionSupport {
 	HttpSession session2 = request.getSession();
 	String str = (String) session2.getAttribute("userName");
 
-	ApplicationContext context = new ClassPathXmlApplicationContext(
-			"Spring.xml");
-	UpdateCompany updateCompany = (UpdateCompany) context
-			.getBean("UpdateCompany");
+	ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
+	UpdateCompany updateCompany = (UpdateCompany) context.getBean("UpdateCompany");
 
 	// company details to Edit company form
 	private String companyUserName;

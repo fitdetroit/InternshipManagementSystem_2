@@ -9,6 +9,8 @@
 </head>
 <body>
 <h2 align="center">Internship Management System</h2>
+<p align="center">(un registed Student)</p>
+<h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="StudentLogOut"/>">(logout)</a></h3>
 <br>
 <p align="center"><a href="<s:url action="ViewCompanyProfile"/>">click here to view Company Profiles</a></p>
 <br>

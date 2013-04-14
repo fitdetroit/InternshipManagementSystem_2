@@ -78,8 +78,23 @@
 				<param name="inputName">inputStream</param>
 			</result>
 		</action>
+		<action name="AllowCvToCompany" class="ims.actions.UpdatingCompany"
+			method="AllowCvToCompany">
+			<result name="success" type="redirect">HaddleCv</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
 
+		<action name="RemoveCvFormCompany" class="ims.actions.UpdatingCompany"
+			method="RemoveCvFromCompany">
+			<result name="success" type="redirect">HaddleCv</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
 
+		<action name="HaddleCv" class="ims.actions.HandleCv"
+			method="allowAndRemoveCv">
+			<result name="success">/jsp/AllowOrRemoveCvToComp.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
 	</package>
 
 

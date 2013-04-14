@@ -110,6 +110,9 @@ public class ViewCompany extends ActionSupport{
 		return SUCCESS;
 	}
 	
+	
+ 
+	
 
 	
 	//getters and setters

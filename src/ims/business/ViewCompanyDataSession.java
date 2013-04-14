@@ -102,6 +102,30 @@ public class ViewCompanyDataSession {
 
 		return list;
 	}
+	
+	public List<Company> CvRecivedCompanyToAdmin()
+	{
+		Session session = getSessionFactory().openSession();
+		String SQL_QUERY ="from Company as com  where com.receiveCv='1'and com.allowed='1'";
+		Query query = session.createQuery(SQL_QUERY);
+	
+		List<Company> list = ((org.hibernate.Query) query).list();
+		session.close();
+
+		return list;
+	}
+	
+	public List<Company> CvNotRecivedCompanyToAdmin()
+	{
+		Session session = getSessionFactory().openSession();
+		String SQL_QUERY ="from Company as com  where com.receiveCv='0'and com.allowed='1'and com.state='0'";
+		Query query = session.createQuery(SQL_QUERY);
+	
+		List<Company> list = ((org.hibernate.Query) query).list();
+		session.close();
+
+		return list;
+	}
 
 
 

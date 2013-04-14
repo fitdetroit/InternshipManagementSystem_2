@@ -115,7 +115,7 @@
 										<tr><td colspan="3">2.An undergraduate of B.Sc. in <s:property  value="digreeTitle" ></s:property> Year of Admission:<s:property  value="yearOfAdmission"></s:property></td></tr>
 										<tr><td colspan="3"><i>Current GPA<br/></i></td></tr>
 										<tr><td style="width:5%"></td><td>GPA semester 1:</td><td style="width:50%;text-align:center"><s:property  value="gpaSemester1"></s:property></td></tr>
-										<tr><td style="width:5%"></td><td>GPA semester 2:</td><td style="width:50%;text-align:center"><s:property  value="gpaSemester1"></s:property></td></tr>
+										<tr><td style="width:5%"></td><td>GPA semester 2:</td><td style="width:50%;text-align:center"><s:property  value="gpaSemester2"></s:property></td></tr>
 										<tr><td style="width:5%"></td><td>GPA semester 3:</td><td style="width:50%;text-align:center"><s:property  value="gpaSemester3"></s:property></td></tr>
 										<tr><td></td></tr>
 										</table></td>

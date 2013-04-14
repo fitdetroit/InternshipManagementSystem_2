@@ -11,7 +11,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 import ims.business.RegisterStudent;
+import ims.data.Application;
 import ims.data.Student;
+import ims.data.StudentCompany;
 import ims.data.User;
 
 public class StudentRegistration extends ActionSupport {
@@ -54,6 +56,20 @@ public class StudentRegistration extends ActionSupport {
 	private String ProfilePictureContentType;
 
 	private Student student = new Student();
+	
+	
+	StudentCompany studentCompany1 = new StudentCompany();
+	StudentCompany studentCompany2 = new StudentCompany();
+	StudentCompany studentCompany3 = new StudentCompany();
+	StudentCompany studentCompany4 = new StudentCompany();
+	StudentCompany studentCompany5 = new StudentCompany();
+	
+	Application application1 = new Application();
+	Application application2 = new Application();
+	Application application3 = new Application();
+	Application application4 = new Application();
+	Application application5 = new Application();
+	
 
 
 
@@ -110,7 +126,74 @@ public class StudentRegistration extends ActionSupport {
 		registerStudent.saveStudent(student);
 		
 		
-		
+		if(!getAppliedCompany1().equals("NOT Select"))
+		{
+			
+			// to get company username from company name
+			String name= registerStudent.getCompanyUserName(getAppliedCompany1());
+			
+			studentCompany1.setStudentId(getStudentUserName());
+			studentCompany1.setCompanyId(name);
+			
+			application1.setStudentCompany(studentCompany1);
+			
+
+			
+			registerStudent.AppliedCompanySave(application1);
+			
+		}
+		if(!getAppliedCompany2().equals("NOT Select"))
+		{
+			// to get company username from company name
+			String name= registerStudent.getCompanyUserName(getAppliedCompany2());
+			
+			studentCompany2.setStudentId(getStudentUserName());
+			studentCompany2.setCompanyId(name);
+			
+			application2.setStudentCompany(studentCompany2);
+			
+			registerStudent.AppliedCompanySave(application2);
+			
+		}
+		if(!getAppliedCompany3().equals("NOT Select"))
+		{
+			// to get company username from company name
+			String name= registerStudent.getCompanyUserName(getAppliedCompany3());
+			
+			studentCompany3.setStudentId(getStudentUserName());
+			studentCompany3.setCompanyId(name);
+			
+			application3.setStudentCompany(studentCompany3);
+			
+			registerStudent.AppliedCompanySave(application3);
+			
+		}
+		if(!getAppliedCompany4().equals("NOT Select"))
+		{
+			// to get company username from company name
+			String name= registerStudent.getCompanyUserName(getAppliedCompany4());
+			
+			studentCompany4.setStudentId(getStudentUserName());
+			studentCompany4.setCompanyId(name);
+			
+			application4.setStudentCompany(studentCompany4);
+			
+			registerStudent.AppliedCompanySave(application4);
+			
+		}
+		if(!getAppliedCompany5().equals("NOT Select"))
+		{
+			// to get company username from company name
+			String name= registerStudent.getCompanyUserName(getAppliedCompany5());
+			
+			studentCompany5.setStudentId(getStudentUserName());
+			studentCompany5.setCompanyId(name);
+			
+			application5.setStudentCompany(studentCompany5);
+			
+			registerStudent.AppliedCompanySave(application5);
+			
+		}
 		
 		return SUCCESS;
 

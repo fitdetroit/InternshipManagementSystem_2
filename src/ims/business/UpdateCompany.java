@@ -116,6 +116,32 @@ public class UpdateCompany {
 		
 	}
 	
+	public void AllowCvToCompany(String userName)
+	{
+		Session session = getSessionFactory().openSession();
+		session.beginTransaction();
+		Company company2 = (Company)session.get(Company.class, userName);
+		company2.setReceiveCv(true);
+		session.merge(company2);
+		session.getTransaction().commit();
+		session.close();
+		
+		
+	}
+	
+	public void RemoveCvFromCompany(String userName)
+	{
+		Session session = getSessionFactory().openSession();
+		session.beginTransaction();
+		Company company2 = (Company)session.get(Company.class, userName);
+		company2.setReceiveCv(false);
+		session.merge(company2);
+		session.getTransaction().commit();
+		session.close();
+		
+		
+	}
+	
 	
 	
 	

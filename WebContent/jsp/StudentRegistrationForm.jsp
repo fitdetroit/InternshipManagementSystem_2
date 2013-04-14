@@ -11,7 +11,7 @@
 <body>
 
 <h2 align="center">Student Register Form</h2>
-
+<h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="StudentLogOut"/>">(logout)</a></h3>
 <br/>
 <table align="center">
 <tr><td><h4 >Your personal Details</h4></td></tr>

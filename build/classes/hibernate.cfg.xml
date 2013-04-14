@@ -36,6 +36,7 @@
    <mapping class="ims.data.User" />
    <mapping class="ims.data.Student" />
    <mapping class="ims.data.Company" />
+   <mapping class="ims.data.Application" />
 
 		
 	</session-factory>
