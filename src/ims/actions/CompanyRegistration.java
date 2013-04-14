@@ -1,6 +1,8 @@
 package ims.actions;
 
 import java.io.File;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 import javax.servlet.ServletContext;
 
@@ -41,7 +43,7 @@ public class CompanyRegistration extends ActionSupport{
 	private String ProfilePictureFileName;
 	private String ProfilePictureContentType;
 	
-	public String registration()
+	public String registration() throws NoSuchAlgorithmException
 	{
 		
 		// uploading profile picture
@@ -65,8 +67,23 @@ public class CompanyRegistration extends ActionSupport{
 	
 		
 		
+		///password encrptation
+		 MessageDigest md = MessageDigest.getInstance("MD5");
+	        md.update(password.getBytes());
+	 
+	        byte byteData[] = md.digest();
+	 
+	        //convert the byte to hex format method 1
+	        StringBuffer sb = new StringBuffer();
+	        for (int i = 0; i < byteData.length; i++) {
+	         sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
+	        }
+	 
+	       // System.out.println("Digest(in hex format):: " + sb.toString());
+		
 		user.setUserName(getCompanyUserName());
-		user.setPassword(getPassword());
+		//user.setPassword(getPassword());
+		user.setPassword(sb.toString());
 		user.setType('c');
 		
 		
@@ -80,8 +97,26 @@ public class CompanyRegistration extends ActionSupport{
 	
 	
 	
-	// this method is in registration class but this method is doing updating the company
 
+	public void validate()
+	{
+		System.out.println("its here too");
+		if(!(getPassword().equals(getConPassword()))){
+			addFieldError("conPassword", "password not match");
+		}
+	}
+	
+
+
+
+
+
+	
+	
+	
+	
+	
+	// getters and setters
 	
 	public Company getCompany() {
 		return company;
@@ -140,24 +175,6 @@ public class CompanyRegistration extends ActionSupport{
 	public void setProfilePictureContentType(String profilePictureContentType) {
 		ProfilePictureContentType = profilePictureContentType;
 	}
-
-
-
-	public void validate()
-	{
-		System.out.println("its here too");
-		if(!(getPassword().equals(getConPassword()))){
-			addFieldError("conPassword", "password not match");
-		}
-	}
-
-	
-	
-	
-	
-	
-	// getters and setters
-	
 
 
 
