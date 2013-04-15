@@ -18,5 +18,7 @@
 <p align="center"><a href="<s:url action="ViewToUpdateCompany"/>">click here to update company</a></p>
 <br>
 <p align="center"><a href="<s:url action="ViewStudentToCompany"/>">click here view applied students</a></p>
+<br>
+<p align="center"><a href="<s:url action="AllowedCompanyToCompany"/>">View Allowed Company Details</a></p>
 </body>
 </html>

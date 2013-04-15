@@ -87,6 +87,19 @@ public class ViewCompany extends ActionSupport{
 		
 	}
 	
+	public String allowedCompanyToCompany()
+	{
+		// to redirect direct access actions  without login
+		if (str==null) {
+			return ERROR;
+				
+		}
+		
+		setList(getViewCompanyDataSession().allowedCompanyToCompany());
+		return SUCCESS;
+		
+	}
+	
 	
 	public String FullProfileToStudent()
 	{
@@ -96,6 +109,17 @@ public class ViewCompany extends ActionSupport{
 				
 		}		
 		setList(getViewCompanyDataSession().FullProfileToStudent(getCompanyUserName()));
+		return SUCCESS;
+	}
+	
+	public String FullProfileToCompany()
+	{
+		// to redirect direct access actions  without login
+		if (str==null) {
+			return ERROR;
+				
+		}		
+		setList(getViewCompanyDataSession().FullProfileToCompany(getCompanyUserName()));
 		return SUCCESS;
 	}
 	

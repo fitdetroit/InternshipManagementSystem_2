@@ -85,5 +85,17 @@
 			<result name="success">/jsp/views/AppliedStudentCvToCompany.jsp</result>
 			<result name="error">/jsp/CompanyLogin.jsp</result>
 		</action>
+		
+				<action name="AllowedCompanyToCompany" class="ims.actions.ViewCompany"
+			method="allowedCompanyToCompany">
+			<result name="success">/jsp/views/AllowedCompanyToCompany.jsp</result>
+			<result name="error">/jsp/CompanyLogin.jsp</result>
+		</action>
+		
+				<action name="FullCompanyProfileToCompany" class="ims.actions.ViewCompany"
+			method="FullProfileToCompany">
+			<result name="success">/jsp/views/FullCompanyToCompany.jsp</result>
+			<result name="error">/jsp/StudentLogin.jsp</result>
+		</action>
 	</package>
 </struts>

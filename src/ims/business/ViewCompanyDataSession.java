@@ -79,7 +79,31 @@ public class ViewCompanyDataSession {
 		
 	}
 	
+	public List<Company> allowedCompanyToCompany()
+	{
+		Session session = getSessionFactory().openSession();
+		String SQL_QUERY = "from Company as com  where com.allowed='1'";
+		Query query = session.createQuery(SQL_QUERY);
+		List<Company> list = ((org.hibernate.Query) query).list();
+		session.close();
+
+		return list;
+		
+	}
+	
 	public List<Company> FullProfileToStudent(String userName)
+	{
+		Session session = getSessionFactory().openSession();
+		String SQL_QUERY = "from Company as com  where com.companyUserName='"+userName+"'";
+		Query query = session.createQuery(SQL_QUERY);
+	
+		List<Company> list = ((org.hibernate.Query) query).list();
+		session.close();
+
+		return list;
+	}
+	
+	public List<Company> FullProfileToCompany(String userName)
 	{
 		Session session = getSessionFactory().openSession();
 		String SQL_QUERY = "from Company as com  where com.companyUserName='"+userName+"'";
