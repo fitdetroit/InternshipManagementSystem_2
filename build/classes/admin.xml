@@ -78,8 +78,8 @@
 				<param name="inputName">inputStream</param>
 			</result>
 		</action>
-		
-				<action name="GetImageStudentToAdmin" class="ims.actions.GetProfilePicture">
+
+		<action name="GetImageStudentToAdmin" class="ims.actions.GetProfilePicture">
 			<result name="success" type="stream">
 				<param name="inputName">inputStream</param>
 			</result>
@@ -96,14 +96,41 @@
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
 
-		<action name="HaddleCv" class="ims.actions.HandleCv"
-			method="allowAndRemoveCv">
+		<action name="HaddleCv" class="ims.actions.HandleCv" method="allowAndRemoveCv">
 			<result name="success">/jsp/AllowOrRemoveCvToComp.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
-				<action name="StudentCvToAdmin" class="ims.actions.ViewStudent"
+		<action name="StudentCvToAdmin" class="ims.actions.ViewStudent"
 			method="studentCvToAdmin">
 			<result name="success">/jsp/views/StudentCvToAdmin.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+
+		<action name="NewStudetProfiles" class="ims.actions.CreateAndDeleteStudentProfiles">
+			<result name="success">/jsp/CreateNewStudentProfiles.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+
+		<action name="CreateStudetProfiles" class="ims.actions.CreateAndDeleteStudentProfiles"
+			method="createStudentProfiles">
+			<result name="success">/jsp/Admin.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+
+		<action name="ToRemoveStudetProfiles" class="ims.actions.CreateAndDeleteStudentProfiles">
+			<result name="success">/jsp/RemoveStudentProfiles.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+
+		<action name="DeleteStudetProfile" class="ims.actions.CreateAndDeleteStudentProfiles"
+			method="deleteStudentProfile">
+			<result name="success">/jsp/Admin.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+
+		<action name="DeleteAllStudetProfiles" class="ims.actions.CreateAndDeleteStudentProfiles"
+			method="deleteAllStudentsFormSystem">
+			<result name="success">/jsp/Admin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
 	</package>

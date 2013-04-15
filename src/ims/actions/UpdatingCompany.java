@@ -37,7 +37,7 @@ public class UpdatingCompany extends ActionSupport{
 	
 	
 
-	//Company company = new Company();
+
 	private Company company;
 	User user = new User();
 	

@@ -12,7 +12,7 @@ public class RegisterCompany {
 	private SessionFactory sessionFactory;
 	
 	
-	
+	// this method used to save company in database in first time 
 	public void saveCompany(Company company,User user)
 	{
 		Session session = getSessionFactory().openSession();

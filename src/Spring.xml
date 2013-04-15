@@ -46,8 +46,12 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 	<bean id="UpdateStudent" class="ims.business.UpdateStudent">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-	
-		<bean id="ViewStudent" class="ims.business.ViewStudentDataSession">
+
+	<bean id="ViewStudent" class="ims.business.ViewStudentDataSession">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="CreateStudent" class="ims.business.CreateAndDeleteStudent">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 
@@ -61,12 +65,12 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 	<bean id="UpdateCompany" class="ims.business.UpdateCompany">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-	
-		<bean id="RemainingCompany" class="ims.business.ViewCompanyDataSession">
+
+	<bean id="RemainingCompany" class="ims.business.ViewCompanyDataSession">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-	
-		<bean id="ViewCompany" class="ims.business.ViewCompanyDataSession">
+
+	<bean id="ViewCompany" class="ims.business.ViewCompanyDataSession">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 </beans>

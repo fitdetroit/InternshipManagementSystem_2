@@ -24,5 +24,13 @@
 <br>
 
 <p align="center"><a href="<s:url action="HaddleCv"/>">To Allow And Reject CV</a></p>
+
+<br>
+
+<p align="center"><a href="<s:url action="NewStudetProfiles"/>">Enter students to system</a></p>
+
+<br>
+
+<p align="center"><a href="<s:url action="ToRemoveStudetProfiles"/>">Remove students From system</a></p>
 </body>
 </html>

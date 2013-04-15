@@ -16,6 +16,8 @@ public class RegisterStudent {
 	
 	private SessionFactory sessionFactory;
 
+	
+	// this method is used to save student details in database in first time
 	public void saveStudent(Student student)
 	{
 		Session session = getSessionFactory().openSession();
@@ -27,7 +29,7 @@ public class RegisterStudent {
 	}
 	
 	
-
+// this method is used to save studet applied companies in database
 	public void AppliedCompanySave(Application appllication)
 	{
 		Session session = getSessionFactory().openSession();
@@ -38,7 +40,7 @@ public class RegisterStudent {
 		
 	}
 	
-	
+// this method is used to get company username from company name to save company username in application object in database	
 	public String getCompanyUserName(String companyName)
 	{
 		Session session = getSessionFactory().openSession();

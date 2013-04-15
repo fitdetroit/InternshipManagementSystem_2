@@ -18,7 +18,7 @@ public class UpdateCompany {
 	
 
 
-// return list of details in company to EditCompany jsp
+// this method is used to get details befor update (form company table)
 	public List<Company> getDetails(String userName)
 	{
 		
@@ -33,7 +33,8 @@ public class UpdateCompany {
 		return list;
 		
 	}
-	
+
+	// this method is used to get deatls befor update (for user table )
 	public List<User> getDetails2(String userName)
 	{
 		
@@ -49,7 +50,7 @@ public class UpdateCompany {
 		
 	}
 	
-	
+	// this method is used to update company
 	public void updateCompany(String userName,Company companyUpdated,User userUpdated)
 	{
 		
@@ -73,7 +74,7 @@ public class UpdateCompany {
 		
 	}
 	
-	
+// this method is used to allow company in system by admin	
 	public void AllowCompany(String userName)
 	{
 		Session session = getSessionFactory().openSession();		
@@ -85,7 +86,7 @@ public class UpdateCompany {
 		session.close();
 		
 	}
-	
+// this method is used to unregister company in system by admin	
 	public void UnRegister(String userName)
 	{
 		Session session = getSessionFactory().openSession();		
@@ -98,6 +99,7 @@ public class UpdateCompany {
 		
 	}
 	
+	// this method is used to delete company from system by admin
 	public void DeleteCompany(String userName)
 	{
 		Session session = getSessionFactory().openSession();
@@ -115,7 +117,7 @@ public class UpdateCompany {
 		session2.close();
 		
 	}
-	
+	// this method is used to send cv's to company by admin
 	public void AllowCvToCompany(String userName)
 	{
 		Session session = getSessionFactory().openSession();
@@ -128,7 +130,7 @@ public class UpdateCompany {
 		
 		
 	}
-	
+// this method is used to remove cv form company by admin	
 	public void RemoveCvFromCompany(String userName)
 	{
 		Session session = getSessionFactory().openSession();

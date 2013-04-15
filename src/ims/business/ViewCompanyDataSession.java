@@ -14,7 +14,7 @@ public class ViewCompanyDataSession {
 	SessionFactory sessionFactory;
 	
 	
-	/// return list to student registration form - still available internship
+// this method is used to get still remainig company to give internsip
 	public List<String> remainingCompanyName()
 	{
 		Session session = getSessionFactory().openSession();
@@ -28,7 +28,7 @@ public class ViewCompanyDataSession {
 		
 	}
 	
-	
+// this method is used to get list of details of allowd compny to admin	
 	public List<Company> allowedCompanyToAdmin()
 	{
 		Session session = getSessionFactory().openSession();
@@ -41,7 +41,7 @@ public class ViewCompanyDataSession {
 		
 	}
 	
-	
+// this method is used to get details about not allowd company to admin	
 	public List<Company> notAllowedCompanyToAdmin()
 	{
 		Session session = getSessionFactory().openSession();
@@ -54,7 +54,7 @@ public class ViewCompanyDataSession {
 		
 	}
 	
-	
+	//this method is used to view company details to company
 	public List<Company> viewCompanyToCompany(String userName)
 	{
 		Session session = getSessionFactory().openSession();
@@ -66,7 +66,7 @@ public class ViewCompanyDataSession {
 
 		return list;
 	}
-	
+	// this method is used to get detials about allowd company to admin
 	public List<Company> allowedCompanyToStudent()
 	{
 		Session session = getSessionFactory().openSession();
@@ -78,7 +78,7 @@ public class ViewCompanyDataSession {
 		return list;
 		
 	}
-	
+	// this method is used to get deatils to company all registed company deails 
 	public List<Company> allowedCompanyToCompany()
 	{
 		Session session = getSessionFactory().openSession();
@@ -90,7 +90,7 @@ public class ViewCompanyDataSession {
 		return list;
 		
 	}
-	
+	// this method is used to give full profile to student form database
 	public List<Company> FullProfileToStudent(String userName)
 	{
 		Session session = getSessionFactory().openSession();
@@ -102,7 +102,7 @@ public class ViewCompanyDataSession {
 
 		return list;
 	}
-	
+// this method is used to give full information about company to compny form database	
 	public List<Company> FullProfileToCompany(String userName)
 	{
 		Session session = getSessionFactory().openSession();
@@ -114,7 +114,7 @@ public class ViewCompanyDataSession {
 
 		return list;
 	}
-	
+	// this method is used to give full information to admin about compies form database
 	public List<Company> FullProfileToAdmin(String userName)
 	{
 		Session session = getSessionFactory().openSession();
@@ -126,7 +126,7 @@ public class ViewCompanyDataSession {
 
 		return list;
 	}
-	
+// this method is used to get list of company names are allowd to view cv form student	
 	public List<Company> CvRecivedCompanyToAdmin()
 	{
 		Session session = getSessionFactory().openSession();
@@ -138,7 +138,7 @@ public class ViewCompanyDataSession {
 
 		return list;
 	}
-	
+	// this method is used to get all not allowd to view  cv form student
 	public List<Company> CvNotRecivedCompanyToAdmin()
 	{
 		Session session = getSessionFactory().openSession();

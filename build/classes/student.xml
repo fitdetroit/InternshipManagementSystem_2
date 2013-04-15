@@ -39,6 +39,7 @@
 			<interceptor-ref name="basicStack" />
 			<result name="success">/jsp/RegistedStudent.jsp</result>
 			<result name="input">/jsp/StudentRegistrationForm.jsp</result>
+			<result name="error">/jsp/StudentLogin.jsp</result>
 		</action>
 
 
@@ -80,6 +81,11 @@
 			</result>
 		</action>
 
+		<action name="GetImageCompanyToStudent" class="ims.actions.GetProfilePicture">
+			<result name="success" type="stream">
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
 
 		<action name="ViewCompanyProfile" class="ims.actions.ViewCompany"
 			method="allowedCompanyToStudent">
@@ -94,11 +100,7 @@
 			<result name="error">/jsp/StudentLogin.jsp</result>
 		</action>
 
-		<action name="GetImageCompanyToStudent" class="ims.actions.GetProfilePicture">
-			<result name="success" type="stream">
-				<param name="inputName">inputStream</param>
-			</result>
-			</action>
+
 	</package>
 
 </struts>

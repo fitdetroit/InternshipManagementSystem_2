@@ -17,7 +17,7 @@ public class UpdateStudent {
 	
 
 
-	// return list of details in company to EditStudent jsp
+// this method is used to get details before update 
 		public List<Student> getDetails(String userName)
 		{
 			
@@ -32,7 +32,7 @@ public class UpdateStudent {
 			return list;
 			
 		}
-		
+		// this method is used to get details befor student update
 		public List<User> getDetails2(String userName)
 		{
 			
@@ -48,7 +48,7 @@ public class UpdateStudent {
 			
 		}
 		
-		
+	// this method is used update student in database	
 		public void updateStudent(String userName,Student studentUpdated,User userUpdated)
 		{
 			

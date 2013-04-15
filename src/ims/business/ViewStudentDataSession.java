@@ -21,7 +21,7 @@ public class ViewStudentDataSession {
 
 	
 
-
+// this method is used to get all student details to admin
 	public List<Student> allStudentToAdmin()
 	{
 		Session session = getSessionFactory().openSession();
@@ -33,7 +33,7 @@ public class ViewStudentDataSession {
 		
 	}
 	
-	
+// this method is used to get student profile to specific student	
 	public List<Student> viewStudentToStudent(String userName)
 	{
 		Session session = getSessionFactory().openSession();
@@ -46,7 +46,8 @@ public class ViewStudentDataSession {
 		return list;
 		
 	}
-	
+
+	// this method is used to get sutdent cv details to admin
 	public List<Student> studentCvToAdmin(String userName)
 	{
 		Session session = getSessionFactory().openSession();
@@ -59,7 +60,7 @@ public class ViewStudentDataSession {
 		return list;
 		
 	}
-	
+	// this method is used to get student cv to compnay 
 	public List<Student> studentCvToCompany(String userName)
 	{
 		Session session = getSessionFactory().openSession();
@@ -73,7 +74,7 @@ public class ViewStudentDataSession {
 		
 	}
 
-	
+	// this method is used to get relavent applied students to company
 	public List<Student> appliedStudentToCompany(String userName)
 	{
 		 List<Student> students=new ArrayList<Student>();

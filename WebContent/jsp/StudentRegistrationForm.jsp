@@ -37,8 +37,8 @@
 <tr><td><s:textfield  label="GPA semester 1"  name="gpaSemester1"></s:textfield> </td></tr>
 <tr><td><s:textfield  label="GPA semester 2"  name="gpaSemester2"></s:textfield> </td></tr>
 <tr><td><s:textfield  label="GPA semester 3"  name="gpaSemester3"></s:textfield> </td></tr>
-<tr><td><s:textarea  label="Working Expirience"  name="workingExperience"></s:textarea> </td></tr>
-<tr><td><s:textarea  label="Projects"  name="projects"></s:textarea> </td></tr>
+<tr><td><s:textarea  label="Working Expirience"  name="workingExperience" cols="50" rows="10"></s:textarea> </td></tr>
+<tr><td><s:textarea  label="Projects"  name="projects" cols="50" rows="10"></s:textarea> </td></tr>
 <tr><td><s:select list="%{list}"   label="Company Name 1" name="appliedCompany1"></s:select> </td></tr>
 <tr><td><s:select list="%{list}"   label="Company Name 2" name="appliedCompany2"></s:select> </td></tr>
 <tr><td><s:select list="%{list}"   label="Company Name 3" name="appliedCompany3"></s:select> </td></tr>

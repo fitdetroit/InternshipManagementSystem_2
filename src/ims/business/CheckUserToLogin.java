@@ -14,7 +14,7 @@ public class CheckUserToLogin {
 	private SessionFactory sessionFactory;
 	
 	
-// check sutdent in database he or she has or not account in user table
+// this method is used to check student user name and password in the database
 	public String findStudent(String userName, String password) {
 		
 
@@ -45,7 +45,7 @@ public class CheckUserToLogin {
 
 	}
 	
-	
+	// this method is used to check company user name and password in the database	
 	public String findCompany(String userName, String password)
 	{
 		
@@ -76,7 +76,7 @@ public class CheckUserToLogin {
 		
 	}
 	
-	
+	// this method is used to check admin user name and password in the database
 	public String findAdmin(String userName, String password)
 	{
 		Session session = getSessionFactory().openSession();
