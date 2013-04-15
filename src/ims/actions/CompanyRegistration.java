@@ -3,6 +3,7 @@ package ims.actions;
 import java.io.File;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Map;
 
 import javax.servlet.ServletContext;
 
@@ -10,6 +11,7 @@ import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 
@@ -91,6 +93,14 @@ public class CompanyRegistration extends ActionSupport{
 		RegisterCompany registerCompany = (RegisterCompany)context.getBean("RegisterCompany");
 		
 		registerCompany.saveCompany(company,user);
+		
+		
+		
+		//create session for new company
+		
+		 Map session;
+     	session = ActionContext.getContext().getSession();
+			  session.put("userName",getCompanyUserName());
 		
 		return SUCCESS;
 	}

@@ -50,6 +50,8 @@ public class CompanyLogin extends ActionSupport{
            
         else if(checkUserToLogin.findCompany(getUserName(),sb.toString())=="notallowed")
         {
+        	session = ActionContext.getContext().getSession();
+			  session.put("userName",getUserName());
         	
         	return "UnRegisted";
         }

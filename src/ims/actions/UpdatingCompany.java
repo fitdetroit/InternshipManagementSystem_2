@@ -83,6 +83,7 @@ public class UpdatingCompany extends ActionSupport{
 		company.setCompanyWeb(getCompanyWeb());
 		if(getNoOfVacancies().length()!=0)
 		company.setNoOfVacancies(getNoOfVacancies());
+		if(company.isAllowed()==true)
 		company.setAllowed(true);
 		
 		
@@ -112,6 +113,14 @@ public class UpdatingCompany extends ActionSupport{
 
 		
 		updateCompany.updateCompany(getCompanyUserName(),company,user);
+		
+		
+		if(company.isAllowed()==false)
+		{
+			return "UnRegisted";
+			
+			
+		}
 		
 		return SUCCESS;
 		
