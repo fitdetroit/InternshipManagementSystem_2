@@ -1,5 +1,7 @@
 package ims.actions;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.Map;
 
@@ -69,7 +71,7 @@ public class UpdatingStudent extends ActionSupport {
 	ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
 	UpdateStudent updateStudent = (UpdateStudent) context.getBean("UpdateStudent");
 
-	public String updateStudent() {
+	public String updateStudent() throws NoSuchAlgorithmException {
 		
 		// to redirect direct access actions  without login
 		if (str==null) {
@@ -147,7 +149,20 @@ public class UpdatingStudent extends ActionSupport {
 		if (getPassword().length() == 0) {
 			user.setPassword(getPassword2());
 		} else {
-			user.setPassword(getPassword());
+			///password encrptation
+			 MessageDigest md = MessageDigest.getInstance("MD5");
+		        md.update(password.getBytes());
+		 
+		        byte byteData[] = md.digest();
+		 
+		        //convert the byte to hex format method 1
+		        StringBuffer sb = new StringBuffer();
+		        for (int i = 0; i < byteData.length; i++) {
+		         sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
+		        }
+		 
+		       // System.out.println("Digest(in hex format):: " + sb.toString());
+			user.setPassword(sb.toString());
 		}
 
 

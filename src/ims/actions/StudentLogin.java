@@ -2,6 +2,8 @@ package ims.actions;
 
 
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Map;
 
 import org.springframework.context.ApplicationContext;
@@ -22,14 +24,29 @@ public class StudentLogin extends ActionSupport{
 	private Map session;
 	
 	
-	public String login()
+	public String login() throws NoSuchAlgorithmException
 	{
 		ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
 		CheckUserToLogin checkUserToLogin = (CheckUserToLogin)context.getBean("CheckUser");
 		
 		
+		///password encrptation
+		 MessageDigest md = MessageDigest.getInstance("MD5");
+	        md.update(password.getBytes());
+	 
+	        byte byteData[] = md.digest();
+	 
+	        //convert the byte to hex format method 1
+	        StringBuffer sb = new StringBuffer();
+	        for (int i = 0; i < byteData.length; i++) {
+	         sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
+	        }
+	 
+	       // System.out.println("Digest(in hex format):: " + sb.toString());
 		
-        if(checkUserToLogin.findStudent(getUserName(),getPassword())=="registed")
+		
+		
+        if(checkUserToLogin.findStudent(getUserName(),sb.toString())=="registed")
         {
         	session = ActionContext.getContext().getSession();
 			  session.put("userName",getUserName());
@@ -37,7 +54,7 @@ public class StudentLogin extends ActionSupport{
         	 return SUCCESS;
         }
            
-        else if(checkUserToLogin.findStudent(getUserName(),getPassword())=="notRegisted")
+        else if(checkUserToLogin.findStudent(getUserName(),sb.toString())=="notRegisted")
         {
         	session = ActionContext.getContext().getSession();
 			  session.put("userName",getUserName());

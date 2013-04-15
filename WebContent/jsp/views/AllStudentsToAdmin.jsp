@@ -54,5 +54,6 @@
   
     </tr>
 </s:iterator>
+</table>
 </body>
 </html>

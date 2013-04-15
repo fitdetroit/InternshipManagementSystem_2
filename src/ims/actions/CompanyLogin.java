@@ -25,6 +25,7 @@ public class CompanyLogin extends ActionSupport{
 		ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
 		CheckUserToLogin checkUserToLogin = (CheckUserToLogin)context.getBean("CheckUser");
 		
+		// to encript password
 		 MessageDigest md = MessageDigest.getInstance("MD5");
 	        md.update(password.getBytes());
 	 
