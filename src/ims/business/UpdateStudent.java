@@ -74,6 +74,19 @@ public class UpdateStudent {
 		}
 		
 		
+		public void changeStudentPassword(String userName,User userUpdated)
+		{
+			Session session2 = getSessionFactory().openSession();
+			session2.beginTransaction();
+			User user = (User)session2.get(User.class, userName);
+			user=userUpdated;
+			session2.merge(user);
+			session2.getTransaction().commit();
+			session2.close();
+			
+		}
+		
+		
 		
 		
 

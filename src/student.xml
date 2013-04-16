@@ -53,6 +53,7 @@
 		<action name="UpdateStudent" class="ims.actions.UpdatingStudent"
 			method="updateStudent">
 			<result name="success">/jsp/RegistedStudent.jsp</result>
+			<result name="input">/jsp/EditStudent.jsp</result>
 			<result name="error">/jsp/EditStudent.jsp</result>
 		</action>
 
@@ -97,6 +98,18 @@
 		<action name="FullCompanyProfileToStudent" class="ims.actions.ViewCompany"
 			method="FullProfileToStudent">
 			<result name="success">/jsp/views/FullCompanyToStudent.jsp</result>
+			<result name="error">/jsp/StudentLogin.jsp</result>
+		</action>
+
+		<action name="updateStudentPassword" class="ims.actions.UpdatingUnRegiStudent"
+			method="changeStudentPassword">
+			<result name="success">/jsp/UnRegistedStudent.jsp</result>
+			<result name="input">/jsp/ChangeStudentPasswordForm.jsp</result>
+			<result name="error">/jsp/StudentLogin.jsp</result>
+		</action>
+
+		<action name="ToChangePasswordStudent" class="ims.actions.EditStudent">
+			<result name="success">/jsp/ChangeStudentPasswordForm.jsp</result>
 			<result name="error">/jsp/StudentLogin.jsp</result>
 		</action>
 

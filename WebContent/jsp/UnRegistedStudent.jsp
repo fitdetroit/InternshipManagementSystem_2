@@ -16,5 +16,8 @@
 <br>
 <p align="center"><a href="<s:url action="NewStudent"/>">click here to new register student</a><p>
 
+<br>
+<p align="center"><a href="<s:url action="ToChangePasswordStudent"/>">click here to change password</a><p>
+
 </body>
 </html>

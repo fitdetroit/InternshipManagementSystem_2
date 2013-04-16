@@ -74,6 +74,7 @@ public class EditStudent extends ActionSupport{
 	UpdateStudent updateStudent = (UpdateStudent) context.getBean("UpdateStudent");
 	
 	
+
 	
 	public String editDetails() {
 		
@@ -129,6 +130,21 @@ public class EditStudent extends ActionSupport{
 
 
 		return SUCCESS;
+	}
+	
+	//this method is used to check student login and redirect to the password change jsp this mthod is not 
+	//for this clz but updating unregister clz have validation so add to this clz
+	public String execute()
+	{
+		// to redirect direct access actions  without login
+		if (str==null) {			
+			return ERROR;
+				
+		}
+		
+		
+		return SUCCESS;
+		
 	}
 
 	

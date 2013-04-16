@@ -55,6 +55,9 @@ public class UpdatingStudent extends ActionSupport {
 	private String password;
 	private String password2;
 	private String conPassword;
+	
+
+
 
 	private List<Student> list = null;
 
@@ -70,6 +73,8 @@ public class UpdatingStudent extends ActionSupport {
 
 	ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
 	UpdateStudent updateStudent = (UpdateStudent) context.getBean("UpdateStudent");
+	
+	
 
 	public String updateStudent() throws NoSuchAlgorithmException {
 		
@@ -171,8 +176,17 @@ public class UpdatingStudent extends ActionSupport {
 		return SUCCESS;
 
 	}
+	
 
+	
+	
+	
+
+	
+	
+	
 	public void validate() {
+		
 
 		if (getPassword().length() != 0) {
 
@@ -186,6 +200,9 @@ public class UpdatingStudent extends ActionSupport {
 	}
 
 	// getters and setters
+	
+
+
 	public List<Student> getList() {
 		return list;
 	}
