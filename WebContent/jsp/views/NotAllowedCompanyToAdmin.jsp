@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Untitled 1</title>
+<title>Internship Management System</title>
 <style type="text/css">
 	.heading
 	{
@@ -75,7 +75,7 @@
 <p align="left"><a href="<s:url action="ToRemoveStudetProfiles"/>">Remove students From system</a></p>
 </div>
 <div style="float:left;width:85%; height: 668px;background:silver">
-<h3 align="center">Allowed Company Details</h3>
+<h3 align="center">Not Allowed Company Details</h3>
 <table border="1" align="center">
 <tr>
     <th width="200">Company Name</th>
