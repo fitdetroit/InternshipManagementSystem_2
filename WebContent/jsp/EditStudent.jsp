@@ -4,14 +4,80 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<style type="text/css">@import url(css/main.css);</style> <style> .errorMessage { color:red; }</style>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Student Registration Form</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+<style type="text/css">
+	.heading
+	{
+	color:silver;
+	font-family:Cambria;
+	font-size:30px;
+	}
+	.ldm
+	{
+	font-family:Cambria;
+	color:gray;
+	text-align:right;
+	}
+	.tags
+	{
+	color:white;
+	font-family:Cambria;
+	font-size:15px;
+	background-color:#3E3E3E;
+	text-align:right;
+	}
+	.ankers
+	{
+	font-family:Cambria;
+	font-style:italic;
+	font-size:20px;
+	color:orange;
+	}
+	.content1
+	{
+	color:black;
+	font-family:Calibri;
+	font-size:15px;
+	text-align:left;
+	background-color:#808080;
+	}
+	a:link{color:white;}
+	a:visited{color:white;}
+	a:hover{color:yellow;}
+	a:active{color:gray;}
+</style>
 </head>
-<body>
 
-<h2 align="center">Student Profile Updating Form</h2>
+<body bgcolor="gray">
+
+
+
+<div style="height: 118px; background:gray" >
+<h2 align="center">Internship Management System</h2>
+<p align="center">(registed Student)</p>
 <h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="StudentLogOut"/>">(logout)</a></h3>
+</div>
+
+
+
+<div style="float:left;width:15%; height: 672px;background=#333333">
+
+
+<p align="left"><a href="<s:url action="ViewStudent"/>">click here to view profile</a></p>
+
+<p align="left"><a href="<s:url action="ViewStudentCV"/>">click here to view cv</a></p>
+
+<p align="left"><a href="<s:url action="ViewToUpdateStudent"/>">click here to update profile</a></p>
+
+<p align="left"><a href="<s:url action="ViewCompanyProfile"/>">click here to view Company Profiles</a></p>
+</div>
+
+
+
+<div style="float:left;width:85%; height: 1400px;background:silver">
+<h2 align="center">Student Profile Updating Form</h2>
+
 <br/>
 <table align="center">
 <tr><td><h4 >Your personal Details</h4></td></tr>
@@ -36,16 +102,20 @@
 <tr><td><s:textfield  label="GPA semester 1"  name="gpaSemester1" value="%{gpaSemester1}"></s:textfield> </td></tr>
 <tr><td><s:textfield  label="GPA semester 2"  name="gpaSemester2" value="%{gpaSemester2}"></s:textfield> </td></tr>
 <tr><td><s:textfield  label="GPA semester 3"  name="gpaSemester3" value="%{gpaSemester3}"></s:textfield> </td></tr>
-<tr><td><s:textarea  label="Working Expirience"  name="workingExperience" value="%{workingExperience}"></s:textarea> </td></tr>
-<tr><td><s:textarea  label="Projects"  name="projects"></s:textarea> </td></tr>
+<tr><td><s:textarea  label="Working Expirience"  name="workingExperience" value="%{workingExperience}" cols="50" rows="10"></s:textarea> </td></tr>
+<tr><td><s:textarea  label="Projects"  name="projects" cols="50" rows="10"></s:textarea> </td></tr>
 <tr><td><s:password name="password" label="New password" value="%{password}"/></td></tr>
 <tr><td><s:password name="conPassword" label="Conform New password" value="%{conPassword}"/></td></tr>
 <tr><td><s:hidden label="Student Hidden password" name="password2" value="%{password2}"></s:hidden></td> </tr> 
-
-<tr><td align="center"><s:submit label="Save"></s:submit></td></tr>
+<tr><td><br></td></tr>
+<tr><td align="center"><s:submit label="Save" align="center"></s:submit></td></tr>
 
 </s:form>
 </td></tr>
-</table>
+</table></div>
+
+
+
 </body>
+
 </html>
