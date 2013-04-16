@@ -44,7 +44,7 @@
 <tr><td><s:select list="%{list}"   label="Company Name 3" name="appliedCompany3"></s:select> </td></tr>
 <tr><td><s:select list="%{list}"   label="Company Name 4" name="appliedCompany4"></s:select> </td></tr>
 <tr><td><s:select list="%{list}"   label="Company Name 5" name="appliedCompany5"></s:select> </td></tr>
-<tr><td align="center"><s:submit label="Save"></s:submit></td></tr>
+<tr><td align="center"><s:submit label="Save" align="center" ></s:submit></td></tr>
 
 </s:form>
 </td></tr>
