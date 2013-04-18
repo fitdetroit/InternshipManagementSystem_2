@@ -110,10 +110,22 @@ public class CompanyRegistration extends ActionSupport{
 
 	public void validate()
 	{
-		System.out.println("its here too");
+		
+		
 		if(!(getPassword().equals(getConPassword()))){
 			addFieldError("conPassword", "password not match");
 		}
+		
+		
+		//for check username is allready in use
+		ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
+		RegisterCompany registerCompany = (RegisterCompany)context.getBean("RegisterCompany");
+		if(registerCompany.cheakUsernameAllreadyAvailable(getCompanyUserName()))
+		{
+			addFieldError("companyUserName", "User Name alreay in Use please use different one");
+		}
+		
+		
 	}
 	
 

@@ -1,5 +1,9 @@
 package ims.business;
 
+import java.util.Iterator;
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
@@ -27,6 +31,28 @@ public class RegisterCompany {
 		session2.save(user);
 		session2.beginTransaction().commit();
 		session2.close();
+		
+	}
+	
+	
+	public boolean cheakUsernameAllreadyAvailable(String userName)
+	{
+		Session session = getSessionFactory().openSession();
+		String hql = " from User u where u.userName='" + userName + "'";
+		Query query = session.createQuery(hql);
+		
+		Iterator<User> it = ((org.hibernate.Query) query).iterate();
+		List<User> list = ((org.hibernate.Query) query).list();
+
+		if (list.size() > 0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+		
 		
 	}
 
