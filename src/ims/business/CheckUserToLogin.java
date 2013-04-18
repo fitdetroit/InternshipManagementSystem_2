@@ -19,11 +19,17 @@ public class CheckUserToLogin {
 		
 
 		Session session = getSessionFactory().openSession();
-		String hql = " from User u where u.userName='" + userName + "' and u.password='" + password + "'and u.type='s'";
+		// bilow 3 codes are befor used codes for login but it can attack by mysql injection
+		//String hql = " from User u where u.userName='" + userName + "' and u.password='" + password + "'and u.type='s'";
+		//Iterator<User> it = ((org.hibernate.Query) query).iterate();
+		//List<User> list = ((org.hibernate.Query) query).list();
+		
+		String hql = " from User u where u.userName=? and u.password=? and u.type='s'";
+		
 		Query query = session.createQuery(hql);
 		
-		Iterator<User> it = ((org.hibernate.Query) query).iterate();
-		List<User> list = ((org.hibernate.Query) query).list();
+
+		List<User> list = query.setString(0, userName).setString(1, password).list();
 
 		if (list.size() > 0) {
 
@@ -51,11 +57,15 @@ public class CheckUserToLogin {
 		
 
 		Session session = getSessionFactory().openSession();
-		String hql = " from User u where u.userName='" + userName + "' and u.password='" + password + "' and u.type='c'";
+		//befor code privent mysql injections
+		//String hql = " from User u where u.userName='" + userName + "' and u.password='" + password + "' and u.type='c'";
+		//Iterator<User> it = ((org.hibernate.Query) query).iterate();
+		//List<User> list = ((org.hibernate.Query) query).list();
+		String hql = " from User u where u.userName=? and u.password=? and u.type='c'";
 		Query query = session.createQuery(hql);
 		
-		Iterator<User> it = ((org.hibernate.Query) query).iterate();
-		List<User> list = ((org.hibernate.Query) query).list();
+
+		List<User> list = query.setString(0, userName).setString(1, password).list();
 
 		if (list.size() > 0) {
 
@@ -80,11 +90,15 @@ public class CheckUserToLogin {
 	public String findAdmin(String userName, String password)
 	{
 		Session session = getSessionFactory().openSession();
-		String hql = " from User u where u.userName='" + userName + "' and u.password='" + password + "' and u.type='a'";
+		//befor code privent mysql injections
+		//String hql = " from User u where u.userName='" + userName + "' and u.password='" + password + "' and u.type='a'";
+		//Iterator<User> it = ((org.hibernate.Query) query).iterate();
+		//List<User> list = ((org.hibernate.Query) query).list();
+		String hql = " from User u where u.userName=? and u.password=? and u.type='a'";
 		Query query = session.createQuery(hql);
 		
-		Iterator<User> it = ((org.hibernate.Query) query).iterate();
-		List<User> list = ((org.hibernate.Query) query).list();
+
+		List<User> list = query.setString(0, userName).setString(1, password).list();
 		
 		if (list.size() > 0) 
 		{
