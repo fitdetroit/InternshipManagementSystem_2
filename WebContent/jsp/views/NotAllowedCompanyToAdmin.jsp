@@ -58,6 +58,7 @@
 </div>
 <div style="float:left;width:15%; height: 672px;background=#333333">
 
+<p align="left"><a href="<s:url action="AdminPage"/>">Admin page</a></p>
 
 <p align="left"><a href="<s:url action="AllStudent"/>">View Student Details</a></p>
 
@@ -75,7 +76,7 @@
 <p align="left"><a href="<s:url action="ToRemoveStudetProfiles"/>">Remove students From system</a></p>
 </div>
 <div style="float:left;width:85%; height: 668px;background:silver">
-<h3 align="center">Not Allowed Company Details</h3>
+<h3 align="center">Selected Students for interview</h3>
 <table border="1" align="center">
 <tr>
     <th width="200">Company Name</th>

@@ -11,5 +11,6 @@
 <h2 align="center">Internship Management System</h2>
 
 <p align="center"><a href="<s:url action="ToRegistration"/>">to register in system</a></p>
+
 </body>
 </html>

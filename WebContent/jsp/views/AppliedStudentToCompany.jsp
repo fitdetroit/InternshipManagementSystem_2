@@ -62,13 +62,17 @@
 
 <div style="float:left;width:15%; height: 672px;background=#333333">
 
-
+<p align="left"><a href="<s:url action="CompanyPage"/>">company logged in page</a></p>
 
 <p align="left"><a href="<s:url action="ViewCompany"/>">click here to view company</a></p>
 
 <p align="left"><a href="<s:url action="ViewToUpdateCompany"/>">click here to update company</a></p>
 
 <p align="left"><a href="<s:url action="ViewStudentToCompany"/>">click here view applied students</a></p>
+
+<p align="left"><a href="<s:url action="SelectForInterview"/>">Select Students To interview</a></p>
+
+<p align="left"><a href="<s:url action="SelectedForInterview"/>">Selected Students for interview</a></p>
 
 <p align="left"><a href="<s:url action="AllowedCompanyToCompany"/>">View Allowed Company Details</a></p>
 </div>
@@ -88,7 +92,7 @@
     <th width="100">Email</th>
     <th width="100">Year of Admission</th>
     <th width="150">View full profile</th>
-    <th width="150">Select for the Interview</th>
+
 
 
     
@@ -110,6 +114,8 @@
         <td><s:hidden label="Company User Name" name="studentUserName" value="%{studentUserName}"></s:hidden></td>        
         <td><s:submit value="View" ></s:submit></td> 
         </s:form></td>
+        
+
 
   
     </tr>

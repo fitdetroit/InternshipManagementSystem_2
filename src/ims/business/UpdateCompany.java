@@ -18,7 +18,7 @@ public class UpdateCompany {
 	
 
 
-// this method is used to get details befor update (form company table)
+// this method is used to get details befor update (for company table)
 	public List<Company> getDetails(String userName)
 	{
 		

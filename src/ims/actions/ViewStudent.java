@@ -97,6 +97,44 @@ public class ViewStudent extends ActionSupport {
 		return SUCCESS;
 	}
 	
+	//this method is used get still not select for interview to specific company
+	public String notSelectedForInterview()
+	{
+		// to redirect direct access actions  without login
+		if (str==null) {
+			return ERROR;
+				
+		}
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String userName = (String) session.get("userName");
+		
+		setList(getViewStudentDataSession().notSelectForInterview(userName));
+		
+		
+		return SUCCESS;
+		
+	}
+	
+	//this method is used get still selected for interview to specific company
+	public String selctedForInterview()
+	{
+		// to redirect direct access actions  without login
+		if (str==null) {
+			return ERROR;
+				
+		}
+		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String userName = (String) session.get("userName");
+		
+		setList(getViewStudentDataSession().selectedForInterview(userName));
+		
+		return SUCCESS;
+		
+	}
+	
 	
 	public String studentCvToAdmin()
 	{
@@ -121,6 +159,9 @@ public class ViewStudent extends ActionSupport {
 		setList(getViewStudentDataSession().studentCvToCompany(getStudentUserName()));
 		return SUCCESS;
 	}
+	
+	
+
 	
 	
 	

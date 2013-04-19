@@ -4,8 +4,12 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import ims.business.CheckUserToLogin;
 
+import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -73,6 +77,23 @@ public class CompanyLogin extends ActionSupport{
 		
 		return SUCCESS;
 		
+	}
+	
+	
+	// to check login and redirect requested company loggedin page
+	public String execute()
+	{
+		HttpServletRequest request = ServletActionContext.getRequest();
+		HttpSession session2 = request.getSession();
+		String str = (String) session2.getAttribute("userName");
+		
+		// to redirect direct access actions  without login
+		if (str==null) {
+			return ERROR;
+				
+		}
+		
+		return SUCCESS;
 	}
 	
 	

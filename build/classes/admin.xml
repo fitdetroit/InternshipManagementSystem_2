@@ -133,6 +133,11 @@
 			<result name="success">/jsp/Admin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
+		
+				<action name="AdminPage" class="ims.actions.AdminLogin">
+			<result name="success">/jsp/Admin.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
 	</package>
 
 

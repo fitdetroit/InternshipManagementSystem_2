@@ -135,7 +135,9 @@ public class StudentRegistration extends ActionSupport {
 			studentCompany1.setStudentId(getStudentUserName());
 			studentCompany1.setCompanyId(name);
 			
+			
 			application1.setStudentCompany(studentCompany1);
+			application1.setState("pending");
 			
 
 			
@@ -151,6 +153,7 @@ public class StudentRegistration extends ActionSupport {
 			studentCompany2.setCompanyId(name);
 			
 			application2.setStudentCompany(studentCompany2);
+			application2.setState("pending");
 			
 			registerStudent.AppliedCompanySave(application2);
 			
@@ -164,6 +167,7 @@ public class StudentRegistration extends ActionSupport {
 			studentCompany3.setCompanyId(name);
 			
 			application3.setStudentCompany(studentCompany3);
+			application3.setState("pending");
 			
 			registerStudent.AppliedCompanySave(application3);
 			
@@ -177,6 +181,7 @@ public class StudentRegistration extends ActionSupport {
 			studentCompany4.setCompanyId(name);
 			
 			application4.setStudentCompany(studentCompany4);
+			application4.setState("pending");
 			
 			registerStudent.AppliedCompanySave(application4);
 			
@@ -190,6 +195,7 @@ public class StudentRegistration extends ActionSupport {
 			studentCompany5.setCompanyId(name);
 			
 			application5.setStudentCompany(studentCompany5);
+			application5.setState("pending");
 			
 			registerStudent.AppliedCompanySave(application5);
 			

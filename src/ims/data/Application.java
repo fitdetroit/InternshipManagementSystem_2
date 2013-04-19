@@ -14,22 +14,23 @@ public class Application {
 	@Id
 	StudentCompany studentCompany;
 
-	private String reject;
+	private String state;
 	
 	
 	
 	
 	
 	// getters and setters
-	public String getReject() {
-		return reject;
-	}
-	public void setReject(String reject) {
-		this.reject = reject;
-	}
+
 	
 	public StudentCompany getStudentCompany() {
 		return studentCompany;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
 	}
 	public void setStudentCompany(StudentCompany studentCompany) {
 		this.studentCompany = studentCompany;

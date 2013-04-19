@@ -5,6 +5,7 @@ import java.util.List;
 import ims.data.Application;
 import ims.data.Company;
 import ims.data.Student;
+import ims.data.StudentCompany;
 import ims.data.User;
 
 import org.hibernate.Query;
@@ -26,6 +27,9 @@ public class CreateAndDeleteStudent {
 		session2.close();
 	}
 	
+	
+	
+	
 	// this method is used to delete specific student form system
 	public void deleteStudentProfile(String userName)
 	{
@@ -43,7 +47,37 @@ public class CreateAndDeleteStudent {
 		session2.delete(user);
 		session2.getTransaction().commit();
 		session2.close();
+		
+
+		
+		
+		////to delete relevant  student in application table
+		Session session5 = getSessionFactory().openSession();
+		String SQL_QUERY3 = "from Application app where app.studentCompany.studentId='"+userName+"'";
+		Query query3 = session5.createQuery(SQL_QUERY3);
+		List<Application> list3 = ((org.hibernate.Query) query3).list();
+		
+		
+		Session session6 = getSessionFactory().openSession();
+		session6.beginTransaction();
+		for(int x=0;x<list3.size();x++)
+		{
+			
+			
+				Application application = (Application)session6.get(Application.class, list3.get(x).getStudentCompany());
+				if(application!=null)
+				session6.delete(application);
+				
+			
+
+			
+		}
+		session6.getTransaction().commit();
+		session6.close();
 	}
+	
+	
+	
 	
 // this method is used to delete all student form system	
 	public void deleteAllStudentFromSystem()
@@ -113,6 +147,9 @@ public class CreateAndDeleteStudent {
 	}
 
 
+	
+	
+	
 	
 	// getters and setters
 	public SessionFactory getSessionFactory() {

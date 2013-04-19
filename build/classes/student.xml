@@ -113,6 +113,11 @@
 			<result name="error">/jsp/StudentLogin.jsp</result>
 		</action>
 
+		<action name="AllowedStudentPage" class="ims.actions.StudentLogin">
+			<result name="success">/jsp/RegistedStudent.jsp</result>
+			<result name="error">/jsp/StudentLogin.jsp</result>
+		</action>
+
 
 	</package>
 

@@ -54,6 +54,10 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 	<bean id="CreateStudent" class="ims.business.CreateAndDeleteStudent">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+	
+		<bean id="UpdateApplication" class="ims.business.UpdateApplication">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
 
 
 

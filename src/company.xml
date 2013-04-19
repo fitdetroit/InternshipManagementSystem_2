@@ -79,24 +79,48 @@
 			<result name="NoAccess">/jsp/AllowedCompany.jsp</result>
 			<result name="error">/jsp/CompanyLogin.jsp</result>
 		</action>
-		
-		
+
+
 		<action name="StudentCvToCompany" class="ims.actions.ViewStudent"
 			method="studentCvToCompany">
 			<result name="success">/jsp/views/AppliedStudentCvToCompany.jsp</result>
 			<result name="error">/jsp/CompanyLogin.jsp</result>
 		</action>
-		
-				<action name="AllowedCompanyToCompany" class="ims.actions.ViewCompany"
+
+		<action name="AllowedCompanyToCompany" class="ims.actions.ViewCompany"
 			method="allowedCompanyToCompany">
 			<result name="success">/jsp/views/AllowedCompanyToCompany.jsp</result>
 			<result name="error">/jsp/CompanyLogin.jsp</result>
 		</action>
-		
-				<action name="FullCompanyProfileToCompany" class="ims.actions.ViewCompany"
+
+		<action name="FullCompanyProfileToCompany" class="ims.actions.ViewCompany"
 			method="FullProfileToCompany">
 			<result name="success">/jsp/views/FullCompanyToCompany.jsp</result>
 			<result name="error">/jsp/StudentLogin.jsp</result>
 		</action>
+
+		<action name="CompanyPage" class="ims.actions.CompanyLogin">
+			<result name="success">/jsp/AllowedCompany.jsp</result>
+			<result name="error">/jsp/StudentLogin.jsp</result>
+		</action>
+
+		<action name="SelectForInterview" class="ims.actions.ViewStudent"
+			method="notSelectedForInterview">
+			<result name="success">/jsp/views/NotSelectForInterviewToCompany.jsp</result>
+			<result name="error">/jsp/StudentLogin.jsp</result>
+		</action>
+		
+		<action name="SelectedForInterview" class="ims.actions.ViewStudent"
+			method="selctedForInterview">
+			<result name="success">/jsp/views/SelectedForInterviewToCompnay.jsp</result>
+			<result name="error">/jsp/StudentLogin.jsp</result>
+		</action>
+		
+			<action name="UpdateStateToInterview" class="ims.actions.UpdatingApplication"
+			method="UpdateStateToInterview">
+			<result name="success" type="redirect">SelectForInterview</result>
+			<result name="error">/jsp/StudentLogin.jsp</result>
+		</action>
+
 	</package>
 </struts>
