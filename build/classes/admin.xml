@@ -7,9 +7,34 @@
 <struts>
 
 	<package name="adminLogin" namespace="/Administrator" extends="struts-default">
-		<action name="AdminLogin">
-			<result>/jsp/AdminLogin.jsp</result>
+		<action name="AdminLogin" class="ims.actions.CheckSession">
+			<result name="success">/jsp/AdminLogin.jsp</result>
+			<result name="admin">jsp/Admin.jsp</result>
+			<result name="regiStudent" type="redirect">../student/regiStudent</result>
+			<result name="notRegiStudent" type="redirect">../student/notRegiStudent</result>
+			<result name="allowedCompany" type="redirect">../company/allowedCompany</result>
+			<result name="notAllowedCompany" type="redirect">../company/notAllowedCompany</result>
 		</action>
+	</package>
+
+	<package name="StudentRedirect" namespace="/student" extends="struts-default">
+		<action name="regiStudent">
+			<result>/jsp/RegistedStudent.jsp</result>
+		</action>
+		<action name="notRegiStudent">
+			<result>jsp/UnRegistedStudent.jsp</result>
+		</action>
+
+	</package>
+
+	<package name="CompanyRedirect" namespace="/company" extends="struts-default">
+		<action name="allowedCompany">
+			<result>../jsp/AllowedCompany.jsp</result>
+		</action>
+		<action name="notAllowedCompany">
+			<result>../jsp/NotAllowedCompany.jsp</result>
+		</action>
+
 	</package>
 
 	<package name="admin" namespace="/Administrator" extends="struts-default">
@@ -133,8 +158,8 @@
 			<result name="success">/jsp/Admin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
-		
-				<action name="AdminPage" class="ims.actions.AdminLogin">
+
+		<action name="AdminPage" class="ims.actions.AdminLogin">
 			<result name="success">/jsp/Admin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>

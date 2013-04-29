@@ -56,25 +56,25 @@
 <div style="height: 118px; background:gray" >
 <h2 align="center">Internship Management System</h2>
 <P align="center">(allowed company)</P>
-<h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="CompanyLogOut"/>">(logout)</a></h3></div>
+<h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="company/CompanyLogOut"/>">(logout)</a></h3></div>
 
 
 
 <div style="float:left;width:15%; height: 672px;background=#333333">
 
-<p align="left"><a href="<s:url action="CompanyPage"/>">company logged in page</a></p>
+<p align="left"><a href="<s:url action="company/CompanyPage"/>">company logged in page</a></p>
 
-<p align="left"><a href="<s:url action="ViewCompany"/>">click here to view company</a></p>
+<p align="left"><a href="<s:url action="company/ViewCompany"/>">click here to view company</a></p>
 
-<p align="left"><a href="<s:url action="ViewToUpdateCompany"/>">click here to update company</a></p>
+<p align="left"><a href="<s:url action="company/ViewToUpdateCompany"/>">click here to update company</a></p>
 
-<p align="left"><a href="<s:url action="ViewStudentToCompany"/>">click here view applied students</a></p>
+<p align="left"><a href="<s:url action="company/ViewStudentToCompany"/>">click here view applied students</a></p>
 
-<p align="left"><a href="<s:url action="SelectForInterview"/>">Select Students To interview</a></p>
+<p align="left"><a href="<s:url action="company/SelectForInterview"/>">Select Students To interview</a></p>
 
-<p align="left"><a href="<s:url action="SelectedForInterview"/>">Selected Students for interview</a></p>
+<p align="left"><a href="<s:url action="company/SelectedForInterview"/>">Selected Students for interview</a></p>
 
-<p align="left"><a href="<s:url action="AllowedCompanyToCompany"/>">View Allowed Company Details</a></p>
+<p align="left"><a href="<s:url action="company/AllowedCompanyToCompany"/>">View Allowed Company Details</a></p>
 </div>
 
 
@@ -82,13 +82,13 @@
 <div style="float:left;width:85%; height: 668px;background:silver">
 <h2 align="center">Company Pivilages</h2>
 <br>
-<p align="center"><a href="<s:url action="ViewCompany"/>">click here to view company</a></p>
+<p align="center"><a href="<s:url action="company/ViewCompany"/>">click here to view company</a></p>
 <br>
-<p align="center"><a href="<s:url action="ViewToUpdateCompany"/>">click here to update company</a></p>
+<p align="center"><a href="<s:url action="company/ViewToUpdateCompany"/>">click here to update company</a></p>
 <br>
-<p align="center"><a href="<s:url action="ViewStudentToCompany"/>">click here view applied students</a></p>
+<p align="center"><a href="<s:url action="company/ViewStudentToCompany"/>">click here view applied students</a></p>
 <br>
-<p align="center"><a href="<s:url action="AllowedCompanyToCompany"/>">View Allowed Company Details</a></p>
+<p align="center"><a href="<s:url action="company/AllowedCompanyToCompany"/>">View Allowed Company Details</a></p>
 </div>
 
 

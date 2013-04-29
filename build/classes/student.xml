@@ -7,8 +7,13 @@
 <struts>
 
 	<package name="studentLogin" extends="struts-default">
-		<action name="StudentLogin">
-			<result>/jsp/StudentLogin.jsp</result>
+		<action name="StudentLogin" class="ims.actions.CheckSession">
+			<result name="success">/jsp/StudentLogin.jsp</result>
+			<result name="admin">jsp/Admin.jsp</result>
+			<result name="regiStudent">jsp/RegistedStudent.jsp</result>
+			<result name="notRegiStudent">jsp/UnRegistedStudent.jsp</result>
+			<result name="allowedCompany">jsp/AllowedCompany.jsp</result>
+			<result name="notAllowedCompany">jsp/NotAllowedCompany.jsp</result>
 		</action>
 	</package>
 

@@ -54,6 +54,7 @@ public class StudentLogin extends ActionSupport{
         {
         	session = ActionContext.getContext().getSession();
 			  session.put("userName",getUserName());
+			  session.put("type","regiStudent");
         	
         	 return SUCCESS;
         }
@@ -62,6 +63,7 @@ public class StudentLogin extends ActionSupport{
         {
         	session = ActionContext.getContext().getSession();
 			  session.put("userName",getUserName());
+			  session.put("type","notRegiStudent");
         	
         	return "UnRegisted";
         }

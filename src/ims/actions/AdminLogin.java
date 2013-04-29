@@ -47,6 +47,7 @@ public class AdminLogin extends ActionSupport{
 		{
         	session = ActionContext.getContext().getSession();
 			  session.put("userName",getUserName());
+			  session.put("type","admin");
 			return SUCCESS;
 			
 		}

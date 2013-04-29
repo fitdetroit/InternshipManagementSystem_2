@@ -48,6 +48,7 @@ public class CompanyLogin extends ActionSupport{
         {
         	session = ActionContext.getContext().getSession();
 			  session.put("userName",getUserName());
+			  session.put("type","allowedCompany");
 
         	 return SUCCESS;
         }
@@ -56,6 +57,7 @@ public class CompanyLogin extends ActionSupport{
         {
         	session = ActionContext.getContext().getSession();
 			  session.put("userName",getUserName());
+			  session.put("type","notAllowedCompany");
         	
         	return "UnRegisted";
         }
