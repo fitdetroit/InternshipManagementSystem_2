@@ -33,17 +33,17 @@ public class CompanyRegistration extends ActionSupport{
 	private String conPassword;
 	private boolean allowed;
 	
-	
-	
-
 	Company company = new Company();
 	User user = new User();
-	
-	
+		
 	//to upload profile picture
 	private File ProfilePicture;
 	private String ProfilePictureFileName;
 	private String ProfilePictureContentType;
+	
+	
+	
+	
 	
 	public String registration() throws NoSuchAlgorithmException
 	{
@@ -58,6 +58,10 @@ public class CompanyRegistration extends ActionSupport{
 			System.out.println("its not working");
 		}
 		
+	
+		
+		
+		// set values to new company object
 		company.setCompanyUserName(getCompanyUserName());
 		company.setCompanyName(getCompanyName());
 		company.setCompanyTelephone(getCompanyTelephone());
@@ -71,8 +75,7 @@ public class CompanyRegistration extends ActionSupport{
 		
 		///password encrptation
 		 MessageDigest md = MessageDigest.getInstance("MD5");
-	        md.update(password.getBytes());
-	 
+	        md.update(password.getBytes());	 
 	        byte byteData[] = md.digest();
 	 
 	        //convert the byte to hex format method 1
@@ -82,11 +85,17 @@ public class CompanyRegistration extends ActionSupport{
 	        }
 	 
 	       // System.out.println("Digest(in hex format):: " + sb.toString());
-		
+	
+	 
+	        
+	    // set values to new user object
 		user.setUserName(getCompanyUserName());
-		//user.setPassword(getPassword());
 		user.setPassword(sb.toString());
 		user.setType('c');
+		
+	
+		
+		
 		
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
@@ -101,6 +110,7 @@ public class CompanyRegistration extends ActionSupport{
 		 Map session;
      	session = ActionContext.getContext().getSession();
 			  session.put("userName",getCompanyUserName());
+			  session.put("type","notAllowedCompany");
 		
 		return SUCCESS;
 	}
@@ -108,14 +118,15 @@ public class CompanyRegistration extends ActionSupport{
 	
 	
 
+	// this validate method is used to validate passwod and confrom passwod and check username allready in database
 	public void validate()
 	{
-		
-		
+			
 		if(!(getPassword().equals(getConPassword()))){
 			addFieldError("conPassword", "password not match");
 		}
 		
+	
 		
 		//for check username is allready in use
 		ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
@@ -138,8 +149,7 @@ public class CompanyRegistration extends ActionSupport{
 	
 	
 	
-	// getters and setters
-	
+	// getters and setters	
 	public Company getCompany() {
 		return company;
 	}

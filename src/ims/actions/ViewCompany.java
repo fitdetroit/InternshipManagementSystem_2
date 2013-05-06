@@ -33,6 +33,8 @@ public class ViewCompany extends ActionSupport{
 	private String companyUserName;
 	
 
+	
+	// this method is used to get allowd company list view to admin
 	public String allowedCompanyToAdmin()
 	{
 		// to redirect direct access actions  without login

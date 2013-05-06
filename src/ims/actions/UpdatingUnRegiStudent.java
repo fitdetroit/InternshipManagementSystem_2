@@ -27,8 +27,6 @@ public class UpdatingUnRegiStudent extends ActionSupport{
 	User user = new User();
 	
 	private String studentUserName;
-
-
 	private String password;
 	private String conPassword;
 	
@@ -39,7 +37,7 @@ public class UpdatingUnRegiStudent extends ActionSupport{
 	
 	
 
-	
+	// this method is used to change password by unregisterd student
 	public String changeStudentPassword() throws NoSuchAlgorithmException
 	{
 		// to redirect direct access actions  without login
@@ -80,6 +78,8 @@ public class UpdatingUnRegiStudent extends ActionSupport{
 	}
 	
 	
+	
+	//password and confrom passowrd check by this method
 	public void validate() {
 		
 		if(getPassword().length()==0)

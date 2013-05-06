@@ -54,7 +54,7 @@
 <div style="height: 118px; background:gray" >
 <h2 align="center">Internship Management System</h2>
 <h2 align="center">Administrator</h2>
-<h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="AdminLogOut"/>">(logout)</a></h3>
+<h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="Administrator/AdminLogOut"/>">(logout)</a></h3>
 </div>
 <div style="float:left;width:15%; height: 672px;background=#333333">
 

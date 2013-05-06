@@ -148,6 +148,8 @@ public class ViewStudent extends ActionSupport {
 		return SUCCESS;
 	}
 	
+	
+	
 	public String studentCvToCompany()
 	{
 		// to redirect direct access actions  without login

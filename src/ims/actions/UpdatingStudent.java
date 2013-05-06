@@ -76,6 +76,8 @@ public class UpdatingStudent extends ActionSupport {
 	
 	
 
+	
+	// this method is used to update student profile 
 	public String updateStudent() throws NoSuchAlgorithmException {
 		
 		// to redirect direct access actions  without login
@@ -181,10 +183,6 @@ public class UpdatingStudent extends ActionSupport {
 	
 	
 	
-
-	
-	
-	
 	public void validate() {
 		
 
@@ -199,9 +197,11 @@ public class UpdatingStudent extends ActionSupport {
 
 	}
 
-	// getters and setters
 	
-
+	
+	
+	
+	// getters and setters
 
 	public List<Student> getList() {
 		return list;

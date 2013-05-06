@@ -35,8 +35,6 @@ public class UpdatingCompany extends ActionSupport{
 	private String conPassword;
 	private boolean allowed;
 	
-	
-
 
 	private Company company;
 	User user = new User();
@@ -51,6 +49,9 @@ public class UpdatingCompany extends ActionSupport{
 	
 
 	
+	
+	
+	// this method is used to update company profile 
 	public String updateCompany() throws NoSuchAlgorithmException
 	{
 		// to redirect direct access actions  without login
@@ -95,6 +96,7 @@ public class UpdatingCompany extends ActionSupport{
 		}
 		else
 		{
+			// password encriptation
 			 MessageDigest md = MessageDigest.getInstance("MD5");
 		        md.update(password.getBytes());
 		 
@@ -126,14 +128,9 @@ public class UpdatingCompany extends ActionSupport{
 		
 	}
 	
-	public List<Company> getList() {
-		return list;
-	}
-
-	public void setList(List<Company> list) {
-		this.list = list;
-	}
-
+	
+	
+ // this method is used to allow company by admin
 	public String AllowCompany()
 	{
 		// to redirect direct access actions  without login
@@ -148,7 +145,7 @@ public class UpdatingCompany extends ActionSupport{
 	}
 	
 	
-	
+	// this method is used to unregister company by admin
 	public String UnRegister()
 	{
 		// to redirect direct access actions  without login
@@ -165,6 +162,7 @@ public class UpdatingCompany extends ActionSupport{
 	
 	
 	
+	// this mehtod is used to delete company by admin
 	public String DeleteCompany()
 	{
 		// to redirect direct access actions  without login
@@ -179,6 +177,8 @@ public class UpdatingCompany extends ActionSupport{
 		
 	}
 	
+	
+	// this method is used to allow view student cv To company
 	public String AllowCvToCompany()
 	{
 		// to redirect direct access actions  without login
@@ -193,6 +193,8 @@ public class UpdatingCompany extends ActionSupport{
 		return SUCCESS;
 	}
 	
+	
+	// this method is used to remove student cv form company
 	public String RemoveCvFromCompany()
 	{
 		// to redirect direct access actions  without login
@@ -208,6 +210,8 @@ public class UpdatingCompany extends ActionSupport{
 	}
 	
 	
+	
+// this method is used to validate new password and confrom password in updating form	
 	public void validate()
 	{
 		
@@ -245,6 +249,15 @@ public class UpdatingCompany extends ActionSupport{
 	
 	
 	// gettes and setters
+	
+	public List<Company> getList() {
+		return list;
+	}
+
+	public void setList(List<Company> list) {
+		this.list = list;
+	}
+
 	public String getPassword2() {
 		return password2;
 	}

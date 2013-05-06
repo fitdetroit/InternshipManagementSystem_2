@@ -24,7 +24,10 @@ public class NewStudent extends ActionSupport{
 	HttpServletRequest request = ServletActionContext.getRequest();
 	HttpSession session = request.getSession();
 	String str = (String) session.getAttribute("userName");
+
 	
+	
+	// this method used to show compnay details to unregisted student
 	public String execute()
 	{
 		// to redirect direct access actions  without login

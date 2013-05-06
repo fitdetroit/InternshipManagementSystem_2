@@ -18,7 +18,7 @@ public class UpdateCompany {
 	
 
 
-// this method is used to get details befor update (for company table)
+// this method is used to get details before update (for company table)
 	public List<Company> getDetails(String userName)
 	{
 		
@@ -34,7 +34,7 @@ public class UpdateCompany {
 		
 	}
 
-	// this method is used to get deatls befor update (for user table )
+	// this method is used to get deatils before update (for user table )
 	public List<User> getDetails2(String userName)
 	{
 		

@@ -18,6 +18,7 @@ import ims.data.User;
 
 public class StudentRegistration extends ActionSupport {
 	
+	private Student student = new Student();
 	
 	private String studentUserName;
 	private String nameInFull;
@@ -49,13 +50,6 @@ public class StudentRegistration extends ActionSupport {
 	private String appliedCompany3;
 	private String appliedCompany4;
 	private String appliedCompany5;
-
-	//to upload profile picture
-	private File ProfilePicture;
-	private String ProfilePictureFileName;
-	private String ProfilePictureContentType;
-
-	private Student student = new Student();
 	
 	
 	StudentCompany studentCompany1 = new StudentCompany();
@@ -71,9 +65,14 @@ public class StudentRegistration extends ActionSupport {
 	Application application5 = new Application();
 	
 
+	//to upload profile picture
+	private File ProfilePicture;
+	private String ProfilePictureFileName;
+	private String ProfilePictureContentType;
 
 
-	// private User user = new User();
+	
+
 
 	public String registration() {
 		
@@ -86,12 +85,17 @@ public class StudentRegistration extends ActionSupport {
 		else {
 			System.out.println("its not working");
 		}
+		
+		
+		
+		
 
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
 		RegisterStudent registerStudent = (RegisterStudent) context.getBean("RegisterStudent");
 		
-		
+
+		// set velues to new student object
 		getStudent().setStudentUserName(getStudentUserName());
 		getStudent().setNameInFull(getNameInFull());
 		getStudent().setNameWithInitials(getNameWithInitials());
@@ -122,9 +126,13 @@ public class StudentRegistration extends ActionSupport {
 		getStudent().setAppliedCompany3(getAppliedCompany3());
 		getStudent().setAppliedCompany4(getAppliedCompany4());
 		getStudent().setAppliedCompany5(getAppliedCompany5());
-
-		registerStudent.saveStudent(student);
 		
+
+		// to save student in student table 
+		registerStudent.saveStudent(student);
+	
+		
+		// folowing several if eles statements used to save applied company list in appliaction table
 		
 		if(!getAppliedCompany1().equals("NOT Select"))
 		{
@@ -204,6 +212,9 @@ public class StudentRegistration extends ActionSupport {
 		return SUCCESS;
 
 	}
+	
+	
+	
 	
 	
 	

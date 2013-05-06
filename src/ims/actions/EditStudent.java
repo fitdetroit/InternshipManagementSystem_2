@@ -95,6 +95,7 @@ public class EditStudent extends ActionSupport{
 		
 		
 
+		//set action class varibale form dababase to view in jsp
 		setStudentUserName(student.getStudentUserName());
 		setNameInFull(student.getNameInFull());
 		setNameWithInitials(student.getNameWithInitials());
@@ -148,8 +149,17 @@ public class EditStudent extends ActionSupport{
 	}
 
 	
+
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	//getters and setters	
 	public List<User> getList2() {
 		return list2;
 	}
@@ -164,7 +174,6 @@ public class EditStudent extends ActionSupport{
 
 
 
-	//getters and setters
 	
 	public User getUser() {
 		return user;

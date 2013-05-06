@@ -24,6 +24,8 @@ public class HandleCv extends ActionSupport{
 	ViewCompanyDataSession viewCompanyDataSession = (ViewCompanyDataSession) context.getBean("ViewCompany");
 	
 	
+	
+
 	public String allowAndRemoveCv()
 	{
 		setList(viewCompanyDataSession.CvNotRecivedCompanyToAdmin());

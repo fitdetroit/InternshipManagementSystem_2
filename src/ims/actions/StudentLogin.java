@@ -27,6 +27,9 @@ public class StudentLogin extends ActionSupport{
 	
 	private Map session;
 	
+
+	
+	
 	
 	public String login() throws NoSuchAlgorithmException
 	{
@@ -36,8 +39,7 @@ public class StudentLogin extends ActionSupport{
 		
 		///password encrptation
 		 MessageDigest md = MessageDigest.getInstance("MD5");
-	        md.update(password.getBytes());
-	 
+	        md.update(password.getBytes());	 
 	        byte byteData[] = md.digest();
 	 
 	        //convert the byte to hex format method 1
@@ -52,6 +54,7 @@ public class StudentLogin extends ActionSupport{
 		
         if(checkUserToLogin.findStudent(getUserName(),sb.toString())=="registed")
         {
+        	// create new session for registed student
         	session = ActionContext.getContext().getSession();
 			  session.put("userName",getUserName());
 			  session.put("type","regiStudent");
@@ -61,6 +64,7 @@ public class StudentLogin extends ActionSupport{
            
         else if(checkUserToLogin.findStudent(getUserName(),sb.toString())=="notRegisted")
         {
+        	// create new session for unregisted student
         	session = ActionContext.getContext().getSession();
 			  session.put("userName",getUserName());
 			  session.put("type","notRegiStudent");
@@ -73,11 +77,14 @@ public class StudentLogin extends ActionSupport{
 		
 	}
 	
+
 	
+	// logout method
 	public String logOut()
 	{
 		session = ActionContext.getContext().getSession();
 		session.remove("UserName");
+		session.remove("type");
 		  if (session instanceof org.apache.struts2.dispatcher.SessionMap)
 		  {
 			  ((org.apache.struts2.dispatcher.SessionMap) session).invalidate();
@@ -87,6 +94,9 @@ public class StudentLogin extends ActionSupport{
 		return SUCCESS;
 		
 	}
+	
+	
+	
 	
 	// to check login and redirect requested student loggedin page
 	public String execute()

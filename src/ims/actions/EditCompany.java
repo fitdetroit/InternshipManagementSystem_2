@@ -19,22 +19,14 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class EditCompany extends ActionSupport {
+	
+	
 
 	private List<Company> list = null;
 	private List<User> list2 = null;
 	private Company company;
 	private User user;
-
-	Map session;
-
-	// to redirect direct access actions without login
-	HttpServletRequest request = ServletActionContext.getRequest();
-	HttpSession session2 = request.getSession();
-	String str = (String) session2.getAttribute("userName");
-
-	ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
-	UpdateCompany updateCompany = (UpdateCompany) context.getBean("UpdateCompany");
-
+	
 	// company details to Edit company form
 	private String companyUserName;
 	private String companyName;
@@ -49,8 +41,23 @@ public class EditCompany extends ActionSupport {
 	private String conPassword;
 	private boolean allowed;
 
+	Map session;
+	
+	ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
+	UpdateCompany updateCompany = (UpdateCompany) context.getBean("UpdateCompany");
+	
+	
+
+	// to redirect direct access actions without login
+	HttpServletRequest request = ServletActionContext.getRequest();
+	HttpSession session2 = request.getSession();
+	String str = (String) session2.getAttribute("userName");
+
+
+
 	// this method call to get data form the database to view in form to edit
 	public String editDetails() {
+		
 		// to redirect direct access actions  without login
 		if (str==null) {
 			return ERROR;
@@ -65,7 +72,7 @@ public class EditCompany extends ActionSupport {
 		company = list.get(0);
 		user = list2.get(0);
 
-		// set action class variable form database
+		// set action class variable form database to view in jsp
 		setCompanyUserName(company.getCompanyUserName());
 		setCompanyName(company.getCompanyName());
 		setCompanyTelephone(company.getCompanyTelephone());
@@ -82,6 +89,11 @@ public class EditCompany extends ActionSupport {
 		return SUCCESS;
 	}
 
+	
+	
+	
+	
+	
 	// getters and setters
 
 	public String getPassword2() {

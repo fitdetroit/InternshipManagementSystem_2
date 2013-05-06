@@ -22,13 +22,19 @@ ServletResponseAware, ServletContextAware{
 	private String userName;
     private HttpServletResponse servletResponse;
     private ServletContext servletContext;
+    
+    
     public void setServletResponse(HttpServletResponse servletResponse) {
         this.servletResponse = servletResponse;
     }
     public void setServletContext(ServletContext servletContext) {
         this.servletContext = servletContext;
     }
+    
+    
+    // this method is used to get user Profile picter user canbe Student or company
     public InputStream getInputStream() throws Exception {
+    	
         String contentType = "image/gif";
         String imageDirectory = servletContext.getRealPath("/WEB-INF/data");
         // The images can be a jpg or gif, 
@@ -55,6 +61,11 @@ ServletResponseAware, ServletContextAware{
         } 
         return null;
     }
+    
+    
+   
+    
+    
     
     
     

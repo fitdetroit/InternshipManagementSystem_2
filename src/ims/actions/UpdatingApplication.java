@@ -28,6 +28,10 @@ public class UpdatingApplication extends ActionSupport{
 	HttpSession session2=request.getSession();
 	String str=(String)session2.getAttribute("userName");
 	
+
+	
+	
+	
 	
 	// this method is used to update selected student state to interview
 	public String UpdateStateToInterview()

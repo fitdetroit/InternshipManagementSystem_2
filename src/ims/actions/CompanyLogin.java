@@ -46,6 +46,7 @@ public class CompanyLogin extends ActionSupport{
 		
         if(checkUserToLogin.findCompany(getUserName(),sb.toString())=="allowed")
         {
+        	// create session for logged in allowed company
         	session = ActionContext.getContext().getSession();
 			  session.put("userName",getUserName());
 			  session.put("type","allowedCompany");
@@ -55,6 +56,7 @@ public class CompanyLogin extends ActionSupport{
            
         else if(checkUserToLogin.findCompany(getUserName(),sb.toString())=="notallowed")
         {
+        	// create session for logged in not allowed company
         	session = ActionContext.getContext().getSession();
 			  session.put("userName",getUserName());
 			  session.put("type","notAllowedCompany");
@@ -67,10 +69,15 @@ public class CompanyLogin extends ActionSupport{
 		
 	}
 	
+	
+	
+	
+	// logout function and session remove in this function
 	public String logOut()
 	{
 		session = ActionContext.getContext().getSession();
 		session.remove("UserName");
+		session.remove("type");
 		  if (session instanceof org.apache.struts2.dispatcher.SessionMap)
 		  {
 			  ((org.apache.struts2.dispatcher.SessionMap) session).invalidate();
@@ -80,6 +87,9 @@ public class CompanyLogin extends ActionSupport{
 		return SUCCESS;
 		
 	}
+	
+	
+	
 	
 	
 	// to check login and redirect requested company loggedin page
@@ -97,6 +107,9 @@ public class CompanyLogin extends ActionSupport{
 		
 		return SUCCESS;
 	}
+	
+	
+	
 	
 	
 	
