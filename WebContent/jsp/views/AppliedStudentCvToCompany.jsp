@@ -55,7 +55,7 @@
 <table width="100%" border="0" style="border-collapse:collapse; height: 1346px; border-top-style: none; border-top-color: inherit; border-top-width: 0px;">
 	<tr>
 		<td class="heading" colspan="3" style="background-image:url('picture1.jpg');background-position:left;background-repeat:inherit;">Curriculum Vitae </td>
-		<td><h3 align="right" style="color:white">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="CompanyLogOut"/>">(logout)</a></h3></td>
+		<td><h3 align="right" style="color:white">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="../LogOut"/>">(logout)</a></h3></td>
 	</tr>
 
 	<tr>

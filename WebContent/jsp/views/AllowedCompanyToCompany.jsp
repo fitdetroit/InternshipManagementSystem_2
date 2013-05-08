@@ -56,7 +56,7 @@
 <div style="height: 118px; background:gray" >
 <h2 align="center">Internship Management System</h2>
 <h2 align="center">Company</h2>
-<h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="CompanyLogOut"/>">(logout)</a></h3></div>
+<h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="../LogOut"/>">(logout)</a></h3></div>
 
 
 

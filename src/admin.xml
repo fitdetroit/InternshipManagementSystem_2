@@ -38,13 +38,13 @@
 	</package>
 
 	<package name="admin" namespace="/Administrator" extends="struts-default">
-		<action name="CheckAdmin" class="ims.actions.AdminLogin"
+		<action name="CheckAdmin" class="ims.actions.Login"
 			method="login">
-			<result name="success">/jsp/Admin.jsp</result>
+			<result name="admin">/jsp/Admin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
-		<action name="AdminLogOut" class="ims.actions.AdminLogin"
-			method="LogOut">
+		<action name="AdminLogOut" class="ims.actions.Login"
+			method="logOut">
 			<result name="success">/jsp/AdminLogin.jsp</result>
 
 		</action>
@@ -159,7 +159,7 @@
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
 
-		<action name="AdminPage" class="ims.actions.AdminLogin">
+		<action name="AdminPage" class="ims.actions.Login">
 			<result name="success">/jsp/Admin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>

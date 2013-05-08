@@ -6,7 +6,28 @@
 
 <struts>
 	<constant name="struts.devMode" value="true" /> <!-- set to false for prod -->
-
+	<package name="Login" extends="struts-default" namespace="/">
+		<action name="Login" class="ims.actions.CheckSession">
+			<result name="success" >/jsp/Login.jsp</result>
+			<result name="admin">jsp/Admin.jsp</result>
+			<result name="regiStudent">jsp/RegistedStudent.jsp</result>
+			<result name="notRegiStudent">jsp/UnRegistedStudent.jsp</result>
+			<result name="allowedCompany">jsp/AllowedCompany.jsp</result>
+			<result name="notAllowedCompany">jsp/NotAllowedCompany.jsp</result>
+		</action>
+			<action name="CheckLogin" class="ims.actions.Login"
+			method="login">
+			<result name="regiStudent">/jsp/RegistedStudent.jsp</result>
+			<result name="notRegiStudent">/jsp/UnRegistedStudent.jsp</result>
+			<result name="allowedCompany">/jsp/AllowedCompany.jsp</result>
+			<result name="notAllowedCompany">/jsp/NotAllowedCompany.jsp</result>		
+			<result name="error">/jsp/Login.jsp</result>
+		</action>
+			<action name="LogOut" class="ims.actions.Login"
+			method="logOut">
+			<result name="success">/jsp/Login.jsp</result>
+		</action>
+	</package>
 
 	<include file="student.xml"></include>
 	<include file="company.xml"></include>
