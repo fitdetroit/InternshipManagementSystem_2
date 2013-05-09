@@ -16,6 +16,7 @@
 
 		<tr><td><s:textfield label="UserName" name="userName" /></td> </tr>
 		<tr><td><s:password label="Password" name="password" /></td> </tr>
+		<tr><td><s:hidden  name="loginPageType" value="admin"></s:hidden></td> </tr>
 		<tr><td><s:submit label="Login" value="Login"></s:submit></td> </tr>
 
 	</s:form></td></tr>

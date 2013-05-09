@@ -19,8 +19,10 @@ import com.opensymphony.xwork2.ActionSupport;
 public class ViewStudent extends ActionSupport {
 
 	private List<Student> list = null;
+	private List<String> companyNames= null;
 	
-	
+
+
 	// to get informatin to admin and company
 	private String studentUserName;
 
@@ -46,8 +48,11 @@ public class ViewStudent extends ActionSupport {
 		}
 		
 		setList(getViewStudentDataSession().allStudentToAdmin());
+		
 		return SUCCESS;
 	}
+	
+	
 
 	
 	
@@ -65,6 +70,7 @@ public class ViewStudent extends ActionSupport {
 		String userName = (String) session.get("userName");
 		
 		list=viewStudentDataSession.viewStudentToStudent(userName);
+		companyNames=viewStudentDataSession.getStudentAppliedCompanyNames(userName);
 		
 		return SUCCESS;
 		
@@ -145,6 +151,9 @@ public class ViewStudent extends ActionSupport {
 		}
 		
 		setList(getViewStudentDataSession().studentCvToAdmin(getStudentUserName()));
+		//get student alplied company names to the companyNames list
+		companyNames=viewStudentDataSession.getStudentAppliedCompanyNames(getStudentUserName());
+		
 		return SUCCESS;
 	}
 	
@@ -174,6 +183,17 @@ public class ViewStudent extends ActionSupport {
 
 
 	// getters and setters
+	
+	public List<String> getCompanyNames() {
+		return companyNames;
+	}
+
+
+
+
+	public void setCompanyNames(List<String> companyNames) {
+		this.companyNames = companyNames;
+	}
 	
 	public String getStudentUserName() {
 		return studentUserName;

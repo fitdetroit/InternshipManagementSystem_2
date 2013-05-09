@@ -60,11 +60,7 @@ public class EditStudent extends ActionSupport{
 	private float gpaSemester3;
 	private String workingExperience;
 	private String projects;
-	private String appliedCompany1;
-	private String appliedCompany2;
-	private String appliedCompany3;
-	private String appliedCompany4;
-	private String appliedCompany5;
+
 	private String password;
 	private String password2;
 
@@ -121,11 +117,7 @@ public class EditStudent extends ActionSupport{
 		setGpaSemester3(student.getGpaSemester3());
 		setWorkingExperience(student.getWorkingExperience());
 		setProjects(student.getProjects());
-		setAppliedCompany1(student.getAppliedCompany1());
-		setAppliedCompany2(student.getAppliedCompany2());
-		setAppliedCompany3(student.getAppliedCompany3());
-		setAppliedCompany4(student.getAppliedCompany4());
-		setAppliedCompany5(student.getAppliedCompany5());
+
 		setPassword(user.getPassword());
 		setPassword2(user.getPassword());
 
@@ -548,76 +540,6 @@ public class EditStudent extends ActionSupport{
 
 	public void setProjects(String projects) {
 		this.projects = projects;
-	}
-
-
-
-
-	public String getAppliedCompany1() {
-		return appliedCompany1;
-	}
-
-
-
-
-	public void setAppliedCompany1(String appliedCompany1) {
-		this.appliedCompany1 = appliedCompany1;
-	}
-
-
-
-
-	public String getAppliedCompany2() {
-		return appliedCompany2;
-	}
-
-
-
-
-	public void setAppliedCompany2(String appliedCompany2) {
-		this.appliedCompany2 = appliedCompany2;
-	}
-
-
-
-
-	public String getAppliedCompany3() {
-		return appliedCompany3;
-	}
-
-
-
-
-	public void setAppliedCompany3(String appliedCompany3) {
-		this.appliedCompany3 = appliedCompany3;
-	}
-
-
-
-
-	public String getAppliedCompany4() {
-		return appliedCompany4;
-	}
-
-
-
-
-	public void setAppliedCompany4(String appliedCompany4) {
-		this.appliedCompany4 = appliedCompany4;
-	}
-
-
-
-
-	public String getAppliedCompany5() {
-		return appliedCompany5;
-	}
-
-
-
-
-	public void setAppliedCompany5(String appliedCompany5) {
-		this.appliedCompany5 = appliedCompany5;
 	}
 
 

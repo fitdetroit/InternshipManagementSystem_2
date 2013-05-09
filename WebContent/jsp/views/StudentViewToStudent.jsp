@@ -147,15 +147,8 @@
 				<tr>
 					<td style="width:5%"></td>
 					<td class="content1"><table style="text-align:left" width="100%">
-										<tr><td><i>Applied Company 1:</i></td><td><s:property  value="appliedCompany1"></s:property></td></tr>
-										<tr><td></td><td></td></tr>
-										<tr><td><i>Applied Company 2:</i></td><td><s:property  value="appliedCompany2"></s:property></td></tr>
-										<tr><td></td><td></td></tr>
-										<tr><td><i>Applied Company 3:</i></td><td><s:property  value="appliedCompany3"></s:property></td></tr>
-										<tr><td></td><td></td></tr>
-										<tr><td><i>Applied Company 4:</i></td><td><s:property  value="appliedCompany4"></s:property></td></tr>
-										<tr><td></td><td></td></tr>
-										<tr><td><i>Applied Company 5:</i></td><td><s:property  value="appliedCompany5"></s:property></td></tr>
+										<tr><td><s:property value="companyNames" ></s:property></td></tr>
+										
 										<tr><td></td><td></td></tr>										
 
 										</table></td>

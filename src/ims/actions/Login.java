@@ -19,6 +19,8 @@ import com.opensymphony.xwork2.ActionSupport;
 public class Login extends ActionSupport{
 	private String UserName;
 	private String password;
+	private String loginPageType=null;
+
 
 	private Map session;
 	
@@ -44,65 +46,85 @@ public class Login extends ActionSupport{
 		// System.out.println("Digest(in hex format):: " + sb.toString());
 
 		//if (checkUserToLogin.findAdmin(getUserName(), sb.toString()) == "success") {
-		if (checkUserToLogin.findUser(getUserName(),sb.toString())=="error") {
+		if (checkUserToLogin.findUser(getUserName(),sb.toString())=="error") 
+		{
 
 			return ERROR;
 		}
 			
-
-		 else {
+        else 
+		 {
+			 
+			 if(getLoginPageType().equals("admin"))
+			 {
+				 if (checkUserToLogin.findUser(getUserName(),sb.toString())=="admin")
+				 {
+					 
+						// creating session for admin
+						session = ActionContext.getContext().getSession();
+						session.put("userName", getUserName());
+						session.put("type", "admin");
+						return "admin";
+					 
+				 }
+				 else
+				 {
+					 return "error";
+					 
+				 }
+				 
+			 }
+			 
+			 else 
+			 {
+				
+				 if (checkUserToLogin.findUser(getUserName(),sb.toString())=="registedStudent")
+				 {
+			        	// create new session for registed student
+			        	session = ActionContext.getContext().getSession();
+						  session.put("userName",getUserName());
+						  session.put("type","regiStudent");
+						  
+						  return "regiStudent";
+					 
+				 }
+				 if (checkUserToLogin.findUser(getUserName(),sb.toString())=="notRegistedStudent")
+				 {
+			        	// create new session for unregisted student
+			        	session = ActionContext.getContext().getSession();
+						  session.put("userName",getUserName());
+						  session.put("type","notRegiStudent");
+						  
+						  return "notRegiStudent";
+					 
+				 }
+				 if (checkUserToLogin.findUser(getUserName(),sb.toString())=="allowedCompany")
+				 {
+			        	// create session for logged in allowed company
+			        	session = ActionContext.getContext().getSession();
+						  session.put("userName",getUserName());
+						  session.put("type","allowedCompany");
+						  
+						  return "allowedCompany";
+					 
+				 }
+				 if (checkUserToLogin.findUser(getUserName(),sb.toString())=="notallowedCompany")
+				 {
+			        	// create session for logged in not allowed company
+			        	session = ActionContext.getContext().getSession();
+						  session.put("userName",getUserName());
+						  session.put("type","notAllowedCompany");
+						  
+						  return "notAllowedCompany";
+					 
+				 }
+				 else
+					 return "error";
+				
+			}
 			
-			 if (checkUserToLogin.findUser(getUserName(),sb.toString())=="admin")
-			 {
-					// creating session for admin
-					session = ActionContext.getContext().getSession();
-					session.put("userName", getUserName());
-					session.put("type", "admin");
-					return "admin";
-				 
-			 }
-			 if (checkUserToLogin.findUser(getUserName(),sb.toString())=="registedStudent")
-			 {
-		        	// create new session for registed student
-		        	session = ActionContext.getContext().getSession();
-					  session.put("userName",getUserName());
-					  session.put("type","regiStudent");
-					  
-					  return "regiStudent";
-				 
-			 }
-			 if (checkUserToLogin.findUser(getUserName(),sb.toString())=="notRegistedStudent")
-			 {
-		        	// create new session for unregisted student
-		        	session = ActionContext.getContext().getSession();
-					  session.put("userName",getUserName());
-					  session.put("type","notRegiStudent");
-					  
-					  return "notRegiStudent";
-				 
-			 }
-			 if (checkUserToLogin.findUser(getUserName(),sb.toString())=="allowedCompany")
-			 {
-		        	// create session for logged in allowed company
-		        	session = ActionContext.getContext().getSession();
-					  session.put("userName",getUserName());
-					  session.put("type","allowedCompany");
-					  
-					  return "allowedCompany";
-				 
-			 }
-			 if (checkUserToLogin.findUser(getUserName(),sb.toString())=="notallowedCompany")
-			 {
-		        	// create session for logged in not allowed company
-		        	session = ActionContext.getContext().getSession();
-					  session.put("userName",getUserName());
-					  session.put("type","notAllowedCompany");
-					  
-					  return "notAllowedCompany";
-				 
-			 }
-			 else
-				 return "error";
+
+
 			
 
 		 }
@@ -148,6 +170,14 @@ public class Login extends ActionSupport{
 	
 	
 	//getters and setters
+		public String getLoginPageType() {
+			return loginPageType;
+		}
+
+		public void setLoginPageType(String loginPageType) {
+			this.loginPageType = loginPageType;
+		}
+
 	public String getUserName() {
 		return UserName;
 	}

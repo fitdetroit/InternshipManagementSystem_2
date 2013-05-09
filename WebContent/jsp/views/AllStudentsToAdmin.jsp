@@ -87,11 +87,7 @@
     <th width="100">Telephone</th>
     <th width="100">Email</th>
     <th width="100">Year of Admission</th>
-    <th width="100">Applied Company 1</th>
-    <th width="100">Applied Company 2</th>
-    <th width="100">Applied Company 3</th>
-    <th width="100">Applied Company 4</th>
-    <th width="100">Applied Company 5</th>
+
        <th width="150">View full profile</th>
 
     
@@ -108,11 +104,7 @@
         <td><s:property value="telephone"/></td>
          <td><s:property value="email"/></td>
         <td><s:property value="yearOfAdmission"/></td>
-        <td><s:property value="appliedCompany1"/></td>
-        <td><s:property value="appliedCompany2"/></td>
-        <td><s:property value="appliedCompany3"/></td>
-        <td><s:property value="appliedCompany4"/></td>
-        <td><s:property value="appliedCompany5"/></td>
+
         
         <td><s:form method="post" action="StudentCvToAdmin" enctype="multipart/form-data" validate="true">
         <td><s:hidden label="Company User Name" name="studentUserName" value="%{studentUserName}"></s:hidden></td>        

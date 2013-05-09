@@ -271,6 +271,56 @@ public class ViewStudentDataSession {
 	
 	
 	
+	public List<String> getStudentAppliedCompanyNames(String studentUsername)
+	{
+		Session session2 = getSessionFactory().openSession();
+		String SQL_QUERY2 = "from Application as app  where app.studentCompany.studentId='"+studentUsername+"' ";
+		Query query2 = session2.createQuery(SQL_QUERY2);
+	
+		List<Application> list = ((org.hibernate.Query) query2).list();
+		session2.close();
+		
+		
+/*		List<String> companyUserNames= null;
+		//if(list.get(0)!=null)
+	
+			companyUserNames.add(list.get(0).getStudentCompany().getCompanyId());
+		if(list.get(1)!=null)
+			companyUserNames.add(list.get(1).getStudentCompany().getCompanyId());
+		if(list.get(2)!=null)
+			companyUserNames.add(list.get(2).getStudentCompany().getCompanyId());
+		if(list.get(3)!=null)
+			companyUserNames.add(list.get(3).getStudentCompany().getCompanyId());
+		if(list.get(4)!=null)
+			companyUserNames.add(list.get(4).getStudentCompany().getCompanyId());*/
+		
+		List<String> companyNames=new ArrayList<String>();
+		
+		Session session3 = getSessionFactory().openSession();
+		for(int x=0;x<=4;x++)
+		{
+			String SQL_QUERY3 ="from Company as com  where com.companyUserName='"+list.get(x).getStudentCompany().getCompanyId()+"' ";
+			Query query = session3.createQuery(SQL_QUERY3);
+		
+			List<Company> list2 = ((org.hibernate.Query) query).list();
+			
+			companyNames.add(list2.get(0).getCompanyName());
+			
+			
+		}
+
+		session3.close();
+		
+		return companyNames;
+		
+		
+		
+		
+	}
+	
+	
+	
+	
 	
 	
 	//getters and setters
