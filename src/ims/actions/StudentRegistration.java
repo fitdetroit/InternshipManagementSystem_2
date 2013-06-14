@@ -14,6 +14,7 @@ import ims.business.RegisterStudent;
 import ims.data.Application;
 import ims.data.Student;
 import ims.data.StudentCompany;
+import ims.data.StudentComplitedProjects;
 import ims.data.User;
 
 public class StudentRegistration extends ActionSupport {
@@ -121,12 +122,13 @@ public class StudentRegistration extends ActionSupport {
 		getStudent().setGpaSemester3(getGpaSemester3());
 		getStudent().setWorkingExperience(getWorkingExperience());
 		getStudent().setProjects(getProjects());
-		getStudent().setAppliedCompany1(getAppliedCompany1());
+/*		getStudent().setAppliedCompany1(getAppliedCompany1());
 		getStudent().setAppliedCompany2(getAppliedCompany2());
 		getStudent().setAppliedCompany3(getAppliedCompany3());
 		getStudent().setAppliedCompany4(getAppliedCompany4());
-		getStudent().setAppliedCompany5(getAppliedCompany5());
+		getStudent().setAppliedCompany5(getAppliedCompany5());*/
 		
+
 
 		// to save student in student table 
 		registerStudent.saveStudent(student);
@@ -207,7 +209,12 @@ public class StudentRegistration extends ActionSupport {
 			
 			registerStudent.AppliedCompanySave(application5);
 			
+		
+			
 		}
+		
+		
+
 		
 		return SUCCESS;
 
