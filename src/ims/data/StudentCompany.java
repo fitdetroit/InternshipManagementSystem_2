@@ -9,6 +9,7 @@ public class StudentCompany implements Serializable{
 	
 	
 
+	
 	private String studentId;
 	private String companyId;
 	

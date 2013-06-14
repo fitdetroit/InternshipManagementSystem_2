@@ -1,8 +1,14 @@
 package ims.data;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+
 
 
 @Entity
@@ -36,15 +42,51 @@ public class Student {
 	private float gpaSemester3;
 	private String workingExperience;
 	private String projects;
+	
 
 	
+	@OneToMany(mappedBy="student")
+	private  Collection<StudentComplitedProjects> studentComplitedProjects = new ArrayList<StudentComplitedProjects>();
+	@OneToMany(mappedBy="student")
+	private Collection<StudentOtherQulification> studentOtherQulification = new ArrayList<StudentOtherQulification>();
+	@OneToMany(mappedBy="student")
+	private Collection<StudentProfessionalExp> studentProfessionalExp = new ArrayList<StudentProfessionalExp>();
 	
 	
 	
 	//getters and setters
+	
+public Collection<StudentOtherQulification> getStudentOtherQulification() {
+		return studentOtherQulification;
+	}
+
+	public void setStudentOtherQulification(
+			Collection<StudentOtherQulification> studentOtherQulification) {
+		this.studentOtherQulification = studentOtherQulification;
+	}
+
+	public Collection<StudentProfessionalExp> getStudentProfessionalExp() {
+		return studentProfessionalExp;
+	}
+
+	public void setStudentProfessionalExp(
+			Collection<StudentProfessionalExp> studentProfessionalExp) {
+		this.studentProfessionalExp = studentProfessionalExp;
+	}
+
 	public String getStudentUserName() {
 		return studentUserName;
 	}
+
+	public Collection<StudentComplitedProjects> getStudentComplitedProjects() {
+		return studentComplitedProjects;
+	}
+
+	public void setStudentComplitedProjects(
+			Collection<StudentComplitedProjects> studentComplitedProjects) {
+		this.studentComplitedProjects = studentComplitedProjects;
+	}
+
 	public void setStudentUserName(String studentUserName) {
 		this.studentUserName = studentUserName;
 	}

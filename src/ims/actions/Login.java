@@ -31,6 +31,11 @@ public class Login extends ActionSupport{
 		ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
 		CheckUserToLogin checkUserToLogin = (CheckUserToLogin) context.getBean("CheckUser");
 
+		//to haddle direct access exeption with Checklogin action
+		if(UserName==null || password==null)
+			return ERROR;
+			
+		
 		///password encrptation
 		MessageDigest md = MessageDigest.getInstance("MD5");
 		md.update(password.getBytes());

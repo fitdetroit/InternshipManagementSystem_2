@@ -70,6 +70,7 @@ public class ViewStudent extends ActionSupport {
 		String userName = (String) session.get("userName");
 		
 		list=viewStudentDataSession.viewStudentToStudent(userName);
+		//get student applied companyNames for view
 		companyNames=viewStudentDataSession.getStudentAppliedCompanyNames(userName);
 		
 		return SUCCESS;
@@ -151,7 +152,7 @@ public class ViewStudent extends ActionSupport {
 		}
 		
 		setList(getViewStudentDataSession().studentCvToAdmin(getStudentUserName()));
-		//get student alplied company names to the companyNames list
+		//get student alplied company names to the companyNames list to view
 		companyNames=viewStudentDataSession.getStudentAppliedCompanyNames(getStudentUserName());
 		
 		return SUCCESS;
