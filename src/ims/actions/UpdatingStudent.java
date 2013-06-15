@@ -8,6 +8,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.lang3.ObjectUtils.Null;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -52,7 +53,7 @@ public class UpdatingStudent extends ActionSupport {
 	private String appliedCompany3;
 	private String appliedCompany4;
 	private String appliedCompany5;
-	private String password;
+	private String password =null;
 	private String password2;
 	private String conPassword;
 	
@@ -78,7 +79,7 @@ public class UpdatingStudent extends ActionSupport {
 
 	
 	// this method is used to update student profile 
-	public String updateStudent() throws NoSuchAlgorithmException {
+	public String updateStudent() throws NoSuchAlgorithmException  {
 		
 		// to redirect direct access actions  without login
 		if (str==null) {
@@ -183,7 +184,7 @@ public class UpdatingStudent extends ActionSupport {
 	
 	
 	
-	public void validate() {
+	public void validate()  {
 		
 
 		if (getPassword().length() != 0) {

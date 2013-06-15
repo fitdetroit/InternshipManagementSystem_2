@@ -35,7 +35,7 @@
 		<div class="login_area grid_5">
 			
 			<div class="login_top">
-				<s:form method="post" action="CheckLogin" >	
+				<s:form method="post" action="Login" >	
 				<s:textfield name="userName" cssClass="login_inputs" value="Username.."/>			
 				<s:password value="Password.." name="password" cssClass="login_inputs password" />
 				<s:hidden  name="loginPageType" value="normall"></s:hidden>
@@ -65,10 +65,10 @@
 
         
 
-        <script src="js/jquery.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="assets/js/jquery.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>

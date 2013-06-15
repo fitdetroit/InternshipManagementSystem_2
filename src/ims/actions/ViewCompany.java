@@ -120,7 +120,13 @@ public class ViewCompany extends ActionSupport{
 		if (str==null) {
 			return ERROR;
 				
-		}		
+		}
+		
+		if(getCompanyUserName()==null)
+		{
+			return ERROR;
+		}
+		
 		setList(getViewCompanyDataSession().FullProfileToCompany(getCompanyUserName()));
 		return SUCCESS;
 	}

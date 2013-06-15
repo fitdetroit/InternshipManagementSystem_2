@@ -1,10 +1,12 @@
 package ims.actions;
 
+import java.io.File;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -23,18 +25,25 @@ public class UpdatingCompany extends ActionSupport{
 	
 	private List<Company> list = null;
 	
-	private String companyUserName;
-	private String companyName;
-	private String companyTelephone;
-	private String contactPerson;
+	private String companyUserName=null;
+	private String companyName=null;
+	private String companyTelephone=null;
+	private String contactPerson=null;
 	private String companyAddress;
-	private String companyWeb;
-	private String noOfVacancies;
-	private String password;
-	private String password2;
-	private String conPassword;
+	private String companyWeb=null;
+	private String noOfVacancies=null;
+	private String password =null;
+	private String password2=null;
+	private String conPassword=null;
 	private boolean allowed;
 	
+	
+	//to upload profile picture
+	private File ProfilePicture;
+	private String ProfilePictureFileName;
+	private String ProfilePictureContentType;
+	
+
 
 	private Company company;
 	User user = new User();
@@ -60,6 +69,11 @@ public class UpdatingCompany extends ActionSupport{
 				
 		}
 		
+		if(getCompanyName()==null&&getCompanyTelephone()==null&&getContactPerson()==null&&getCompanyAddress()==null&&getCompanyWeb()==null&&getNoOfVacancies()==null&&getPassword()==null)
+		{
+			return ERROR;
+		}
+		
 	
 		Map session;
 		session = ActionContext.getContext().getSession();
@@ -69,20 +83,35 @@ public class UpdatingCompany extends ActionSupport{
 		company = list.get(0);
 		System.out.println("its exeisting company"+getCompany().getCompanyName());
 		
+		
+		// uploading profile picture
+		ServletContext servletContext = ServletActionContext.getServletContext(); 
+		if (ProfilePicture != null) {
+			String dataDir = servletContext.getRealPath("/WEB-INF/data"); 
+			File existingFile = new File(dataDir, getCompanyUserName()+".gif");
+			existingFile.delete();
+			File savedFile = new File(dataDir, getCompanyUserName()+".gif"); 
+			
+			ProfilePicture.renameTo(savedFile); } 
+		else {
+			//System.out.println("its not working");
+		}
+		
+		
 	
-		if(getCompanyUserName().length()!=0)
+		if(getCompanyUserName()!=null)
 		company.setCompanyUserName(getCompanyUserName());
-		if(getCompanyName().length()!=0)
+		if(getCompanyName()!=null)
 		company.setCompanyName(getCompanyName());
-		if(getCompanyTelephone().length()!=0)
+		if(getCompanyTelephone()!=null)
 		company.setCompanyTelephone(getCompanyTelephone());
-		if(getContactPerson().length()!=0)
+		if(getContactPerson()!=null)
 		company.setContactPerson(getContactPerson());
-		if(getCompanyAddress().length()!=0)
+		if(getCompanyAddress()!=null)
 		company.setCompanyAddress(getCompanyAddress());
-		if(getCompanyWeb().length()!=0)
+		if(getCompanyWeb()!=null)
 		company.setCompanyWeb(getCompanyWeb());
-		if(getNoOfVacancies().length()!=0)
+		if(getNoOfVacancies()!=null)
 		company.setNoOfVacancies(getNoOfVacancies());
 		if(company.isAllowed()==true)
 		company.setAllowed(true);
@@ -90,7 +119,7 @@ public class UpdatingCompany extends ActionSupport{
 		
 		user.setUserName(getCompanyUserName());
 		user.setType('c');
-		if(getPassword().length()==0)
+		if(getPassword()==null)
 		{
 			user.setPassword(getPassword2());
 		}
@@ -116,7 +145,7 @@ public class UpdatingCompany extends ActionSupport{
 		
 		updateCompany.updateCompany(getCompanyUserName(),company,user);
 		
-		
+		System.out.println("aaaaaaaaaaaaaaaaa");
 		if(company.isAllowed()==false)
 		{
 			return "UnRegisted";
@@ -131,6 +160,8 @@ public class UpdatingCompany extends ActionSupport{
 	
 	
  // this method is used to allow company by admin
+	
+
 	public String AllowCompany()
 	{
 		// to redirect direct access actions  without login
@@ -214,17 +245,20 @@ public class UpdatingCompany extends ActionSupport{
 // this method is used to validate new password and confrom password in updating form	
 	public void validate()
 	{
-		
-		
-		if(getPassword().length()!=0)
+		if(getPassword()!=null)
 		{
-			
-			if(!(getPassword().equals(getConPassword()))){
-				addFieldError("conPassword", "password not match");
+			if(getPassword().length()!=0)
+			{
+				
+				if(!(getPassword().equals(getConPassword()))){
+					addFieldError("conPassword", "password not match");
+					
+				}
 				
 			}
-			
 		}
+		
+
 
 	}
 	
@@ -249,7 +283,29 @@ public class UpdatingCompany extends ActionSupport{
 	
 	
 	// gettes and setters
-	
+	public File getProfilePicture() {
+		return ProfilePicture;
+	}
+
+	public void setProfilePicture(File profilePicture) {
+		ProfilePicture = profilePicture;
+	}
+
+	public String getProfilePictureFileName() {
+		return ProfilePictureFileName;
+	}
+
+	public void setProfilePictureFileName(String profilePictureFileName) {
+		ProfilePictureFileName = profilePictureFileName;
+	}
+
+	public String getProfilePictureContentType() {
+		return ProfilePictureContentType;
+	}
+
+	public void setProfilePictureContentType(String profilePictureContentType) {
+		ProfilePictureContentType = profilePictureContentType;
+	}
 	public List<Company> getList() {
 		return list;
 	}

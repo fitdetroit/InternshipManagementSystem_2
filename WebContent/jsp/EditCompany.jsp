@@ -78,7 +78,7 @@
 <h2 align="center">Update Company Details Form</h2>
 
 
-<s:form method="post" action="UpdateCompany"  validate="true">
+<s:form method="post" action="UpdateCompany"  enctype="multipart/form-data" validate="true">
 <table align="center">
 
 
@@ -87,6 +87,7 @@
      <tr><td><s:hidden label="Company User Name" name="companyUserName" value="%{companyUserName}"></s:hidden></td> </tr>   
      <tr><td><s:hidden label="Company Hidden Name" name="companyName" value="%{companyName}" ></s:hidden></td> </tr> 
      <tr><td><s:textfield label="Company Name" name="companyName2" value="%{companyName}" disabled="true"></s:textfield></td> </tr> 
+     <tr><td><s:file label="Update Profile Picture" name="ProfilePicture"/></td> </tr>
      <tr><td><s:textfield label="Telephone No" name="companyTelephone" value="%{companyTelephone}"></s:textfield></td> </tr> 
      <tr><td><s:textfield label="Contact Person" name="contactPerson" value="%{contactPerson}"></s:textfield></td> </tr> 
      <tr><td><s:textfield label="Company Address" name="companyAddress" value="%{companyAddress}"></s:textfield></td> </tr> 

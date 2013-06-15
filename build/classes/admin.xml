@@ -6,6 +6,8 @@
 
 <struts>
 
+	
+
 	<package name="adminLogin" namespace="/Administrator" extends="struts-default">
 		<action name="AdminLogin" class="ims.actions.CheckSession">
 			<result name="success">/jsp/AdminLogin.jsp</result>

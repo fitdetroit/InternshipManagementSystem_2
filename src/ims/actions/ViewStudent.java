@@ -24,7 +24,7 @@ public class ViewStudent extends ActionSupport {
 
 
 	// to get informatin to admin and company
-	private String studentUserName;
+	private String studentUserName= null;
 
 	ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
 	ViewStudentDataSession viewStudentDataSession = (ViewStudentDataSession) context.getBean("ViewStudent");
@@ -166,6 +166,11 @@ public class ViewStudent extends ActionSupport {
 		if (str==null) {
 			return ERROR;
 				
+		}
+		
+		if(getStudentUserName()==null)
+		{
+			return ERROR;
 		}
 		
 		setList(getViewStudentDataSession().studentCvToCompany(getStudentUserName()));

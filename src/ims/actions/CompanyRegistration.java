@@ -55,7 +55,7 @@ public class CompanyRegistration extends ActionSupport{
 			File savedFile = new File(dataDir, getCompanyUserName()+".gif"); 
 			ProfilePicture.renameTo(savedFile); } 
 		else {
-			System.out.println("its not working");
+			//System.out.println("its not working");
 		}
 		
 	

@@ -18,6 +18,11 @@
 			<param name="trim">true</param>
 			<message>Please enter Company Telephone No</message>
 		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">10</param>
+			<param name="maxLength">10</param>
+			<message>Mobile number Must be 10 digits</message>
+		</field-validator>
 	</field>
 	<field name="contactPerson">
 		<field-validator type="requiredstring">

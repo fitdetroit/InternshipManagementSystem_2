@@ -6,22 +6,20 @@
 
 <struts>
 
-
+	
 
 	<package name="student" namespace="/student" extends="struts-default">
 
-		<action name="*">
-			<result>/jsp/Login.jsp</result>
-		</action>
+
 
 		<action name="LogOut" class="ims.actions.Login"
 			method="logOut">
-			<result name="success" type="redirect">../Login</result>
+			<result name="success" type="redirect">../index.jsp</result>
 		</action>
 
 		<action name="NewStudent" class="ims.actions.NewStudent">
 			<result>/jsp/StudentRegistrationForm.jsp</result>
-			<result name="error" type="redirect">../Login</result>
+			<result name="error" type="redirect">../CheckLogin</result>
 		</action>
 
 		<action name="RegisterStudent" class="ims.actions.StudentRegistration"
@@ -33,7 +31,7 @@
 			<interceptor-ref name="basicStack" />
 			<result name="success">/jsp/RegistedStudent.jsp</result>
 			<result name="input">/jsp/StudentRegistrationForm.jsp</result>
-			<result name="error" type="redirect">../Login</result>
+			<result name="error" type="redirect">../CheckLogin</result>
 		</action>
 
 
@@ -41,26 +39,26 @@
 			method="editDetails">
 			<result name="success" >/jsp/EditStudent.jsp</result>
 			<result name="input">../jsp/Login.jsp</result>
-			<result name="error" type="redirect">../Login</result>
+			<result name="error" type="redirect">../CheckLogin</result>
 		</action>
 
 		<action name="UpdateStudent" class="ims.actions.UpdatingStudent"
 			method="updateStudent">
 			<result name="success">/jsp/RegistedStudent.jsp</result>
 			<result name="input">/jsp/EditStudent.jsp</result>
-			<result name="error" type="redirect">../Login</result>
+			<result name="error" type="redirect">../CheckLogin</result>
 		</action>
 
 		<action name="ViewStudent" class="ims.actions.ViewStudent"
 			method="viewStudentToStudent">
 			<result name="success">/jsp/views/StudentViewToStudent.jsp</result>
-			<result name="error" type="redirect">../Login</result>
+			<result name="error" type="redirect">../CheckLogin</result>
 		</action>
 
 		<action name="ViewStudentCV" class="ims.actions.ViewStudent"
 			method="viewStudentToStudent">
 			<result name="success">/jsp/views/StudentCvToStudent.jsp</result>
-			<result name="error" type="redirect">../Login</result>
+			<result name="error" type="redirect">../CheckLogin</result>
 		</action>
 
 
@@ -82,31 +80,31 @@
 		<action name="ViewCompanyProfile" class="ims.actions.ViewCompany"
 			method="allowedCompanyToStudent">
 			<result name="success">/jsp/views/AllowedCompanyToStudent.jsp</result>
-			<result name="error" type="redirect">../Login</result>
+			<result name="error" type="redirect">../CheckLogin</result>
 		</action>
 
 
 		<action name="FullCompanyProfileToStudent" class="ims.actions.ViewCompany"
 			method="FullProfileToStudent">
 			<result name="success">/jsp/views/FullCompanyToStudent.jsp</result>
-			<result name="error" type="redirect">../Login</result>
+			<result name="error" type="redirect">../CheckLogin</result>
 		</action>
 
 		<action name="updateStudentPassword" class="ims.actions.UpdatingUnRegiStudent"
 			method="changeStudentPassword">
 			<result name="success">/jsp/UnRegistedStudent.jsp</result>
 			<result name="input">/jsp/ChangeStudentPasswordForm.jsp</result>
-			<result name="error" type="redirect">../Login</result>
+			<result name="error" type="redirect">../CheckLogin</result>
 		</action>
 
 		<action name="ToChangePasswordStudent" class="ims.actions.EditStudent">
 			<result name="success">/jsp/ChangeStudentPasswordForm.jsp</result>
-			<result name="error" type="redirect">../Login</result>
+			<result name="error" type="redirect">../CheckLogin</result>
 		</action>
 
 		<action name="AllowedStudentPage" class="ims.actions.Login">
 			<result name="success">/jsp/RegistedStudent.jsp</result>
-			<result name="error" type="redirect">../Login</result>
+			<result name="error" type="redirect">../CheckLogin</result>
 		</action>
 
 

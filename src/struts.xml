@@ -5,27 +5,36 @@
 
 
 <struts>
+
 	<constant name="struts.devMode" value="true" /> <!-- set to false for prod -->
+	<constant name="struts.action.extension" value="," />
+	
+
+	
 	<package name="Loginpackage" extends="struts-default" namespace="/">
-		<action name="Login" class="ims.actions.CheckSession">
-			<result name="success" >/jsp/Login.jsp</result>
+	
+		<action name="index">
+			<result type="redirect">CheckLogin</result>
+		</action>
+		<action name="CheckLogin" class="ims.actions.CheckSession">
+			<result name="success" >jsp/Login.jsp</result>
 			<result name="admin">jsp/Admin.jsp</result>
 			<result name="regiStudent">jsp/RegistedStudent.jsp</result>
 			<result name="notRegiStudent">jsp/UnRegistedStudent.jsp</result>
 			<result name="allowedCompany">jsp/AllowedCompany.jsp</result>
 			<result name="notAllowedCompany">jsp/NotAllowedCompany.jsp</result>
 		</action>
-			<action name="CheckLogin" class="ims.actions.Login"
+			<action name="Login" class="ims.actions.Login"
 			method="login">
 			<result name="regiStudent">/jsp/RegistedStudent.jsp</result>
 			<result name="notRegiStudent">/jsp/UnRegistedStudent.jsp</result>
 			<result name="allowedCompany">/jsp/AllowedCompany.jsp</result>
 			<result name="notAllowedCompany">/jsp/NotAllowedCompany.jsp</result>		
-			<result name="error">/jsp/index2.jsp</result>
+			<result name="error" type="redirect">CheckLogin</result>
 		</action>
 			<action name="LogOut" class="ims.actions.Login"
 			method="logOut">
-			<result name="success">/jsp/Login.jsp</result>
+			<result name="success">jsp/Login.jsp</result>
 		</action>
 	</package>
 
