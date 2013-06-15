@@ -93,7 +93,7 @@
      <tr><td><s:textfield label="Company Address" name="companyAddress" value="%{companyAddress}"></s:textfield></td> </tr> 
      <tr><td><s:textfield label="Company Web Url" name="companyWeb" value="%{companyWeb}"></s:textfield></td> </tr> 
      <tr><td><s:textfield label="No of Vacancies" name="noOfVacancies" value="%{noOfVacancies}"></s:textfield></td> </tr>
-     <tr><td><s:password label="Company password" name="password" value="%{password}"></s:password></td> </tr> 
+     <tr><td><s:password label="Company password" name="password" ></s:password></td> </tr> 
      <tr><td><s:password label="conform password" name="conPassword" value="%{conPassword}"></s:password></td> </tr>
       <tr><td><s:hidden label="Company Hidden password" name="password2" value="%{password2}" ></s:hidden></td> </tr>  
     

@@ -119,12 +119,14 @@ public class UpdatingCompany extends ActionSupport{
 		
 		user.setUserName(getCompanyUserName());
 		user.setType('c');
-		if(getPassword()==null)
+		if(getPassword().length()==0)
 		{
 			user.setPassword(getPassword2());
 		}
 		else
 		{
+			System.out.println(getPassword());
+
 			// password encriptation
 			 MessageDigest md = MessageDigest.getInstance("MD5");
 		        md.update(password.getBytes());
@@ -145,7 +147,7 @@ public class UpdatingCompany extends ActionSupport{
 		
 		updateCompany.updateCompany(getCompanyUserName(),company,user);
 		
-		System.out.println("aaaaaaaaaaaaaaaaa");
+	
 		if(company.isAllowed()==false)
 		{
 			return "UnRegisted";
