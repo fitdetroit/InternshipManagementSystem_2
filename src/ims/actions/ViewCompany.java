@@ -109,7 +109,11 @@ public class ViewCompany extends ActionSupport{
 		if (str==null) {
 			return ERROR;
 				
-		}		
+		}	
+		if(getCompanyUserName()==null)
+		{
+			return ERROR;
+		}
 		setList(getViewCompanyDataSession().FullProfileToStudent(getCompanyUserName()));
 		return SUCCESS;
 	}

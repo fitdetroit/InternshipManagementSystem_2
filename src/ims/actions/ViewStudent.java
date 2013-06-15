@@ -86,16 +86,20 @@ public class ViewStudent extends ActionSupport {
 				
 		}
 		
+		
+		
 		Map session;
 		session = ActionContext.getContext().getSession();
 		String userName = (String) session.get("userName");
-		
+		System.out.println("ddddddddddddddddddddddddddddddddddddddddddd");
+		System.out.println(userName);
 		if(viewStudentDataSession.appliedStudentToCompany(userName)==null)
 		{
 			return "NoAccess";
 		}
 		else
 		{
+			
 			setList(viewStudentDataSession.appliedStudentToCompany(userName));
 		}
 		
@@ -104,6 +108,24 @@ public class ViewStudent extends ActionSupport {
 		return SUCCESS;
 	}
 	
+	public HttpSession getSession() {
+		return session;
+	}
+
+
+
+
+
+
+	public void setSession(HttpSession session) {
+		this.session = session;
+	}
+
+
+
+
+
+
 	//this method is used get still not select for interview to specific company
 	public String notSelectedForInterview()
 	{

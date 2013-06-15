@@ -37,9 +37,9 @@
 			<result name="error" type="redirect">../CheckLogin</result>
 		</action>
 
-		<action name="UpdateCompany" class="ims.actions.UpdatingCompany"
+		<action name="UpdateCompany" class="ims.actions.UpdatingCompanyByCompany"
 			method="updateCompany">
-			<result name="success">/jsp/AllowedCompany.jsp</result>
+			<result name="success" type="redirect">../CheckLogin</result>
 			<result name="input">/jsp/EditCompany.jsp</result>
 			<result name="UnRegisted">/jsp/NotAllowedCompany.jsp</result>
 			<result name="error" type="redirect">../CheckLogin</result>

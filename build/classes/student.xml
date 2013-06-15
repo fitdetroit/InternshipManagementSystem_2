@@ -14,7 +14,7 @@
 
 		<action name="LogOut" class="ims.actions.Login"
 			method="logOut">
-			<result name="success" type="redirect">../index.jsp</result>
+			<result name="success" type="redirect">../CheckLogin</result>
 		</action>
 
 		<action name="NewStudent" class="ims.actions.NewStudent">
@@ -42,9 +42,9 @@
 			<result name="error" type="redirect">../CheckLogin</result>
 		</action>
 
-		<action name="UpdateStudent" class="ims.actions.UpdatingStudent"
+		<action name="UpdateStudent" class="ims.actions.UpdatingStudentByStudent"
 			method="updateStudent">
-			<result name="success">/jsp/RegistedStudent.jsp</result>
+			<result name="success" type="redirect">../CheckLogin</result>
 			<result name="input">/jsp/EditStudent.jsp</result>
 			<result name="error" type="redirect">../CheckLogin</result>
 		</action>

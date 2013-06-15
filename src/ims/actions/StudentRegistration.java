@@ -332,16 +332,9 @@ public class StudentRegistration extends ActionSupport {
 	}
 
 
-
-
-
 	public void setTelephone(String telephone) {
 		this.telephone = telephone;
 	}
-
-
-
-
 
 	public String getEmail() {
 		return email;

@@ -1,10 +1,12 @@
 package ims.actions;
 
+import java.io.File;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -20,7 +22,7 @@ import ims.business.UpdateStudent;
 import ims.data.Student;
 import ims.data.User;
 
-public class UpdatingStudent extends ActionSupport {
+public class UpdatingStudentByStudent extends ActionSupport {
 
 	
 	private String studentUserName;
@@ -58,7 +60,12 @@ public class UpdatingStudent extends ActionSupport {
 	private String conPassword;
 	
 
+	//to upload profile picture
+	private File ProfilePicture;
+	private String ProfilePictureFileName;
+	private String ProfilePictureContentType;
 
+	
 
 	private List<Student> list = null;
 
@@ -96,6 +103,20 @@ public class UpdatingStudent extends ActionSupport {
 		String userName = (String) session.get("userName");
 
 		setList(updateStudent.getDetails(userName));
+		
+		
+		
+		// uploading updatad profile picture
+		ServletContext servletContext = ServletActionContext.getServletContext(); 
+		if (ProfilePicture != null) {
+			String dataDir = servletContext.getRealPath("/WEB-INF/data");
+			File existingFile = new File(dataDir, getStudentUserName()+".gif");
+			existingFile.delete();
+			File savedFile = new File(dataDir, getStudentUserName()+".gif"); 
+			ProfilePicture.renameTo(savedFile); } 
+		else {
+			System.out.println("its not working");
+		}
 		
 		student=list.get(0);
 
@@ -139,11 +160,11 @@ public class UpdatingStudent extends ActionSupport {
 		student.setDigreeTitle(getDigreeTitle());
 		if(getYearOfAdmission()!=0)
 		student.setYearOfAdmission(getYearOfAdmission());
-		if(getGpaSemester1()!=0)
+		//if(getGpaSemester1()!=0)
 		student.setGpaSemester1(getGpaSemester1());
-		if(getGpaSemester2()!=0)
+		//if(getGpaSemester2()!=0)
 		student.setGpaSemester2(getGpaSemester2());
-		if(getGpaSemester3()!=0)
+		//if(getGpaSemester3()!=0)
 		student.setGpaSemester3(getGpaSemester3());
 		if(getWorkingExperience().length()!=0)
 		student.setWorkingExperience(getWorkingExperience());
@@ -203,6 +224,28 @@ public class UpdatingStudent extends ActionSupport {
 	
 	
 	// getters and setters
+	
+	public File getProfilePicture() {
+		return ProfilePicture;
+	}
+
+	public void setProfilePicture(File profilePicture) {
+		ProfilePicture = profilePicture;
+	}
+
+	public String getProfilePictureFileName() {
+		return ProfilePictureFileName;
+	}
+
+	public void setProfilePictureFileName(String profilePictureFileName) {
+		ProfilePictureFileName = profilePictureFileName;
+	}
+	public String getProfilePictureContentType() {
+		return ProfilePictureContentType;
+	}
+	public void setProfilePictureContentType(String profilePictureContentType) {
+		ProfilePictureContentType = profilePictureContentType;
+	}
 
 	public List<Student> getList() {
 		return list;

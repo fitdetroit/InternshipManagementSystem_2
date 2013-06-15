@@ -77,6 +77,7 @@ public class ViewStudentDataSession {
 	// this method is used to get relavent applied students to company
 	public List<Student> appliedStudentToCompany(String userName)
 	{
+		
 		 List<Student> students=new ArrayList<Student>();
 	
 		/// check company allowd and can access student cv
@@ -89,6 +90,7 @@ public class ViewStudentDataSession {
 		
 		if(list.size()==0)
 		{
+			
 			//System.out.println("its here");
 			List<Student> list2 = null;
 			return list2;
@@ -120,20 +122,30 @@ public class ViewStudentDataSession {
 			//for(int y=0;list3.get(y).getStudentCompany().getStudentId().length()!=0;y++)
 			for(int y=0;list3.size()>y;y++)
 			{
+				
 				String SQL_QUERY3 = "from Student as stu  where stu.studentUserName='"+list3.get(y).getStudentCompany().getStudentId()+"'";
 				Query query3 = session3.createQuery(SQL_QUERY3);
 
 					//students=((org.hibernate.Query) query3).list();
 
-				
+			
 
 					List<Student> list4 = ((org.hibernate.Query) query3).list();
 				//getStudents().add(y,list4.get(0));
-					Student student = new Student();
-					student=(Student)list4.get(0);
-				students.add(student);
+					
+					
+					if(list4.size()!=0)
+					{
+						Student student = new Student();
+						student=(Student)list4.get(0);
+					students.add(student);
+					}
+					
+			
 			}
+			
 			session3.close();
+			
 			return students;
 			
 		}
@@ -191,9 +203,12 @@ public class ViewStudentDataSession {
 
 					List<Student> list4 = ((org.hibernate.Query) query3).list();
 				//getStudents().add(y,list4.get(0));
+				if(list4.size()!=0)
+				{
 					Student student = new Student();
 					student=(Student)list4.get(0);
 				students.add(student);
+				}
 			}
 			session3.close();
 			return students;
@@ -253,9 +268,13 @@ public class ViewStudentDataSession {
 
 					List<Student> list4 = ((org.hibernate.Query) query3).list();
 				//getStudents().add(y,list4.get(0));
-					Student student = new Student();
-					student=(Student)list4.get(0);
-				students.add(student);
+					if(list4.size()!=0)
+					{
+						Student student = new Student();
+						student=(Student)list4.get(0);
+					students.add(student);
+					}
+				
 			}
 			session3.close();
 			return students;
