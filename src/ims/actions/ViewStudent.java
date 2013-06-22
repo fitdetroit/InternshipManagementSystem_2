@@ -23,6 +23,9 @@ public class ViewStudent extends ActionSupport {
 	private List<String> companyNames= null;
 	private List<StudentComplitedProjects> studentComplitedProjects=null;
 	
+	
+	private Student student= new Student();
+	
 
 
 	// to get informatin to admin and company
@@ -71,11 +74,10 @@ public class ViewStudent extends ActionSupport {
 		session = ActionContext.getContext().getSession();
 		String userName = (String) session.get("userName");
 		
-		list=viewStudentDataSession.viewStudentToStudent(userName);
+		setStudent(viewStudentDataSession.viewStudentToStudent(userName));
 		//get student applied companyNames for view
 		companyNames=viewStudentDataSession.getStudentAppliedCompanyNames(userName);
-		
-		setStudentComplitedProjects(getViewStudentDataSession().getStudentComplitedProjectsFromDB(getStudentUserName()));
+	
 		return SUCCESS;
 		
 	}
@@ -94,7 +96,6 @@ public class ViewStudent extends ActionSupport {
 		Map session;
 		session = ActionContext.getContext().getSession();
 		String userName = (String) session.get("userName");
-		System.out.println("ddddddddddddddddddddddddddddddddddddddddddd");
 		System.out.println(userName);
 		if(viewStudentDataSession.appliedStudentToCompany(userName)==null)
 		{
@@ -158,12 +159,13 @@ public class ViewStudent extends ActionSupport {
 				
 		}
 		
-		setList(getViewStudentDataSession().studentCvToAdmin(getStudentUserName()));
+
+		student=getViewStudentDataSession().studentCvToAdmin(getStudentUserName());
 		//get student alplied company names to the companyNames list to view
 		companyNames=viewStudentDataSession.getStudentAppliedCompanyNames(getStudentUserName());
 		
 		
-	    setStudentComplitedProjects(getViewStudentDataSession().getStudentComplitedProjectsFromDB(getStudentUserName()));
+
 	
 		return SUCCESS;
 	}
@@ -190,10 +192,11 @@ public class ViewStudent extends ActionSupport {
 			return ERROR;
 		}
 		
-		setList(getViewStudentDataSession().studentCvToCompany(getStudentUserName()));
+		//setList(getViewStudentDataSession().studentCvToCompany(getStudentUserName()));
+		setStudent(viewStudentDataSession.studentCvToCompany(getStudentUserName()));
 		
 		
-		setStudentComplitedProjects(getViewStudentDataSession().getStudentComplitedProjectsFromDB(getStudentUserName()));
+		//setStudentComplitedProjects(getViewStudentDataSession().getStudentComplitedProjectsFromDB(getStudentUserName()));
 		return SUCCESS;
 	}
 	
@@ -209,7 +212,14 @@ public class ViewStudent extends ActionSupport {
 
 
 	// getters and setters
-	
+
+	public Student getStudent() {
+		return student;
+	}
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
 	
 	public HttpSession getSession() {
 		return session;

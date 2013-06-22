@@ -16,6 +16,7 @@ import ims.data.Application;
 import ims.data.Student;
 import ims.data.StudentCompany;
 import ims.data.StudentComplitedProjects;
+import ims.data.StudentOtherQulification;
 import ims.data.User;
 
 public class StudentRegistration extends ActionSupport {
@@ -62,6 +63,12 @@ public class StudentRegistration extends ActionSupport {
 	private String projectYear2;
 	
 	
+	private String otherQulification1;
+	private String otherQulification2;
+	
+	
+
+
 	StudentCompany studentCompany1 = new StudentCompany();
 	StudentCompany studentCompany2 = new StudentCompany();
 	StudentCompany studentCompany3 = new StudentCompany();
@@ -147,16 +154,26 @@ public class StudentRegistration extends ActionSupport {
 		studentComplitedProjects2.setStudent(getStudent());
 	
 
-		
 		getStudent().getStudentComplitedProjects().add(studentComplitedProjects1);
 		getStudent().getStudentComplitedProjects().add(studentComplitedProjects2);
+		
+		
+		StudentOtherQulification  studentOtherQulification1= new StudentOtherQulification();
+		studentOtherQulification1.setDescription(projectDescription1);
+		studentOtherQulification1.setStudent(getStudent());
+		
+		StudentOtherQulification  studentOtherQulification2= new StudentOtherQulification();
+		studentOtherQulification2.setDescription(projectDescription1);
+		studentOtherQulification2.setStudent(getStudent());
+		
+		
+		getStudent().getStudentOtherQulification().add(studentOtherQulification1);
+		getStudent().getStudentOtherQulification().add(studentOtherQulification2);
+		
 
 		// to save student in student table 
 		registerStudent.saveStudent(student);
 	
-		//saving student complited projects in studentComplitedProject table
-		//registerStudent.studentCompliteProjectsSave(studentComplitedProjects1);
-		//registerStudent.studentCompliteProjectsSave(studentComplitedProjects2);
 		
 		
 		
@@ -260,6 +277,22 @@ public class StudentRegistration extends ActionSupport {
 	
 	
 	// getters and setters
+	public String getOtherQulification1() {
+		return otherQulification1;
+	}
+
+
+	public void setOtherQulification1(String otherQulification1) {
+		this.otherQulification1 = otherQulification1;
+	}
+
+   public String getOtherQulification2() {
+		return otherQulification2;
+	}
+
+	public void setOtherQulification2(String otherQulification2) {
+		this.otherQulification2 = otherQulification2;
+	}
 	public String getProjectTitle1() {
 		return projectTitle1;
 	}

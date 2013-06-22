@@ -22,38 +22,36 @@ public class UpdateStudent {
 
 
 // this method is used to get details before update 
-		public List<Student> getDetails(String userName)
+		public Student getDetails(String userName)
 		{
 			
 
 			Session session = getSessionFactory().openSession();
-			String SQL_QUERY = "from Student as stu  where stu.studentUserName='"+userName+"'";
-			Query query = session.createQuery(SQL_QUERY);
-		
-			List<Student> list = ((org.hibernate.Query) query).list();
+			session.beginTransaction();
+			Student student =(Student)session.get(Student.class, userName);
+			session.getTransaction().commit();
 			session.close();
-
-			return list;
+			
+			return student;
 			
 		}
 		// this method is used to get details befor student update
-		public List<User> getDetails2(String userName)
+		public User getDetails2(String userName)
 		{
 			
 
-			Session session2 = getSessionFactory().openSession();
-			String SQL_QUERY = "from User as usr  where usr.userName='"+userName+"'";
-			Query query = session2.createQuery(SQL_QUERY);
-		
-			List<User> list = ((org.hibernate.Query) query).list();
-			session2.close();
-
-			return list;
+			Session session = getSessionFactory().openSession();
+			session.beginTransaction();
+			User user =(User)session.get(User.class, userName);
+			session.getTransaction().commit();
+			session.close();
+			
+			return user;
 			
 		}
 		
 		
-		public List<StudentComplitedProjects>  getStudentComplitedProjectsFromDB(String userName)
+/*		public List<StudentComplitedProjects>  getStudentComplitedProjectsFromDB(String userName)
 		{
 			Session session2 = getSessionFactory().openSession();
 			String SQL_QUERY2 = "from StudentComplitedProjects as scp  where scp.student.studentUserName='"+userName+"' ";
@@ -65,7 +63,7 @@ public class UpdateStudent {
 			
 			return list;
 			
-		}
+		}*/
 		
 	// this method is used update student in database	
 		public void updateStudent(String userName,Student studentUpdated,User userUpdated)

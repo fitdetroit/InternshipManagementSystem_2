@@ -78,7 +78,7 @@
 
 <table align="center">
 <tr><td><h4 >Your personal Details</h4></td></tr>
-<tr><td><s:form method="post" action="RegisterStudent" enctype="multipart/form-data" validate="true">
+<tr><td><s:form method="post" action="RegisterStudent" enctype="multipart/form-data" validate="false">
 <tr><td><s:hidden label="Student User Name" name="studentUserName" value="%{#session.userName}"></s:hidden></td> </tr> 
 <tr><td><s:textfield label="Name In Full" name="nameInFull"></s:textfield></td> </tr>
 <tr><td><s:textfield label="Name With Initials" name="nameWithInitials"></s:textfield></td> </tr>
@@ -104,6 +104,8 @@
 <!--  <tr><td><s:textarea  label="Projects"  name="projects" cols="50" rows="10"></s:textarea> </td></tr>-->
 <tr ><td><s:textfield  label="p1 projectTitle"  name="projectTitle1" ></s:textfield> </td><td><s:textfield  label="p1 projectDescription"  name="projectDescription1" ></s:textfield> </td><td><s:textfield label="p1 rojectYear"  name="projectYear1" ></s:textfield> </td></tr>
 <tr ><td><s:textfield  label="p2 projectTitle"  name="projectTitle2" ></s:textfield> </td><td><s:textfield  label="p2 projectDescription"  name="projectDescription2" ></s:textfield> </td><td><s:textfield label="p2 rojectYear"  name="projectYear2" ></s:textfield> </td></tr>
+<tr><td><s:textfield  label="Qther qulification 1"  name="otherQulification1"></s:textfield> </td></tr>
+<tr><td><s:textfield  label="Qther qulification 2"  name="otherQulification2"></s:textfield> </td></tr>
 <tr><td><s:select list="%{list}"   label="Company Name 1" name="appliedCompany1"></s:select> </td></tr>
 <tr><td><s:select list="%{list}"   label="Company Name 2" name="appliedCompany2"></s:select> </td></tr>
 <tr><td><s:select list="%{list}"   label="Company Name 3" name="appliedCompany3"></s:select> </td></tr>

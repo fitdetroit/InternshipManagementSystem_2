@@ -22,24 +22,11 @@ public class EditCompany extends ActionSupport {
 	
 	
 
-	private List<Company> list = null;
-	private List<User> list2 = null;
+
 	private Company company;
 	private User user;
 	
-	// company details to Edit company form
-	private String companyUserName;
-	private String companyName;
-	private String companyName2;// this variable for not editable value to form
-	private String companyTelephone;
-	private String contactPerson;
-	private String companyAddress;
-	private String companyWeb;
-	private String noOfVacancies;
-	private String password;
-	private String password2;
-	private String conPassword;
-	private boolean allowed;
+
 
 	Map session;
 	
@@ -67,24 +54,10 @@ public class EditCompany extends ActionSupport {
 		session = ActionContext.getContext().getSession();
 		String userName = (String) session.get("userName");
 
-		setList(getUpdateCompany().getDetails(userName));
-		setList2(getUpdateCompany().getDetails2(userName));
-		company = list.get(0);
-		user = list2.get(0);
+		setCompany(getUpdateCompany().getDetails(userName));
+		setUser(getUpdateCompany().getDetails2(userName));
 
-		// set action class variable form database to view in jsp
-		setCompanyUserName(company.getCompanyUserName());
-		setCompanyName(company.getCompanyName());
-		setCompanyTelephone(company.getCompanyTelephone());
-		setContactPerson(company.getContactPerson());
-		setCompanyAddress(company.getCompanyAddress());
-		setCompanyWeb(company.getCompanyWeb());
-		setNoOfVacancies(company.getNoOfVacancies());
-		setAllowed(true);
-		setCompanyName2(company.getCompanyName());
-		setPassword(user.getPassword());
-		setPassword2(user.getPassword());
-		setConPassword(user.getPassword());
+
 
 		return SUCCESS;
 	}
@@ -94,23 +67,11 @@ public class EditCompany extends ActionSupport {
 	
 	
 	
+	
+	
+	
 	// getters and setters
 
-	public String getPassword2() {
-		return password2;
-	}
-
-	public void setPassword2(String password2) {
-		this.password2 = password2;
-	}
-
-	public List<User> getList2() {
-		return list2;
-	}
-
-	public void setList2(List<User> list2) {
-		this.list2 = list2;
-	}
 
 	public User getUser() {
 		return user;
@@ -119,15 +80,6 @@ public class EditCompany extends ActionSupport {
 	public void setUser(User user) {
 		this.user = user;
 	}
-
-	public List<Company> getList() {
-		return list;
-	}
-
-	public void setList(List<Company> list) {
-		this.list = list;
-	}
-
 	public Company getCompany() {
 		return company;
 	}
@@ -152,92 +104,7 @@ public class EditCompany extends ActionSupport {
 		this.updateCompany = updateCompany;
 	}
 
-	public String getCompanyUserName() {
-		return companyUserName;
-	}
 
-	public void setCompanyUserName(String companyUserName) {
-		this.companyUserName = companyUserName;
-	}
 
-	public String getCompanyName() {
-		return companyName;
-	}
-
-	public void setCompanyName(String companyName) {
-		this.companyName = companyName;
-	}
-
-	public String getCompanyTelephone() {
-		return companyTelephone;
-	}
-
-	public void setCompanyTelephone(String companyTelephone) {
-		this.companyTelephone = companyTelephone;
-	}
-
-	public String getContactPerson() {
-		return contactPerson;
-	}
-
-	public void setContactPerson(String contactPerson) {
-		this.contactPerson = contactPerson;
-	}
-
-	public String getCompanyAddress() {
-		return companyAddress;
-	}
-
-	public void setCompanyAddress(String companyAddress) {
-		this.companyAddress = companyAddress;
-	}
-
-	public String getCompanyWeb() {
-		return companyWeb;
-	}
-
-	public void setCompanyWeb(String companyWeb) {
-		this.companyWeb = companyWeb;
-	}
-
-	public String getNoOfVacancies() {
-		return noOfVacancies;
-	}
-
-	public void setNoOfVacancies(String noOfVacancies) {
-		this.noOfVacancies = noOfVacancies;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getConPassword() {
-		return conPassword;
-	}
-
-	public void setConPassword(String conPassword) {
-		this.conPassword = conPassword;
-	}
-
-	public boolean isAllowed() {
-		return allowed;
-	}
-
-	public void setAllowed(boolean allowed) {
-		this.allowed = allowed;
-	}
-
-	public String getCompanyName2() {
-		return companyName2;
-	}
-
-	public void setCompanyName2(String companyName2) {
-		this.companyName2 = companyName2;
-	}
 
 }

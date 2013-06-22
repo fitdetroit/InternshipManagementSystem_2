@@ -55,16 +55,15 @@ public class ViewCompanyDataSession {
 	}
 	
 	//this method is used to view company details to company
-	public List<Company> viewCompanyToCompany(String userName)
+	public Company viewCompanyToCompany(String userName)
 	{
 		Session session = getSessionFactory().openSession();
-		String SQL_QUERY = "from Company as com  where com.companyUserName='"+userName+"'";
-		Query query = session.createQuery(SQL_QUERY);
-	
-		List<Company> list = ((org.hibernate.Query) query).list();
+		session.beginTransaction();
+		Company company =(Company)session.get(Company.class, userName);
+		session.getTransaction().commit();
 		session.close();
-
-		return list;
+		
+		return company;
 	}
 	// this method is used to get detials about allowd company to admin
 	public List<Company> allowedCompanyToStudent()
@@ -91,40 +90,37 @@ public class ViewCompanyDataSession {
 		
 	}
 	// this method is used to give full profile to student form database
-	public List<Company> FullProfileToStudent(String userName)
+	public Company FullProfileToStudent(String userName)
 	{
 		Session session = getSessionFactory().openSession();
-		String SQL_QUERY = "from Company as com  where com.companyUserName='"+userName+"'";
-		Query query = session.createQuery(SQL_QUERY);
-	
-		List<Company> list = ((org.hibernate.Query) query).list();
+		session.beginTransaction();
+		Company company =(Company)session.get(Company.class, userName);
+		session.getTransaction().commit();
 		session.close();
-
-		return list;
+		
+		return company;
 	}
 // this method is used to give full information about company to compny form database	
-	public List<Company> FullProfileToCompany(String userName)
+	public Company FullProfileToCompany(String userName)
 	{
 		Session session = getSessionFactory().openSession();
-		String SQL_QUERY = "from Company as com  where com.companyUserName='"+userName+"'";
-		Query query = session.createQuery(SQL_QUERY);
-	
-		List<Company> list = ((org.hibernate.Query) query).list();
+		session.beginTransaction();
+		Company company =(Company)session.get(Company.class, userName);
+		session.getTransaction().commit();
 		session.close();
-
-		return list;
+		
+		return company;
 	}
 	// this method is used to give full information to admin about compies form database
-	public List<Company> FullProfileToAdmin(String userName)
+	public Company FullProfileToAdmin(String userName)
 	{
 		Session session = getSessionFactory().openSession();
-		String SQL_QUERY = "from Company as com  where com.companyUserName='"+userName+"'";
-		Query query = session.createQuery(SQL_QUERY);
-	
-		List<Company> list = ((org.hibernate.Query) query).list();
+		session.beginTransaction();
+		Company company =(Company)session.get(Company.class, userName);
+		session.getTransaction().commit();
 		session.close();
-
-		return list;
+		
+		return company;
 	}
 // this method is used to get list of company names are allowd to view cv form student	
 	public List<Company> CvRecivedCompanyToAdmin()

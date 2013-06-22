@@ -20,6 +20,9 @@ import com.opensymphony.xwork2.ActionSupport;
 public class ViewCompany extends ActionSupport{
 	private List<Company> list = null;
 
+	private Company company = new Company();
+
+
 	ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
 	ViewCompanyDataSession viewCompanyDataSession = (ViewCompanyDataSession) context.getBean("ViewCompany");
 	
@@ -71,7 +74,7 @@ public class ViewCompany extends ActionSupport{
 		Map session;
 		session = ActionContext.getContext().getSession();
 		String userName = (String) session.get("userName");
-		setList(getViewCompanyDataSession().viewCompanyToCompany(userName));
+		setCompany(getViewCompanyDataSession().viewCompanyToCompany(userName));
 		return SUCCESS;
 	}
 	
@@ -114,7 +117,7 @@ public class ViewCompany extends ActionSupport{
 		{
 			return ERROR;
 		}
-		setList(getViewCompanyDataSession().FullProfileToStudent(getCompanyUserName()));
+		setCompany(getViewCompanyDataSession().FullProfileToStudent(getCompanyUserName()));
 		return SUCCESS;
 	}
 	
@@ -131,7 +134,7 @@ public class ViewCompany extends ActionSupport{
 			return ERROR;
 		}
 		
-		setList(getViewCompanyDataSession().FullProfileToCompany(getCompanyUserName()));
+		setCompany(getViewCompanyDataSession().FullProfileToCompany(getCompanyUserName()));
 		return SUCCESS;
 	}
 	
@@ -142,7 +145,7 @@ public class ViewCompany extends ActionSupport{
 			return ERROR;
 				
 		}		
-		setList(getViewCompanyDataSession().FullProfileToAdmin(getCompanyUserName()));
+		setCompany(getViewCompanyDataSession().FullProfileToAdmin(getCompanyUserName()));
 		return SUCCESS;
 	}
 	
@@ -152,6 +155,14 @@ public class ViewCompany extends ActionSupport{
 
 	
 	//getters and setters
+	
+	public Company getCompany() {
+		return company;
+	}
+
+	public void setCompany(Company company) {
+		this.company = company;
+	}
 	public List<Company> getList() {
 		return list;
 	}

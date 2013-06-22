@@ -79,7 +79,6 @@ public class UpdatingStudentByStudent extends ActionSupport {
 
 	
 
-	private List<Student> list = null;
 
 
 	Student student = new Student();
@@ -114,7 +113,7 @@ public class UpdatingStudentByStudent extends ActionSupport {
 		session = ActionContext.getContext().getSession();
 		String userName = (String) session.get("userName");
 
-		setList(updateStudent.getDetails(userName));
+		setStudent(updateStudent.getDetails(userName));
 		
 		
 		
@@ -130,7 +129,7 @@ public class UpdatingStudentByStudent extends ActionSupport {
 			System.out.println("its not working");
 		}
 		
-		student=list.get(0);
+		
 
 		if(getStudentUserName().length()!=0)
 		student.setStudentUserName(getStudentUserName());
@@ -356,13 +355,7 @@ public class UpdatingStudentByStudent extends ActionSupport {
 		ProfilePictureContentType = profilePictureContentType;
 	}
 
-	public List<Student> getList() {
-		return list;
-	}
 
-	public void setList(List<Student> list) {
-		this.list = list;
-	}
 	public String getStudentUserName() {
 		return studentUserName;
 	}

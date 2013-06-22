@@ -35,43 +35,51 @@ public class ViewStudentDataSession {
 	}
 	
 // this method is used to get student profile to specific student	
-	public List<Student> viewStudentToStudent(String userName)
+	public Student viewStudentToStudent(String userName)
 	{
-		Session session = getSessionFactory().openSession();
-		String SQL_QUERY = "from Student as stu  where stu.studentUserName='"+userName+"'";
-		Query query = session.createQuery(SQL_QUERY);
-	
-		List<Student> list = ((org.hibernate.Query) query).list();
-		session.close();
 
-		return list;
+		
+		
+		Session session = getSessionFactory().openSession();
+		session.beginTransaction();
+		Student student =(Student)session.get(Student.class, userName);
+		session.getTransaction().commit();
+		session.close();
+		
+		return student;
 		
 	}
 
-	// this method is used to get sutdent cv details to admin
-	public List<Student> studentCvToAdmin(String userName)
-	{
-		Session session = getSessionFactory().openSession();
-		String SQL_QUERY = "from Student as stu  where stu.studentUserName='"+userName+"'";
-		Query query = session.createQuery(SQL_QUERY);
-	
-		List<Student> list = ((org.hibernate.Query) query).list();
-		session.close();
 
-		return list;
+	
+	
+	// this method is used to get sutdent cv details to admin
+	public Student studentCvToAdmin(String userName)
+	{
+
+
+		Session session = getSessionFactory().openSession();
+		session.beginTransaction();
+		Student student =(Student)session.get(Student.class, userName);
+		session.getTransaction().commit();
+		session.close();
+		
+		return student;
+		
 		
 	}
 	// this method is used to get student cv to compnay 
-	public List<Student> studentCvToCompany(String userName)
+	public Student studentCvToCompany(String userName)
 	{
-		Session session = getSessionFactory().openSession();
-		String SQL_QUERY = "from Student as stu  where stu.studentUserName='"+userName+"'";
-		Query query = session.createQuery(SQL_QUERY);
-	
-		List<Student> list = ((org.hibernate.Query) query).list();
-		session.close();
 
-		return list;
+		
+		Session session = getSessionFactory().openSession();
+		session.beginTransaction();
+		Student student =(Student)session.get(Student.class, userName);
+		session.getTransaction().commit();
+		session.close();
+		
+		return student;
 		
 	}
 
@@ -339,18 +347,7 @@ public class ViewStudentDataSession {
 	}
 	
 	
-	public List<StudentComplitedProjects> getStudentComplitedProjectsFromDB(String studentUserName )
-	{
-		Session session2 = getSessionFactory().openSession();
-		String SQL_QUERY2 = "from StudentComplitedProjects as scp  where scp.student.studentUserName='"+studentUserName+"' ";
-		Query query2 = session2.createQuery(SQL_QUERY2);
-	
-		List<StudentComplitedProjects> list = ((org.hibernate.Query) query2).list();
-		session2.close();
-		
-		return list;
-		
-	}
+
 	
 	
 	

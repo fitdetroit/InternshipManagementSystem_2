@@ -51,7 +51,7 @@
 </head>
 
 <body bgcolor="#333333" >
-<s:iterator value="list" var="student" >
+
 <table width="100%" border="0" style="border-collapse:collapse; height: 1346px; border-top-style: none; border-top-color: inherit; border-top-width: 0px;">
 	<tr>
 		<td class="heading" colspan="3" style="background-image:url('picture1.jpg');background-position:left;background-repeat:inherit;">Curriculum Vitae </td>
@@ -82,7 +82,7 @@
 		<td style="height: 1331px" valign="top">
 			<table width="100%" border="0">
 				<tr>
-					<td colspan="2" style="background-color:black;width:100%;font-family:Cambria;font-size:60px;color:teal"><s:property  value="nameWithInitials"></s:property></td>
+					<td colspan="2" style="background-color:black;width:100%;font-family:Cambria;font-size:60px;color:teal"><s:property  value="student.nameWithInitials"></s:property></td>
 				</tr>
 				<tr><td style="height: 50px"></td></tr>
 				<tr style="background-color:#333333">
@@ -92,15 +92,15 @@
 					<td style="width:5%"></td>
 					<td class="content1"><table style="text-align:left" width="100%">
 										
-										<tr><td style="width:15%"><i>Name</i></td><td><s:property  value="nameInFull"></s:property></td></tr>
-										<tr><td><i>Gender</i></td><td><s:property  value="gender" ></s:property></td></tr>
-										<tr><td><i>Marital Status</i></td><td><s:property  value="maritalStatus"></s:property></td></tr>
-										<tr><td><i>Date Of Birth</i></td><td><s:property  value="dateOfBirth"></s:property></td></tr>
-										<tr><td><i>Address</i></td><td><s:property  value="permanentAddress"></s:property></td></tr>
-										<tr><td><i>Mobile 1</i></td><td><s:property  value="mobile1"></s:property></td></tr>
-										<tr><td><i>Mobile 2</i></td><td><s:property  value="mobile2"></s:property></td></tr>
-										<tr><td><i>Telephone</i></td><td><s:property  value="telephone"></s:property></td></tr>										
-										<tr><td><i>E-mail</i></td><td><s:property  value="email"></s:property></td></tr>
+										<tr><td style="width:15%"><i>Name</i></td><td><s:property  value="student.nameInFull"></s:property></td></tr>
+										<tr><td><i>Gender</i></td><td><s:property  value="student.gender" ></s:property></td></tr>
+										<tr><td><i>Marital Status</i></td><td><s:property  value="student.maritalStatus"></s:property></td></tr>
+										<tr><td><i>Date Of Birth</i></td><td><s:property  value="student.dateOfBirth"></s:property></td></tr>
+										<tr><td><i>Address</i></td><td><s:property  value="student.permanentAddress"></s:property></td></tr>
+										<tr><td><i>Mobile 1</i></td><td><s:property  value="student.mobile1"></s:property></td></tr>
+										<tr><td><i>Mobile 2</i></td><td><s:property  value="student.mobile2"></s:property></td></tr>
+										<tr><td><i>Telephone</i></td><td><s:property  value="student.telephone"></s:property></td></tr>										
+										<tr><td><i>E-mail</i></td><td><s:property  value="student.email"></s:property></td></tr>
 										
 										</table></td>
 				</tr>
@@ -115,15 +115,15 @@
 										
 										<tr><td></td></tr>
 										<tr><td colspan="3"><i>1. G.C.E.Advanced Level<br/></i></td></tr>														
-										<tr><td style="width:5%"></td><td><s:property  value="alSubject1"></s:property></td><td style="width:50%;text-align:center"><s:property  value="alResult1" ></s:property></td></tr>
-										<tr><td style="width:5%"></td><td><s:property  value="alSubject2"></s:property></td><td style="width:50%;text-align:center"><s:property  value="alResult2" ></s:property></td></tr>
-										<tr><td style="width:5%"></td><td><s:property  value="alSubject3"></s:property></td><td style="width:50%;text-align:center"><s:property  value="alResult3" ></s:property></td></tr>
+										<tr><td style="width:5%"></td><td><s:property  value="student.alSubject1"></s:property></td><td style="width:50%;text-align:center"><s:property  value="student.alResult1" ></s:property></td></tr>
+										<tr><td style="width:5%"></td><td><s:property  value="student.alSubject2"></s:property></td><td style="width:50%;text-align:center"><s:property  value="student.alResult2" ></s:property></td></tr>
+										<tr><td style="width:5%"></td><td><s:property  value="student.alSubject3"></s:property></td><td style="width:50%;text-align:center"><s:property  value="student.alResult3" ></s:property></td></tr>
 										<tr><td></td></tr>
-										<tr><td colspan="3">2.An undergraduate of B.Sc. in <s:property  value="digreeTitle" ></s:property> Year of Admission:<s:property  value="yearOfAdmission"></s:property></td></tr>
+										<tr><td colspan="3">2.An undergraduate of B.Sc. in <s:property  value="student.digreeTitle" ></s:property> Year of Admission:<s:property  value="student.yearOfAdmission"></s:property></td></tr>
 										<tr><td colspan="3"><i>Current GPA<br/></i></td></tr>
-										<tr><td style="width:5%"></td><td>GPA semester 1:</td><td style="width:50%;text-align:center"><s:property  value="gpaSemester1"></s:property></td></tr>
-										<tr><td style="width:5%"></td><td>GPA semester 2:</td><td style="width:50%;text-align:center"><s:property  value="gpaSemester2"></s:property></td></tr>
-										<tr><td style="width:5%"></td><td>GPA semester 3:</td><td style="width:50%;text-align:center"><s:property  value="gpaSemester3"></s:property></td></tr>
+										<tr><td style="width:5%"></td><td>GPA semester 1:</td><td style="width:50%;text-align:center"><s:property  value="student.gpaSemester1"></s:property></td></tr>
+										<tr><td style="width:5%"></td><td>GPA semester 2:</td><td style="width:50%;text-align:center"><s:property  value="student.gpaSemester2"></s:property></td></tr>
+										<tr><td style="width:5%"></td><td>GPA semester 3:</td><td style="width:50%;text-align:center"><s:property  value="student.gpaSemester3"></s:property></td></tr>
 										<tr><td></td></tr>
 										</table></td>
 				</tr>
@@ -134,14 +134,14 @@
 				<tr>
 					<td style="width:5%"></td>
 					<td class="content1"><table style="text-align:left" width="100%">
-										<tr><td><s:property  value="workingExperience"></s:property></td></tr>
+										<tr><td><s:property  value="student.workingExperience"></s:property></td></tr>
 										</table></td>
 				</tr>
 				<tr><td style="height:20px"></td></tr>
 				<tr style="background-color:#333333">
 					<td colspan="2" class="ankers"><a name="projects"></a>Projects</td>
 				</tr>
-			<s:iterator value="studentComplitedProjects"  >
+			<s:iterator value="student.studentComplitedProjects"  >
 				<tr>
 				
 					<td style="width:5%"></td>
@@ -180,7 +180,7 @@
 	</tr>
 
 </table>
-</s:iterator>
+
 </body>
 
 </html>

@@ -14,6 +14,7 @@ import org.hibernate.annotations.NotFoundAction;
 
 
 @Entity
+@org.hibernate.annotations.Entity(selectBeforeUpdate = true)
 @Table(name="Student_Other_Qulification")
 public class StudentOtherQulification {
 	

@@ -23,7 +23,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class UpdatingCompanyByCompany extends ActionSupport{
 	
-	private List<Company> list = null;
+
 	
 	private String companyUserName=null;
 	private String companyName=null;
@@ -78,10 +78,8 @@ public class UpdatingCompanyByCompany extends ActionSupport{
 		Map session;
 		session = ActionContext.getContext().getSession();
 		String userName = (String) session.get("userName");
-		setList(updateCompany.getDetails(userName));
-		
-		company = list.get(0);
-		System.out.println("its exeisting company"+getCompany().getCompanyName());
+		setCompany(updateCompany.getDetails(userName));
+	
 		
 		
 		// uploading updated profile picture
@@ -214,13 +212,7 @@ public class UpdatingCompanyByCompany extends ActionSupport{
 	public void setProfilePictureContentType(String profilePictureContentType) {
 		ProfilePictureContentType = profilePictureContentType;
 	}
-	public List<Company> getList() {
-		return list;
-	}
 
-	public void setList(List<Company> list) {
-		this.list = list;
-	}
 
 	public String getPassword2() {
 		return password2;

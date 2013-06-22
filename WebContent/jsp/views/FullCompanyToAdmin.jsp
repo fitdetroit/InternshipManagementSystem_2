@@ -51,7 +51,7 @@
 </head>
 
 <body bgcolor="#333333" >
-<s:iterator value="list" var="student" >
+
 <table width="100%" border="0" style="border-collapse:collapse; height: 1346px; border-top-style: none; border-top-color: inherit; border-top-width: 0px;">
 	<tr>
 		<td class="heading" colspan="3" style="background-image:url('picture1.jpg');background-position:left;background-repeat:inherit;">Profile details </td>
@@ -75,7 +75,7 @@
 		<td style="height: 1331px" valign="top">
 			<table width="100%" border="0">
 				<tr>
-					<td colspan="2" style="background-color:black;width:100%;font-family:Cambria;font-size:60px;color:teal"><s:property  value="companyName"></s:property></td>
+					<td colspan="2" style="background-color:black;width:100%;font-family:Cambria;font-size:60px;color:teal"><s:property  value="company.companyName"></s:property></td>
 				</tr>
 				<tr><td style="height: 50px"></td></tr>
 				<tr style="background-color:#333333">
@@ -84,12 +84,12 @@
 				<tr>
 					<td style="width:5%"></td>
 					<td class="content1"><table style="text-align:left" width="100%">					
-					<tr><td style="width:15%"><i>Company Name</i></td><td><s:property  value="companyName"></s:property></td></tr>
-					<tr><td><i>Company Telephone</i></td><td><s:property  value="companyTelephone" ></s:property></td></tr>
-					<tr><td><i>Contact Person</i></td><td><s:property  value="contactPerson"></s:property></td></tr>
-					<tr><td><i>Company Address</i></td><td><s:property  value="companyAddress"></s:property></td></tr>
-					<tr><td><i>Company Web</i></td><td><s:property  value="companyWeb"></s:property></td></tr>
-					<tr><td><i>No of Vacancies</i></td><td><s:property  value="noOfVacancies"></s:property></td></tr>
+					<tr><td style="width:15%"><i>Company Name</i></td><td><s:property  value="company.companyName"></s:property></td></tr>
+					<tr><td><i>Company Telephone</i></td><td><s:property  value="company.companyTelephone" ></s:property></td></tr>
+					<tr><td><i>Contact Person</i></td><td><s:property  value="company.contactPerson"></s:property></td></tr>
+					<tr><td><i>Company Address</i></td><td><s:property  value="company.companyAddress"></s:property></td></tr>
+					<tr><td><i>Company Web</i></td><td><s:property  value="company.companyWeb"></s:property></td></tr>
+					<tr><td><i>No of Vacancies</i></td><td><s:property  value="company.noOfVacancies"></s:property></td></tr>
 										
 										</table></td>
 				</tr>
@@ -102,7 +102,7 @@
 	</tr>
 
 </table>
-</s:iterator>
+
 </body>
 
 </html>

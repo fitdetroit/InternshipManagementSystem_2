@@ -48,7 +48,7 @@ public class Student {
 	
 	@OneToMany(mappedBy="student",fetch=FetchType.EAGER,cascade={CascadeType.ALL})
 	private  Collection<StudentComplitedProjects> studentComplitedProjects = new ArrayList<StudentComplitedProjects>();
-	@OneToMany(mappedBy="student")
+	@OneToMany(mappedBy="student",fetch=FetchType.LAZY,cascade={CascadeType.ALL})
 	private Collection<StudentOtherQulification> studentOtherQulification = new ArrayList<StudentOtherQulification>();
 	@OneToMany(mappedBy="student")
 	private Collection<StudentProfessionalExp> studentProfessionalExp = new ArrayList<StudentProfessionalExp>();
