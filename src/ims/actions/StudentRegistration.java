@@ -2,6 +2,7 @@ package ims.actions;
 
 import java.io.File;
 
+import javax.persistence.Column;
 import javax.servlet.ServletContext;
 
 import org.apache.struts2.ServletActionContext;
@@ -44,13 +45,21 @@ public class StudentRegistration extends ActionSupport {
 	private float gpaSemester1;
 	private float gpaSemester2;
 	private float gpaSemester3;
-	private String workingExperience;
-	private String projects;
 	private String appliedCompany1;
 	private String appliedCompany2;
 	private String appliedCompany3;
 	private String appliedCompany4;
 	private String appliedCompany5;
+	
+	
+	
+	
+	private String projectTitle1;
+	private String projectDescription1;
+	private String projectYear1;
+	private String projectTitle2;
+	private String projectDescription2;
+	private String projectYear2;
 	
 	
 	StudentCompany studentCompany1 = new StudentCompany();
@@ -65,6 +74,7 @@ public class StudentRegistration extends ActionSupport {
 	Application application4 = new Application();
 	Application application5 = new Application();
 	
+
 
 	//to upload profile picture
 	private File ProfilePicture;
@@ -120,19 +130,37 @@ public class StudentRegistration extends ActionSupport {
 		getStudent().setGpaSemester1(getGpaSemester1());
 		getStudent().setGpaSemester2(getGpaSemester2());
 		getStudent().setGpaSemester3(getGpaSemester3());
-		getStudent().setWorkingExperience(getWorkingExperience());
-		getStudent().setProjects(getProjects());
-/*		getStudent().setAppliedCompany1(getAppliedCompany1());
-		getStudent().setAppliedCompany2(getAppliedCompany2());
-		getStudent().setAppliedCompany3(getAppliedCompany3());
-		getStudent().setAppliedCompany4(getAppliedCompany4());
-		getStudent().setAppliedCompany5(getAppliedCompany5());*/
-		
 
+		
+      //To save student done projects in studentComplitedProject table
+		
+		StudentComplitedProjects studentComplitedProjects1= new StudentComplitedProjects();
+		studentComplitedProjects1.setProjectTitle(getProjectTitle1());
+		studentComplitedProjects1.setProjectDescription(getProjectDescription1());
+		studentComplitedProjects1.setProjectYear(getProjectYear1());
+		studentComplitedProjects1.setStudent(getStudent());
+		
+		StudentComplitedProjects studentComplitedProjects2 = new StudentComplitedProjects();
+		studentComplitedProjects2.setProjectTitle(getProjectTitle2());
+		studentComplitedProjects2.setProjectDescription(getProjectDescription2());
+		studentComplitedProjects2.setProjectYear(getProjectYear2());
+		studentComplitedProjects2.setStudent(getStudent());
+	
+
+		
+		getStudent().getStudentComplitedProjects().add(studentComplitedProjects1);
+		getStudent().getStudentComplitedProjects().add(studentComplitedProjects2);
 
 		// to save student in student table 
 		registerStudent.saveStudent(student);
 	
+		//saving student complited projects in studentComplitedProject table
+		//registerStudent.studentCompliteProjectsSave(studentComplitedProjects1);
+		//registerStudent.studentCompliteProjectsSave(studentComplitedProjects2);
+		
+		
+		
+		
 		
 		// folowing several if eles statements used to save applied company list in appliaction table
 		
@@ -227,7 +255,59 @@ public class StudentRegistration extends ActionSupport {
 	
 	
 	
+	
+	
+	
+	
 	// getters and setters
+	public String getProjectTitle1() {
+		return projectTitle1;
+	}
+
+	public void setProjectTitle1(String projectTitle1) {
+		this.projectTitle1 = projectTitle1;
+	}
+
+	public String getProjectDescription1() {
+		return projectDescription1;
+	}
+
+	public void setProjectDescription1(String projectDescription1) {
+		this.projectDescription1 = projectDescription1;
+	}
+
+	public String getProjectYear1() {
+		return projectYear1;
+	}
+
+	public void setProjectYear1(String projectYear1) {
+		this.projectYear1 = projectYear1;
+	}
+
+	public String getProjectTitle2() {
+		return projectTitle2;
+	}
+
+	public void setProjectTitle2(String projectTitle2) {
+		this.projectTitle2 = projectTitle2;
+	}
+
+	public String getProjectDescription2() {
+		return projectDescription2;
+	}
+
+	public void setProjectDescription2(String projectDescription2) {
+		this.projectDescription2 = projectDescription2;
+	}
+
+	public String getProjectYear2() {
+		return projectYear2;
+	}
+
+	public void setProjectYear2(String projectYear2) {
+		this.projectYear2 = projectYear2;
+	}
+
 	public File getProfilePicture() {
 		return ProfilePicture;
 	}
@@ -450,21 +530,7 @@ public class StudentRegistration extends ActionSupport {
 		this.gpaSemester3 = gpaSemester3;
 	}
 
-	public String getWorkingExperience() {
-		return workingExperience;
-	}
 
-	public void setWorkingExperience(String workingExperience) {
-		this.workingExperience = workingExperience;
-	}
-
-	public String getProjects() {
-		return projects;
-	}
-
-	public void setProjects(String projects) {
-		this.projects = projects;
-	}
 
 	public String getAppliedCompany1() {
 		return appliedCompany1;

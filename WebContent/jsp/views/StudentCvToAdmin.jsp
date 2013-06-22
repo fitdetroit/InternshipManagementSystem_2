@@ -51,7 +51,8 @@
 </head>
 
 <body bgcolor="#333333" >
-<s:iterator value="list" var="student" >
+<s:iterator value="list" var="student" id="parent" >
+
 <table width="100%" border="0" style="border-collapse:collapse; height: 1346px; border-top-style: none; border-top-color: inherit; border-top-width: 0px;">
 	<tr>
 		<td class="heading" colspan="3" style="background-image:url('picture1.jpg');background-position:left;background-repeat:inherit;">Curriculum Vitae </td>
@@ -141,12 +142,23 @@
 				<tr style="background-color:#333333">
 					<td colspan="2" class="ankers"><a name="projects"></a>Projects</td>
 				</tr>
+				<s:iterator value="studentComplitedProjects"  >
 				<tr>
+				
 					<td style="width:5%"></td>
-					<td class="content1"><table style="text-align:left" width="100%">
-										<tr><td><s:property  value="projects"></s:property></td></tr>
+					
+					<td class="content1">
+					
+					<table style="text-align:left" width="100%">
+					
+										<tr><td><s:property  value="projectTitle"></s:property></td></tr>
+										<tr><td><s:property  value="projectDescription"></s:property></td></tr>
+										<tr><td><s:property  value="projectYear"></s:property></td></tr>
+										
 										</table></td>
+										
 				</tr>
+				</s:iterator>
 				<tr><td style="height:20px"></td></tr>
 				<tr style="background-color:#333333">
 					<td colspan="2" class="ankers"><a name="uni"></a>University Details</td>
@@ -169,6 +181,7 @@
 	</tr>
 
 </table>
+
 </s:iterator>
 </body>
 

@@ -64,23 +64,23 @@
 <div style="float:left;width:15%; height: 672px;background=#333333">
 
 
-<p align="left"><a href="<s:url action="/student/ViewCompanyProfile"/>">click here to view Company Profiles</a></p>
+<p align="left"><a href="<s:url action="student/ViewCompanyProfile"/>">click here to view Company Profiles</a></p>
 
-<p align="left"><a href="<s:url action="/student/NewStudent"/>">click here to new register student</a><p>
+<p align="left"><a href="<s:url action="student/NewStudent"/>">click here to new register student</a><p>
 
-<p align="left"><a href="<s:url action="/student/ToChangePasswordStudent"/>">click here to change password</a><p>
+<p align="left"><a href="<s:url action="student/ToChangePasswordStudent"/>">click here to change password</a><p>
 </div>
 
 
 
 <div style="float:left;width:85%; height: 668px;background:silver">
 <br>
-<p align="center"><a href="<s:url action="/student/ViewCompanyProfile"/>">click here to view Company Profiles</a></p>
+<p align="center"><a href="<s:url action="student/ViewCompanyProfile"/>">click here to view Company Profiles</a></p>
 <br>
-<p align="center"><a href="<s:url action="/student/NewStudent"/>">click here to new register student</a><p>
+<p align="center"><a href="<s:url action="student/NewStudent"/>">click here to new register student</a><p>
 
 <br>
-<p align="center"><a href="<s:url action="/student/ToChangePasswordStudent"/>">click here to change password</a><p>
+<p align="center"><a href="<s:url action="student/ToChangePasswordStudent"/>">click here to change password</a><p>
 </div>
 
 

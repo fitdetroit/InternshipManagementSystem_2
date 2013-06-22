@@ -3,7 +3,9 @@ package ims.data;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -40,12 +42,11 @@ public class Student {
 	private float gpaSemester1;
 	private float gpaSemester2;
 	private float gpaSemester3;
-	private String workingExperience;
-	private String projects;
+
 	
 
 	
-	@OneToMany(mappedBy="student")
+	@OneToMany(mappedBy="student",fetch=FetchType.EAGER,cascade={CascadeType.ALL})
 	private  Collection<StudentComplitedProjects> studentComplitedProjects = new ArrayList<StudentComplitedProjects>();
 	@OneToMany(mappedBy="student")
 	private Collection<StudentOtherQulification> studentOtherQulification = new ArrayList<StudentOtherQulification>();
@@ -224,20 +225,7 @@ public Collection<StudentOtherQulification> getStudentOtherQulification() {
 	public void setGpaSemester3(float gpaSemester3) {
 		this.gpaSemester3 = gpaSemester3;
 	}
-	public String getWorkingExperience() {
-		return workingExperience;
-	}
-	public void setWorkingExperience(String workingExperience) {
-		this.workingExperience = workingExperience;
-	}
-	public String getProjects() {
-		return projects;
-	}
-	public void setProjects(String projects) {
-		this.projects = projects;
-	}
 
-	
 
 	
 

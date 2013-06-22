@@ -3,6 +3,7 @@ package ims.actions;
 
 import ims.business.UpdateStudent;
 import ims.data.Student;
+import ims.data.StudentComplitedProjects;
 import ims.data.User;
 
 import java.util.List;
@@ -24,6 +25,9 @@ public class EditStudent extends ActionSupport{
 	
 	private List<Student> list = null;
 	private List<User> list2 = null;
+	private List<StudentComplitedProjects> studentComplitedProjects= null;
+
+
 	private Student student;
 	private User user;
 
@@ -58,11 +62,20 @@ public class EditStudent extends ActionSupport{
 	private float gpaSemester1;
 	private float gpaSemester2;
 	private float gpaSemester3;
-	private String workingExperience;
-	private String projects;
-
 	private String password;
 	private String password2;
+	private int projectId1=0;
+	private int projectId2=0;;
+	private String projectTitle1;
+	private String projectDescription1;
+	private String projectYear1;
+	private String projectTitle2;
+	private String projectDescription2;
+	private String projectYear2;
+
+
+
+
 
 
 
@@ -86,6 +99,9 @@ public class EditStudent extends ActionSupport{
 
 		setList(getUpdateStudent().getDetails(userName));
 		setList2(getUpdateStudent().getDetails2(userName));
+		System.out.println("aaa");
+		setStudentComplitedProjects(getUpdateStudent().getStudentComplitedProjectsFromDB(userName));
+		
 		student=list.get(0);
 		user=list2.get(0);
 		
@@ -115,11 +131,35 @@ public class EditStudent extends ActionSupport{
 		setGpaSemester1(student.getGpaSemester1());
 		setGpaSemester2(student.getGpaSemester2());
 		setGpaSemester3(student.getGpaSemester3());
-		setWorkingExperience(student.getWorkingExperience());
-		setProjects(student.getProjects());
+
 
 		setPassword(user.getPassword());
 		setPassword2(user.getPassword());
+		
+		System.out.println("bbbb");
+		//set values to project
+		if(getStudentComplitedProjects().isEmpty()!=true)
+		{
+			if(getStudentComplitedProjects().get(0)!=null)
+			{
+				setProjectId1(studentComplitedProjects.get(0).getProjectId());
+				setProjectTitle1(studentComplitedProjects.get(0).getProjectTitle());
+				setProjectDescription1(studentComplitedProjects.get(0).getProjectDescription());
+				setProjectYear1(studentComplitedProjects.get(0).getProjectYear());
+			}
+			
+			if(getStudentComplitedProjects().get(1)!=null)
+			{
+				setProjectId2(studentComplitedProjects.get(1).getProjectId());
+				setProjectTitle2(studentComplitedProjects.get(1).getProjectTitle());
+				setProjectDescription2(studentComplitedProjects.get(1).getProjectDescription());
+				setProjectYear2(studentComplitedProjects.get(1).getProjectYear());
+				
+			}
+			
+		}
+		
+
 
 
 		return SUCCESS;
@@ -151,7 +191,79 @@ public class EditStudent extends ActionSupport{
 	
 	
 	
-	//getters and setters	
+	//getters and setters
+
+
+	public int getProjectId2() {
+		return projectId2;
+	}
+
+	public int getProjectId1() {
+		return projectId1;
+	}
+
+	public void setProjectId1(int projectId1) {
+		this.projectId1 = projectId1;
+	}
+
+	public void setProjectId2(int projectId2) {
+		this.projectId2 = projectId2;
+	}
+	public List<StudentComplitedProjects> getStudentComplitedProjects() {
+		return studentComplitedProjects;
+	}
+
+	public void setStudentComplitedProjects(
+			List<StudentComplitedProjects> studentComplitedProjects) {
+		this.studentComplitedProjects = studentComplitedProjects;
+	}
+	public String getProjectTitle1() {
+		return projectTitle1;
+	}
+
+	public void setProjectTitle1(String projectTitle1) {
+		this.projectTitle1 = projectTitle1;
+	}
+
+	public String getProjectDescription1() {
+		return projectDescription1;
+	}
+
+	public void setProjectDescription1(String projectDescription1) {
+		this.projectDescription1 = projectDescription1;
+	}
+
+	public String getProjectYear1() {
+		return projectYear1;
+	}
+
+	public void setProjectYear1(String projectYear1) {
+		this.projectYear1 = projectYear1;
+	}
+
+	public String getProjectTitle2() {
+		return projectTitle2;
+	}
+
+	public void setProjectTitle2(String projectTitle2) {
+		this.projectTitle2 = projectTitle2;
+	}
+
+	public String getProjectDescription2() {
+		return projectDescription2;
+	}
+
+	public void setProjectDescription2(String projectDescription2) {
+		this.projectDescription2 = projectDescription2;
+	}
+
+	public String getProjectYear2() {
+		return projectYear2;
+	}
+
+	public void setProjectYear2(String projectYear2) {
+		this.projectYear2 = projectYear2;
+	}
 	public List<User> getList2() {
 		return list2;
 	}
@@ -513,36 +625,6 @@ public class EditStudent extends ActionSupport{
 	public void setGpaSemester3(float gpaSemester3) {
 		this.gpaSemester3 = gpaSemester3;
 	}
-
-
-
-
-	public String getWorkingExperience() {
-		return workingExperience;
-	}
-
-
-
-
-	public void setWorkingExperience(String workingExperience) {
-		this.workingExperience = workingExperience;
-	}
-
-
-
-
-	public String getProjects() {
-		return projects;
-	}
-
-
-
-
-	public void setProjects(String projects) {
-		this.projects = projects;
-	}
-
-
 
 
 	public ApplicationContext getContext() {

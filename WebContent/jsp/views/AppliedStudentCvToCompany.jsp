@@ -141,12 +141,23 @@
 				<tr style="background-color:#333333">
 					<td colspan="2" class="ankers"><a name="projects"></a>Projects</td>
 				</tr>
+			<s:iterator value="studentComplitedProjects"  >
 				<tr>
+				
 					<td style="width:5%"></td>
-					<td class="content1"><table style="text-align:left" width="100%">
-										<tr><td><s:property  value="projects"></s:property></td></tr>
+					
+					<td class="content1">
+					
+					<table style="text-align:left" width="100%">
+					
+										<tr><td><s:property  value="projectTitle"></s:property></td></tr>
+										<tr><td><s:property  value="projectDescription"></s:property></td></tr>
+										<tr><td><s:property  value="projectYear"></s:property></td></tr>
+										
 										</table></td>
+										
 				</tr>
+				</s:iterator>
 				<tr><td style="height:20px"></td></tr>
 				<tr style="background-color:#333333">
 					<td colspan="2" class="ankers"><a name="uni"></a>University Details</td>

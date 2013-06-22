@@ -133,7 +133,6 @@ public class CheckUserToLogin {
 
 				String hql2 = " from Student st where st.studentUserName='" + userName + "'";
 				Query query2 = session.createQuery(hql2);
-				Iterator<Student> it2 = ((org.hibernate.Query) query2).iterate();
 				List<Student> list2 = ((org.hibernate.Query) query2).list();
 				if (list2.size() > 0) {
 					session.close();
@@ -148,7 +147,6 @@ public class CheckUserToLogin {
 			{
 				String hql2 = " from Company cm where cm.companyUserName='" + userName + "'and cm.allowed='1'";
 				Query query2 = session.createQuery(hql2);
-				Iterator<Student> it2 = ((org.hibernate.Query) query2).iterate();
 				List<Student> list2 = ((org.hibernate.Query) query2).list();
 				if (list2.size() > 0) {
 					session.close();

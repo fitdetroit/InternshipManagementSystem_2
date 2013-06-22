@@ -6,6 +6,7 @@ import java.util.List;
 import ims.data.Application;
 import ims.data.Company;
 import ims.data.Student;
+import ims.data.StudentComplitedProjects;
 import ims.data.User;
 
 import org.hibernate.Query;
@@ -39,6 +40,8 @@ public class RegisterStudent {
 		session.close();
 		
 	}
+	
+
 	
 // this method is used to get company username from company name to save company username in application object in database	
 	public String getCompanyUserName(String companyName)

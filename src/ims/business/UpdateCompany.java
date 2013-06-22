@@ -56,22 +56,12 @@ public class UpdateCompany {
 		
 		Session session = getSessionFactory().openSession();		
 		session.beginTransaction();		
-		Company company2 = (Company)session.get(Company.class, userName);
-		company2=companyUpdated;		
-		session.merge(company2);
+		session.update(companyUpdated);
+		session.update(userUpdated);
 		session.getTransaction().commit();
 		session.close();
 		
-		
-		Session session2 = getSessionFactory().openSession();
-		session2.beginTransaction();
-		User user = (User)session2.get(User.class, userName);
-		user=userUpdated;
-		session2.merge(user);
-		session2.getTransaction().commit();
-		session2.close();
-		
-		
+			
 	}
 	
 // this method is used to allow company in system by admin	

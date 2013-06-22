@@ -1,7 +1,9 @@
 package ims.business;
 
+import ims.data.Application;
 import ims.data.Company;
 import ims.data.Student;
+import ims.data.StudentComplitedProjects;
 import ims.data.User;
 
 import java.util.List;
@@ -9,6 +11,8 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class UpdateStudent {
 	
@@ -48,30 +52,35 @@ public class UpdateStudent {
 			
 		}
 		
+		
+		public List<StudentComplitedProjects>  getStudentComplitedProjectsFromDB(String userName)
+		{
+			Session session2 = getSessionFactory().openSession();
+			String SQL_QUERY2 = "from StudentComplitedProjects as scp  where scp.student.studentUserName='"+userName+"' ";
+			Query query2 = session2.createQuery(SQL_QUERY2);
+			
+		
+			List<StudentComplitedProjects> list = ((org.hibernate.Query) query2).list();
+			session2.close();
+			
+			return list;
+			
+		}
+		
 	// this method is used update student in database	
 		public void updateStudent(String userName,Student studentUpdated,User userUpdated)
 		{
-			
-			
+
 			Session session = getSessionFactory().openSession();		
 			session.beginTransaction();		
-			Student student2 = (Student)session.get(Student.class, userName);
-			student2=studentUpdated;		
-			session.merge(student2);
+			session.update(studentUpdated);
+			session.update(userUpdated);
 			session.getTransaction().commit();
 			session.close();
-			
-			
-			Session session2 = getSessionFactory().openSession();
-			session2.beginTransaction();
-			User user = (User)session2.get(User.class, userName);
-			user=userUpdated;
-			session2.merge(user);
-			session2.getTransaction().commit();
-			session2.close();
-			
+				
 			
 		}
+		
 		
 		
 		public void changeStudentPassword(String userName,User userUpdated)

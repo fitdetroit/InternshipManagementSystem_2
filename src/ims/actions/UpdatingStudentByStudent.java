@@ -20,6 +20,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import ims.business.UpdateStudent;
 import ims.data.Student;
+import ims.data.StudentComplitedProjects;
 import ims.data.User;
 
 public class UpdatingStudentByStudent extends ActionSupport {
@@ -48,8 +49,6 @@ public class UpdatingStudentByStudent extends ActionSupport {
 	private float gpaSemester1;
 	private float gpaSemester2;
 	private float gpaSemester3;
-	private String workingExperience;
-	private String projects;
 	private String appliedCompany1;
 	private String appliedCompany2;
 	private String appliedCompany3;
@@ -59,6 +58,19 @@ public class UpdatingStudentByStudent extends ActionSupport {
 	private String password2;
 	private String conPassword;
 	
+	
+	private int projectId1;
+	private int projectId2;
+
+
+	private String projectTitle1;
+	private String projectDescription1;
+	private String projectYear1;
+	private String projectTitle2;
+	private String projectDescription2;
+	private String projectYear2;
+
+
 
 	//to upload profile picture
 	private File ProfilePicture;
@@ -166,10 +178,7 @@ public class UpdatingStudentByStudent extends ActionSupport {
 		student.setGpaSemester2(getGpaSemester2());
 		//if(getGpaSemester3()!=0)
 		student.setGpaSemester3(getGpaSemester3());
-		if(getWorkingExperience().length()!=0)
-		student.setWorkingExperience(getWorkingExperience());
-		if(getProjects().length()!=0)
-		student.setProjects(getProjects());
+
 
 
 		user.setUserName(getStudentUserName());
@@ -193,18 +202,53 @@ public class UpdatingStudentByStudent extends ActionSupport {
 		       // System.out.println("Digest(in hex format):: " + sb.toString());
 			user.setPassword(sb.toString());
 		}
+		
+		
+		
+	      //To save student done projects in studentComplitedProject table
+		
+			StudentComplitedProjects studentComplitedProjects1= new StudentComplitedProjects();
+			studentComplitedProjects1.setProjectTitle(getProjectTitle1());
+			studentComplitedProjects1.setProjectDescription(getProjectDescription1());
+			studentComplitedProjects1.setProjectYear(getProjectYear1());
+			studentComplitedProjects1.setStudent(getStudent());
+			
+			StudentComplitedProjects studentComplitedProjects2 = new StudentComplitedProjects();
+			studentComplitedProjects2.setProjectTitle(getProjectTitle2());
+			studentComplitedProjects2.setProjectDescription(getProjectDescription2());
+			studentComplitedProjects2.setProjectYear(getProjectYear2());
+			studentComplitedProjects2.setStudent(getStudent());
+		
+
+			
+			getStudent().getStudentComplitedProjects().add(studentComplitedProjects1);
+			getStudent().getStudentComplitedProjects().add(studentComplitedProjects2);
+		
+		
+		
+		
 
 
 		updateStudent.updateStudent(getStudentUserName(), student, user);
+		
+		
+/*		if(getProjectId1()!=0)
+		updateStudent.updateStudentComplitedProjects(getProjectId1(),studentComplitedProjects1);
+		else {
+			updateStudent.studentCompliteProjectsSave(studentComplitedProjects1);
+		}
+		if(getProjectId2()!=0)
+		updateStudent.updateStudentComplitedProjects(getProjectId2(),studentComplitedProjects2);
+		else {
+			updateStudent.studentCompliteProjectsSave(studentComplitedProjects2);
+		}*/
+		
 
 		return SUCCESS;
 
 	}
 	
 
-	
-	
-	
 	public void validate()  {
 		
 
@@ -224,7 +268,72 @@ public class UpdatingStudentByStudent extends ActionSupport {
 	
 	
 	// getters and setters
-	
+
+	public int getProjectId2() {
+		return projectId2;
+	}
+
+	public int getProjectId1() {
+		return projectId1;
+	}
+
+
+	public void setProjectId1(int projectId1) {
+		this.projectId1 = projectId1;
+	}
+
+
+	public void setProjectId2(int projectId2) {
+		this.projectId2 = projectId2;
+	}
+	public String getProjectYear2() {
+		return projectYear2;
+	}
+
+	public void setProjectYear2(String projectYear2) {
+		this.projectYear2 = projectYear2;
+	}
+
+
+	public String getProjectTitle1() {
+		return projectTitle1;
+	}
+
+	public void setProjectTitle1(String projectTitle1) {
+		this.projectTitle1 = projectTitle1;
+	}
+
+	public String getProjectDescription1() {
+		return projectDescription1;
+	}
+
+	public void setProjectDescription1(String projectDescription1) {
+		this.projectDescription1 = projectDescription1;
+	}
+
+	public String getProjectYear1() {
+		return projectYear1;
+	}
+
+	public void setProjectYear1(String projectYear1) {
+		this.projectYear1 = projectYear1;
+	}
+
+	public String getProjectTitle2() {
+		return projectTitle2;
+	}
+
+	public void setProjectTitle2(String projectTitle2) {
+		this.projectTitle2 = projectTitle2;
+	}
+
+	public String getProjectDescription2() {
+		return projectDescription2;
+	}
+
+	public void setProjectDescription2(String projectDescription2) {
+		this.projectDescription2 = projectDescription2;
+	}
 	public File getProfilePicture() {
 		return ProfilePicture;
 	}
@@ -438,21 +547,7 @@ public class UpdatingStudentByStudent extends ActionSupport {
 		this.gpaSemester3 = gpaSemester3;
 	}
 
-	public String getWorkingExperience() {
-		return workingExperience;
-	}
 
-	public void setWorkingExperience(String workingExperience) {
-		this.workingExperience = workingExperience;
-	}
-
-	public String getProjects() {
-		return projects;
-	}
-
-	public void setProjects(String projects) {
-		this.projects = projects;
-	}
 
 	public String getAppliedCompany1() {
 		return appliedCompany1;

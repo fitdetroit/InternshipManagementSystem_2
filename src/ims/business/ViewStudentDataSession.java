@@ -4,6 +4,7 @@ import ims.data.Application;
 import ims.data.Company;
 import ims.data.Student;
 import ims.data.StudentCompany;
+import ims.data.StudentComplitedProjects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -336,6 +337,21 @@ public class ViewStudentDataSession {
 		
 		
 	}
+	
+	
+	public List<StudentComplitedProjects> getStudentComplitedProjectsFromDB(String studentUserName )
+	{
+		Session session2 = getSessionFactory().openSession();
+		String SQL_QUERY2 = "from StudentComplitedProjects as scp  where scp.student.studentUserName='"+studentUserName+"' ";
+		Query query2 = session2.createQuery(SQL_QUERY2);
+	
+		List<StudentComplitedProjects> list = ((org.hibernate.Query) query2).list();
+		session2.close();
+		
+		return list;
+		
+	}
+	
 	
 	
 	

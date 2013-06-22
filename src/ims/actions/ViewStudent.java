@@ -2,6 +2,7 @@ package ims.actions;
 
 import ims.business.ViewStudentDataSession;
 import ims.data.Student;
+import ims.data.StudentComplitedProjects;
 
 import java.util.List;
 import java.util.Map;
@@ -20,6 +21,7 @@ public class ViewStudent extends ActionSupport {
 
 	private List<Student> list = null;
 	private List<String> companyNames= null;
+	private List<StudentComplitedProjects> studentComplitedProjects=null;
 	
 
 
@@ -73,6 +75,7 @@ public class ViewStudent extends ActionSupport {
 		//get student applied companyNames for view
 		companyNames=viewStudentDataSession.getStudentAppliedCompanyNames(userName);
 		
+		setStudentComplitedProjects(getViewStudentDataSession().getStudentComplitedProjectsFromDB(getStudentUserName()));
 		return SUCCESS;
 		
 	}
@@ -107,24 +110,6 @@ public class ViewStudent extends ActionSupport {
 		
 		return SUCCESS;
 	}
-	
-	public HttpSession getSession() {
-		return session;
-	}
-
-
-
-
-
-
-	public void setSession(HttpSession session) {
-		this.session = session;
-	}
-
-
-
-
-
 
 	//this method is used get still not select for interview to specific company
 	public String notSelectedForInterview()
@@ -177,11 +162,21 @@ public class ViewStudent extends ActionSupport {
 		//get student alplied company names to the companyNames list to view
 		companyNames=viewStudentDataSession.getStudentAppliedCompanyNames(getStudentUserName());
 		
+		
+	    setStudentComplitedProjects(getViewStudentDataSession().getStudentComplitedProjectsFromDB(getStudentUserName()));
+	
 		return SUCCESS;
 	}
 	
 	
 	
+
+
+
+
+
+
+
 	public String studentCvToCompany()
 	{
 		// to redirect direct access actions  without login
@@ -196,6 +191,9 @@ public class ViewStudent extends ActionSupport {
 		}
 		
 		setList(getViewStudentDataSession().studentCvToCompany(getStudentUserName()));
+		
+		
+		setStudentComplitedProjects(getViewStudentDataSession().getStudentComplitedProjectsFromDB(getStudentUserName()));
 		return SUCCESS;
 	}
 	
@@ -212,6 +210,23 @@ public class ViewStudent extends ActionSupport {
 
 	// getters and setters
 	
+	
+	public HttpSession getSession() {
+		return session;
+	}
+
+	public void setSession(HttpSession session) {
+		this.session = session;
+	}
+
+	public List<StudentComplitedProjects> getStudentComplitedProjects() {
+		return studentComplitedProjects;
+	}
+
+	public void setStudentComplitedProjects(
+			List<StudentComplitedProjects> studentComplitedProjects) {
+		this.studentComplitedProjects = studentComplitedProjects;
+	}
 	public List<String> getCompanyNames() {
 		return companyNames;
 	}

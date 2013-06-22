@@ -103,8 +103,12 @@
 <tr><td><s:textfield  label="GPA semester 1"  name="gpaSemester1" value="%{gpaSemester1}"></s:textfield> </td></tr>
 <tr><td><s:textfield  label="GPA semester 2"  name="gpaSemester2" value="%{gpaSemester2}"></s:textfield> </td></tr>
 <tr><td><s:textfield  label="GPA semester 3"  name="gpaSemester3" value="%{gpaSemester3}"></s:textfield> </td></tr>
-<tr><td><s:textarea  label="Working Expirience"  name="workingExperience" value="%{workingExperience}" cols="50" rows="10"></s:textarea> </td></tr>
-<tr><td><s:textarea  label="Projects"  name="projects" cols="50" rows="10"></s:textarea> </td></tr>
+<!--<tr><td><s:textarea  label="Working Expirience"  name="workingExperience" cols="50" rows="10"></s:textarea> </td></tr>-->
+<!--  <tr><td><s:textarea  label="Projects"  name="projects" cols="50" rows="10"></s:textarea> </td></tr>-->
+<tr ><td><s:textfield  label="p1 projectTitle"  name="projectTitle1" ></s:textfield> </td><td><s:textfield  label="p1 projectDescription"  name="projectDescription1" ></s:textfield> </td><td><s:textfield label="p1 rojectYear"  name="projectYear1" ></s:textfield> </td></tr>
+<tr><td><s:hidden label="porject 1 id" name="projectId1" value="%{#session.projecId1}"></s:hidden></td> </tr>
+<tr ><td><s:textfield  label="p2 projectTitle"  name="projectTitle2" ></s:textfield> </td><td><s:textfield  label="p2 projectDescription"  name="projectDescription2" ></s:textfield> </td><td><s:textfield label="p2 rojectYear"  name="projectYear2" ></s:textfield> </td></tr>
+<tr><td><s:hidden label="porject 2 id" name="projectId2" value="%{#session.projecId2}"></s:hidden></td> </tr>
 <tr><td><s:password name="password" label="New password" value="%{password}"/></td></tr>
 <tr><td><s:password name="conPassword" label="Conform New password" value="%{conPassword}"/></td></tr>
 <tr><td><s:hidden label="Student Hidden password" name="password2" value="%{password2}"></s:hidden></td> </tr> 
