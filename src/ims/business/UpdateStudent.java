@@ -32,8 +32,7 @@ public class UpdateStudent {
 			// this x , y initialize becose othervise its not fetch the object from this tables
 			int x =student.getStudentOtherQulification().size();
 			int y =student.getStudentComplitedProjects().size();
-			//System.out.println(student.getStudentOtherQulification().size()+"sizw of the objec");
-			//System.out.println(student.getStudentComplitedProjects().size()+"sizw of the objec");
+
 			session.getTransaction().commit();
 			session.close();
 			
@@ -56,19 +55,7 @@ public class UpdateStudent {
 		}
 		
 		
-/*		public List<StudentComplitedProjects>  getStudentComplitedProjectsFromDB(String userName)
-		{
-			Session session2 = getSessionFactory().openSession();
-			String SQL_QUERY2 = "from StudentComplitedProjects as scp  where scp.student.studentUserName='"+userName+"' ";
-			Query query2 = session2.createQuery(SQL_QUERY2);
-			
-		
-			List<StudentComplitedProjects> list = ((org.hibernate.Query) query2).list();
-			session2.close();
-			
-			return list;
-			
-		}*/
+
 		
 	// this method is used update student in database	
 		public void updateStudent(String userName,Student studentUpdated,User userUpdated)

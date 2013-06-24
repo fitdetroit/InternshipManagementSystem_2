@@ -49,33 +49,9 @@ public class CreateAndDeleteStudent {
 		session2.close();
 		
 
+	}	
 		
-		
-		////to delete relevant  student in application table
-/*		Session session5 = getSessionFactory().openSession();
-		String SQL_QUERY3 = "from Application app where app.studentCompany.studentId='"+userName+"'";
-		Query query3 = session5.createQuery(SQL_QUERY3);
-		List<Application> list3 = ((org.hibernate.Query) query3).list();
-		
-		
-		Session session6 = getSessionFactory().openSession();
-		session6.beginTransaction();
-		for(int x=0;x<list3.size();x++)
-		{
-			
-			
-				Application application = (Application)session6.get(Application.class, list3.get(x).getStudentCompany());
-				if(application!=null)
-				session6.delete(application);
-				
-			
 
-			
-		}
-		session6.getTransaction().commit();
-		session6.close();*/
-	}
-	
 	
 	
 	
@@ -122,24 +98,7 @@ public class CreateAndDeleteStudent {
 		
 		
 		
-/*		//studnt delet form application table
-		Session session5 = getSessionFactory().openSession();
-		String SQL_QUERY3 = "from Application";
-		Query query3 = session5.createQuery(SQL_QUERY3);
-		List<Application> list3 = ((org.hibernate.Query) query3).list();
-		
-		
-		Session session6 = getSessionFactory().openSession();
-		session6.beginTransaction();
-		for(int x=0;x<list3.size();x++)
-		{
-			Application application = (Application)session6.get(Application.class, list3.get(x).getStudentCompany());
-			if(application!=null)
-			session6.delete(application);
-			
-		}
-		session6.getTransaction().commit();
-		session6.close();*/
+
 		
 		
 		

@@ -30,16 +30,7 @@ public class RegisterStudent {
 	}
 	
 	
-// this method is used to save studet applied companies in database
-/*	public void AppliedCompanySave(Application appllication)
-	{
-		Session session = getSessionFactory().openSession();
-		session.beginTransaction();
-		session.save(appllication);
-		session.beginTransaction().commit();
-		session.close();
-		
-	}*/
+
 	
 
 	

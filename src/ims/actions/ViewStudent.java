@@ -80,7 +80,7 @@ public class ViewStudent extends ActionSupport {
 		
 		setStudent(viewStudentDataSession.viewStudentToStudent(userName));
 		
-		//List<String> companyNames=new ArrayList<String>();
+	
 		
 		
 		for(StudentCompany studentAppliedCompany:getStudent().getStudentCompany())
@@ -90,9 +90,7 @@ public class ViewStudent extends ActionSupport {
 			
 		}
 		
-		//get student applied companyNames for view
-		////companyNames=viewStudentDataSession.getStudentAppliedCompanyNames(userName);
-		//System.out.println(student.getStudentOtherQulification().size()+"sizw of the objec    ddddddddddddddddd");
+
 		
 		return SUCCESS;
 		
@@ -187,8 +185,7 @@ public class ViewStudent extends ActionSupport {
 			companyNames.add(studentAppliedCompany.getCompany().getCompanyName());
 			
 		}
-		//get student alplied company names to the companyNames list to view
-		////companyNames=viewStudentDataSession.getStudentAppliedCompanyNames(getStudentUserName());
+
 		
 		
 
@@ -233,11 +230,11 @@ public class ViewStudent extends ActionSupport {
 			return ERROR;
 		}
 		
-		//setList(getViewStudentDataSession().studentCvToCompany(getStudentUserName()));
+		
 		setStudent(viewStudentDataSession.studentCvToCompany(getStudentUserName()));
 		
 		
-		//setStudentComplitedProjects(getViewStudentDataSession().getStudentComplitedProjectsFromDB(getStudentUserName()));
+	
 		return SUCCESS;
 	}
 	
