@@ -122,14 +122,23 @@
 				</tr>
 				<tr><td style="height:20px"></td></tr>
 				<tr style="background-color:#333333">
-					<td colspan="2" class="ankers"><a name="workingExperience"></a>Working Experience:</td>
+					<td colspan="2" class="ankers"><a name="workingExperience"></a>Other qulification:</td>
 				</tr>
+			   <s:iterator value="student.studentOtherQulification"  >
 				<tr>
+				
 					<td style="width:5%"></td>
-					<td class="content1"><table style="text-align:left" width="100%">
-										<tr><td><s:property  value="student.workingExperience"></s:property></td></tr>
+					
+					<td class="content1">
+					
+					<table style="text-align:left" width="100%">
+					
+										<tr><td><s:property  value="description"></s:property></td></tr>
+										
 										</table></td>
+										
 				</tr>
+				</s:iterator>
 				<tr><td style="height:20px"></td></tr>
 				<tr style="background-color:#333333">
 					<td colspan="2" class="ankers"><a name="projects"></a>Projects</td>

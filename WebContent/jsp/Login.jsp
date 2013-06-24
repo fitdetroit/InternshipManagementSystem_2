@@ -37,7 +37,7 @@
 			<div class="login_top">
 				<s:form method="post" action="Login" >	
 				<s:textfield name="userName" cssClass="login_inputs" value="Username.."/>			
-				<s:password value="Password.." name="password" cssClass="login_inputs password" />
+				<s:password value="Password.." name="password" cssClass="login_inputs" />
 				<s:hidden  name="loginPageType" value="normall"></s:hidden>
 				
 				<s:submit value="Sign in"  cssClass="but_login"></s:submit>

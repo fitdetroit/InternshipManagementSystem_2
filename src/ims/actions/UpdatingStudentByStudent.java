@@ -21,6 +21,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import ims.business.UpdateStudent;
 import ims.data.Student;
 import ims.data.StudentComplitedProjects;
+import ims.data.StudentOtherQulification;
 import ims.data.User;
 
 public class UpdatingStudentByStudent extends ActionSupport {
@@ -59,16 +60,17 @@ public class UpdatingStudentByStudent extends ActionSupport {
 	private String conPassword;
 	
 	
-	private int projectId1;
-	private int projectId2;
-
-
+	private int projectId1=0;
+	private int projectId2=0;
 	private String projectTitle1;
 	private String projectDescription1;
 	private String projectYear1;
 	private String projectTitle2;
 	private String projectDescription2;
 	private String projectYear2;
+
+	private String otherQulification1;
+	private String otherQulification2;
 
 
 
@@ -107,7 +109,7 @@ public class UpdatingStudentByStudent extends ActionSupport {
 		
 		
 		
-
+System.out.println("its herer now");
 		
 		Map session;
 		session = ActionContext.getContext().getSession();
@@ -206,24 +208,63 @@ public class UpdatingStudentByStudent extends ActionSupport {
 		
 	      //To save student done projects in studentComplitedProject table
 		
-			StudentComplitedProjects studentComplitedProjects1= new StudentComplitedProjects();
+/*			StudentComplitedProjects studentComplitedProjects1= new StudentComplitedProjects();
+			//studentComplitedProjects1.setProjectId(getProjectId1());
 			studentComplitedProjects1.setProjectTitle(getProjectTitle1());
 			studentComplitedProjects1.setProjectDescription(getProjectDescription1());
 			studentComplitedProjects1.setProjectYear(getProjectYear1());
 			studentComplitedProjects1.setStudent(getStudent());
-			
+	
 			StudentComplitedProjects studentComplitedProjects2 = new StudentComplitedProjects();
+			//studentComplitedProjects2.setProjectId(getProjectId2());
 			studentComplitedProjects2.setProjectTitle(getProjectTitle2());
 			studentComplitedProjects2.setProjectDescription(getProjectDescription2());
 			studentComplitedProjects2.setProjectYear(getProjectYear2());
-			studentComplitedProjects2.setStudent(getStudent());
+			studentComplitedProjects2.setStudent(getStudent());*/
 		
+			
+			
+			for (StudentComplitedProjects project : getStudent().getStudentComplitedProjects()) {
+				
+				if(project.getProjectId()==getProjectId1())
+				{
+					project.setProjectTitle(getProjectTitle1());
+					project.setProjectDescription(getProjectDescription1());
+					project.setProjectYear(getProjectYear1());
+					project.setStudent(getStudent());
+					
+				}
+				if(project.getProjectId()==getProjectId2())
+				{
+					project.setProjectTitle(getProjectTitle2());
+					project.setProjectDescription(getProjectDescription2());
+					project.setProjectYear(getProjectYear2());
+					project.setStudent(getStudent());
+				}
+				
+			}
+			
+			for (StudentOtherQulification otherQulification :getStudent().getStudentOtherQulification())
+			{
+				otherQulification.setDescription(otherQulification1);
+				otherQulification.setStudent(getStudent());
+				
+			}
 
 			
-			getStudent().getStudentComplitedProjects().add(studentComplitedProjects1);
-			getStudent().getStudentComplitedProjects().add(studentComplitedProjects2);
+
 		
-		
+/*		
+			StudentOtherQulification  studentOtherQulification1= new StudentOtherQulification();
+			studentOtherQulification1.setDescription(otherQulification1);
+			studentOtherQulification1.setStudent(getStudent());
+			
+			StudentOtherQulification  studentOtherQulification2= new StudentOtherQulification();
+			studentOtherQulification2.setDescription(otherQulification2);
+			studentOtherQulification2.setStudent(getStudent());*/
+			
+			//getStudent().getStudentOtherQulification().add(studentOtherQulification1);
+			//getStudent().getStudentOtherQulification().add(studentOtherQulification2);
 		
 		
 
@@ -267,6 +308,24 @@ public class UpdatingStudentByStudent extends ActionSupport {
 	
 	
 	// getters and setters
+	public String getOtherQulification1() {
+		return otherQulification1;
+	}
+
+
+	public void setOtherQulification1(String otherQulification1) {
+		this.otherQulification1 = otherQulification1;
+	}
+
+
+	public String getOtherQulification2() {
+		return otherQulification2;
+	}
+
+
+	public void setOtherQulification2(String otherQulification2) {
+		this.otherQulification2 = otherQulification2;
+	}
 
 	public int getProjectId2() {
 		return projectId2;

@@ -48,6 +48,13 @@ public class EditStudent extends ActionSupport{
 	private String projectDescription2;
 	private String projectYear2;
 
+	
+	private String otherQulification1;
+	private String otherQulification2;
+
+
+
+
 
 	ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
 	UpdateStudent updateStudent = (UpdateStudent) context.getBean("UpdateStudent");
@@ -104,6 +111,8 @@ public class EditStudent extends ActionSupport{
 		return SUCCESS;
 	}
 	
+
+
 	//this method is used to check student login and redirect to the password change jsp this mthod is not 
 	//for this clz but updating unregister clz have validation so add to this clz
 	public String execute()
@@ -135,10 +144,6 @@ public class EditStudent extends ActionSupport{
 	//getters and setters
 
 
-	public int getProjectId2() {
-		return projectId2;
-	}
-
 	public int getProjectId1() {
 		return projectId1;
 	}
@@ -147,9 +152,30 @@ public class EditStudent extends ActionSupport{
 		this.projectId1 = projectId1;
 	}
 
+	public int getProjectId2() {
+		return projectId2;
+	}
+
 	public void setProjectId2(int projectId2) {
 		this.projectId2 = projectId2;
 	}
+	
+	public String getOtherQulification1() {
+		return otherQulification1;
+	}
+
+	public void setOtherQulification1(String otherQulification1) {
+		this.otherQulification1 = otherQulification1;
+	}
+
+	public String getOtherQulification2() {
+		return otherQulification2;
+	}
+
+	public void setOtherQulification2(String otherQulification2) {
+		this.otherQulification2 = otherQulification2;
+	}
+
 	public List<StudentComplitedProjects> getStudentComplitedProjects() {
 		return studentComplitedProjects;
 	}

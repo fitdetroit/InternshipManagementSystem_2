@@ -159,11 +159,11 @@ public class StudentRegistration extends ActionSupport {
 		
 		
 		StudentOtherQulification  studentOtherQulification1= new StudentOtherQulification();
-		studentOtherQulification1.setDescription(projectDescription1);
+		studentOtherQulification1.setDescription(otherQulification1);
 		studentOtherQulification1.setStudent(getStudent());
 		
 		StudentOtherQulification  studentOtherQulification2= new StudentOtherQulification();
-		studentOtherQulification2.setDescription(projectDescription1);
+		studentOtherQulification2.setDescription(otherQulification2);
 		studentOtherQulification2.setStudent(getStudent());
 		
 		

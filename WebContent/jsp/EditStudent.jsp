@@ -81,7 +81,7 @@
 <br/>
 <table align="center">
 <tr><td><h4 >Your personal Details</h4></td></tr>
-<tr><td><s:form method="post" action="UpdateStudent" enctype="multipart/form-data" validate="false">
+<tr><td><s:form method="post" action="UpdateStudent" enctype="multipart/form-data" validate="true">
 <tr><td><s:hidden label="Student User Name" name="studentUserName" value="%{#session.userName}"></s:hidden></td> </tr> 
 <tr><td><s:textfield label="Name In Full" name="nameInFull" value="%{student.nameInFull}"></s:textfield></td> </tr>
 <tr><td><s:textfield label="Name With Initials" name="nameWithInitials" value="%{student.nameWithInitials}"></s:textfield></td> </tr>
@@ -106,11 +106,12 @@
 <!--<tr><td><s:textarea  label="Working Expirience"  name="workingExperience" cols="50" rows="10"></s:textarea> </td></tr>-->
 <!--  <tr><td><s:textarea  label="Projects"  name="projects" cols="50" rows="10"></s:textarea> </td></tr>-->
 <tr ><td><s:textfield  label="p1 projectTitle"  name="projectTitle1" ></s:textfield> </td><td><s:textfield  label="p1 projectDescription"  name="projectDescription1" ></s:textfield> </td><td><s:textfield label="p1 rojectYear"  name="projectYear1" ></s:textfield> </td></tr>
-<tr><td><s:hidden label="porject 1 id" name="projectId1" value="%{#session.projecId1}"></s:hidden></td> </tr>
 <tr ><td><s:textfield  label="p2 projectTitle"  name="projectTitle2" ></s:textfield> </td><td><s:textfield  label="p2 projectDescription"  name="projectDescription2" ></s:textfield> </td><td><s:textfield label="p2 rojectYear"  name="projectYear2" ></s:textfield> </td></tr>
+<tr><td><s:hidden label="project id 1" name="projectId1" value="%{projectId1}"></s:hidden></td> </tr> 
+<tr><td><s:hidden label="project id 1" name="projectId2" value="%{projectId2}"></s:hidden></td> </tr> 
 <tr><td><s:textfield  label="Qther qulification 1"  name="otherQulification1"></s:textfield> </td></tr>
 <tr><td><s:textfield  label="Qther qulification 2"  name="otherQulification2"></s:textfield> </td></tr>
-<tr><td><s:hidden label="porject 2 id" name="projectId2" value="%{#session.projecId2}"></s:hidden></td> </tr>
+
 <tr><td><s:password name="password" label="New password" value="%{user.password}"/></td></tr>
 <tr><td><s:password name="conPassword" label="Conform New password" value="%{user.password}"/></td></tr>
 <tr><td><s:hidden label="Student Hidden password" name="password2" value="%{user.password}"></s:hidden></td> </tr> 

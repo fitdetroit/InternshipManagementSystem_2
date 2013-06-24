@@ -29,6 +29,11 @@ public class UpdateStudent {
 			Session session = getSessionFactory().openSession();
 			session.beginTransaction();
 			Student student =(Student)session.get(Student.class, userName);
+			// this x , y initialize becose othervise its not fetch the object from this tables
+			int x =student.getStudentOtherQulification().size();
+			int y =student.getStudentComplitedProjects().size();
+			//System.out.println(student.getStudentOtherQulification().size()+"sizw of the objec");
+			//System.out.println(student.getStudentComplitedProjects().size()+"sizw of the objec");
 			session.getTransaction().commit();
 			session.close();
 			

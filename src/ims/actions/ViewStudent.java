@@ -77,7 +77,8 @@ public class ViewStudent extends ActionSupport {
 		setStudent(viewStudentDataSession.viewStudentToStudent(userName));
 		//get student applied companyNames for view
 		companyNames=viewStudentDataSession.getStudentAppliedCompanyNames(userName);
-	
+		//System.out.println(student.getStudentOtherQulification().size()+"sizw of the objec    ddddddddddddddddd");
+		
 		return SUCCESS;
 		
 	}

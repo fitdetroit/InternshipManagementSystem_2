@@ -78,7 +78,7 @@
 
 <table align="center">
 <tr><td><h4 >Your personal Details</h4></td></tr>
-<tr><td><s:form method="post" action="RegisterStudent" enctype="multipart/form-data" validate="false">
+<tr><td><s:form method="post" action="RegisterStudent" enctype="multipart/form-data" validate="true">
 <tr><td><s:hidden label="Student User Name" name="studentUserName" value="%{#session.userName}"></s:hidden></td> </tr> 
 <tr><td><s:textfield label="Name In Full" name="nameInFull"></s:textfield></td> </tr>
 <tr><td><s:textfield label="Name With Initials" name="nameWithInitials"></s:textfield></td> </tr>
