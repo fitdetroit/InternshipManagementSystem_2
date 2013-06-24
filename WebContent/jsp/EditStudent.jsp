@@ -69,7 +69,7 @@
 <p align="left"><a href="<s:url action="ViewStudentCV"/>">click here to view cv</a></p>
 
 <p align="left"><a href="<s:url action="ViewToUpdateStudent"/>">click here to update profile</a></p>
-
+<p align="left"><a href="<s:url action="ViewStateOfCompany"/>">view State of company</a></p>
 <p align="left"><a href="<s:url action="ViewCompanyProfile"/>">click here to view Company Profiles</a></p>
 </div>
 
@@ -109,9 +109,10 @@
 <tr ><td><s:textfield  label="p2 projectTitle"  name="projectTitle2" ></s:textfield> </td><td><s:textfield  label="p2 projectDescription"  name="projectDescription2" ></s:textfield> </td><td><s:textfield label="p2 rojectYear"  name="projectYear2" ></s:textfield> </td></tr>
 <tr><td><s:hidden label="project id 1" name="projectId1" value="%{projectId1}"></s:hidden></td> </tr> 
 <tr><td><s:hidden label="project id 1" name="projectId2" value="%{projectId2}"></s:hidden></td> </tr> 
-<tr><td><s:textfield  label="Qther qulification 1"  name="otherQulification1"></s:textfield> </td></tr>
-<tr><td><s:textfield  label="Qther qulification 2"  name="otherQulification2"></s:textfield> </td></tr>
-
+<tr><td><s:textfield  label="Qther qulification 1"  name="otherQulification1" value="%{otherQulification1}" ></s:textfield> </td></tr>
+<tr><td><s:textfield  label="Qther qulification 2"  name="otherQulification2" value="%{otherQulification2}" ></s:textfield> </td></tr>
+<tr><td><s:hidden label="Qther qulification 1 id" name="otherQulificationId1" value="%{otherQulificationId1}"></s:hidden></td> </tr> 
+<tr><td><s:hidden label="Qther qulification 12 id" name="otherQulificationId2" value="%{otherQulificationId2}"></s:hidden></td> </tr>
 <tr><td><s:password name="password" label="New password" value="%{user.password}"/></td></tr>
 <tr><td><s:password name="conPassword" label="Conform New password" value="%{user.password}"/></td></tr>
 <tr><td><s:hidden label="Student Hidden password" name="password2" value="%{user.password}"></s:hidden></td> </tr> 

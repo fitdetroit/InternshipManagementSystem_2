@@ -70,6 +70,8 @@
 
 <p align="left"><a href="<s:url action="student/ViewToUpdateStudent"/>">click here to update profile</a></p>
 
+<p align="left"><a href="<s:url action="ViewStateOfCompany"/>">view State of company</a></p>
+
 <p align="left"><a href="<s:url action="student/ViewCompanyProfile"/>">click here to view Company Profiles</a></p>
 </div>
 

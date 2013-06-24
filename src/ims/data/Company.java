@@ -1,7 +1,13 @@
 package ims.data;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -23,10 +29,18 @@ public class Company {
 	private boolean receiveCv;
 	
 	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.company", cascade=CascadeType.ALL)
+	private Collection<StudentCompany> studentCompany = new ArrayList<StudentCompany>();
 	
 	
-	
+
 	//getters and setters
+	public Collection<StudentCompany> getStudentCompany() {
+		return studentCompany;
+	}
+	public void setStudentCompany(Collection<StudentCompany> studentCompany) {
+		this.studentCompany = studentCompany;
+	}
 	public boolean isState() {
 		return state;
 	}

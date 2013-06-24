@@ -2,8 +2,10 @@ package ims.actions;
 
 import ims.business.ViewStudentDataSession;
 import ims.data.Student;
+import ims.data.StudentCompany;
 import ims.data.StudentComplitedProjects;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -20,7 +22,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class ViewStudent extends ActionSupport {
 
 	private List<Student> list = null;
-	private List<String> companyNames= null;
+	private List<String> companyNames= new ArrayList<String>();
 	private List<StudentComplitedProjects> studentComplitedProjects=null;
 	
 	
@@ -75,8 +77,19 @@ public class ViewStudent extends ActionSupport {
 		String userName = (String) session.get("userName");
 		
 		setStudent(viewStudentDataSession.viewStudentToStudent(userName));
+		
+		//List<String> companyNames=new ArrayList<String>();
+		
+		
+		for(StudentCompany studentAppliedCompany:getStudent().getStudentCompany())
+		{
+			System.out.println(studentAppliedCompany.getCompany().getCompanyName()+"company name");
+			companyNames.add(studentAppliedCompany.getCompany().getCompanyName());
+			
+		}
+		
 		//get student applied companyNames for view
-		companyNames=viewStudentDataSession.getStudentAppliedCompanyNames(userName);
+		////companyNames=viewStudentDataSession.getStudentAppliedCompanyNames(userName);
 		//System.out.println(student.getStudentOtherQulification().size()+"sizw of the objec    ddddddddddddddddd");
 		
 		return SUCCESS;
@@ -162,8 +175,15 @@ public class ViewStudent extends ActionSupport {
 		
 
 		student=getViewStudentDataSession().studentCvToAdmin(getStudentUserName());
+		
+		for(StudentCompany studentAppliedCompany:getStudent().getStudentCompany())
+		{
+			System.out.println(studentAppliedCompany.getCompany().getCompanyName()+"company name");
+			companyNames.add(studentAppliedCompany.getCompany().getCompanyName());
+			
+		}
 		//get student alplied company names to the companyNames list to view
-		companyNames=viewStudentDataSession.getStudentAppliedCompanyNames(getStudentUserName());
+		////companyNames=viewStudentDataSession.getStudentAppliedCompanyNames(getStudentUserName());
 		
 		
 
@@ -172,13 +192,10 @@ public class ViewStudent extends ActionSupport {
 	}
 	
 	
+
 	
-
-
-
-
-
-
+	
+	
 
 	public String studentCvToCompany()
 	{
@@ -203,7 +220,6 @@ public class ViewStudent extends ActionSupport {
 	
 	
 
-	
 	
 	
 	

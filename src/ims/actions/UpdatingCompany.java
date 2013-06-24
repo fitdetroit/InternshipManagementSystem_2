@@ -121,6 +121,8 @@ public class UpdatingCompany extends ActionSupport{
 	}
 
 
+	
+	//getters and setters
 	public String getCompanyUserName() {
 		return companyUserName;
 	}

@@ -106,6 +106,8 @@
 			<result name="success">/jsp/RegistedStudent.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
+		
+
 
 
 	</package>

@@ -4,6 +4,7 @@ package ims.actions;
 import ims.business.UpdateStudent;
 import ims.data.Student;
 import ims.data.StudentComplitedProjects;
+import ims.data.StudentOtherQulification;
 import ims.data.User;
 
 import java.util.ArrayList;
@@ -34,7 +35,7 @@ public class EditStudent extends ActionSupport{
 	HttpSession session2=request.getSession();
 	String str=(String)session2.getAttribute("userName");
 	
-	private List<StudentComplitedProjects> studentComplitedProjects= new ArrayList<StudentComplitedProjects>();
+	//private List<StudentComplitedProjects> studentComplitedProjects= new ArrayList<StudentComplitedProjects>();
 
 	private Student student;
 	private User user;
@@ -48,7 +49,8 @@ public class EditStudent extends ActionSupport{
 	private String projectDescription2;
 	private String projectYear2;
 
-	
+	private int otherQulificationId1;
+	private int otherQulificationId2;
 	private String otherQulification1;
 	private String otherQulification2;
 
@@ -80,10 +82,57 @@ public class EditStudent extends ActionSupport{
 		setUser(getUpdateStudent().getDetails2(userName));
 		
 	
-		studentComplitedProjects.addAll(getStudent().getStudentComplitedProjects());
+		//studentComplitedProjects.addAll(getStudent().getStudentComplitedProjects());
+		
+		int x=1;
+		for(StudentComplitedProjects project:getStudent().getStudentComplitedProjects())
+		{
+			if(x==1)
+			{
+				setProjectId1(project.getProjectId());
+				setProjectTitle1(project.getProjectTitle());
+				setProjectDescription1(project.getProjectDescription());
+				setProjectYear1(project.getProjectYear());
+				
+			}
+			else if(x==2)
+			{
+				setProjectId2(project.getProjectId());
+				setProjectTitle2(project.getProjectTitle());
+				setProjectDescription2(project.getProjectDescription());
+				setProjectYear2(project.getProjectYear());
+				
+			}
+			else
+			{
+				
+			}
+			x++;
+				
+			
+		}
+		
+		int y=1;
+		for(StudentOtherQulification otherQulification:getStudent().getStudentOtherQulification())
+		{
+			if(y==1)
+			{
+				setOtherQulificationId1(otherQulification.getOtherQulificationId());
+				setOtherQulification1(otherQulification.getDescription());
+				
+			}
+			else if(y==2)
+			{
+				setOtherQulificationId2(otherQulification.getOtherQulificationId());
+				setOtherQulification2(otherQulification.getDescription());
+				
+			}
+			
+			y++;
+		}
 
 
-		//set values to project
+/*		//set values to project
 		if(getStudentComplitedProjects().isEmpty()!=true)
 		{
 			if(getStudentComplitedProjects().get(0)!=null)
@@ -103,7 +152,7 @@ public class EditStudent extends ActionSupport{
 				
 			}
 			
-		}
+		}*/
 		
 
 
@@ -142,7 +191,27 @@ public class EditStudent extends ActionSupport{
 	
 	
 	//getters and setters
+	public int getOtherQulificationId1() {
+		return otherQulificationId1;
+	}
 
+
+
+	public void setOtherQulificationId1(int otherQulificationId1) {
+		this.otherQulificationId1 = otherQulificationId1;
+	}
+
+
+
+	public int getOtherQulificationId2() {
+		return otherQulificationId2;
+	}
+
+
+
+	public void setOtherQulificationId2(int otherQulificationId2) {
+		this.otherQulificationId2 = otherQulificationId2;
+	}
 
 	public int getProjectId1() {
 		return projectId1;
@@ -176,14 +245,14 @@ public class EditStudent extends ActionSupport{
 		this.otherQulification2 = otherQulification2;
 	}
 
-	public List<StudentComplitedProjects> getStudentComplitedProjects() {
+/*	public List<StudentComplitedProjects> getStudentComplitedProjects() {
 		return studentComplitedProjects;
 	}
 
 	public void setStudentComplitedProjects(
 			List<StudentComplitedProjects> studentComplitedProjects) {
 		this.studentComplitedProjects = studentComplitedProjects;
-	}
+	}*/
 	public String getProjectTitle1() {
 		return projectTitle1;
 	}

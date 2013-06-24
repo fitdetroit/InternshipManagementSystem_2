@@ -69,6 +69,8 @@ public class UpdatingStudentByStudent extends ActionSupport {
 	private String projectDescription2;
 	private String projectYear2;
 
+	private int otherQulificationId1;
+	private int otherQulificationId2;
 	private String otherQulification1;
 	private String otherQulification2;
 
@@ -244,12 +246,30 @@ System.out.println("its herer now");
 				
 			}
 			
+			
+			
+			
 			for (StudentOtherQulification otherQulification :getStudent().getStudentOtherQulification())
 			{
-				otherQulification.setDescription(otherQulification1);
-				otherQulification.setStudent(getStudent());
+				if(otherQulification.getOtherQulificationId()==getOtherQulificationId1())
+				{
+					otherQulification.setDescription(otherQulification1);
+					otherQulification.setStudent(getStudent());
+					
+				}
+				
+				if(otherQulification.getOtherQulificationId()==getOtherQulificationId2())
+				{
+					otherQulification.setDescription(otherQulification2);
+					otherQulification.setStudent(getStudent());
+					
+				}
+				
 				
 			}
+			
+			
+			
 
 			
 
@@ -308,6 +328,24 @@ System.out.println("its herer now");
 	
 	
 	// getters and setters
+	public int getOtherQulificationId1() {
+		return otherQulificationId1;
+	}
+
+
+	public void setOtherQulificationId1(int otherQulificationId1) {
+		this.otherQulificationId1 = otherQulificationId1;
+	}
+
+
+	public int getOtherQulificationId2() {
+		return otherQulificationId2;
+	}
+
+
+	public void setOtherQulificationId2(int otherQulificationId2) {
+		this.otherQulificationId2 = otherQulificationId2;
+	}
 	public String getOtherQulification1() {
 		return otherQulification1;
 	}

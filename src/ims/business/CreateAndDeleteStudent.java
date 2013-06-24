@@ -2,7 +2,7 @@ package ims.business;
 
 import java.util.List;
 
-import ims.data.Application;
+//import ims.data.Application;
 import ims.data.Company;
 import ims.data.Student;
 import ims.data.StudentCompany;
@@ -52,7 +52,7 @@ public class CreateAndDeleteStudent {
 		
 		
 		////to delete relevant  student in application table
-		Session session5 = getSessionFactory().openSession();
+/*		Session session5 = getSessionFactory().openSession();
 		String SQL_QUERY3 = "from Application app where app.studentCompany.studentId='"+userName+"'";
 		Query query3 = session5.createQuery(SQL_QUERY3);
 		List<Application> list3 = ((org.hibernate.Query) query3).list();
@@ -73,7 +73,7 @@ public class CreateAndDeleteStudent {
 			
 		}
 		session6.getTransaction().commit();
-		session6.close();
+		session6.close();*/
 	}
 	
 	
@@ -122,7 +122,7 @@ public class CreateAndDeleteStudent {
 		
 		
 		
-		//studnt delet form application table
+/*		//studnt delet form application table
 		Session session5 = getSessionFactory().openSession();
 		String SQL_QUERY3 = "from Application";
 		Query query3 = session5.createQuery(SQL_QUERY3);
@@ -139,7 +139,7 @@ public class CreateAndDeleteStudent {
 			
 		}
 		session6.getTransaction().commit();
-		session6.close();
+		session6.close();*/
 		
 		
 		

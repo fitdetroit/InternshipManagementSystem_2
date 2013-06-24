@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 import ims.business.RegisterStudent;
-import ims.data.Application;
+//import ims.data.Application;
 import ims.data.Student;
 import ims.data.StudentCompany;
 import ims.data.StudentComplitedProjects;
@@ -75,11 +75,11 @@ public class StudentRegistration extends ActionSupport {
 	StudentCompany studentCompany4 = new StudentCompany();
 	StudentCompany studentCompany5 = new StudentCompany();
 	
-	Application application1 = new Application();
+/*	Application application1 = new Application();
 	Application application2 = new Application();
 	Application application3 = new Application();
 	Application application4 = new Application();
-	Application application5 = new Application();
+	Application application5 = new Application();*/
 	
 
 
@@ -157,6 +157,7 @@ public class StudentRegistration extends ActionSupport {
 		getStudent().getStudentComplitedProjects().add(studentComplitedProjects1);
 		getStudent().getStudentComplitedProjects().add(studentComplitedProjects2);
 		
+		// to save student other qulification
 		
 		StudentOtherQulification  studentOtherQulification1= new StudentOtherQulification();
 		studentOtherQulification1.setDescription(otherQulification1);
@@ -171,6 +172,40 @@ public class StudentRegistration extends ActionSupport {
 		getStudent().getStudentOtherQulification().add(studentOtherQulification2);
 		
 
+		StudentCompany studentCompany1 =new StudentCompany();
+		studentCompany1.setStudent(getStudent());
+		studentCompany1.setCompany(registerStudent.getStudentAppliedCompanyObject(getAppliedCompany1()));
+		studentCompany1.setState("pending");
+		
+		StudentCompany studentCompany2 =new StudentCompany();
+		studentCompany2.setStudent(getStudent());
+		studentCompany2.setCompany(registerStudent.getStudentAppliedCompanyObject(getAppliedCompany2()));
+		studentCompany2.setState("pending");
+		
+		StudentCompany studentCompany3 =new StudentCompany();
+		studentCompany3.setStudent(getStudent());
+		studentCompany3.setCompany(registerStudent.getStudentAppliedCompanyObject(getAppliedCompany3()));
+		studentCompany3.setState("pending");
+		
+		StudentCompany studentCompany4 =new StudentCompany();
+		studentCompany4.setStudent(getStudent());
+		studentCompany4.setCompany(registerStudent.getStudentAppliedCompanyObject(getAppliedCompany4()));
+		studentCompany4.setState("pending");
+		
+		StudentCompany studentCompany5 =new StudentCompany();
+		studentCompany5.setStudent(getStudent());
+		studentCompany5.setCompany(registerStudent.getStudentAppliedCompanyObject(getAppliedCompany5()));
+		studentCompany5.setState("pending");
+		
+		
+		getStudent().getStudentCompany().add(studentCompany1);
+		getStudent().getStudentCompany().add(studentCompany2);
+		getStudent().getStudentCompany().add(studentCompany3);
+		getStudent().getStudentCompany().add(studentCompany4);
+		getStudent().getStudentCompany().add(studentCompany5);
+		
+		
+		
 		// to save student in student table 
 		registerStudent.saveStudent(student);
 	
@@ -181,7 +216,7 @@ public class StudentRegistration extends ActionSupport {
 		
 		// folowing several if eles statements used to save applied company list in appliaction table
 		
-		if(!getAppliedCompany1().equals("NOT Select"))
+/*		if(!getAppliedCompany1().equals("NOT Select"))
 		{
 			
 			// to get company username from company name
@@ -256,7 +291,7 @@ public class StudentRegistration extends ActionSupport {
 			
 		
 			
-		}
+		}*/
 		
 		
 

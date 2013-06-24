@@ -1,6 +1,6 @@
 package ims.business;
 
-import ims.data.Application;
+//import ims.data.Application;
 import ims.data.Company;
 import ims.data.Student;
 import ims.data.StudentCompany;
@@ -46,6 +46,8 @@ public class ViewStudentDataSession {
 		// this x , y initialize becose othervise its not fetch the object from this tables
 		int x =student.getStudentOtherQulification().size();
 		int y =student.getStudentComplitedProjects().size();
+		int z= student.getStudentCompany().size();
+		System.out.println(student.getStudentCompany().size()+"this is size");
 		//System.out.println(student.getStudentOtherQulification().size()+"sizw of the objec");
 		//System.out.println(student.getStudentComplitedProjects().size()+"sizw of the objec");
 
@@ -70,6 +72,7 @@ public class ViewStudentDataSession {
 		// this x , y initialize becose othervise its not fetch the object from this tables
 		int x =student.getStudentOtherQulification().size();
 		int y =student.getStudentComplitedProjects().size();
+		int z= student.getStudentCompany().size();
 		session.getTransaction().commit();
 		session.close();
 		
@@ -94,9 +97,107 @@ public class ViewStudentDataSession {
 		return student;
 		
 	}
+	
+	public List<Student> appliedStudentToCompany(String userName)
+	{
+		Session session = getSessionFactory().openSession();
+		session.beginTransaction();
+		Company company =(Company)session.get(Company.class, userName);
+		int x= company.getStudentCompany().size();
+		session.getTransaction().commit();
+		session.close();
+		
+		List<Student> list= new ArrayList<Student>();
+		if(company.isReceiveCv()==true)
+		{
+			for(StudentCompany studentAppliedCompany:company.getStudentCompany())
+			{
+				list.add(studentAppliedCompany.getStudent());
+				
+			}
+			
+		}
+		else
+		{
+			list= null;
+		}
+		
+
+		
+		return list;
+		
+	}
+	
+	public List<Student> notSelectForInterview(String userName)
+	{
+		Session session = getSessionFactory().openSession();
+		session.beginTransaction();
+		Company company =(Company)session.get(Company.class, userName);
+		int x= company.getStudentCompany().size();
+		session.getTransaction().commit();
+		session.close();
+		
+		List<Student> list= new ArrayList<Student>();
+		if(company.isReceiveCv()==true)
+		{
+			for(StudentCompany studentAppliedCompany:company.getStudentCompany())
+			{
+				if(studentAppliedCompany.getState().equals("pending"))
+				list.add(studentAppliedCompany.getStudent());
+				
+			}
+			
+		}
+		else
+		{
+			list= null;
+		}
+		
+
+		
+		return list;
+		
+	}
+	
+	public List<Student> selectedForInterview(String userName)
+	{
+		Session session = getSessionFactory().openSession();
+		session.beginTransaction();
+		Company company =(Company)session.get(Company.class, userName);
+		int x= company.getStudentCompany().size();
+		session.getTransaction().commit();
+		session.close();
+		
+		List<Student> list= new ArrayList<Student>();
+		if(company.isReceiveCv()==true)
+		{
+			for(StudentCompany studentAppliedCompany:company.getStudentCompany())
+			{
+				
+				if(studentAppliedCompany.getState().equals("interview"))
+				{
+					list.add(studentAppliedCompany.getStudent());
+					
+					
+				}
+				
+				
+			}
+			
+		}
+		else
+		{
+			list= null;
+		}
+		
+
+		
+		return list;
+		
+	}
 
 	// this method is used to get relavent applied students to company
-	public List<Student> appliedStudentToCompany(String userName)
+/*	public List<Student> appliedStudentToCompany(String userName)
 	{
 		
 		 List<Student> students=new ArrayList<Student>();
@@ -129,14 +230,14 @@ public class ViewStudentDataSession {
 			List<Application> list3 = ((org.hibernate.Query) query2).list();
 			session2.close();
 
-/*			List<String> studentNames=null;
+			List<String> studentNames=null;
 			for(int x=0;list3.get(x)!=null;x++)
 			{
 				//studentNames.add(x, list3.get(x).getStudentCompany().getStudentId());
 				String name=list3.get(x).getStudentCompany().getStudentId();
 				studentNames.add(name);
 				
-			}*/
+			}
 						
 			
 			Session session3 = getSessionFactory().openSession();
@@ -175,10 +276,10 @@ public class ViewStudentDataSession {
 	
 
 		
-	}
+	}*/
 	
 	// this method is used to get not selected student for interivew list for company
-	public List<Student> notSelectForInterview(String userName)
+/*	public List<Student> notSelectForInterview(String userName)
 	{
 		 List<Student> students=new ArrayList<Student>();
 	
@@ -240,10 +341,10 @@ public class ViewStudentDataSession {
 	
 
 		
-	}
+	}*/
 	
 	// this method is used to get  selected student for interivew list for company
-	public List<Student> selectedForInterview(String userName)
+/*	public List<Student> selectedForInterview(String userName)
 	{
 		 List<Student> students=new ArrayList<Student>();
 	
@@ -306,12 +407,12 @@ public class ViewStudentDataSession {
 	
 
 		
-	}
+	}*/
 	
 	
 	
 	
-	public List<String> getStudentAppliedCompanyNames(String studentUsername)
+/*	public List<String> getStudentAppliedCompanyNames(String studentUsername)
 	{
 		Session session2 = getSessionFactory().openSession();
 		String SQL_QUERY2 = "from Application as app  where app.studentCompany.studentId='"+studentUsername+"' ";
@@ -321,7 +422,7 @@ public class ViewStudentDataSession {
 		session2.close();
 		
 		
-/*		List<String> companyUserNames= null;
+		List<String> companyUserNames= null;
 		//if(list.get(0)!=null)
 	
 			companyUserNames.add(list.get(0).getStudentCompany().getCompanyId());
@@ -332,7 +433,7 @@ public class ViewStudentDataSession {
 		if(list.get(3)!=null)
 			companyUserNames.add(list.get(3).getStudentCompany().getCompanyId());
 		if(list.get(4)!=null)
-			companyUserNames.add(list.get(4).getStudentCompany().getCompanyId());*/
+			companyUserNames.add(list.get(4).getStudentCompany().getCompanyId());
 		
 		List<String> companyNames=new ArrayList<String>();
 		
@@ -356,7 +457,7 @@ public class ViewStudentDataSession {
 		
 		
 		
-	}
+	}*/
 	
 	
 

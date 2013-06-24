@@ -45,8 +45,10 @@ public class Student {
 	private float gpaSemester3;
 
 	
-
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.student", cascade=CascadeType.ALL)
+	private Collection<StudentCompany> studentCompany = new ArrayList<StudentCompany>();
 	
+
 	@OneToMany(mappedBy="student",fetch=FetchType.LAZY,cascade={CascadeType.ALL})
 	private  Collection<StudentComplitedProjects> studentComplitedProjects = new ArrayList<StudentComplitedProjects>();
 	@OneToMany(mappedBy="student",fetch=FetchType.LAZY,cascade={CascadeType.ALL})
@@ -57,7 +59,13 @@ public class Student {
 	
 	
 	//getters and setters
-	
+	public Collection<StudentCompany> getStudentCompany() {
+		return studentCompany;
+	}
+
+	public void setStudentCompany(Collection<StudentCompany> studentCompany) {
+		this.studentCompany = studentCompany;
+	}
 public Collection<StudentOtherQulification> getStudentOtherQulification() {
 		return studentOtherQulification;
 	}

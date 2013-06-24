@@ -1,6 +1,6 @@
 package ims.business;
 
-import ims.data.Application;
+//import ims.data.Application;
 import ims.data.StudentCompany;
 import ims.data.User;
 
@@ -17,7 +17,7 @@ public class UpdateApplication {
 	{
 		StudentCompany studentCompany = new StudentCompany();
 		
-		studentCompany.setStudentId(studentUserName);
+/*		studentCompany.setStudentId(studentUserName);
 		studentCompany.setCompanyId(companyUserName);
 		
 		
@@ -29,7 +29,7 @@ public class UpdateApplication {
 		application.setState("interview");
 		session2.merge(application);
 		session2.getTransaction().commit();
-		session2.close();
+		session2.close();*/
 		
 	}
 	
