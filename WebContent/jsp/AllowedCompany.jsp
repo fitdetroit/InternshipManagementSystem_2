@@ -74,6 +74,8 @@
 
 <p align="left"><a href="<s:url action="company/SelectedForInterview"/>">Selected Students for interview</a></p>
 
+<p align="left"><a href="<s:url action="company/SelectedForInternship"/>">Selected Students for internship</a></p>
+
 <p align="left"><a href="<s:url action="company/AllowedCompanyToCompany"/>">View Allowed Company Details</a></p>
 </div>
 

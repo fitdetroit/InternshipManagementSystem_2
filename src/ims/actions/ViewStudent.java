@@ -26,6 +26,8 @@ public class ViewStudent extends ActionSupport {
 	private List<StudentComplitedProjects> studentComplitedProjects=null;
 	
 	
+	
+	
 	private Student student= new Student();
 	
 
@@ -140,6 +142,9 @@ public class ViewStudent extends ActionSupport {
 		
 		setList(getViewStudentDataSession().notSelectForInterview(userName));
 		
+
+		
+		
 		
 		return SUCCESS;
 		
@@ -189,6 +194,24 @@ public class ViewStudent extends ActionSupport {
 
 	
 		return SUCCESS;
+	}
+	
+	public String selctedForInternship()
+	{
+		// to redirect direct access actions  without login
+		if (str==null) {
+			return ERROR;
+				
+		}
+		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String userName = (String) session.get("userName");
+		
+		setList(getViewStudentDataSession().selectedForInternship(userName));
+		
+		return SUCCESS;
+		
 	}
 	
 	

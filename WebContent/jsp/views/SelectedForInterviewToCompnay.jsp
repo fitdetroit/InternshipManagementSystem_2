@@ -74,6 +74,8 @@
 
 <p align="left"><a href="<s:url action="SelectedForInterview"/>">Selected Students for interview</a></p>
 
+<p align="left"><a href="<s:url action="company/SelectedForInternship"/>">Selected Students for internship</a></p>
+
 <p align="left"><a href="<s:url action="AllowedCompanyToCompany"/>">View Allowed Company Details</a></p>
 </div>
 
@@ -116,12 +118,24 @@
         <td><s:submit value="View" ></s:submit></td> 
         </s:form></td>
         
-         <td><s:form method="post" action="SelectForInternship" enctype="multipart/form-data" validate="true">
+         <td>
+         <s:if test="%{selected==true}">
+         <s:form method="post" action="UpdateStateToSelected" enctype="multipart/form-data" validate="true">
         <td><s:hidden label="Company User Name" name="studentUserName" value="%{studentUserName}"></s:hidden></td> 
           
-        <td><s:submit value="select" ></s:submit></td>    
+       <td><s:submit value="select" disabled="true"></s:submit><p>(this student already selected)</p></td>      
         
-        </s:form></td>
+        </s:form>
+        </s:if>
+        <s:else>
+                
+         <s:form method="post" action="UpdateStateToSelected" enctype="multipart/form-data" validate="true">
+        <td><s:hidden label="Company User Name" name="studentUserName" value="%{studentUserName}"></s:hidden></td> 
+          
+       <td><s:submit value="select" ></s:submit></td> 
+       </s:form>
+        </s:else>
+        </td>
 
   
     </tr>

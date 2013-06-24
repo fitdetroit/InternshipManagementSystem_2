@@ -43,8 +43,11 @@ public class Student {
 	private float gpaSemester1;
 	private float gpaSemester2;
 	private float gpaSemester3;
+	// this variable is used to get state of student selected or not to view to other companyis that student applied
+	private boolean selected;
 
 	
+
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.student", cascade=CascadeType.ALL)
 	private Collection<StudentCompany> studentCompany = new ArrayList<StudentCompany>();
 	
@@ -59,6 +62,13 @@ public class Student {
 	
 	
 	//getters and setters
+	public boolean isSelected() {
+		return selected;
+	}
+
+	public void setSelected(boolean selected) {
+		this.selected = selected;
+	}
 	public Collection<StudentCompany> getStudentCompany() {
 		return studentCompany;
 	}
@@ -66,7 +76,7 @@ public class Student {
 	public void setStudentCompany(Collection<StudentCompany> studentCompany) {
 		this.studentCompany = studentCompany;
 	}
-public Collection<StudentOtherQulification> getStudentOtherQulification() {
+    public Collection<StudentOtherQulification> getStudentOtherQulification() {
 		return studentOtherQulification;
 	}
 

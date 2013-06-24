@@ -137,6 +137,7 @@ public class StudentRegistration extends ActionSupport {
 		getStudent().setGpaSemester1(getGpaSemester1());
 		getStudent().setGpaSemester2(getGpaSemester2());
 		getStudent().setGpaSemester3(getGpaSemester3());
+		getStudent().setSelected(false);
 
 		
       //To save student done projects in studentComplitedProject table

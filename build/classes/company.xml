@@ -109,10 +109,23 @@
 			</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
+		
+			<action name="SelectedForInternship" class="ims.actions.ViewStudent"
+			method="selctedForInternship">
+			<result name="success">/jsp/views/SelectedForInternshipToCompany.jsp
+			</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
 
-		<action name="UpdateStateToInterview" class="ims.actions.UpdatingApplication"
+		<action name="UpdateStateToInterview" class="ims.actions.UpdatingStudentCompany"
 			method="UpdateStateToInterview">
 			<result name="success" type="redirect">SelectForInterview</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		
+		<action name="UpdateStateToSelected" class="ims.actions.UpdatingStudentCompany"
+			method="UpdateStateToSelected">
+			<result name="success" type="redirect">SelectedForInterview</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 

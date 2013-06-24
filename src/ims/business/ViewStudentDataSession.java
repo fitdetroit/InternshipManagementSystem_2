@@ -195,6 +195,43 @@ public class ViewStudentDataSession {
 		return list;
 		
 	}
+	
+	public List<Student> selectedForInternship(String userName)
+	{
+		Session session = getSessionFactory().openSession();
+		session.beginTransaction();
+		Company company =(Company)session.get(Company.class, userName);
+		int x= company.getStudentCompany().size();
+		session.getTransaction().commit();
+		session.close();
+		
+		List<Student> list= new ArrayList<Student>();
+		if(company.isReceiveCv()==true)
+		{
+			for(StudentCompany studentAppliedCompany:company.getStudentCompany())
+			{
+				
+				if(studentAppliedCompany.getState().equals("Selected"))
+				{
+					list.add(studentAppliedCompany.getStudent());
+					
+					
+				}
+				
+				
+			}
+			
+		}
+		else
+		{
+			list= null;
+		}
+		
+
+		
+		return list;
+		
+	}
 
 	// this method is used to get relavent applied students to company
 /*	public List<Student> appliedStudentToCompany(String userName)
