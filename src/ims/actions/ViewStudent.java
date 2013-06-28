@@ -85,7 +85,7 @@ public class ViewStudent extends ActionSupport {
 		
 		for(StudentCompany studentAppliedCompany:getStudent().getStudentCompany())
 		{
-			System.out.println(studentAppliedCompany.getCompany().getCompanyName()+"company name");
+			//System.out.println(studentAppliedCompany.getCompany().getCompanyName()+"company name");
 			companyNames.add(studentAppliedCompany.getCompany().getCompanyName());
 			
 		}
@@ -181,7 +181,7 @@ public class ViewStudent extends ActionSupport {
 		
 		for(StudentCompany studentAppliedCompany:getStudent().getStudentCompany())
 		{
-			System.out.println(studentAppliedCompany.getCompany().getCompanyName()+"company name");
+			//System.out.println(studentAppliedCompany.getCompany().getCompanyName()+"company name");
 			companyNames.add(studentAppliedCompany.getCompany().getCompanyName());
 			
 		}

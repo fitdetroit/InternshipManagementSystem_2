@@ -52,6 +52,13 @@ public class UpdatingStudentCompany extends ActionSupport{
 		return SUCCESS;
 		
 	}
+
+	
+	
+	public String sendMailToStudentInfromInterview()
+	{
+		return SUCCESS;
+	}
 	
 	public String UpdateStateToSelected()
 	{

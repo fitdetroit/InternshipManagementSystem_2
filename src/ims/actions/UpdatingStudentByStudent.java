@@ -18,8 +18,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
+import ims.business.RegisterStudent;
 import ims.business.UpdateStudent;
 import ims.data.Student;
+import ims.data.StudentCompany;
 import ims.data.StudentComplitedProjects;
 import ims.data.StudentOtherQulification;
 import ims.data.User;
@@ -80,8 +82,16 @@ public class UpdatingStudentByStudent extends ActionSupport {
 	private File ProfilePicture;
 	private String ProfilePictureFileName;
 	private String ProfilePictureContentType;
+	
+	
+	
+	
+	
+
 
 	
+
+
 
 
 
@@ -111,7 +121,7 @@ public class UpdatingStudentByStudent extends ActionSupport {
 		
 		
 		
-System.out.println("its herer now");
+//System.out.println("its herer now");
 		
 		Map session;
 		session = ActionContext.getContext().getSession();
@@ -313,6 +323,7 @@ System.out.println("its herer now");
 		
 
 		if (getPassword().length() != 0) {
+		
 
 			if (!(getPassword().equals(getConPassword()))) {
 				addFieldError("conPassword", "password not match");
@@ -322,12 +333,13 @@ System.out.println("its herer now");
 		}
 
 	}
+	
+	
+	
 
 	
-	
-	
-	
-	// getters and setters
+
+//gettser and setter
 	public int getOtherQulificationId1() {
 		return otherQulificationId1;
 	}

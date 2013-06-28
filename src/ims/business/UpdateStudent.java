@@ -32,6 +32,7 @@ public class UpdateStudent {
 			// this x , y initialize becose othervise its not fetch the object from this tables
 			int x =student.getStudentOtherQulification().size();
 			int y =student.getStudentComplitedProjects().size();
+			int z= student.getStudentCompany().size();
 
 			session.getTransaction().commit();
 			session.close();
@@ -65,6 +66,19 @@ public class UpdateStudent {
 			session.beginTransaction();		
 			session.update(studentUpdated);
 			session.update(userUpdated);
+			session.getTransaction().commit();
+			session.close();
+				
+			
+		}
+		
+		// this method is used update student in database	
+		public void updateStudentNewAppliedCompany(Student studentUpdated)
+		{
+
+			Session session = getSessionFactory().openSession();		
+			session.beginTransaction();		
+			session.update(studentUpdated);			
 			session.getTransaction().commit();
 			session.close();
 				

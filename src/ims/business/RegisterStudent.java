@@ -49,13 +49,18 @@ public class RegisterStudent {
 	public Company getStudentAppliedCompanyObject(String companyName)
 	{
 		Session session = getSessionFactory().openSession();
-		String SQL_QUERY = "from Company as com  where com.companyName='" + companyName + "'";
+		String SQL_QUERY ="from Company cm where cm.companyName='" + companyName + "'";
 		Query query = session.createQuery(SQL_QUERY);
-		List<Company> list  =null;
-		list=((org.hibernate.Query) query).list();
-		session.close();
+	
+		List<Company> list = ((org.hibernate.Query) query).list();
+		//List<String> list= ((org.hibernate.Query) query).list();	
 		
-		return list.get(0);
+		
+
+		
+		
+return list.get(0);
+	
 	}
 			
 	

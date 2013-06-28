@@ -107,7 +107,15 @@
 			<result name="error" type="redirect">../index</result>
 		</action>
 		
-
+		<action name="ViewStateOfCompany" class="ims.actions.ViewStudentStateOfCompany" method="viewStudentAppliedCompanyState">
+			<result name="success">/jsp/views/ViewCompanyStateToStudent.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		
+			<action name="UpdateNewApplyCompany" class="ims.actions.UpdateNewlyAppliedCompany" method="updateNewlyAppliedCompany">
+			<result name="success" type="redirect">../index</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
 
 
 	</package>

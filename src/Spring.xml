@@ -30,13 +30,17 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
 
 
-
 	<!-- regarding to student,company and admin beans -->
 	<bean id="CheckUser" class="ims.business.CheckUserToLogin">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+	
 
-
+   <!-- regarding to student,company  beans -->
+	<bean id="ViewStudentCompany" class="ims.business.ViewStudentCompanyDataSession">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
 
 	<!-- regarding to student beans -->
 	<bean id="RegisterStudent" class="ims.business.RegisterStudent">
