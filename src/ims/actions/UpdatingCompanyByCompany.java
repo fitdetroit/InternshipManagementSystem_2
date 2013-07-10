@@ -92,7 +92,7 @@ public class UpdatingCompanyByCompany extends ActionSupport{
 			
 			ProfilePicture.renameTo(savedFile); } 
 		else {
-			//System.out.println("its not working");
+			System.out.println("its not working");
 		}
 		
 		

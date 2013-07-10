@@ -129,6 +129,7 @@
           <tr>
             <td class="user_input_fieldset"><label>Repeat Password</label>
               <input type="password" name="conPassword" class="form_inputs" /></td>
+               <td><s:hidden label="Company Hidden password" name="password2" value="%{company.password}" ></s:hidden></td>
             <td class="input_notif"></td>
           </tr>
           <tr>
