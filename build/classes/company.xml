@@ -13,7 +13,7 @@
 	
 
 		<action name="NewCompany">
-			<result>/jsp/NewCompany.jsp</result>
+			<result>/jsp/CompanyRegistrationForm.jsp</result>
 		</action>
 		<action name="ToRegistration">
 			<result>/jsp/CompanyRegistrationForm.jsp</result>

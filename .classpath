@@ -23,5 +23,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="D:/Projects/2nd Year Project/recaptcha4j-0.0.7.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
