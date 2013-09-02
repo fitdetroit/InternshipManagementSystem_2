@@ -18,6 +18,10 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class ViewCompany extends ActionSupport{
+	
+	private String role;
+	private String page;
+	
 	private List<Company> list = null;
 
 	private Company company = new Company();
@@ -75,6 +79,9 @@ public class ViewCompany extends ActionSupport{
 		session = ActionContext.getContext().getSession();
 		String userName = (String) session.get("userName");
 		setCompany(getViewCompanyDataSession().viewCompanyToCompany(userName));
+		
+		this.role=(String)session.get("type");
+		this.page="CompanyViewToCompany.jsp";
 		return SUCCESS;
 	}
 	
@@ -99,6 +106,12 @@ public class ViewCompany extends ActionSupport{
 			return ERROR;
 				
 		}
+		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		
+		this.role=(String)session.get("type");
+		this.page="AllowedCompanyToCompany.jsp";
 		
 		setList(getViewCompanyDataSession().allowedCompanyToCompany());
 		return SUCCESS;
@@ -156,8 +169,25 @@ public class ViewCompany extends ActionSupport{
 	
 	//getters and setters
 	
+	
 	public Company getCompany() {
 		return company;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public String getPage() {
+		return page;
+	}
+
+	public void setPage(String page) {
+		this.page = page;
 	}
 
 	public void setCompany(Company company) {

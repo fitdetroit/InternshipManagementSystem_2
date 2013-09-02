@@ -18,6 +18,9 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class NewStudent extends ActionSupport{
 	
+	private String role;
+	private String page;
+	
 	private List<String> list = null;
 	
 	// to redirect direct access actions without login
@@ -49,9 +52,35 @@ public class NewStudent extends ActionSupport{
 	
 	
 	//getters and setters
+	
+	
 	public List<String> getList() {
 		return list;
 	}
+
+	public String getRole() {
+		return role;
+	}
+
+
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+
+
+	public String getPage() {
+		return page;
+	}
+
+
+
+	public void setPage(String page) {
+		this.page = page;
+	}
+
+
 
 	public void setList(List<String> list) {
 		this.list = list;

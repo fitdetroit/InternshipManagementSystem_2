@@ -22,6 +22,10 @@ import ims.data.User;
 
 public class CompanyRegistration extends ActionSupport{
 	
+	private String role;
+	private String page;
+	
+	
 	private String companyUserName;
 	private String companyName;
 	private String companyTelephone;
@@ -149,10 +153,40 @@ public class CompanyRegistration extends ActionSupport{
 	
 	
 	
-	// getters and setters	
+	// getters and setters
+	
+	
 	public Company getCompany() {
 		return company;
 	}
+
+
+
+	public String getRole() {
+		return role;
+	}
+
+
+
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+
+
+
+	public String getPage() {
+		return page;
+	}
+
+
+
+
+	public void setPage(String page) {
+		this.page = page;
+	}
+
 
 
 

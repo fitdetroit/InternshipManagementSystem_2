@@ -64,9 +64,9 @@
 
 
 
-<p align="left"><a href="<s:url action="company/ViewCompany"/>">click here to view company</a></p>
+<p align="left"><a href="<s:url action="ViewCompany"/>">click here to view company</a></p>
 
-<p align="left"><a href="<s:url action="company/ViewToUpdateCompany"/>">click here to update company</a></p>
+<p align="left"><a href="<s:url action="ViewToUpdateCompany"/>">click here to update company</a></p>
 
 </div>
 
@@ -74,9 +74,9 @@
 
 <div style="float:left;width:85%; height: 668px;background:silver">
 <h3 align="center">Not Allowed Company Privilages</h3>
-<p align="center"><a href="<s:url action="company/ViewCompany"/>">click here to view company</a></p>
+<p align="center"><a href="<s:url action="ViewCompany"/>">click here to view company</a></p>
 
-<p align="center"><a href="<s:url action="company/ViewToUpdateCompany"/>">click here to update company</a></p>
+<p align="center"><a href="<s:url action="ViewToUpdateCompany"/>">click here to update company</a></p>
 </div>
 
 

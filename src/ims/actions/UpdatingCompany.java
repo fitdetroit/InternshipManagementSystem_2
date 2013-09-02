@@ -23,7 +23,8 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class UpdatingCompany extends ActionSupport{
 	
-	
+	private String role;
+	private String page;
 	
 	private String companyUserName=null;
 
@@ -123,8 +124,30 @@ public class UpdatingCompany extends ActionSupport{
 
 	
 	//getters and setters
+	
+	
 	public String getCompanyUserName() {
 		return companyUserName;
+	}
+
+
+	public String getPage() {
+		return page;
+	}
+
+
+	public void setPage(String page) {
+		this.page = page;
+	}
+
+
+	public HttpServletRequest getRequest() {
+		return request;
+	}
+
+
+	public void setRequest(HttpServletRequest request) {
+		this.request = request;
 	}
 
 

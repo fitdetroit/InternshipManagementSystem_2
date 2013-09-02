@@ -8,12 +8,12 @@
 
 	
 
-	<package name="company" namespace="/company" extends="struts-default">
+	<package name="company" namespace="/" extends="struts-default">
 
 	
 
 		<action name="NewCompany">
-			<result>/jsp/CompanyRegistrationForm.jsp</result>
+			<result>/jsp/HomeIndex.jsp</result>
 		</action>
 		<action name="ToRegistration">
 			<result>/jsp/CompanyRegistrationForm.jsp</result>
@@ -33,7 +33,7 @@
 
 		<action name="ViewToUpdateCompany" class="ims.actions.EditCompany"
 			method="editDetails">
-			<result name="success">/jsp/EditCompany.jsp</result>
+			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
@@ -47,7 +47,7 @@
 
 		<action name="ViewCompany" class="ims.actions.ViewCompany"
 			method="viewCompanyToCompany">
-			<result name="success">/jsp/views/CompanyViewToCompany.jsp</result>
+			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
@@ -81,7 +81,7 @@
 
 		<action name="AllowedCompanyToCompany" class="ims.actions.ViewCompany"
 			method="allowedCompanyToCompany">
-			<result name="success">/jsp/views/AllowedCompanyToCompany.jsp</result>
+			<result name="success">/jsp/HomeIndex.jsp</result>
 		<result name="error" type="redirect">../index</result>
 		</action>
 
@@ -98,21 +98,20 @@
 
 		<action name="SelectForInterview" class="ims.actions.ViewStudent"
 			method="notSelectedForInterview">
-			<result name="success">/jsp/views/NotSelectForInterviewToCompany.jsp
-			</result>
+			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
 		<action name="SelectedForInterview" class="ims.actions.ViewStudent"
 			method="selctedForInterview">
-			<result name="success">/jsp/views/SelectedForInterviewToCompnay.jsp
+			<result name="success">/jsp/HomeIndex.jsp
 			</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 		
 			<action name="SelectedForInternship" class="ims.actions.ViewStudent"
 			method="selctedForInternship">
-			<result name="success">/jsp/views/SelectedForInternshipToCompany.jsp
+			<result name="success">/jsp/HomeIndex.jsp
 			</result>
 			<result name="error" type="redirect">../index</result>
 		</action>

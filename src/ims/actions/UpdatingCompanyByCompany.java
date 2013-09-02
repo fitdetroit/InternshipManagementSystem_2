@@ -23,6 +23,8 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class UpdatingCompanyByCompany extends ActionSupport{
 	
+	private String role;
+	private String page;
 
 	
 	private String companyUserName=null;
@@ -189,9 +191,47 @@ public class UpdatingCompanyByCompany extends ActionSupport{
 	
 	
 	// gettes and setters
+	
+	
 	public File getProfilePicture() {
 		return ProfilePicture;
 	}
+
+	public String getPage() {
+		return page;
+	}
+
+
+
+
+
+
+	public void setPage(String page) {
+		this.page = page;
+	}
+
+
+
+
+
+
+	public HttpServletRequest getRequest() {
+		return request;
+	}
+
+
+
+
+
+
+	public void setRequest(HttpServletRequest request) {
+		this.request = request;
+	}
+
+
+
+
+
 
 	public void setProfilePicture(File profilePicture) {
 		ProfilePicture = profilePicture;

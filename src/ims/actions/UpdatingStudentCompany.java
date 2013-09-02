@@ -25,6 +25,8 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class UpdatingStudentCompany extends ActionSupport{
 	
+	private String role;
+	private String page;
 	
 	private String studentUserName;
 	
@@ -167,9 +169,34 @@ public class UpdatingStudentCompany extends ActionSupport{
 	
 	
 	// getters and setters
+	
 	public String getStudentUserName() {
 		return studentUserName;
 	}
+
+	public String getRole() {
+		return role;
+	}
+
+
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+
+
+	public String getPage() {
+		return page;
+	}
+
+
+
+	public void setPage(String page) {
+		this.page = page;
+	}
+
+
 
 	public void setStudentUserName(String studentUserName) {
 		this.studentUserName = studentUserName;

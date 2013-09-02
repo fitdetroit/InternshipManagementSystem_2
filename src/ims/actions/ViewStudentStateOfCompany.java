@@ -23,6 +23,9 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class ViewStudentStateOfCompany extends ActionSupport{
 	
+	private String role;
+	private String page;
+	
 	
 	private String newAppliedCompnay1;
 	private String newAppliedCompnay2;
@@ -205,9 +208,103 @@ public class ViewStudentStateOfCompany extends ActionSupport{
 
 
 	//getters and setters
+	
+	
 	public List<String> getAllCompany() {
 		return allCompany;
 	}
+
+
+	public String getRole() {
+		return role;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public String getPage() {
+		return page;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public void setPage(String page) {
+		this.page = page;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	public void setAllCompany(List<String> allCompany) {

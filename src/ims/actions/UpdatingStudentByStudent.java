@@ -28,6 +28,8 @@ import ims.data.User;
 
 public class UpdatingStudentByStudent extends ActionSupport {
 
+	private String role;
+	private String page;
 	
 	private String studentUserName;
 	private String nameInFull;
@@ -340,8 +342,30 @@ public class UpdatingStudentByStudent extends ActionSupport {
 	
 
 //gettser and setter
+	
+	
 	public int getOtherQulificationId1() {
 		return otherQulificationId1;
+	}
+
+
+	public String getRole() {
+		return role;
+	}
+
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+
+	public String getPage() {
+		return page;
+	}
+
+
+	public void setPage(String page) {
+		this.page = page;
 	}
 
 

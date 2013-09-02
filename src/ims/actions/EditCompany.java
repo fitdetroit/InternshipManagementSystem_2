@@ -21,7 +21,8 @@ import com.opensymphony.xwork2.ActionSupport;
 public class EditCompany extends ActionSupport {
 	
 	
-
+	private String role;
+	private String page;
 
 	private Company company;
 	private User user;
@@ -86,6 +87,8 @@ public class EditCompany extends ActionSupport {
 		setPassword2(user.getPassword());
 		setConPassword(user.getPassword());
 
+		this.role=(String)session.get("type");
+		this.page="EditCompany.jsp";
 		return SUCCESS;
 	}
 
@@ -99,9 +102,81 @@ public class EditCompany extends ActionSupport {
 	
 	// getters and setters
 
+	public String getRole() {
+		return role;
+	}
+
+
+
+
+
+
+
+
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+
+
+
+
+
+
+
+
 	public String getCompanyUserName() {
 		return companyUserName;
 	}
+
+	public String getPage() {
+		return page;
+	}
+
+
+
+
+
+
+
+
+
+	public void setPage(String page) {
+		this.page = page;
+	}
+
+
+
+
+
+
+
+
+
+	public HttpServletRequest getRequest() {
+		return request;
+	}
+
+
+
+
+
+
+
+
+
+	public void setRequest(HttpServletRequest request) {
+		this.request = request;
+	}
+
+
+
+
+
+
+
+
 
 	public void setCompanyUserName(String companyUserName) {
 		this.companyUserName = companyUserName;

@@ -26,6 +26,8 @@ import com.opensymphony.xwork2.ActionSupport;
 // this class give details form database fo Edit Student Form
 public class EditStudent extends ActionSupport{
 	
+	private String role;
+	private String page;
 
 
 	Map session;
@@ -259,8 +261,33 @@ public class EditStudent extends ActionSupport{
 	
 	
 	//getters and setters
+	
 	public String getStudentUserName() {
 		return studentUserName;
+	}
+
+
+
+	public String getRole() {
+		return role;
+	}
+
+
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+
+
+	public String getPage() {
+		return page;
+	}
+
+
+
+	public void setPage(String page) {
+		this.page = page;
 	}
 
 

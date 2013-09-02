@@ -14,6 +14,11 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class HandleCv extends ActionSupport{
 
+	
+	private String role;
+	private String page;
+	
+	
 	private List<Company> list = null;
 	private List<Company> list2 = null;
 	

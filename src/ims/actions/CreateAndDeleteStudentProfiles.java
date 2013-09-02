@@ -19,6 +19,9 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class CreateAndDeleteStudentProfiles extends ActionSupport {
 
+	private String role;
+	private String page;
+	
 	HttpServletRequest request = ServletActionContext.getRequest();
 	HttpSession session2 = request.getSession();
 	String str = (String) session2.getAttribute("userName");

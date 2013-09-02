@@ -21,6 +21,9 @@ import ims.data.User;
 
 public class StudentRegistration extends ActionSupport {
 	
+	private String role;
+	private String page;
+	
 	private Student student = new Student();
 	
 	private String studentUserName;
@@ -224,9 +227,70 @@ public class StudentRegistration extends ActionSupport {
 	
 	
 	// getters and setters
+	
 	public String getOtherQulification1() {
 		return otherQulification1;
 	}
+
+
+	public String getRole() {
+		return role;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	public String getPage() {
+		return page;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	public void setPage(String page) {
+		this.page = page;
+	}
+
+
+
+
+
+
+
+
+
+
 
 
 	public void setOtherQulification1(String otherQulification1) {

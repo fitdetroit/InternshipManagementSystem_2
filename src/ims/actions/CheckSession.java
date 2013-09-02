@@ -11,6 +11,9 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class CheckSession extends ActionSupport {
+	
+	private String role;
+	private String page;
 
 	HttpServletRequest request = ServletActionContext.getRequest();
 	HttpSession session2 = request.getSession();
@@ -60,5 +63,23 @@ public class CheckSession extends ActionSupport {
 		}
 
 	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public String getPage() {
+		return page;
+	}
+
+	public void setPage(String page) {
+		this.page = page;
+	}
+	
+	
 
 }

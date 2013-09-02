@@ -20,6 +20,9 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class ViewStudent extends ActionSupport {
+	
+	private String role;
+	private String page;
 
 	private List<Student> list = null;
 	private List<String> companyNames= new ArrayList<String>();
@@ -142,7 +145,8 @@ public class ViewStudent extends ActionSupport {
 		
 
 		
-		
+		this.role=(String)session.get("type");
+		this.page="NotSelectForInterviewToCompany.jsp";
 		
 		return SUCCESS;
 		
@@ -163,6 +167,9 @@ public class ViewStudent extends ActionSupport {
 		
 		setList(getViewStudentDataSession().selectedForInterview(userName));
 		
+		this.role= (String)session.get("type");
+		this.page = "SelectedForInterviewToCompnay.jsp";
+
 		return SUCCESS;
 		
 	}
@@ -206,7 +213,8 @@ public class ViewStudent extends ActionSupport {
 		String userName = (String) session.get("userName");
 		
 		setList(getViewStudentDataSession().selectedForInternship(userName));
-		
+		this.role= (String)session.get("type");
+		this.page = "SelectedForInternshipToCompany.jsp";
 		return SUCCESS;
 		
 	}
@@ -253,6 +261,42 @@ public class ViewStudent extends ActionSupport {
 	public Student getStudent() {
 		return student;
 	}
+	public String getRole() {
+		return role;
+	}
+
+
+
+
+
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+
+
+
+
+
+	public String getPage() {
+		return page;
+	}
+
+
+
+
+
+
+	public void setPage(String page) {
+		this.page = page;
+	}
+
+
+
+
+
+
 	public void setStudent(Student student) {
 		this.student = student;
 	}

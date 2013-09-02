@@ -17,6 +17,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class Login extends ActionSupport{
+	
+	private String role;
+	private String page;
+	
+	
 	private String UserName;
 	private String password;
 	private String loginPageType=null;
@@ -69,6 +74,9 @@ public class Login extends ActionSupport{
 						session = ActionContext.getContext().getSession();
 						session.put("userName", getUserName());
 						session.put("type", "admin");
+						
+						this.role ="admin";
+						this.page="Admin.jsp";
 						return "admin";
 					 
 				 }
@@ -90,6 +98,8 @@ public class Login extends ActionSupport{
 						  session.put("userName",getUserName());
 						  session.put("type","regiStudent");
 						  
+						  this.role ="regiStudent";
+						  this.page="RegistedStudent.jsp";
 						  return "regiStudent";
 					 
 				 }
@@ -110,6 +120,8 @@ public class Login extends ActionSupport{
 						  session.put("userName",getUserName());
 						  session.put("type","allowedCompany");
 						  
+						  this.role="allowedCompany";
+						  this.page="AllowedCompany.jsp";
 						  return "allowedCompany";
 					 
 				 }
@@ -120,6 +132,8 @@ public class Login extends ActionSupport{
 						  session.put("userName",getUserName());
 						  session.put("type","notAllowedCompany");
 						  
+						  this.role="notAllowedCompany";
+						  this.page="NotAllowedCompany.jsp";
 						  return "notAllowedCompany";
 					 
 				 }
@@ -175,8 +189,26 @@ public class Login extends ActionSupport{
 	
 	
 	//getters and setters
+		
+		
 		public String getLoginPageType() {
 			return loginPageType;
+		}
+
+		public String getRole() {
+			return role;
+		}
+
+		public void setRole(String role) {
+			this.role = role;
+		}
+
+		public String getPage() {
+			return page;
+		}
+
+		public void setPage(String page) {
+			this.page = page;
 		}
 
 		public void setLoginPageType(String loginPageType) {

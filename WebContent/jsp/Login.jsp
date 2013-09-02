@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="assets/css/normalize.min.css">
         <link rel="stylesheet" href="assets/css/main.css">
 		<link rel="stylesheet" href="assets/css/960.css">
+		<link rel="stylesheet" href="assets/css/login.css">
 
         <script src="assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
@@ -35,17 +36,17 @@
 		<div class="login_area grid_5">
 			
 			<div class="login_top">
-				<s:form method="post" action="Login" >	
-				<s:textfield name="userName" cssClass="login_inputs" value="Username.."/>			
-				<s:password value="Password.." name="password" cssClass="login_inputs" />
+				<form method="GET" action="Login" >	
+				<input type="text" name="userName" class="login_inputs" placeholder="Username"/>			
+				<input type="password" name="password" class="login_inputs"  placeholder="Password" />
 				<s:hidden  name="loginPageType" value="normall"></s:hidden>
 				
 				<s:submit value="Sign in"  cssClass="but_login"></s:submit>
-				</s:form>
+				</form>
 			</div>
 			<div class="login_bottom">
 				<label class="we-are-comp">We are a Company</label>
-				<s:form method="post" action="company/NewCompany" >
+				<s:form method="GET" action="NewCompany" >
 				<s:submit  value="Register with Us" cssClass="but_signup" align="center"></s:submit>
 				</s:form>
 				
