@@ -6,11 +6,7 @@
 
 <struts>
 
-	
-
 	<package name="company" namespace="/" extends="struts-default">
-
-	
 
 		<action name="NewCompany">
 			<result>/jsp/HomeIndex.jsp</result>
@@ -50,8 +46,6 @@
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
-
-
 
 		<action name="GetImageCompany" class="ims.actions.GetProfilePicture">
 			<result name="success" type="stream">

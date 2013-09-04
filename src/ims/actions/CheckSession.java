@@ -21,10 +21,12 @@ public class CheckSession extends ActionSupport {
 
 	// this method check allready user logged in or not
 	public String execute() {
-		
+	
 		
 
 		if (str != null) {
+			
+			
 			Map session;
 			session = ActionContext.getContext().getSession();
 			String type = (String) session.get("type");

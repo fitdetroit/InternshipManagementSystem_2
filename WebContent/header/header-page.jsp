@@ -21,6 +21,5 @@
   </div>
 </div>
 <div class="header_bottom">
-	<%@include file="main-menu.jsp"%>
 </div>
 <div class="div_middle"></div>
