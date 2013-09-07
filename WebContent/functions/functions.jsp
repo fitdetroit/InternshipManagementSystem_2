@@ -39,9 +39,22 @@
 <s:if test="%{#page=='AllowedCompanyToCompany.jsp'}">
 	<%@include file="/content/company/AllowedCompanyToCompany.jsp" %>
 </s:if>
+<s:if test="%{#page=='AppliedStudentCvToCompany'}">
+	<%@include file="/content/company/AppliedStudentCvToCompany.jsp" %>
+</s:if>
+
+<s:if test="%{#page=='FullCompanyToCompany'}">
+	<%@include file="/content/company/FullCompanyToCompany.jsp" %>
+</s:if>
+
 
 <!-- menu Actions -->
-<s:if test="%{#menu=='Manage'}" >
+<s:if test="%{#page=='ManageStudents'}" >
 	<%@include file="/content/company/ManageStudents.jsp" %>
 </s:if>
+
+<s:if test="%{#page=='AllowedCompany'}" >
+	<%@include file="/content/company/AllowedCompany.jsp" %>
+</s:if>
+
 

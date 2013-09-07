@@ -69,7 +69,7 @@
 
 		<action name="StudentCvToCompany" class="ims.actions.ViewStudent"
 			method="studentCvToCompany">
-			<result name="success">/content/company/AppliedStudentCvToCompany.jsp</result>
+			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
@@ -81,7 +81,7 @@
 
 		<action name="FullCompanyProfileToCompany" class="ims.actions.ViewCompany"
 			method="FullProfileToCompany">
-			<result name="success">/content/company/FullCompanyToCompany.jsp</result>
+			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
@@ -122,8 +122,12 @@
 			<result name="error" type="redirect">../index</result>
 		</action>
 		
-
+<!-- Munu Manage -->
 		<action name="ManageAction" class="ims.actions.MainMenuActions" method="MenuManage">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		<action name="HomeAction" class="ims.actions.MainMenuActions" method="HomeMenu">
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>

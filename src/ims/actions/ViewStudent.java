@@ -124,9 +124,6 @@ public class ViewStudent extends ActionSupport {
 			
 			setList(viewStudentDataSession.appliedStudentToCompany(userName));
 		}
-		
-		
-		
 		return SUCCESS;
 	}
 
@@ -143,8 +140,6 @@ public class ViewStudent extends ActionSupport {
 		String userName = (String) session.get("userName");
 		
 		setList(getViewStudentDataSession().notSelectForInterview(userName));
-		
-
 		
 		this.role=(String)session.get("type");
 		this.page="NotSelectForInterviewToCompany.jsp";
@@ -196,10 +191,6 @@ public class ViewStudent extends ActionSupport {
 			
 		}
 
-		
-		
-
-	
 		return SUCCESS;
 	}
 	
@@ -222,19 +213,12 @@ public class ViewStudent extends ActionSupport {
 		return SUCCESS;
 		
 	}
-	
-	
-
-	
-	
-	
 
 	public String studentCvToCompany()
 	{
 		// to redirect direct access actions  without login
 		if (str==null) {
-			return ERROR;
-				
+			return ERROR;		
 		}
 		
 		if(getStudentUserName()==null)
@@ -242,24 +226,19 @@ public class ViewStudent extends ActionSupport {
 			return ERROR;
 		}
 		
-		
 		setStudent(viewStudentDataSession.studentCvToCompany(getStudentUserName()));
 		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String userName = (String) session.get("userName");
 		
-	
+		setList(getViewStudentDataSession().selectedForInternship(userName));
+		this.role= (String)session.get("type");
+		this.page = "AppliedStudentCvToCompany";
+		this.menu = "Manage";
 		return SUCCESS;
 	}
 	
-	
-
-	
-	
-	
-
-
-
-
-
 	// getters and setters
 
 	public Student getStudent() {

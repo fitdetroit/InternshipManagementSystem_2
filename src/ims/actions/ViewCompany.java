@@ -21,9 +21,9 @@ public class ViewCompany extends ActionSupport{
 	
 	private String role;
 	private String page;
+	private String menu;
 	
 	private List<Company> list = null;
-
 	private Company company = new Company();
 
 
@@ -82,6 +82,7 @@ public class ViewCompany extends ActionSupport{
 		
 		this.role=(String)session.get("type");
 		this.page="CompanyViewToCompany.jsp";
+		this.menu = "Home";
 		return SUCCESS;
 	}
 	
@@ -112,6 +113,7 @@ public class ViewCompany extends ActionSupport{
 		
 		this.role=(String)session.get("type");
 		this.page="AllowedCompanyToCompany.jsp";
+		this.menu = "Manage";
 		
 		setList(getViewCompanyDataSession().allowedCompanyToCompany());
 		return SUCCESS;
@@ -148,6 +150,14 @@ public class ViewCompany extends ActionSupport{
 		}
 		
 		setCompany(getViewCompanyDataSession().FullProfileToCompany(getCompanyUserName()));
+		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String type = (String) session.get("type");
+		
+		this.role=(String)session.get("type");
+		this.page="FullCompanyToCompany";
+		this.menu="Manage";
 		return SUCCESS;
 	}
 	
@@ -188,6 +198,15 @@ public class ViewCompany extends ActionSupport{
 
 	public void setPage(String page) {
 		this.page = page;
+	}
+	
+	public String getMenu() {
+	return menu;
+	}
+	
+	public void setMenu(String menu) {
+		this.menu = menu;
+		
 	}
 
 	public void setCompany(Company company) {

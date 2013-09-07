@@ -1,8 +1,5 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
-<s:set name="role" value="role"/>
-<s:set name="menuType" value="menyType"/>
-
 <s:if test="%{#role==null}">
 	<%@include file="/header/menus/main_menu-common.jsp" %>
 </s:if>

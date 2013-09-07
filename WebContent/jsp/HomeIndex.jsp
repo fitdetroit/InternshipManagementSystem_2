@@ -2,6 +2,10 @@
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="/struts-tags" prefix="s"%>
 
+<s:set name="role" value="role"/>
+<s:set name="page" value="page"/>
+<s:set name="menu" value="menu"/>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -23,7 +27,7 @@
 
 <script src="assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
-<body class="<%= request.getParameter("cat") %> <%= request.getParameter("page") %>">
+<body class="<s:property value="%{#role}"/> <s:property value="%{#page}"/> <s:property value="%{#menu}"/>">
 <div class="header_top">
   <div class="header_contariner"> <img src="assets/img/university_logo.png" class="uni_logo"/>
     <h1>Faculty of Information Technology - University of Moratuwa</h1>
