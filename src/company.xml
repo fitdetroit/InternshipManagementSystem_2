@@ -12,7 +12,7 @@
 			<result>/jsp/HomeIndex.jsp</result>
 		</action>
 		<action name="ToRegistration">
-			<result>/jsp/CompanyRegistrationForm.jsp</result>
+			<result>/content/company/CompanyRegistrationForm.jsp</result>
 		</action>
 		
 		<action name="LogOut" class="ims.actions.Login"
@@ -22,8 +22,8 @@
 
 		<action name="RegisterCompany" class="ims.actions.CompanyRegistration"
 			method="registration">
-			<result name="success">/jsp/NotAllowedCompany.jsp</result>
-			<result name="input">/jsp/CompanyRegistrationForm.jsp</result>
+			<result name="success">/content/company/NotAllowedCompany.jsp</result>
+			<result name="input">/content/company/CompanyRegistrationForm.jsp</result>
 		<result name="error" type="redirect">../index</result>
 		</action>
 
@@ -36,8 +36,8 @@
 		<action name="UpdateCompany" class="ims.actions.UpdatingCompanyByCompany"
 			method="updateCompany">
 			<result name="success" type="redirect">../index</result>
-			<result name="input">/jsp/EditCompany.jsp</result>
-			<result name="UnRegisted">/jsp/NotAllowedCompany.jsp</result>
+			<result name="input">/content/company/EditCompany.jsp</result>
+			<result name="UnRegisted">/content/company/NotAllowedCompany.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
@@ -61,15 +61,15 @@
 
 		<action name="ViewStudentToCompany" class="ims.actions.ViewStudent"
 			method="appliedStudentToCompany">
-			<result name="success">/jsp/views/AppliedStudentToCompany.jsp</result>
-			<result name="NoAccess">/jsp/AllowedCompany.jsp</result>
+			<result name="success">/content/company/views/AppliedStudentToCompany.jsp</result>
+			<result name="NoAccess">/content/company/AllowedCompany.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
 
 		<action name="StudentCvToCompany" class="ims.actions.ViewStudent"
 			method="studentCvToCompany">
-			<result name="success">/jsp/views/AppliedStudentCvToCompany.jsp</result>
+			<result name="success">/content/company/AppliedStudentCvToCompany.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
@@ -81,7 +81,7 @@
 
 		<action name="FullCompanyProfileToCompany" class="ims.actions.ViewCompany"
 			method="FullProfileToCompany">
-			<result name="success">/jsp/views/FullCompanyToCompany.jsp</result>
+			<result name="success">/content/company/FullCompanyToCompany.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
@@ -119,6 +119,12 @@
 		<action name="UpdateStateToSelected" class="ims.actions.UpdatingStudentCompany"
 			method="UpdateStateToSelected">
 			<result name="success" type="redirect">SelectedForInterview</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		
+
+		<action name="ManageAction" class="ims.actions.MainMenuActions" method="Manage">
+			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
