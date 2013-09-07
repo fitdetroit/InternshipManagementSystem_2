@@ -1,6 +1,7 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
 <s:set name="page" value="page"/>
+<s:set name="menu" value="menu"/>
 
 <s:if test="%{#page==null}">
 	<%@include file="/content/company/CompanyRegistrationForm.jsp" %>
@@ -39,7 +40,8 @@
 	<%@include file="/content/company/AllowedCompanyToCompany.jsp" %>
 </s:if>
 
-<!-- Temp menu Actions -->
-<s:if test="%{#page=='ManagePage'}">
+<!-- menu Actions -->
+<s:if test="%{#menu=='Manage'}" >
 	<%@include file="/content/company/ManageStudents.jsp" %>
 </s:if>
+

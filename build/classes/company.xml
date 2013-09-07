@@ -123,7 +123,7 @@
 		</action>
 		
 
-		<action name="ManageAction" class="ims.actions.MainMenuActions" method="Manage">
+		<action name="ManageAction" class="ims.actions.MainMenuActions" method="MenuManage">
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
