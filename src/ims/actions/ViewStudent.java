@@ -23,6 +23,7 @@ public class ViewStudent extends ActionSupport {
 	
 	private String role;
 	private String page;
+	private String menu;
 
 	private List<Student> list = null;
 	private List<String> companyNames= new ArrayList<String>();
@@ -147,6 +148,7 @@ public class ViewStudent extends ActionSupport {
 		
 		this.role=(String)session.get("type");
 		this.page="NotSelectForInterviewToCompany.jsp";
+		this.menu = "Manage";
 		
 		return SUCCESS;
 		
@@ -169,6 +171,7 @@ public class ViewStudent extends ActionSupport {
 		
 		this.role= (String)session.get("type");
 		this.page = "SelectedForInterviewToCompnay.jsp";
+		this.menu = "Manage";
 
 		return SUCCESS;
 		
@@ -215,6 +218,7 @@ public class ViewStudent extends ActionSupport {
 		setList(getViewStudentDataSession().selectedForInternship(userName));
 		this.role= (String)session.get("type");
 		this.page = "SelectedForInternshipToCompany.jsp";
+		this.menu = "Manage";
 		return SUCCESS;
 		
 	}
@@ -265,37 +269,25 @@ public class ViewStudent extends ActionSupport {
 		return role;
 	}
 
-
-
-
-
-
 	public void setRole(String role) {
 		this.role = role;
 	}
-
-
-
-
-
 
 	public String getPage() {
 		return page;
 	}
 
-
-
-
-
-
 	public void setPage(String page) {
 		this.page = page;
 	}
+	
+	public String getMenu() {
+		return menu;
+	}
 
-
-
-
-
+	public void setMenu(String menu) {
+		this.menu = menu;
+	}
 
 	public void setStudent(Student student) {
 		this.student = student;

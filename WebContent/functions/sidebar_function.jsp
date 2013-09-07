@@ -6,6 +6,10 @@
 	
 </s:if>
 
+<s:if test="%{#role=='allowedCompany' && #menu=='Manage'}" >
+	<%@include file="/header/menus/widget_side_menu_manage.jsp" %>
+</s:if>
+
 <s:if test="%{#role=='allowedCompany'}">
 	<%@include file="/header/menus/widget_side_menu_allowed_comp.jsp" %>
 </s:if>
@@ -14,7 +18,5 @@
 	<%@include file="/header/menus/widget_side_menu_notallowed_comp.jsp" %>
 </s:if>
 
-<s:if test="%{#menu=='Manage'}" >
-	<%@include file="/header/menus/widget_side_menu_manage.jsp" %>
-</s:if>
+
 
