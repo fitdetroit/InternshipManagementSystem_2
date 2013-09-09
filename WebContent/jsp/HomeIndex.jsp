@@ -71,6 +71,7 @@
 			<h4>Related Links</h4>
 			<ul><li><img src="assets/img/building.png">University Of Moratuwa</li>
 				<li><img src="assets/img/building.png">Faculty Of Information Technology</li>
+				<li><img src="assets/img/building.png">Slasscom</li>
 			</ul>
 
 		</div>

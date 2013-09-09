@@ -18,14 +18,12 @@
 <s:if test="%{#page=='NotAllowedCompany.jsp'}">
 	<%@include file="/content/company/NotAllowedCompany.jsp" %>
 </s:if>
-<s:if test="%{#page=='NotAllowedCompany.jsp'}">
-	<%@include file="/content/company/NotAllowedCompany.jsp" %>
-</s:if>
+
 <s:if test="%{#page=='CompanyViewToCompany.jsp'}">
 	<%@include file="/content/company/CompanyViewToCompany.jsp" %>
 </s:if>
 <s:if test="%{#page=='EditCompany.jsp'}">
-	<%@include file="/jsp/EditCompany.jsp" %>
+	<%@include file="/content/company/EditCompany.jsp" %>
 </s:if>
 <s:if test="%{#page=='NotSelectForInterviewToCompany.jsp'}">
 	<%@include file="/content/company/NotSelectForInterviewToCompany.jsp" %>

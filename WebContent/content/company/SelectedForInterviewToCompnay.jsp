@@ -1,4 +1,4 @@
-<div style="float:left;width:85%; height: 668px;background:silver">
+<div>
 <h2 align="center">Selected Students to Interview </h2>
 <table border="1" align="center">
 <tr >

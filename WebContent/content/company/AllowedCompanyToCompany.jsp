@@ -1,4 +1,4 @@
-<div style="float:left;width:85%; height: 668px;background:silver">
+<div>
 <h3 align="center">Allowed Company Details</h3>
 <table border="1" align="center">
 <tr>

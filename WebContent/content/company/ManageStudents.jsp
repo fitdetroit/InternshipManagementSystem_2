@@ -8,12 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-Manage Students page<br> Under Construction
-<br>
-Page : <s:property value="%{#page}"/>
-<br>
-Role :	<s:property value="%{#role}"/>
-<br>
-menu id : <s:property value="%{#menu}"/>
+about the internship program <b>time period</b>
+<br>No of Applied Students
+<br>Summery of contents
 </body>
 </html>
