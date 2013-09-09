@@ -25,11 +25,11 @@
 		<td style="height: 1331px" valign="top">
 			<table width="100%" border="0">
 				<tr>
-					<td colspan="2" style="background-color:black;width:100%;font-family:Cambria;font-size:60px;color:teal"><s:property  value="student.nameWithInitials"></s:property></td>
+					<td colspan="2" style="width:100%;"><s:property  value="student.nameWithInitials"></s:property></td>
 				</tr>
 				<tr><td style="height: 50px"></td></tr>
-				<tr style="background-color:#333333">
-					<td colspan="2" class="ankers"><a name="personal"></a>Personal Informations</td>
+				<tr>
+					<td colspan="2" class="ankers"><a name="personal"></a><b>Personal Informations</b></td>
 				</tr>
 				<tr>
 					<td style="width:5%"></td>
@@ -49,8 +49,8 @@
 				</tr>
 
 				<tr><td style="height:20px"></td></tr>
-				<tr style="background-color:#333333">
-					<td colspan="2" class="ankers"><a name="edu"></a>Educatin Qualifications</td>
+				<tr>
+					<td colspan="2" class="ankers"><a name="edu"></a><b>Educatin Qualifications</b></td>
 				</tr>
 				<tr>
 					<td style="width:5%"></td>
@@ -71,8 +71,8 @@
 										</table></td>
 				</tr>
 				<tr><td style="height:20px"></td></tr>
-				<tr style="background-color:#333333">
-					<td colspan="2" class="ankers"><a name="workingExperience"></a>Other qulification:</td>
+				<tr>
+					<td colspan="2" class="ankers"><a name="workingExperience"></a><b>Other qulification:</b></td>
 				</tr>
 			   <s:iterator value="student.studentOtherQulification"  >
 				<tr>
@@ -90,8 +90,8 @@
 				</tr>
 				</s:iterator>
 				<tr><td style="height:20px"></td></tr>
-				<tr style="background-color:#333333">
-					<td colspan="2" class="ankers"><a name="projects"></a>Projects</td>
+				<tr>
+					<td colspan="2" class="ankers"><a name="projects"></a><b>Projects</b></td>
 				</tr>
 			<s:iterator value="student.studentComplitedProjects"  >
 				<tr>
@@ -111,8 +111,8 @@
 				</tr>
 				</s:iterator>
 				<tr><td style="height:20px"></td></tr>
-				<tr style="background-color:#333333">
-					<td colspan="2" class="ankers"><a name="uni"></a>University Details</td>
+				<tr>
+					<td colspan="2" class="ankers"><a name="uni"></a><b>University Details</b></td>
 				</tr>
 				<tr>
 					<td style="width:5%"></td>
