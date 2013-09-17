@@ -54,5 +54,8 @@
 <s:if test="%{#page=='AllowedCompany'}" >
 	<%@include file="/content/company/AllowedCompany.jsp" %>
 </s:if>
+<s:if test="%{#page=='Support'}" >
+	<%@include file="/content/common/support.jsp" %>
+</s:if>
 
 

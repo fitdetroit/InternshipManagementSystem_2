@@ -85,6 +85,34 @@
 <script type="text/javascript" src="assets/js/jquery.validate.js"></script>
 <script type="text/javascript" src="assets/js/dropdown.js"></script>
 <script type="text/javascript" src="assets/js/Regpage_validate.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function()
+	    {
+	      
+	      $("#submit_msg").validate(
+	      {
+	        rules:{
+	        	name:"required",
+	        	term:"required",
+	        	
+	        	msg:"required",
+	        	term:"required",
+	 
+	        	
+	        	email:{	
+	                required:true,
+	                email: true
+
+	                },
+
+	            
+	          },
+	        errorClass: "help-inline-note" 
+	      });
+	    });
+
+</script>
 
 </body>
 </html>

@@ -131,6 +131,10 @@
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
+		<action name="SupportAction" class="ims.actions.MainMenuActions" method="SupportMenu">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
 
 	</package>
 </struts>

@@ -56,6 +56,24 @@ public class MainMenuActions extends ActionSupport{
 				return SUCCESS;
 
 		}
+		
+		public String SupportMenu() {	
+			
+			// to redirect direct access actions  without login
+			if (str==null) {
+				return ERROR;
+					
+			}	
+				Map session;
+				session = ActionContext.getContext().getSession();
+				String type = (String) session.get("type");
+				
+				this.role=(String)session.get("type");
+				this.page="Support";
+				this.menu="Support";
+				return SUCCESS;
+
+		}
 
 		public String getRole() {
 			return role;
