@@ -1,3 +1,173 @@
+ <style>
+.profile_container{ background:#FFFFFF; padding:10px;}
+
+.address { margin-top:-15px; font-weight:bold; color:#666666} 
+.page_title{ background:rgba(227, 252, 221, 1); margin-top:10px; padding:5px 0 0 5px; height:30px;border: 1px solid #C2F0C2;} 
+.profile_body { height:100px; margin:0 auto 0 auto; width: 980px;}
+.td_header{ width:200px; font-weight: bold;}
+.td_body p{ margin-top:0; margin-bottom:0;}
+
+.header_profile {color:#298B1C; margin: 0 auto;font-family: 'MerriweatherSans-Bold'; font-size:22px;}
+.profile_general{ height:150px; padding-top:10px;}
+.pro_img_container{ width:250px;float:left; overflow-y: auto}
+.pro_disc_container{ float:left; width:720px}
+.profile_container .profile_name{ color:#333333; background:none; border:none; font-size:33px; font-weight:bold; font-family: 'segoeuib-Bold'; margin: 0 auto auto -1px;}
+.pro_disc_container .address{ color:#666666; font-size:15px; margin:10px auto auto 10px;}
+.pro_disc_container hr { margin:10px;}
+.pro_disc_container .comp_discription{color: #666666; margin: 10px; font-size: 14px;}
+
+table.table_info{ border:none; margin-left:10px;}
+
+table.table_info th{ text-align:left; color:#3960A5; background: #F5F6F7; font-weight:600}
+table.table_info td{ padding:2px 0 2px 0}
+table.table_info td.col_1{ width:150px; text-align:right; color: #333333; font-weight:600; font-size:15px; padding-right:10px;}
+table.table_info td.col_2{ width:10px; text-align:right; vertical-align:top}
+table.table_info td.col_3{ width:500px; font-size:14px; vertical-align:top}
+table.table_info td.col_3 p { padding:0; margin:0;vertical-align:top;padding-left: 10px;}
+
+
+
+</style>
+
+  <div class="page_title"><h2 class="header_profile">Student Profile</h2></div>
+    <div class="profile_container">
+		<div class="profile_general">
+			<div class="pro_img_container"><img class="profile_image" src="assets/img/st_profileimg.jpg" alt="company name" width="250"/></div>
+			<div class="pro_disc_container">
+				<h3 class="profile_name">Charith Hewage</h3>
+				<p class="address">No.44, New Kandy Road Malabe, Sri Lanka.</p>
+				<hr>	
+							<table cellpadding="0" cellspacing="0" class="table_info">
+			<th colspan="3">Genaral Information</th>
+			<tr><td class="col_1">Name in Full</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>Hewa Wathudurage Charith Lakmina</p></td>
+			</tr>
+			<tr><td class="col_1"><tr><td class="col_1">Gender</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>Male</p></td>
+			</tr>
+			<tr><td class="col_1"><tr><td class="col_1">Nationality</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>Sri Lankan</p></td>
+			</tr>
+			<tr><td class="col_1"><tr><td class="col_1">Date of Birth</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>20.07.1989</p></td>
+			</tr>
+			<tr><td class="col_1"><tr><td class="col_1">Marital State</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>Single</p></td>
+			</tr>
+			
+			
+			<th colspan="3">Objectives</th>
+			<tr><td class="col_3" colspan="3">
+					<ul><li><p>Freelancer.com is the world’s #1 outsourcing website and consistently ranks in the Top 250 Sites Worldwide. </p></li>
+					<li><p>Freelancer.com is the world’s #1 outsourcing website and consistently ranks in the Top 250 Sites Worldwide. </p></li>
+					
+					</ul>
+				</td>
+			
+			</tr>
+			
+			
+			<th colspan="3">Educational Qualifications</th>
+			<tr><td colspan="3" style="padding-left:10px; font-weight:600; color:#298B1C">GCE O/L</td></tr>
+			<tr><td class="col_1">Mathematics</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>A</p></td>
+			<tr><td class="col_1">Science</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>A</p></td></tr>
+			<tr><td class="col_1">Buddhism</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>A</p></td></tr>
+			<tr><td class="col_1">English Language</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>A</p></td></tr>
+			<tr><td class="col_1">First Language</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>A</p></td></tr>
+			<tr><td class="col_1">Social Studies</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>A</p></td></tr>
+			<tr><td class="col_1">Health and Physical Science</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>A</p></td></tr>
+				
+			
+			<tr><td colspan="3" style="padding-left:10px; font-weight:600; color:#298B1C">GCE O/L</td></tr>
+			<tr><td class="col_1">Mathematics</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>A</p></td>
+			<tr><td class="col_1">Chemestry</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>A</p></td></tr>
+			<tr><td class="col_1">Physics</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>A</p></td></tr>
+
+			
+			<th colspan="3">Skills</th>
+			<tr><td colspan="3" style="padding-left:10px; font-weight:600; color:#298B1C">Computer Skills</td></tr>
+			<tr><td class="col_1">ProgrammingLanguages</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>Java, [C, C++]</p></td>
+			</tr>
+			
+			<tr><td class="col_1">Web Technologies</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>PHP, CSS, JavaScript, Ajax</p></td>
+			</tr>
+			
+			<th colspan="3">Work Experience</th>
+			<tr><td colspan="3" style="padding-left:10px; font-weight:600; color:#298B1C">Faculty of Information Technology</td></tr>
+			<tr><td class="col_3" colspan="3"><p>Freelancer.com is the worldâ€™s #1 outsourcing website and consistently ranks in the Top 250 Sites Worldwide.</p></td>
+			
+			</tr>
+			
+			<tr><td colspan="3" style="padding-left:10px; font-weight:600; color:#298B1C">Faculty of Information Technology</td></tr>
+			<tr><td class="col_3" colspan="3"><p>Freelancer.com is the worldâ€™s #1 outsourcing website and consistently ranks in the Top 250 Sites Worldwide.</p></td>
+			</tr>
+			
+			
+			
+			<th colspan="3">Contact Information</th>
+			<tr><td class="col_1">Telephone</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>+9411883399</p></td>
+			</tr>
+			<tr><td class="col_1"><tr><td class="col_1">Mobile</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>+9411993300</p></td>
+			</tr>
+			<tr><td class="col_1"><tr><td class="col_1">E-mail</td>
+				<td class="col_2">:</td>
+				<td class="col_3"><p>name@gmail.com</p></td>
+			</tr>
+			</table>
+				
+			</div>
+		</div>
+		
+
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
 
 
 <table width="100%" border="0" style="border-collapse:collapse; height: 1346px; border-top-style: none; border-top-color: inherit; border-top-width: 0px;">
@@ -132,4 +302,4 @@
 	</tr>
 
 </table>
-
+-->
