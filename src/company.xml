@@ -135,6 +135,13 @@
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
+		
+		<action name="UpdateVecancies" class="ims.actions.MainMenuActions" method="UpdateVecancies">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		
+		
 
 	</package>
 </struts>

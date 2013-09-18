@@ -8,6 +8,12 @@
 	<%@include file="/header/menus/main_menu_allowed_comp.jsp" %>
 </s:if>
 
+<s:if test="%{#role=='regiStudent'}">
+	<%@include file="/header/menus/main_menu_reg_student.jsp" %>
+</s:if>
+
+
+ 
 
 
 	

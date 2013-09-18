@@ -1,6 +1,6 @@
 <div class="header_top">
   <div class="header_contariner"> <img src="assets/img/university_logo.png" class="uni_logo"/>
-    <h1>Faculty of Information Technology - University of Moratuwa</h1>
+    <h1>Faculty of Information Technology</h1>
     <div class="header_right_panel">
       <ul>
         <li class="sub-menu">&nbsp;</li>

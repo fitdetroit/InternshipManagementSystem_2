@@ -94,7 +94,9 @@ public class ViewStudent extends ActionSupport {
 			
 		}
 		
-
+		this.role=(String)session.get("type");
+		this.page="StudentViewToStudent";
+		this.menu = "home";
 		
 		return SUCCESS;
 		

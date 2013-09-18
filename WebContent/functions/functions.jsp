@@ -58,4 +58,14 @@
 	<%@include file="/content/common/support.jsp" %>
 </s:if>
 
+<s:if test="%{#page=='UpdateVecancies'}" >
+	<%@include file="/content/company/UpdateVecancies.jsp" %>
+</s:if>
 
+<s:if test="%{#page=='RegistedStudent'}" >
+	<%@include file="/content/student/RegistedStudent.jsp" %>
+</s:if>
+
+<s:if test="%{#page=='StudentViewToStudent'}" >
+	<%@include file="/content/student/StudentViewToStudent.jsp" %>
+</s:if>

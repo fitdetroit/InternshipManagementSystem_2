@@ -1,0 +1,8 @@
+<div class="main_menu">
+    <ul>
+      <a href="<s:url action="HomeActionByStd"/>"><li class="mein-menu-li home">HOME</li></a>
+      <a href="<s:url action='CompanyActionByStd'/>"><li class="mein-menu-li manage">COMPANY</li></a>
+      <li class="mein-menu-li contact-us">MESSAGES</li>
+      <a href="<s:url action='SupportAction'/>"><li class="mein-menu-li support">SUPPORT</li></a>
+    </ul>
+  </div>

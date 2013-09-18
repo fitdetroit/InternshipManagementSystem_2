@@ -30,7 +30,7 @@
 <body class="<s:property value="%{#role}"/> <s:property value="%{#page}"/> <s:property value="%{#menu}"/>">
 <div class="header_top">
   <div class="header_contariner"> <img src="assets/img/university_logo.png" class="uni_logo"/>
-    <h1>Faculty of Information Technology - University of Moratuwa</h1>
+    <h1>Internship Management system - Faculty of Information Technology</h1>
     <div class="header_right_panel">
       <ul>
         <li class="sub-menu">&nbsp;</li>
@@ -111,6 +111,15 @@ $(document).ready(function()
 	        errorClass: "help-inline-note" 
 	      });
 	    });
+
+</script>
+
+			<script type="text/javascript">
+			$("#add_more").click(function () {
+			   $("table").append($("<tr><td class='col_1'><tr><td class='col_1'><input type='text' name='' class='inputs'/></td><td class='col_2'>:</td><td class='col_3' ><input type='text' name='' class='inputs'/></td></tr>"));
+	
+			})
+
 
 </script>
 

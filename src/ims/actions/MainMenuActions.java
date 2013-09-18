@@ -73,8 +73,45 @@ public class MainMenuActions extends ActionSupport{
 				this.menu="Support";
 				return SUCCESS;
 
-		}
+		}//SupportMenu
+		public String UpdateVecancies() {	
+			
+			// to redirect direct access actions  without login
+			if (str==null) {
+				return ERROR;
+					
+			}	
+				Map session;
+				session = ActionContext.getContext().getSession();
+				String type = (String) session.get("type");
+				
+				this.role=(String)session.get("type");
+				this.page="UpdateVecancies";
+				this.menu="home";
+				return SUCCESS;
 
+		}
+		
+		//UpdateVecancies
+		public String HomeActionByStd() {	
+			
+			// to redirect direct access actions  without login
+			if (str==null) {
+				return ERROR;
+					
+			}	
+				Map session;
+				session = ActionContext.getContext().getSession();
+				String type = (String) session.get("type");
+				
+				this.role=(String)session.get("type");
+				this.page="RegistedStudent";
+				this.menu="home";
+				return SUCCESS;
+
+		}
+		
+		//HomeActionByStd
 		public String getRole() {
 			return role;
 		}

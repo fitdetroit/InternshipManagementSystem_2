@@ -8,10 +8,7 @@
 
 	
 
-	<package name="student" namespace="/student" extends="struts-default">
-
-
-
+	<package name="student" namespace="/" extends="struts-default">
 		<action name="LogOut" class="ims.actions.Login"
 			method="logOut">
 			<result name="success" type="redirect">../index</result>
@@ -51,7 +48,7 @@
 
 		<action name="ViewStudent" class="ims.actions.ViewStudent"
 			method="viewStudentToStudent">
-			<result name="success">/jsp/views/StudentViewToStudent.jsp</result>
+			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
@@ -116,7 +113,12 @@
 			<result name="success" type="redirect">../index</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
-
+	<!-- Main menu actions by students -->
+		<action name="HomeActionByStd" class="ims.actions.MainMenuActions" method="HomeActionByStd">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+	
 
 	</package>
 
