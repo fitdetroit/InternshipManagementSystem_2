@@ -19,6 +19,10 @@ import com.opensymphony.xwork2.Result;
 public class GetProfilePicture extends ActionSupport implements
 ServletResponseAware, ServletContextAware{
 	
+	private String role;
+	private String page;
+	private String menu;
+	
 	private String userName;
     private HttpServletResponse servletResponse;
     private ServletContext servletContext;

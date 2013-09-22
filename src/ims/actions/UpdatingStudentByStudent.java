@@ -30,6 +30,7 @@ public class UpdatingStudentByStudent extends ActionSupport {
 
 	private String role;
 	private String page;
+	private String menu;
 	
 	private String studentUserName;
 	private String nameInFull;

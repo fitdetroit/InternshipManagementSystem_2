@@ -126,5 +126,4 @@
 	</tr>
 
 </table>
-<s:action name="ViewCompanyProfile" executeResult="true"/>
 

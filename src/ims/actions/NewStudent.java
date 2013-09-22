@@ -20,6 +20,7 @@ public class NewStudent extends ActionSupport{
 	
 	private String role;
 	private String page;
+	private String menu;
 	
 	private List<String> list = null;
 	

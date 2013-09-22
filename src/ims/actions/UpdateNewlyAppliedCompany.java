@@ -20,19 +20,16 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class UpdateNewlyAppliedCompany extends ActionSupport{
 
+		private String role;
+		private String page;
+		private String menu;
+	
 		//to update new applied companyies
 		private String newAppliedCompnay1 = null;
 		private String newAppliedCompnay2 = null;
 		private String newAppliedCompnay3 = null;
 		private String newAppliedCompnay4 = null;
 		private String newAppliedCompnay5 = null;
-
-		
-		
-
-
-
-
 
 		Student student = new Student();
 		

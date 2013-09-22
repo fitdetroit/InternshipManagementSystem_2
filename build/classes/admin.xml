@@ -11,7 +11,7 @@
 	<package name="adminLogin" namespace="/Administrator" extends="struts-default">
 		<action name="AdminLogin" class="ims.actions.CheckSession">
 			<result name="success">/jsp/AdminLogin.jsp</result>
-			<result name="admin">../jsp/Admin.jsp</result>
+			<result name="admin">/jsp/Admin.jsp</result>
 			<result name="regiStudent" type="redirect">../student/regiStudent</result>
 			<result name="notRegiStudent" type="redirect">../student/notRegiStudent</result>
 			<result name="allowedCompany" type="redirect">../company/allowedCompany</result>
@@ -53,20 +53,20 @@
 
 		<action name="AllStudent" class="ims.actions.ViewStudent"
 			method="allStudentToAdmin">
-			<result name="success">/jsp/views/AllStudentsToAdmin.jsp</result>
+			<result name="success">/jsp/Admin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
 
 
 		<action name="AllowedCompany" class="ims.actions.ViewCompany"
 			method="allowedCompanyToAdmin">
-			<result name="success">/jsp/views/AllowedCompanyToAdmin.jsp</result>
+			<result name="success">/jsp/Admin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
 
 		<action name="NotAllowedCompany" class="ims.actions.ViewCompany"
 			method="notAllowedCompanyToAdmin">
-			<result name="success">/jsp/views/NotAllowedCompanyToAdmin.jsp</result>
+			<result name="success">/jsp/Admin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
 
@@ -96,7 +96,7 @@
 
 		<action name="FullCompanyProfileToAdmin" class="ims.actions.ViewCompany"
 			method="FullProfileToAdmin">
-			<result name="success">/jsp/views/FullCompanyToAdmin.jsp</result>
+			<result name="success">/jsp/Admin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
 
@@ -124,17 +124,17 @@
 		</action>
 
 		<action name="HaddleCv" class="ims.actions.HandleCv" method="allowAndRemoveCv">
-			<result name="success">/jsp/AllowOrRemoveCvToComp.jsp</result>
+			<result name="success">/jsp/Admin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
 		<action name="StudentCvToAdmin" class="ims.actions.ViewStudent"
 			method="studentCvToAdmin">
-			<result name="success">/jsp/views/StudentCvToAdmin.jsp</result>
+			<result name="success">/jsp/Admin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
 
 		<action name="NewStudetProfiles" class="ims.actions.CreateAndDeleteStudentProfiles">
-			<result name="success">/jsp/CreateNewStudentProfiles.jsp</result>
+			<result name="success">/jsp/Admin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
 
@@ -145,7 +145,7 @@
 		</action>
 
 		<action name="ToRemoveStudetProfiles" class="ims.actions.CreateAndDeleteStudentProfiles">
-			<result name="success">/jsp/RemoveStudentProfiles.jsp</result>
+			<result name="success">/jsp/Admin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
 

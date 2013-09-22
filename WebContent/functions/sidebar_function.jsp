@@ -17,5 +17,13 @@
 	<%@include file="/header/menus/widget_side_menu_notallowed_comp.jsp" %>
 </s:if>
 
+<s:if test="%{#menu=='home_st' || #menu=='Support' || #menu=='internship_st' }">
+	<%@include file="/header/menus/widget_side_menu_allowed_student.jsp" %>
+</s:if>
+
+<s:if test="%{#menu=='company_st' }">
+	<%@include file="/header/menus/widget_side_menu_company_st.jsp" %>
+</s:if>
+
 
 

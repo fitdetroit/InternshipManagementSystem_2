@@ -46,7 +46,7 @@
 			<result name="error" type="redirect">../index</result>
 		</action>
 
-		<action name="ViewStudent" class="ims.actions.ViewStudent"
+		<action name="ViewProfileSt" class="ims.actions.ViewStudent"
 			method="viewStudentToStudent">
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
@@ -54,7 +54,7 @@
 
 		<action name="ViewStudentCV" class="ims.actions.ViewStudent"
 			method="viewStudentToStudent">
-			<result name="success">/jsp/views/StudentCvToStudent.jsp</result>
+			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
@@ -76,14 +76,14 @@
 
 		<action name="ViewCompanyProfile" class="ims.actions.ViewCompany"
 			method="allowedCompanyToStudent">
-			<result name="success">/jsp/views/AllowedCompanyToStudent.jsp</result>
+			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
 
 		<action name="FullCompanyProfileToStudent" class="ims.actions.ViewCompany"
 			method="FullProfileToStudent">
-			<result name="success">/jsp/views/FullCompanyToStudent.jsp</result>
+			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
@@ -118,6 +118,25 @@
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
+		<action name="CompanyActionByStd" class="ims.actions.MainMenuActions" method="CompanyActionByStd">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		
+		<action name="MessageActionByStd" class="ims.actions.MainMenuActions" method="MessageActionByStd">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		<action name="internshipActionByStd" class="ims.actions.MainMenuActions" method="internshipActionByStd">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		
+<!-- Side menu for registered Students -->
+	
+		
+		
+		
 	
 
 	</package>

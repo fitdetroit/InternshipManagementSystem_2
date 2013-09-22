@@ -24,6 +24,7 @@ public class CompanyRegistration extends ActionSupport{
 	
 	private String role;
 	private String page;
+	private String menu;
 	
 	
 	private String companyUserName;

@@ -51,6 +51,15 @@ public class ViewCompany extends ActionSupport{
 		}
 		
 		setList(getViewCompanyDataSession().allowedCompanyToAdmin());
+		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String userName = (String) session.get("userName");
+		setCompany(getViewCompanyDataSession().viewCompanyToCompany(userName));
+		
+		this.role=(String)session.get("type");
+		this.page="allowedCompanyToAdmin";
+		this.menu = "company_admin";
 		return SUCCESS;
 		
 	}
@@ -63,6 +72,15 @@ public class ViewCompany extends ActionSupport{
 				
 		}
 		setList(getViewCompanyDataSession().notAllowedCompanyToAdmin());
+		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String userName = (String) session.get("userName");
+		setCompany(getViewCompanyDataSession().viewCompanyToCompany(userName));		
+		this.role=(String)session.get("type");
+		this.page="notallowedCompanyToAdmin";
+		this.menu = "company_admin";
+		
 		return SUCCESS;
 		
 	}
@@ -93,11 +111,19 @@ public class ViewCompany extends ActionSupport{
 		if (str==null) {
 			return ERROR;
 				
-		}
+		}		
+		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String userName = (String) session.get("userName");
+		setCompany(getViewCompanyDataSession().viewCompanyToCompany(userName));
+		
+		this.role=(String)session.get("type");
+		this.page="AllowedCompanyToStudent";
+		this.menu = "company_st";
 		
 		setList(getViewCompanyDataSession().allowedCompanyToStudent());
 		return SUCCESS;
-		
 	}
 	
 	public String allowedCompanyToCompany()
@@ -132,6 +158,14 @@ public class ViewCompany extends ActionSupport{
 		{
 			return ERROR;
 		}
+		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		
+		this.role=(String)session.get("type");
+		this.page="FullCompanyToStudent";
+		this.menu = "company_st";
+		
 		setCompany(getViewCompanyDataSession().FullProfileToStudent(getCompanyUserName()));
 		return SUCCESS;
 	}
@@ -169,6 +203,14 @@ public class ViewCompany extends ActionSupport{
 				
 		}		
 		setCompany(getViewCompanyDataSession().FullProfileToAdmin(getCompanyUserName()));
+		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String type = (String) session.get("type");
+		
+		this.role=(String)session.get("type");
+		this.page="FullProfileToAdmin";
+		this.menu="company_admin";
 		return SUCCESS;
 	}
 	

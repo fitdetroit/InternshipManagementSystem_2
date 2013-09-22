@@ -62,6 +62,12 @@ public class ViewStudent extends ActionSupport {
 		
 		setList(getViewStudentDataSession().allStudentToAdmin());
 		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String userName = (String) session.get("userName");
+		this.role=(String)session.get("type");
+		this.page="allStudentToAdmin";
+		this.menu = "students_admin";
 		return SUCCESS;
 	}
 	
@@ -83,20 +89,15 @@ public class ViewStudent extends ActionSupport {
 		String userName = (String) session.get("userName");
 		
 		setStudent(viewStudentDataSession.viewStudentToStudent(userName));
-		
-	
-		
-		
 		for(StudentCompany studentAppliedCompany:getStudent().getStudentCompany())
 		{
 			//System.out.println(studentAppliedCompany.getCompany().getCompanyName()+"company name");
-			companyNames.add(studentAppliedCompany.getCompany().getCompanyName());
-			
+			companyNames.add(studentAppliedCompany.getCompany().getCompanyName());	
 		}
 		
 		this.role=(String)session.get("type");
-		this.page="StudentViewToStudent";
-		this.menu = "home";
+		this.page="StudentCvToStudent";
+		this.menu = "home_st";
 		
 		return SUCCESS;
 		
@@ -193,6 +194,12 @@ public class ViewStudent extends ActionSupport {
 			
 		}
 
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String userName = (String) session.get("userName");
+		this.role= (String)session.get("type");
+		this.page = "studentCvToAdmin";
+		this.menu = "students_admin";
 		return SUCCESS;
 	}
 	

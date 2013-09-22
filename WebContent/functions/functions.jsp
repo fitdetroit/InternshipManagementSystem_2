@@ -6,9 +6,6 @@
 <s:if test="%{#page==null}">
 	<%@include file="/content/company/CompanyRegistrationForm.jsp" %>
 </s:if>
-<s:if test="%{#page=='Admin.jsp'}">
-	<%@include file="/jsp/Admin.jsp" %>
-</s:if>
 <s:if test="%{#page=='RegistedStudent.jsp'}">
 	<%@include file="/jsp/RegistedStudent.jsp" %>
 </s:if>
@@ -45,6 +42,19 @@
 	<%@include file="/content/company/FullCompanyToCompany.jsp" %>
 </s:if>
 
+<s:if test="%{#page=='FullCompanyToStudent'}">
+	<%@include file="/content/student/FullCompanyToStudent.jsp" %>
+</s:if>
+
+<s:if test="%{#page=='StudentCvToStudent'}">
+	<%@include file="/content/student/StudentCvToStudent.jsp" %>
+</s:if>
+<s:if test="%{#page=='AllowedCompanyToStudent'}">
+	<%@include file="/content/student/AllowedCompanyToStudent.jsp" %>
+</s:if>
+
+
+
 
 <!-- menu Actions -->
 <s:if test="%{#page=='ManageStudents'}" >
@@ -69,3 +79,26 @@
 <s:if test="%{#page=='StudentViewToStudent'}" >
 	<%@include file="/content/student/StudentViewToStudent.jsp" %>
 </s:if>
+
+<s:if test="%{#page=='MenuCompanypage'}" >
+	<%@include file="/content/student/MenuCompanypage.jsp" %>
+</s:if>
+
+<s:if test="%{#page=='MessageDefault'}" >
+	<%@include file="/content/student/MessageDefault.jsp" %>
+</s:if>
+
+<s:if test="%{#page=='internshipDefault'}" >
+	<%@include file="/content/student/internshipDefault.jsp" %>
+</s:if>
+
+<s:if test="%{#page=='internshipDefault'}" >
+	<%@include file="/content/student/internshipDefault.jsp" %>
+</s:if>
+
+
+
+
+
+
+

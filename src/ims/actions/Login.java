@@ -20,6 +20,7 @@ public class Login extends ActionSupport{
 	
 	private String role;
 	private String page;
+	private String menu;
 	
 	
 	private String UserName;
@@ -76,7 +77,8 @@ public class Login extends ActionSupport{
 						session.put("type", "admin");
 						
 						this.role ="admin";
-						this.page="Admin.jsp";
+						this.page="Adminpage";
+						this.menu="home_admin";
 						return "admin";
 					 
 				 }
@@ -134,6 +136,7 @@ public class Login extends ActionSupport{
 						  
 						  this.role="notAllowedCompany";
 						  this.page="NotAllowedCompany.jsp";
+						  this.menu="";
 						  return "notAllowedCompany";
 					 
 				 }
@@ -164,6 +167,10 @@ public class Login extends ActionSupport{
 
 			}
 
+			this.role="admin";
+			this.page="Adminpage";
+			this.menu="home_admin";
+			  
 			return SUCCESS;
 
 		}
@@ -181,6 +188,10 @@ public class Login extends ActionSupport{
 					
 			}
 			
+			this.role="admin";
+			this.page="Adminpage";
+			this.menu="home_admin";
+			  
 			return SUCCESS;
 		}
 	
@@ -209,6 +220,13 @@ public class Login extends ActionSupport{
 
 		public void setPage(String page) {
 			this.page = page;
+		}
+		public String getMenu() {
+			return menu;
+		}
+
+		public void setMenu(String menu) {
+			this.menu = menu;
 		}
 
 		public void setLoginPageType(String loginPageType) {

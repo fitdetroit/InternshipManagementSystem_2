@@ -14,6 +14,7 @@ public class CheckSession extends ActionSupport {
 	
 	private String role;
 	private String page;
+	private String menu;
 
 	HttpServletRequest request = ServletActionContext.getRequest();
 	HttpSession session2 = request.getSession();
@@ -34,6 +35,11 @@ public class CheckSession extends ActionSupport {
 			
 			if (type == "admin") 
 			{
+				
+				this.role=(String)session.get("type");
+				this.page="Adminpage";
+				this.menu = "Home_admin";
+				
 				return "admin";
 
 			} 
@@ -80,6 +86,14 @@ public class CheckSession extends ActionSupport {
 
 	public void setPage(String page) {
 		this.page = page;
+	}
+	
+	public String getMenu() {
+		return menu;
+	}
+
+	public void setMenu(String menu) {
+		this.menu = menu;
 	}
 	
 	

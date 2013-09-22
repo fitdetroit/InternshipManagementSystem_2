@@ -2,6 +2,7 @@ package ims.actions;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Map;
 
 import ims.business.CreateAndDeleteStudent;
 import ims.business.UpdateCompany;
@@ -15,12 +16,14 @@ import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class CreateAndDeleteStudentProfiles extends ActionSupport {
 
 	private String role;
 	private String page;
+	private String menu;
 	
 	HttpServletRequest request = ServletActionContext.getRequest();
 	HttpSession session2 = request.getSession();
@@ -41,6 +44,14 @@ public class CreateAndDeleteStudentProfiles extends ActionSupport {
 			return ERROR;
 
 		}
+		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String userName = (String) session.get("userName");
+		
+		this.role= (String)session.get("type");
+		this.page = "ToRemoveStudetProfiles";
+		this.menu = "students_admin";
 
 		return SUCCESS;
 
@@ -84,8 +95,16 @@ public class CreateAndDeleteStudentProfiles extends ActionSupport {
 			createAndDeleteStudent.createStudentProfiles(user);
 
 		}
+		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String userName = (String) session.get("userName");
 
+		this.role= (String)session.get("type");
+		this.page = "createStudentProfiles";
+		this.menu = "students_admin";
 		return SUCCESS;
+
 	}
 	
 	
@@ -103,6 +122,13 @@ public class CreateAndDeleteStudentProfiles extends ActionSupport {
 
 		createAndDeleteStudent.deleteStudentProfile(getUserName());
 
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String userName = (String) session.get("userName");
+
+		this.role= (String)session.get("type");
+		this.page = "deleteStudentProfile";
+		this.menu = "students_admin";
 		return SUCCESS;
 
 	}
@@ -120,6 +146,13 @@ public class CreateAndDeleteStudentProfiles extends ActionSupport {
 		}
 		createAndDeleteStudent.deleteAllStudentFromSystem();
 
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String userName = (String) session.get("userName");
+
+		this.role= (String)session.get("type");
+		this.page = "deleteAllStudentsFormSystem";
+		this.menu = "students_admin";
 		return SUCCESS;
 	}
 
@@ -130,6 +163,30 @@ public class CreateAndDeleteStudentProfiles extends ActionSupport {
 	
 	
 	// getters and setters
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public String getPage() {
+		return page;
+	}
+
+	public void setPage(String page) {
+		this.page = page;
+	}
+	
+	public String getMenu() {
+		return menu;
+	}
+
+	public void setMenu(String menu) {
+		this.menu = menu;
+	}
+	
 	public String getUserName() {
 		return userName;
 	}

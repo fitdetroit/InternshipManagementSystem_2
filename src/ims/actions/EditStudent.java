@@ -28,6 +28,7 @@ public class EditStudent extends ActionSupport{
 	
 	private String role;
 	private String page;
+	private String menu;
 
 
 	Map session;
@@ -108,22 +109,17 @@ public class EditStudent extends ActionSupport{
 	
 	
 	
-	public String editDetails() {
-		
-		
+	public String editDetails() {	
 		// to redirect direct access actions  without login
 		if (str==null) {
-			return ERROR;
-				
+			return ERROR;		
 		}
-		
 		session = ActionContext.getContext().getSession();
 		String userName = (String) session.get("userName");
 
 		setStudent(getUpdateStudent().getDetails(userName));
 		setUser(getUpdateStudent().getDetails2(userName));
 		
-
 		//set action class varibale form dababase to view in jsp
 		setStudentUserName(student.getStudentUserName());
 		setNameInFull(student.getNameInFull());

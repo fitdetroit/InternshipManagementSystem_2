@@ -23,6 +23,7 @@ public class EditCompany extends ActionSupport {
 	
 	private String role;
 	private String page;
+	private String menu;
 
 	private Company company;
 	private User user;

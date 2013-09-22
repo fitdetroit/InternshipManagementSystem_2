@@ -21,6 +21,7 @@ public class UpdatingUnRegiStudent extends ActionSupport{
 	
 	private String role;
 	private String page;
+	private String menu;
 	
 	// to redirect direct access actions without login
 	HttpServletRequest request = ServletActionContext.getRequest();

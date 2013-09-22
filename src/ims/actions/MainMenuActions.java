@@ -90,9 +90,9 @@ public class MainMenuActions extends ActionSupport{
 				this.menu="home";
 				return SUCCESS;
 
-		}
+		}//UpdateVecancies
 		
-		//UpdateVecancies
+		
 		public String HomeActionByStd() {	
 			
 			// to redirect direct access actions  without login
@@ -106,12 +106,68 @@ public class MainMenuActions extends ActionSupport{
 				
 				this.role=(String)session.get("type");
 				this.page="RegistedStudent";
-				this.menu="home";
+				this.menu="home_st";
 				return SUCCESS;
 
-		}
+		}//HomeActionByStd
 		
-		//HomeActionByStd
+		public String CompanyActionByStd() {	
+			
+			// to redirect direct access actions  without login
+			if (str==null) {
+				return ERROR;
+					
+			}	
+				Map session;
+				session = ActionContext.getContext().getSession();
+				String type = (String) session.get("type");
+				
+				this.role=(String)session.get("type");
+				this.page="MenuCompanypage";
+				this.menu="company_st";
+				return SUCCESS;
+
+		}//CompanyActionByStd
+		
+		
+		public String MessageActionByStd() {	
+			
+			// to redirect direct access actions  without login
+			if (str==null) {
+				return ERROR;
+					
+			}	
+				Map session;
+				session = ActionContext.getContext().getSession();
+				String type = (String) session.get("type");
+				
+				this.role=(String)session.get("type");
+				this.page="MessageDefault";
+				this.menu="Message_st";
+				return SUCCESS;
+
+		}//MessageActionByStd
+		
+		public String internshipActionByStd() {	
+			
+			// to redirect direct access actions  without login
+			if (str==null) {
+				return ERROR;
+					
+			}	
+				Map session;
+				session = ActionContext.getContext().getSession();
+				String type = (String) session.get("type");
+				
+				this.role=(String)session.get("type");
+				this.page="internshipDefault";
+				this.menu="internship_st";
+				return SUCCESS;
+
+		}//internshipActionByStd
+		
+// Side menu actions for Registered Students
+		
 		public String getRole() {
 			return role;
 		}

@@ -25,6 +25,7 @@ public class ViewStudentStateOfCompany extends ActionSupport{
 	
 	private String role;
 	private String page;
+	private String menu;
 	
 	
 	private String newAppliedCompnay1;

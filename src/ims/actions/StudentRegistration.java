@@ -23,6 +23,7 @@ public class StudentRegistration extends ActionSupport {
 	
 	private String role;
 	private String page;
+	private String menu;
 	
 	private Student student = new Student();
 	
