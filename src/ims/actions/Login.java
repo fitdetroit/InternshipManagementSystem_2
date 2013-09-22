@@ -102,6 +102,7 @@ public class Login extends ActionSupport{
 						  
 						  this.role ="regiStudent";
 						  this.page="RegistedStudent.jsp";
+						  this.menu="home_st";
 						  return "regiStudent";
 					 
 				 }
@@ -124,6 +125,7 @@ public class Login extends ActionSupport{
 						  
 						  this.role="allowedCompany";
 						  this.page="AllowedCompany.jsp";
+						  this.menu="home_company";
 						  return "allowedCompany";
 					 
 				 }
@@ -136,7 +138,7 @@ public class Login extends ActionSupport{
 						  
 						  this.role="notAllowedCompany";
 						  this.page="NotAllowedCompany.jsp";
-						  this.menu="";
+						  this.menu="home_common";
 						  return "notAllowedCompany";
 					 
 				 }
