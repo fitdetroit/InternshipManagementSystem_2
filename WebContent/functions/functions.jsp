@@ -52,7 +52,9 @@
 <s:if test="%{#page=='AllowedCompanyToStudent'}">
 	<%@include file="/content/student/AllowedCompanyToStudent.jsp" %>
 </s:if>
-
+<s:if test="%{#page=='editDetails'}">
+	<%@include file="/content/student/EditStudent.jsp" %>
+</s:if>
 
 
 

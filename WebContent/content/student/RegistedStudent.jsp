@@ -10,7 +10,7 @@
 
 
 
-<div style="float:left;width:15%; height: 672px;background=#333333">
+<div style="float:left;width:15%; height: 672px;">
 
 
 <p align="left"><a href="<s:url action="ViewStudent"/>">click here to view profile</a></p>
@@ -26,7 +26,7 @@
 
 
 
-<div style="float:left;width:85%; height: 668px;background:silver">
+<div style="float:left;width:85%; height: 668px;">
 <h3 align="center">Registed Student Privilages</h3>
 <p align="center"><a href="<s:url action="ViewStudent"/>">click here to view profile</a></p>
 <br>

@@ -220,7 +220,9 @@ public class EditStudent extends ActionSupport{
 			
 		}*/
 		
-
+		this.role=(String)session.get("type");
+		this.page="editDetails";
+		this.menu = "home_st";
 
 
 		return SUCCESS;

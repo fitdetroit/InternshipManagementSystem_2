@@ -25,7 +25,6 @@
 				<param name="maximumSize">10000000</param>
 				<param name="allowedTypes"> image/png,image/gif,image/jpeg,image/pjpeg</param>
 			</interceptor-ref>
-			<interceptor-ref name="basicStack" />
 			<result name="success">/jsp/RegistedStudent.jsp</result>
 			<result name="input">/jsp/StudentRegistrationForm.jsp</result>
 			<result name="error" type="redirect">../index</result>
@@ -34,7 +33,7 @@
 
 		<action name="ViewToUpdateStudent" class="ims.actions.EditStudent"
 			method="editDetails">
-			<result name="success" >/jsp/EditStudent.jsp</result>
+			<result name="success" >/jsp/HomeIndex.jsp</result>
 			<result name="input">../jsp/Login.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
