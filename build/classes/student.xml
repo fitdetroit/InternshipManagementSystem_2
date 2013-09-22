@@ -104,7 +104,7 @@
 		</action>
 		
 		<action name="ViewStateOfCompany" class="ims.actions.ViewStudentStateOfCompany" method="viewStudentAppliedCompanyState">
-			<result name="success">/jsp/views/ViewCompanyStateToStudent.jsp</result>
+			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 		

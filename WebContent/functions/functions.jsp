@@ -7,7 +7,7 @@
 	<%@include file="/content/company/CompanyRegistrationForm.jsp" %>
 </s:if>
 <s:if test="%{#page=='RegistedStudent.jsp'}">
-	<%@include file="/jsp/RegistedStudent.jsp" %>
+	<%@include file="/content/student/RegistedStudent.jsp" %>
 </s:if>
 <s:if test="%{#page=='AllowedCompany.jsp'}">
 	<%@include file="/content/company/AllowedCompany.jsp" %>
@@ -54,6 +54,9 @@
 </s:if>
 <s:if test="%{#page=='editDetails'}">
 	<%@include file="/content/student/EditStudent.jsp" %>
+</s:if>
+<s:if test="%{#page=='ViewStudentStateOfCompany'}">
+	<%@include file="/content/student/StudentViewToStudent.jsp" %>
 </s:if>
 
 

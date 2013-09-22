@@ -185,6 +185,9 @@ public class ViewStudentStateOfCompany extends ActionSupport{
 		}*/
 		
 		
+		this.role=(String)session.get("type");
+		this.page="ViewStudentStateOfCompany";
+		this.menu = "company_st";
 		
 		return SUCCESS;
 	}
@@ -209,16 +212,38 @@ public class ViewStudentStateOfCompany extends ActionSupport{
 
 
 	//getters and setters
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public String getPage() {
+		return page;
+	}
+
+	public void setPage(String page) {
+		this.page = page;
+	}
 	
+	public String getMenu() {
+	return menu;
+	}
+	
+	public void setMenu(String menu) {
+		this.menu = menu;
+		
+	}
 	
 	public List<String> getAllCompany() {
 		return allCompany;
 	}
 
 
-	public String getRole() {
-		return role;
-	}
+
 
 
 
