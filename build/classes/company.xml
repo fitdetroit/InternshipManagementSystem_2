@@ -140,6 +140,25 @@
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
+		<action name="MessageAction" class="ims.actions.MainMenuActions" method="MessageAction">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		<action name="CreateNewMsgCompany" class="ims.actions.MainMenuActions" method="CreateNewMsgCompany">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		
+		
+		
+		<action name="InboxCompany" class="ims.actions.MainMenuActions" method="InboxCompany">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		
+		
+		
+		
 		
 		
 

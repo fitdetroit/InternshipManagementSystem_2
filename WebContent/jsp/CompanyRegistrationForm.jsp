@@ -100,8 +100,8 @@
             <td>
             <input type="checkbox" id="Web1"/><label for="Web1">Web Developing</label><br>
             <input type="checkbox" id="Web2"/><label for="Web2">Java</label><br>
-            <input type="checkbox" id="Web3"/><label for="Web3">C# ASP .NET</label></td>
-            
+            <input type="checkbox" id="Web3"/><label for="Web3">C# ASP .NET</label>
+            <input type="text" id="test" placeholder="Other"/></td>
             
             
             <td>
@@ -165,14 +165,7 @@
                 &nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</label>
               </div></td>
           </tr>
-		 </table>	
-		 
-        
-        
-        
-        
-        
-        
+		 </table>
         <s:submit label="Save" id="signUp" cssClass="but_submit"></s:submit>
       </s:form>
       <p class="text_note" style="color:#999999;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>

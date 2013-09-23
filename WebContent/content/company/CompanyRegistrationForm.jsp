@@ -53,7 +53,7 @@
           
           <tr>
             <td class="user_input_fieldset"><label class="user_input_label">Username</label>
-              <input type="text" name="companyUserName" class="form_inputs"/></td>
+              <input type="text" name="companyUserName" id="companyUserName" class="form_inputs"/></td>
             <td class="input_notif"></td>
           </tr>
           <tr>
@@ -95,27 +95,23 @@
         </table>
 
 <table cellpadding="5" cellspacing="0">
-          <tr><td colspan="2" class="sub_header">Spacification</td></tr>
+          <tr><td colspan="2" class="sub_header">Technologies</td></tr>
 		  <tr>
             <td>
             <input type="checkbox" id="Web1"/><label for="Web1">Web Developing</label><br>
             <input type="checkbox" id="Web2"/><label for="Web2">Java</label><br>
-            <input type="checkbox" id="Web3"/><label for="Web3">C# ASP .NET</label></td>
-            
-            
-            
-            <td>
+            <input type="checkbox" id="Web3"/><label for="Web3">C# ASP .NET</label>
+          	<td>
             <input type="checkbox" id="Web4"/><label for="Web4">PHP</label><br>
             <input type="checkbox" id="Web5"/><label for="Web5">RUBY</label><br>
-            <input type="checkbox" id="Web6"/><label for="Web6">PYTHON</label> </td>
+            <input type="checkbox" id="Web6"/><label for="Web6">PYTHON</label>
             
             <td>
             <input type="checkbox" id="Web7"/><label for="Web7">TEXT</label><br>
             <input type="checkbox" id="Web8"/><label for="Web8">Other</label><br>
             <input type="checkbox" id="Web9"/><label for="Web9">This is a sample</label> </td>
-            
-            
-          </tr>
+         	</tr>
+         	<tr><td colspan="2"><input type="text" placeholder="Other.." style="width:300px"/></td></tr>
 
 		 </table>
 

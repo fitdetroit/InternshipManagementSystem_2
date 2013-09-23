@@ -12,6 +12,12 @@
 	<%@include file="/header/menus/main_menu_reg_student.jsp" %>
 </s:if>
 
+<s:if test="%{#role=='notAllowedCompany'}">
+	<%@include file="/header/menus/main_menu-common.jsp" %>
+</s:if>
+
+
+
 
  
 

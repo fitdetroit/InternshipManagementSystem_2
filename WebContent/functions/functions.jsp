@@ -76,6 +76,17 @@
 <s:if test="%{#page=='UpdateVecancies'}" >
 	<%@include file="/content/company/UpdateVecancies.jsp" %>
 </s:if>
+<s:if test="%{#page=='Messages_company'}" >
+	<%@include file="/content/company/Messages_company.jsp" %>
+</s:if>
+<s:if test="%{#page=='CreateNewMsgCompany'}" >
+	<%@include file="/content/company/CreateNewMsgCompany.jsp" %>
+</s:if>
+<s:if test="%{#page=='InboxCompany'}" >
+	<%@include file="/content/company/InboxCompany.jsp" %>
+</s:if>
+
+
 
 <s:if test="%{#page=='RegistedStudent'}" >
 	<%@include file="/content/student/RegistedStudent.jsp" %>
