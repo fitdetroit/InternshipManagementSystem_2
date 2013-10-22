@@ -151,10 +151,6 @@
 		
 		
 		
-			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
-		</action>
-		
 		
 		
 		
