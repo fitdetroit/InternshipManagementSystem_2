@@ -54,10 +54,17 @@ public class Student {
 
 	@OneToMany(mappedBy="student",fetch=FetchType.LAZY,cascade={CascadeType.ALL})
 	private  Collection<StudentComplitedProjects> studentComplitedProjects = new ArrayList<StudentComplitedProjects>();
+	
 	@OneToMany(mappedBy="student",fetch=FetchType.LAZY,cascade={CascadeType.ALL})
 	private Collection<StudentOtherQulification> studentOtherQulification = new ArrayList<StudentOtherQulification>();
+	
 	@OneToMany(mappedBy="student",fetch=FetchType.LAZY,cascade={CascadeType.ALL})
 	private Collection<StudentProfessionalExp> studentProfessionalExp = new ArrayList<StudentProfessionalExp>();
+	
+	@OneToMany(mappedBy="student",fetch=FetchType.LAZY,cascade={CascadeType.ALL})
+	private  Collection<Support> support  = new ArrayList<Support>();
+	
+	
 	
 	
 	

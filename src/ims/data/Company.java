@@ -32,7 +32,8 @@ public class Company {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.company", cascade=CascadeType.ALL)
 	private Collection<StudentCompany> studentCompany = new ArrayList<StudentCompany>();
 	
-	
+	@OneToMany(mappedBy="company",fetch=FetchType.LAZY,cascade={CascadeType.ALL})
+	private  Collection<Support> support = new ArrayList<Support>();
 
 	//getters and setters
 	public Collection<StudentCompany> getStudentCompany() {
