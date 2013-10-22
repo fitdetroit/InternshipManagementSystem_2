@@ -151,7 +151,6 @@
 		
 		
 		
-		<action name="InboxCompany" class="ims.actions.MainMenuActions" method="InboxCompany">
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
