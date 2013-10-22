@@ -185,12 +185,12 @@ body{ background:#e0e8f6; }
 .icon_log_out {background: url(assets/img/glyphicons-halflings.png) no-repeat -383px 0;}
 .main_menu {height:35px; width:1300px; position:relative; margin-left:auto; margin-right:auto; padding-top:16px;}
 .main_menu ul{ list-style-type:none; list-style:none; margin-top:7px; padding: 0 0 0 0px;}
-.main_menu ul li{ background: url(assets/img/header_bottom_bg.png); height:28px; float:left; padding-left:10px; padding-right:10px; margin-right:4px; text-align:center; font-size:0.7em; border-radius:3px; border:1px solid #6d7aa7; text-shadow: 1px 1px 2px #bdbdbd;
-        filter: dropshadow(color=#bdbdbd, offx=1, offy=1);}
-.main_menu ul li:hover{ background:#FFFFFF; height:35px; border:1px solid #ffffff; cursor:pointer;}
+.main_menu ul li{ background: url(assets/img/1.png); color:#FFF; height:28px;padding-top: 2px; float:left; padding-left:10px; padding-right:10px; margin-right:4px; text-align:center; font-size:0.7em; border-radius:3px; border:1px solid #616F9E; text-shadow: 1px 1px 2px #1F1F1F;
+        filter: dropshadow(color=#1F1F1F, offx=1, offy=1); border-bottom:none}
+.main_menu ul li:hover{ background:#FFFFFF; height:35px; border:1px solid #ffffff; color:#000000; cursor:pointer;text-shadow:none}
 .Manage .main_menu ul li.manage, 
 	.Home .main_menu ul li.home,
-	.Support .main_menu ul li.support{ background:#FFFFFF; border-radius:5px 5px 0 0; border:none; height:34px}
+	.Support .main_menu ul li.support{ background:#FFFFFF; color:#000000; border-radius:5px 5px 0 0; border:none; height:34px; text-shadow:none}
 
 .div_middle{ height:10px; background:#FFFFFF; -webkit-box-shadow:  0px 5px 10px 0px rgba(0, 0, 0, 0.4); box-shadow:  0px 5px 10px 0px rgba(0, 0, 0, 0.4); z-index:0}
 .site_body{ background:#e0e8f6; width:100%;}
@@ -209,8 +209,10 @@ position: relative;}
 .widget_2{ background:#f2f5fa; width:270px; display:block; margin-top:10px; padding:10px 5px 10px 15px;}
 .widget_1 h4, .widget_2 h4, .widget_3 h4{ padding:0; margin-top:0; font-size:0.8em; }
 .widget_1 p, .widget_2 p, .widget_3 p{margin-top: -10px; font-size:0.8em}
+.widget_1 a, .widget_2 a, .widget_3 a{text-decoration: none;}
 .widget_1 ul, .widget_2 ul{ margin: -19px auto 10px -40px;}
-.widget_1 ul li, .widget_2 ul li{ list-style:none; font-size:0.9em; color:#0066CC; font-weight:500; cursor:pointer; border-bottom: 1px solid #CCCCCC;}
+.widget_1 ul li, .widget_2 ul li{ list-style:none;  font-size:0.9em; color:#3F6AC9; font-weight:600; cursor:pointer; border-bottom: 1px solid #CCCCCC; padding-top: 7px; height:30px;}
+.widget_1 ul li:hover, .widget_2 ul li:hover{ color:#2155C9;}
 .widget_1 ul li img, .widget_2 ul li img{ width:15px; height:15px; margin-right:10px;}
 .widget_3{ background:#f2f5fa; width:270px; display:block; margin-top:10px;padding:10px 5px 10px 15px;}
 .widget_2 a, .widget_3 a{text-decoration:none; color:#0066CC;}

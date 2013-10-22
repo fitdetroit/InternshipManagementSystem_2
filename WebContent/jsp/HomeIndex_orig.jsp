@@ -84,11 +84,37 @@
 <script type="text/javascript" src="assets/js/bootstrap-fileupload.js"></script>
 <script type="text/javascript" src="assets/js/jquery.validate.js"></script>
 <script type="text/javascript" src="assets/js/dropdown.js"></script>
-
-
-
-
+<script type="text/javascript" src="assets/js/Regpage_validate.js"></script>
 <script type="text/javascript">
+
+$(document).ready(function()
+	    {
+	      
+	      $("#submit_msg").validate(
+	      {
+	        rules:{
+	        	name:"required",
+	        	term:"required",
+	        	
+	        	msg:"required",
+	        	term:"required",
+	 
+	        	
+	        	email:{	
+	                required:true,
+	                email: true
+
+	                },
+
+	            
+	          },
+	        errorClass: "help-inline-note" 
+	      });
+	    });
+
+</script>
+
+			<script type="text/javascript">
 			$("#add_more").click(function () {
 			   $("table").append($("<tr><td class='col_1'><tr><td class='col_1'><input type='text' name='' class='inputs'/></td><td class='col_2'>:</td><td class='col_3' ><input type='text' name='' class='inputs'/></td></tr>"));
 	
