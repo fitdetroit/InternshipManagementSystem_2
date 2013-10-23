@@ -1,3 +1,4 @@
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <div>
 <h3 align="center">Allowed Company Details</h3>
 <table border="1" align="center">

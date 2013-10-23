@@ -70,7 +70,7 @@ public class UpdatingStudentCompany extends ActionSupport{
 	public String sendMailToStudentInfromInterview()
 	{
 		
-		final String username = "dkithmalfit@gmail.com";
+		final String username = "dkithmal10@gmail.com";
 		final String password = "password";
  
 		Properties props = new Properties();
@@ -89,7 +89,7 @@ public class UpdatingStudentCompany extends ActionSupport{
 		try {
  
 			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("dkithmalfit@gmail.com"));
+			message.setFrom(new InternetAddress("dkithmal@yahoo.com"));
 			message.setRecipients(Message.RecipientType.TO,
 				InternetAddress.parse("dkithmal10@gmail.com"));
 			message.setSubject("Selected For the interview");
@@ -130,7 +130,7 @@ public class UpdatingStudentCompany extends ActionSupport{
 	
 	public String sendMailToStudentInfromSelectedToCompany()
 	{
-		final String username = "dkithmalfit@gmail.com";
+		final String username = "dkithmal10@gmail.com";
 		final String password = "password";
  
 		Properties props = new Properties();
@@ -149,7 +149,7 @@ public class UpdatingStudentCompany extends ActionSupport{
 		try {
  
 			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("dkithmalfit@gmail.com"));
+			message.setFrom(new InternetAddress("dkithmal@yahoo.com"));
 			message.setRecipients(Message.RecipientType.TO,
 				InternetAddress.parse("dkithmal10@gmail.com"));
 			message.setSubject("Selected for the Internship ");

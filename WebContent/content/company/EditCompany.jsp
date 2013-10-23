@@ -1,3 +1,4 @@
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <style type="text/css">
  .container { min-height: 1250px;}
 .registration_form{ height: 1171px; padding:10px; width: 960px;}
