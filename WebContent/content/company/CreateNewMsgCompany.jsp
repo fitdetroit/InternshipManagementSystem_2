@@ -1,3 +1,4 @@
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <style>
 .page_title{ background: #E4FCEA; border: 1px solid #C6E5C9; height:30px; margin-top:10px;}
 .header_profile{ margin:0; padding:0;color: #298B1C; font-family: 'MerriweatherSans-Bold'; margin-left: 10px; padding-top: 2px; }

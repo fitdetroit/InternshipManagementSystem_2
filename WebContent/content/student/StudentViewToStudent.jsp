@@ -1,4 +1,4 @@
-
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <body>
 
 <table width="100%" border="0" style="border-collapse:collapse; height: 1346px; border-top-style: none; border-top-color: inherit; border-top-width: 0px;">

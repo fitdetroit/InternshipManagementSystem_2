@@ -1,3 +1,4 @@
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <style>
 .page_title{ background:rgba(227, 252, 221, 1); margin-top:10px; padding:5px 0 0 5px; border: 1px solid #C2F0C2;} 
 .profile_container{ font-size:14px; padding:10px;}

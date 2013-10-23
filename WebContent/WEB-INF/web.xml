@@ -54,7 +54,7 @@
 			<web-resource-name>content</web-resource-name>
 			<url-pattern>/content/*</url-pattern>
 			<url-pattern>/functions/*</url-pattern>
-			<url-pattern>/assets/*</url-pattern>
+			
 			<url-pattern>/header/*</url-pattern>
 			
 		</web-resource-collection>
