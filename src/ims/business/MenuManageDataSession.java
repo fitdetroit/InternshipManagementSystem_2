@@ -30,13 +30,13 @@ public class MenuManageDataSession {
 		List<StudentCompany> list = ((org.hibernate.Query) query).list();
 		
 		Query query2 = session.createQuery(hql2);			
-		List<StudentCompany> list2 = ((org.hibernate.Query) query).list();
+		List<StudentCompany> list2 = ((org.hibernate.Query) query2).list();
 		
 		Query query3= session.createQuery(hql3);			
-		List<StudentCompany> list3 = ((org.hibernate.Query) query).list();
+		List<StudentCompany> list3 = ((org.hibernate.Query) query3).list();
 		
 		Query query4 = session.createQuery(hql4);			
-		List<StudentCompany> list4 = ((org.hibernate.Query) query).list();
+		List<StudentCompany> list4 = ((org.hibernate.Query) query4).list();
 		
 		
 		companyStateDetails =String.valueOf(list.size());
