@@ -12,5 +12,17 @@
 about the internship program <b>time period</b>
 <br>No of Applied Students
 <br>Summery of contents
+
+<s:if test="%{#applyStudentCount==0}">
+<p>Students not applied yet></p>
+</s:if>
+
+<s:else>
+<p>applyed Student Count:</p><p><s:property  value="applyStudentCount" ></s:property></p>
+<p>interview Student Count:</p><p><s:property  value="interviewStudentCount" ></s:property></p>
+<p>selected Student Count:</p><p><s:property  value="selectedStudentCount" ></s:property></p>
+<p>not Selected Student Count:</p><p><s:property  value="notSelectedStudentCount" ></s:property></p>
+</s:else>
+
 </body>
 </html>
