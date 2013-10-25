@@ -1,14 +1,12 @@
 package ims.actions;
 
 import java.io.File;
-<<<<<<< HEAD
 
-=======
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.ObjectUtils.Null;
 
 import java.io.IOException; 
->>>>>>> origin
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Map;

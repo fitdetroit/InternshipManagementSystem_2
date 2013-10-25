@@ -7,6 +7,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Map;
 
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -72,7 +73,7 @@ public class UpdatingUnRegiStudent extends ActionSupport{
 			
 		updateStudent.changeStudentPassword(userName, user);
 		
-		Map session;
+	
 		session = ActionContext.getContext().getSession();
 		String type = (String) session.get("type");
 		
