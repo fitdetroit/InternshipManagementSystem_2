@@ -23,7 +23,7 @@ public class AdministatingDataSession {
 		Session session = getSessionFactory().openSession();
 		String SQL_QUERY = "from Administration";
 		Query query = session.createQuery(SQL_QUERY);
-		List<Student> list = ((org.hibernate.Query) query).list();
+		List<Administration> list = ((org.hibernate.Query) query).list();
 		if(list.isEmpty())
 		{
 			Session session3 = getSessionFactory().openSession();

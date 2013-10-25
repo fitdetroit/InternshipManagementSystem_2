@@ -39,6 +39,14 @@ public class Student {
 	private String alResult2;
 	private String alResult3;
 	private String digreeTitle;
+	private String batch;
+	public String getBatch() {
+		return batch;
+	}
+
+	public void setBatch(String batch) {
+		this.batch = batch;
+	}
 	private int yearOfAdmission;
 	private float gpaSemester1;
 	private float gpaSemester2;
