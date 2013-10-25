@@ -124,6 +124,7 @@ public class Login extends ActionSupport{
 				 {
 
 						  
+
 						  if(checkUserToLogin.checkStudentBatchAllowd(UserName))
 						  {
 					        	// create new session for unregisted student
@@ -132,10 +133,10 @@ public class Login extends ActionSupport{
 								session.put("type","notRegiStudent");
 								session.put("userFullName",checkUserToLogin.getStudentName(UserName) );
 								  
-							  this.role ="notRegiStudent";
-							  this.page="UnRegistedStudent";
-							  this.menu="home_st";
-							  return "notRegiStudent";
+								  this.role ="notRegiStudent";
+								  this.page="UnRegistedStudent";
+								  this.menu="home_nrst";
+								  return "notRegiStudent";
 							  
 						  }
 						  else
@@ -143,6 +144,9 @@ public class Login extends ActionSupport{
 							  return "error";
 							  
 						  }
+
+
+
 
 						  
 

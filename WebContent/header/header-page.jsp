@@ -9,9 +9,7 @@
       </ul>
       <div class="submenu">
         <ul>
-          <li>
-            <div class="icon_view_pro"></div>
-            Veiw Profile</li>
+          
           <li>
             <div class="icon_log_out"></div>
             Log out</li>

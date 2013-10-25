@@ -26,7 +26,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">About Company </label>
 								<div class="inputarea">													 
-									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" ></textarea>
+									 <textarea class="autocomplete_field half discription_area" ></textarea>
 								</div>
 							</div>
 							
@@ -47,7 +47,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">Repeat Password</label>
 								<div class="inputarea">													 
-									 <input type="password" name="conPassword" placeholder="Type project name to find existing" class="autocomplete_field half" />
+									 <input type="password" name="conPassword" placeholder="Confirm your Password" class="autocomplete_field half" />
 								</div>
 							</div>
 						</fieldset>
@@ -57,10 +57,11 @@
 							<div class="inputrow">
 								<label class="inputlabel">&nbsp;</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" value="<%= request.getAttribute("technologies") %>"/>
+									 <input type="text" class="autocomplete_field half" value="<%= request.getAttribute("technologies") %>"/>
 								</div>
 							</div>
 						</fieldset>	
+						
 						
 					<h3>Genaral Contact Information</h3>
 						<fieldset class="fieldset">
@@ -94,8 +95,8 @@
 						</fieldset>
 						
 						
-						<h3 class="header_importent">For office use only</h3>
-						<h3 >Contact Person</h3>
+						<h3 class="header_importent">Provide contact details for the use of Administrator</h3>
+						
 						<fieldset class="fieldset importent">
 							<div class="inputrow">
 								<label class="inputlabel">Name of the Person</label>
@@ -115,8 +116,9 @@
 									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" value="<%= request.getAttribute("contactPersonEmail") %>"/>
 								</div>
 							</div>
-							<p>This field is optional</p>
+							
 							<hr>
+							<p>Alternative contact person (optional)</p>
 							<div class="inputrow">
 								<label class="inputlabel">Name of the Person</label>
 								<div class="inputarea">													 

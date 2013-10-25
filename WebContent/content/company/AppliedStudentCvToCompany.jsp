@@ -48,6 +48,12 @@
 								</div>
 							</div>
 							<div class="inputrow">
+								<label class="inputlabel">Marital Status</label>
+								<div class="inputarea">													 
+									 <p>Notmarried</p>
+								</div>
+							</div>
+							<div class="inputrow">
 								<label class="inputlabel">Nationality</label>
 								<div class="inputarea">													 
 									 <p>Sri Lankan</p>
@@ -116,16 +122,23 @@
 									<p style="padding-left: 20px;">GPA</p>
 									<label>Level 1/ Semester 1 :4.2</label><label>Level 2/ Semester 1 :4.2</label><label>Level 3/ Semester 1 :4.2</label>
 									</li>
-								<li><h4>Vacancies Australia</h4>
-									<label>Check & Compare Rates, Reviews. Up to 75% off. Book today!</label></li>
-								<li><h4>Colombo Hotel Discounts</h4>
-									<label>Check & Compare Rates, Reviews. Up to 75% off. Book today!</label></li>	
+								<li><h4>This is a sample School - 2015 A/L</h4>
+										<table class="results_table" cellpadding="0" cellspacing="0">
+											<tr class="tab_header"><td>Subject</td><td>Result</td></tr>
+											<tr><td>Maths</td><td>Result</td></tr>
+											<tr><td>Chemistry</td><td>Result</td></tr>
+											<tr><td>Physics</td><td>Result</td></tr>
+										</table>
+
+</table>
+</li>
+										
 							</ul>
 						</fieldset>
 						
 					<hr>	
 						
-					<div class="profile_sub_header"><img src="assets/img/other_activities.png"/><h3>Other Activities</h3></div>
+					<div class="profile_sub_header"><img src="assets/img/other_activities.png"/><h3>Extra Currycular Activities</h3></div>
 					<fieldset class="fieldset profile_content">
 							<ul>
 								<li><h4>Colombo Hotel Discounts</h4>
@@ -143,7 +156,7 @@
 			<div class="form_container">
 			<div class="inputarea action_bottons_area">													 
 									 <input type="submit" value="Select" class="but_submit"/>
-									 <input type="submit" value="Add to List" class="but_change"/>
+									 <input type="submit" value="Call Interview" class="but_change"/>
 									 <input type="submit" value="Reject" class="but_create"/>
 								</div>
 								</div><!-- /End Form container-->
