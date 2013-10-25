@@ -9,12 +9,15 @@
 						<div class="profile_header_container ">
 							<h4><s:property  value="company.companyName"></s:property></h4>
 							<p><s:property  value="company.companyAddress"></s:property></p>
+
 							<p class="longtext"><s:property  value="company.aboutCompany"></s:property></p>
+
+						
 						</div>
 						
 						</div>
 					</fieldset>
-					<h3>Genaral Information</h3>
+					<h3>General Information</h3>
 					<fieldset class="fieldset profile_content">
 							<div class="inputrow">
 								<label class="inputlabel">Username</label>

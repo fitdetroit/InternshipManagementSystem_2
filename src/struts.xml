@@ -22,7 +22,7 @@
 			<result name="allowedCompany">jsp/HomeIndex.jsp</result>
 			<result name="notAllowedCompany">jsp/HomeIndex.jsp</result>
 		</action>
-			<action name="Login" class="ims.actions.Login"
+		<action name="Login" class="ims.actions.Login"
 			method="login">
 			<result name="regiStudent">/jsp/HomeIndex.jsp</result>
 			<result name="notRegiStudent">/jsp/HomeIndex.jsp</result>
@@ -30,10 +30,15 @@
 			<result name="notAllowedCompany">/jsp/HomeIndex.jsp</result>		
 			<result name="error" type="redirect">index</result>
 		</action>
-			<action name="LogOut" class="ims.actions.Login"
+		<action name="LogOut" class="ims.actions.Login"
 			method="logOut">
 			<result name="success">jsp/Login.jsp</result>
 		</action>
+		
+		<action name="NewUserNameCheck" class="ims.actions.NewUserNameCheck">
+			<result name="success">/content/company/CompanyRegistrationForm.jsp</result>
+		</action>
+		
 	</package>
 
 	<include file="student.xml"></include>

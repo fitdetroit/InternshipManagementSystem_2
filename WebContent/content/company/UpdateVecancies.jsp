@@ -20,11 +20,12 @@ table.table_info td.col_3{ padding:0; margin:0; padding-left:10px; padding-top:5
 </style>
 
  <div class="page_title"><h2 class="header_profile">Update Vacancies</h2>
-		<p>Freelancer.com is the world’s #1 outsourcing website and consistently ranks in the Top 250 Sites Worldwide. Advertise to millions of professionals and business decision makers everyday!</p></div>
+		</div>
     <div class="profile_container">
 		<div class="updates_cont">
 		<table cellpadding="0" cellspacing="0" class="table_info">
-			<th>Related Fields</th>
+			<th> Category</th>
+			<th>No of Vacancies</th>
 			<tr><td class="col_1" >Web Developing</td>
 				<td class="col_2" >:</td>
 				<td class="col_3" >3</td>

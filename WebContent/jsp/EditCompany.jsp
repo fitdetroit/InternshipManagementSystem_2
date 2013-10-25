@@ -58,7 +58,7 @@
         <ul>
           <li>
             <div class="icon_view_pro"></div>
-            Veiw Profile</li>
+            View Profile</li>
           <li>
             <div class="icon_log_out"></div>
             Log out</li>
@@ -71,7 +71,7 @@
     <ul>
       <li class="active_li">HOME</li>
       <li>ABOUT US</li>
-      <li>MESSAGFS</li>
+      <li>MASSAGES</li>
       <li>CONTACT US</li>
       <li>HELP</li>
       <li>HOME</li>

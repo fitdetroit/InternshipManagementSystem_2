@@ -21,6 +21,7 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 
+
 import ims.business.RegisterCompany;
 import ims.business.UpdateCompany;
 import ims.data.Company;
@@ -154,10 +155,15 @@ public class CompanyRegistration extends ActionSupport{
 		
 		//create session for new company
 		
-		 Map session;
+		Map session;
      	session = ActionContext.getContext().getSession();
-			  session.put("userName",getCompanyUserName());
-			  session.put("type","notAllowedCompany");
+		session.put("userName",getCompanyUserName());
+		session.put("type","notAllowedCompany");
+		
+		this.role=(String)session.get("type");
+		this.page="NotAllowedCompany";
+		this.menu = "";
+		
 		
 		return SUCCESS;
 	}
@@ -202,32 +208,24 @@ public class CompanyRegistration extends ActionSupport{
 	public Company getCompany() {
 		return company;
 	}
-
-
-
 	public String getRole() {
 		return role;
 	}
-
-
-
-
 	public void setRole(String role) {
 		this.role = role;
 	}
 
-
-
-
 	public String getPage() {
 		return page;
 	}
-
-
-
-
 	public void setPage(String page) {
 		this.page = page;
+	}
+	public String getMenu() {
+		return menu;
+	}
+	public void setMenu(String menu) {
+		this.menu = menu;
 	}
 
 
@@ -376,22 +374,6 @@ public class CompanyRegistration extends ActionSupport{
 	public void setNoOfVacancies(String noOfVacancies) {
 		this.noOfVacancies = noOfVacancies;
 	}
-
-
-
-
-	public String getMenu() {
-		return menu;
-	}
-
-
-
-
-	public void setMenu(String menu) {
-		this.menu = menu;
-	}
-
-
 
 
 	public String getTechnologies() {

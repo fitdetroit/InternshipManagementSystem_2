@@ -70,7 +70,7 @@ int z = n1*n2;
 if( z >10 ){
 	
 	out.println(1);
-	
+
 	
 }
 
