@@ -55,6 +55,14 @@ public class AdminstratingSystem extends ActionSupport{
 		return SUCCESS;
 		
 	}
+	
+	public String stopInternshipPeriod()
+	{
+		administatingDataSession.stopInternshipPeriod();
+		
+		
+		return SUCCESS;
+	}
 
 	
 	

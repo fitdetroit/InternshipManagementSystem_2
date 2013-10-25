@@ -47,6 +47,28 @@ public class AdministatingDataSession {
 
 		
 	}
+	
+	public void stopInternshipPeriod()
+	{
+		Session session = getSessionFactory().openSession();
+		String SQL_QUERY = "from Administration";
+		Query query = session.createQuery(SQL_QUERY);
+		List<Administration> list = ((org.hibernate.Query) query).list();
+		if(list.isEmpty())
+		{
+			
+		}
+		else
+		{
+			Session session2 = getSessionFactory().openSession();		
+			session2.beginTransaction();		
+			session2.delete(list.get(0));
+			session2.getTransaction().commit();
+			session2.close();
+			
+		}
+		
+	}
 
 
 	
