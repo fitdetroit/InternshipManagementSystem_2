@@ -87,6 +87,12 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 		<bean id="MenuManage" class="ims.business.MenuManageDataSession">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+	
+	<!-- regarding to massage passing -->
+	<bean id="MessageHandle" class="ims.business.HandleMassageDataSession">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
 </beans>
 
 

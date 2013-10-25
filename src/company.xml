@@ -149,6 +149,12 @@
 			<result name="error" type="redirect">../index</result>
 		</action>
 		
+	<!-- New message haddle -->	
+		<action name="MessageFromCompany" class="ims.actions.HandleMassages" method="HandleNewCompanyMessage">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		
 		
 		
 		
