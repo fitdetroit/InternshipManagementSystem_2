@@ -16,12 +16,15 @@
 <div class="page_title"><h2 class="header_profile">Messages</h2></div>
     <div class="profile_container">
 		<div class="message_container">
-			
+			<s:form id="SendMessagebyCompany" method="post" action="MessageFromCompany" enctype="multipart/form-data" >
 			<div class="reply_area">
-			<input type="text" class="msg_header"/>
-			<textarea class="reply_field"></textarea>
+			<input type="text" class="msg_header"name="subject"/>
+			<textarea class="reply_field" name="content"></textarea>
 			</div>
-			<div class="reply_area"><input type="submit" value="Reply"/></div>
+
+			<div class="reply_area"><s:submit label="Save" id="signUp" cssClass="but_submit"></s:submit></div>
+			        
+      </s:form>
 		</section>
 		</div>
 </div>
