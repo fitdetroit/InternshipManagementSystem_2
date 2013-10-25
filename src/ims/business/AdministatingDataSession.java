@@ -4,6 +4,7 @@ import java.util.List;
 
 import ims.data.Administration;
 import ims.data.Student;
+import ims.data.StudentCompany;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -65,6 +66,21 @@ public class AdministatingDataSession {
 			session2.delete(list.get(0));
 			session2.getTransaction().commit();
 			session2.close();
+			
+			Session session3 = getSessionFactory().openSession();
+			String SQL_QUERY2 = "from StudentCompany";
+			Query query2 = session3.createQuery(SQL_QUERY2);
+			List<StudentCompany> list2 = ((org.hibernate.Query) query2).list();
+			
+//			for(int i=0;i<list2.size();i++)
+//			{
+//				Session session4 = getSessionFactory().openSession();		
+//				session4.beginTransaction();		
+//				session4.delete(list.get(i));
+//				session4.getTransaction().commit();
+//				session4.close();
+//				
+//			}
 			
 		}
 		
