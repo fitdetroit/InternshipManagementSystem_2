@@ -185,6 +185,11 @@
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
 		
+		<action name="NewInternshipPeriod" class="ims.actions.AdminstratingSystem" method="newInternshipPeriod">
+			<result name="success">/jsp/Admin.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+		
 		
 		
 	</package>
