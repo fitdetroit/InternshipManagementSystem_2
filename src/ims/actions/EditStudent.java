@@ -5,6 +5,7 @@ import ims.business.UpdateStudent;
 import ims.data.Student;
 import ims.data.StudentComplitedProjects;
 import ims.data.StudentOtherQulification;
+import ims.data.StudentProfessionalExp;
 import ims.data.User;
 
 import java.util.ArrayList;
@@ -82,20 +83,60 @@ public class EditStudent extends ActionSupport{
 
 
 
-
+//to get data from project
 	private int projectId1=0;
-	private int projectId2=0;;
+	private int projectId2=0;
+	private int projectId3=0;
+	private int projectId4=0;
+	private int projectId5=0;
 	private String projectTitle1;
 	private String projectDescription1;
 	private String projectYear1;
+	
 	private String projectTitle2;
 	private String projectDescription2;
 	private String projectYear2;
+	
+	private String projectTitle3;
+	private String projectDescription3;
+	private String projectYear3;
+	
+	private String projectTitle4;
+	private String projectDescription4;
+	private String projectYear4;
+	
+	private String projectTitle5;
+	private String projectDescription5;
+	private String projectYear5;
 
 	private int otherQulificationId1;
 	private int otherQulificationId2;
+	private int otherQulificationId3;
+	private int otherQulificationId4;
+	private int otherQulificationId5;
+
 	private String otherQulification1;
 	private String otherQulification2;
+	private String otherQulification3;
+	private String otherQulification4;
+	private String otherQulification5;
+
+	
+	private int professionalExpId1;
+	private String companyName1;
+	private String briefDescription1;
+	private int professionalExpId2;
+	private String companyName2;
+	private String briefDescription2;
+	private int professionalExpId3;
+	private String companyName3;
+	private String briefDescription3;
+	private int professionalExpId4;
+	private String companyName4;
+	private String briefDescription4;
+	private int professionalExpId5;
+	private String companyName5;
+	private String briefDescription5;
 
 
 
@@ -169,8 +210,28 @@ public class EditStudent extends ActionSupport{
 				setProjectYear2(project.getProjectYear());
 				
 			}
-			else
+			else if(x==3)
 			{
+				setProjectId3(project.getProjectId());
+				setProjectTitle3(project.getProjectTitle());
+				setProjectDescription3(project.getProjectDescription());
+				setProjectYear3(project.getProjectYear());
+				
+			}
+			else if(x==4)
+			{
+				setProjectId4(project.getProjectId());
+				setProjectTitle4(project.getProjectTitle());
+				setProjectDescription4(project.getProjectDescription());
+				setProjectYear4(project.getProjectYear());
+				
+			}
+			else if(x==5)
+			{
+				setProjectId5(project.getProjectId());
+				setProjectTitle5(project.getProjectTitle());
+				setProjectDescription5(project.getProjectDescription());
+				setProjectYear5(project.getProjectYear());
 				
 			}
 			x++;
@@ -193,9 +254,73 @@ public class EditStudent extends ActionSupport{
 				setOtherQulification2(otherQulification.getDescription());
 				
 			}
+			else if(y==3)
+			{
+				setOtherQulificationId3(otherQulification.getOtherQulificationId());
+				setOtherQulification3(otherQulification.getDescription());
+				
+			}
+			else if(y==4)
+			{
+				setOtherQulificationId4(otherQulification.getOtherQulificationId());
+				setOtherQulification4(otherQulification.getDescription());
+				
+			}
+			else if(y==5)
+			{
+				setOtherQulificationId5(otherQulification.getOtherQulificationId());
+				setOtherQulification5(otherQulification.getDescription());
+				
+			}
 			
 			y++;
 		}
+		
+		
+		int z=1;
+		for(StudentProfessionalExp studentProfessionalExp:getStudent().getStudentProfessionalExp())
+		{
+			if(z==1)
+			{
+				setProfessionalExpId1(studentProfessionalExp.getProfessionalExpId());
+				setCompanyName1(studentProfessionalExp.getCompanyName());
+				setBriefDescription1(studentProfessionalExp.getBriefDescription());
+				
+				
+			}
+			if(z==2)
+			{
+				setProfessionalExpId2(studentProfessionalExp.getProfessionalExpId());
+				setCompanyName2(studentProfessionalExp.getCompanyName());
+				setBriefDescription2(studentProfessionalExp.getBriefDescription());
+				
+			}
+			if(z==3)
+			{
+				setProfessionalExpId3(studentProfessionalExp.getProfessionalExpId());
+				setCompanyName3(studentProfessionalExp.getCompanyName());
+				setBriefDescription3(studentProfessionalExp.getBriefDescription());
+				
+			}
+			if(z==4)
+			{
+				setProfessionalExpId4(studentProfessionalExp.getProfessionalExpId());
+				setCompanyName4(studentProfessionalExp.getCompanyName());
+				setBriefDescription4(studentProfessionalExp.getBriefDescription());
+				
+			}
+			if(z==5)
+			{
+				setProfessionalExpId5(studentProfessionalExp.getProfessionalExpId());
+				setCompanyName5(studentProfessionalExp.getCompanyName());
+				setBriefDescription5(studentProfessionalExp.getBriefDescription());
+				
+			}
+			
+		}
+		
+		
+		
 
 
 /*		//set values to project
@@ -258,8 +383,177 @@ public class EditStudent extends ActionSupport{
 	
 	//getters and setters
 	
+	
 	public String getStudentUserName() {
 		return studentUserName;
+	}
+
+
+
+	public String getProjectYear4() {
+		return projectYear4;
+	}
+
+
+
+	public void setProjectYear4(String projectYear4) {
+		this.projectYear4 = projectYear4;
+	}
+
+
+
+	public String getProjectYear5() {
+		return projectYear5;
+	}
+
+
+
+	public void setProjectYear5(String projectYear5) {
+		this.projectYear5 = projectYear5;
+	}
+
+
+
+	public String getProjectTitle5() {
+		return projectTitle5;
+	}
+
+
+
+	public void setProjectTitle5(String projectTitle5) {
+		this.projectTitle5 = projectTitle5;
+	}
+
+
+
+	public int getProjectId3() {
+		return projectId3;
+	}
+
+
+
+	public void setProjectId3(int projectId3) {
+		this.projectId3 = projectId3;
+	}
+
+
+
+	public int getProjectId4() {
+		return projectId4;
+	}
+
+
+
+	public void setProjectId4(int projectId4) {
+		this.projectId4 = projectId4;
+	}
+
+
+
+	public int getProjectId5() {
+		return projectId5;
+	}
+
+
+
+	public void setProjectId5(int projectId5) {
+		this.projectId5 = projectId5;
+	}
+
+
+
+	public String getProjectTitle3() {
+		return projectTitle3;
+	}
+
+
+
+	public void setProjectTitle3(String projectTitle3) {
+		this.projectTitle3 = projectTitle3;
+	}
+
+
+
+	public String getProjectDescription3() {
+		return projectDescription3;
+	}
+
+
+
+	public void setProjectDescription3(String projectDescription3) {
+		this.projectDescription3 = projectDescription3;
+	}
+
+
+
+	public String getProjectTitle4() {
+		return projectTitle4;
+	}
+
+
+
+	public void setProjectTitle4(String projectTitle4) {
+		this.projectTitle4 = projectTitle4;
+	}
+
+
+
+	public String getProjectDescription4() {
+		return projectDescription4;
+	}
+
+
+
+	public void setProjectDescription4(String projectDescription4) {
+		this.projectDescription4 = projectDescription4;
+	}
+
+
+
+	public String getProjectDescription5() {
+		return projectDescription5;
+	}
+
+
+
+	public void setProjectDescription5(String projectDescription5) {
+		this.projectDescription5 = projectDescription5;
+	}
+
+
+
+	public String getOtherQulification3() {
+		return otherQulification3;
+	}
+
+
+
+	public void setOtherQulification3(String otherQulification3) {
+		this.otherQulification3 = otherQulification3;
+	}
+
+
+
+	public String getOtherQulification4() {
+		return otherQulification4;
+	}
+
+
+
+	public void setOtherQulification4(String otherQulification4) {
+		this.otherQulification4 = otherQulification4;
+	}
+
+
+
+	public String getOtherQulification5() {
+		return otherQulification5;
+	}
+
+
+
+	public void setOtherQulification5(String otherQulification5) {
+		this.otherQulification5 = otherQulification5;
 	}
 
 
@@ -403,6 +697,18 @@ public class EditStudent extends ActionSupport{
 
 
 
+	public String getProjectYear3() {
+		return projectYear3;
+	}
+
+
+
+	public void setProjectYear3(String projectYear3) {
+		this.projectYear3 = projectYear3;
+	}
+
+
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
@@ -478,6 +784,43 @@ public class EditStudent extends ActionSupport{
 	public void setAlResult2(String alResult2) {
 		this.alResult2 = alResult2;
 	}
+
+
+	public int getOtherQulificationId3() {
+		return otherQulificationId3;
+	}
+
+
+
+	public void setOtherQulificationId3(int otherQulificationId3) {
+		this.otherQulificationId3 = otherQulificationId3;
+	}
+
+
+
+	public int getOtherQulificationId4() {
+		return otherQulificationId4;
+	}
+
+
+
+	public void setOtherQulificationId4(int otherQulificationId4) {
+		this.otherQulificationId4 = otherQulificationId4;
+	}
+
+
+
+	public int getOtherQulificationId5() {
+		return otherQulificationId5;
+	}
+
+
+
+	public void setOtherQulificationId5(int otherQulificationId5) {
+		this.otherQulificationId5 = otherQulificationId5;
+	}
+
+
 
 
 
@@ -828,6 +1171,186 @@ public class EditStudent extends ActionSupport{
 
 	public void setStudent(Student student) {
 		this.student = student;
+	}
+
+
+
+	public int getProfessionalExpId1() {
+		return professionalExpId1;
+	}
+
+
+
+	public void setProfessionalExpId1(int professionalExpId1) {
+		this.professionalExpId1 = professionalExpId1;
+	}
+
+
+
+	public String getCompanyName1() {
+		return companyName1;
+	}
+
+
+
+	public void setCompanyName1(String companyName1) {
+		this.companyName1 = companyName1;
+	}
+
+
+
+	public String getBriefDescription1() {
+		return briefDescription1;
+	}
+
+
+
+	public void setBriefDescription1(String briefDescription1) {
+		this.briefDescription1 = briefDescription1;
+	}
+
+
+
+	public int getProfessionalExpId2() {
+		return professionalExpId2;
+	}
+
+
+
+	public void setProfessionalExpId2(int professionalExpId2) {
+		this.professionalExpId2 = professionalExpId2;
+	}
+
+
+
+	public String getCompanyName2() {
+		return companyName2;
+	}
+
+
+
+	public void setCompanyName2(String companyName2) {
+		this.companyName2 = companyName2;
+	}
+
+
+
+	public String getBriefDescription2() {
+		return briefDescription2;
+	}
+
+
+
+	public void setBriefDescription2(String briefDescription2) {
+		this.briefDescription2 = briefDescription2;
+	}
+
+
+
+	public int getProfessionalExpId3() {
+		return professionalExpId3;
+	}
+
+
+
+	public void setProfessionalExpId3(int professionalExpId3) {
+		this.professionalExpId3 = professionalExpId3;
+	}
+
+
+
+	public String getCompanyName3() {
+		return companyName3;
+	}
+
+
+
+	public void setCompanyName3(String companyName3) {
+		this.companyName3 = companyName3;
+	}
+
+
+
+	public String getBriefDescription3() {
+		return briefDescription3;
+	}
+
+
+
+	public void setBriefDescription3(String briefDescription3) {
+		this.briefDescription3 = briefDescription3;
+	}
+
+
+
+	public int getProfessionalExpId4() {
+		return professionalExpId4;
+	}
+
+
+
+	public void setProfessionalExpId4(int professionalExpId4) {
+		this.professionalExpId4 = professionalExpId4;
+	}
+
+
+
+	public String getCompanyName4() {
+		return companyName4;
+	}
+
+
+
+	public void setCompanyName4(String companyName4) {
+		this.companyName4 = companyName4;
+	}
+
+
+
+	public String getBriefDescription4() {
+		return briefDescription4;
+	}
+
+
+
+	public void setBriefDescription4(String briefDescription4) {
+		this.briefDescription4 = briefDescription4;
+	}
+
+
+
+	public int getProfessionalExpId5() {
+		return professionalExpId5;
+	}
+
+
+
+	public void setProfessionalExpId5(int professionalExpId5) {
+		this.professionalExpId5 = professionalExpId5;
+	}
+
+
+
+	public String getCompanyName5() {
+		return companyName5;
+	}
+
+
+
+	public void setCompanyName5(String companyName5) {
+		this.companyName5 = companyName5;
+	}
+
+
+
+	public String getBriefDescription5() {
+		return briefDescription5;
+	}
+
+
+
+	public void setBriefDescription5(String briefDescription5) {
+		this.briefDescription5 = briefDescription5;
 	}
 
 
