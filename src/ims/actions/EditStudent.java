@@ -276,10 +276,14 @@ public class EditStudent extends ActionSupport{
 			y++;
 		}
 		
+		System.out.println("fdfdfdfdfdf");
 		
 		int z=1;
 		for(StudentProfessionalExp studentProfessionalExp:getStudent().getStudentProfessionalExp())
 		{
+			System.out.println("fdfdfdfdfdf");
+			if(getStudent().getStudentProfessionalExp().isEmpty())
+				break;
 			if(z==1)
 			{
 				setProfessionalExpId1(studentProfessionalExp.getProfessionalExpId());
@@ -288,34 +292,36 @@ public class EditStudent extends ActionSupport{
 				
 				
 			}
-			if(z==2)
+			else if(z==2)
 			{
 				setProfessionalExpId2(studentProfessionalExp.getProfessionalExpId());
 				setCompanyName2(studentProfessionalExp.getCompanyName());
 				setBriefDescription2(studentProfessionalExp.getBriefDescription());
 				
 			}
-			if(z==3)
+			else if(z==3)
 			{
 				setProfessionalExpId3(studentProfessionalExp.getProfessionalExpId());
 				setCompanyName3(studentProfessionalExp.getCompanyName());
 				setBriefDescription3(studentProfessionalExp.getBriefDescription());
 				
 			}
-			if(z==4)
+			else if(z==4)
 			{
 				setProfessionalExpId4(studentProfessionalExp.getProfessionalExpId());
 				setCompanyName4(studentProfessionalExp.getCompanyName());
 				setBriefDescription4(studentProfessionalExp.getBriefDescription());
 				
 			}
-			if(z==5)
+			else if(z==5)
 			{
 				setProfessionalExpId5(studentProfessionalExp.getProfessionalExpId());
 				setCompanyName5(studentProfessionalExp.getCompanyName());
 				setBriefDescription5(studentProfessionalExp.getBriefDescription());
 				
 			}
+			
+			z++;
 			
 		}
 		
