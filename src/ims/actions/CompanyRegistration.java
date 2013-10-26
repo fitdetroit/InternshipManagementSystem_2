@@ -47,8 +47,7 @@ public class CompanyRegistration extends ActionSupport{
 	private String ProfilePictureContentType;
 	
 	
-	
-	
+
 	
 	public String registration() throws NoSuchAlgorithmException
 	{
