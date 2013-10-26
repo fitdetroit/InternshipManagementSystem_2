@@ -8,7 +8,8 @@
 
 	<package name="company" namespace="/" extends="struts-default">
 
-		<action name="NewCompany">
+		<action name="NewCompany" class="ims.actions.NewCompany"
+			method="applyForRegistration">
 			<result>/jsp/HomeIndex.jsp</result>
 		</action>
 		<action name="ToRegistration">

@@ -45,19 +45,30 @@ public class CheckSession extends ActionSupport {
 			} 
 			else if (type == "regiStudent") 
 			{
+				this.role=(String)session.get("type");
+				
 				return "regiStudent";
 
 			} 
 			else if (type == "notRegiStudent") {
+				
+				this.role=(String)session.get("type");
+				
 				return "notRegiStudent";
 
 			} 
 			else if (type == "allowedCompany") 
 			{
+				this.role=(String)session.get("type");
+				this.page="AllowedCompany.jsp";
+				this.menu = "Home_admin";
+				
 				return "allowedCompany";
 			} 
 			else if (type == "notAllowedCompany") 
 			{
+				this.role=(String)session.get("type");
+				
 				return "notAllowedCompany";
 			} 
 			else 
