@@ -4,12 +4,7 @@
 					<fieldset class="fieldset">
 						<div class="contentrow">
 						<div class="profile_image_container">
-											
-			<s:url id="url" action="GetImageStudent">
-            <s:param name="userName"><s:property value="%{#session.userName}"/> </s:param>
-                </s:url>
-                <img src="<s:property value='#url'/>"  width="200px" height="250px"/>
-				
+							<img src="assets/img/comp_logo_mit.jpg" class="profileimage" >
 						</div>
 						<div class="profile_header_container ">
 							<h4><s:property  value="company.companyName"></s:property></h4>

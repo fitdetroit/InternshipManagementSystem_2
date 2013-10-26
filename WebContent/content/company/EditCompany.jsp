@@ -19,10 +19,7 @@
 								<label class="inputlabel">Change Company Logo</label>
 								<div class="inputarea">													 
 			
-				<s:url id="url" action="GetImageStudent">
-                   <s:param name="userName"><s:property value="%{#session.userName}"/> </s:param>
-                </s:url>
-                <img src="<s:property value='#url'/>"  width="200px" height="250px"/>
+									<input type="file" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture"/>
 								</div>
 							</div>
 							

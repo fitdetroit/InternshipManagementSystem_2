@@ -10,10 +10,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">Index No.</label>
 								<div class="inputarea">
-				<s:url id="url" action="GetImageStudent">
-                  <s:param name="userName"><s:property value="%{#session.userName}"/> </s:param>
-                </s:url>
-                <img src="<s:property value='#url'/>"  width="200px" height="250px"/>
+									<input type="text" value="114455K" disabled="disabled" class="autocomplete_field half input_disabled"  name="indexnumber"/>
 									
 								</div>
 							</div>
