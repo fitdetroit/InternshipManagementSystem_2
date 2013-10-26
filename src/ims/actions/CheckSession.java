@@ -46,14 +46,15 @@ public class CheckSession extends ActionSupport {
 			else if (type == "regiStudent") 
 			{
 				this.role=(String)session.get("type");
-				
+				this.page="RegistedStudent";
 				return "regiStudent";
 
 			} 
 			else if (type == "notRegiStudent") {
 				
 				this.role=(String)session.get("type");
-				
+
+				this.menu ="home_st";
 				return "notRegiStudent";
 
 			} 
