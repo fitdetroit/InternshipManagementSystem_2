@@ -3,6 +3,7 @@ package ims.business;
 import java.util.List;
 
 import ims.data.Administration;
+import ims.data.Company;
 import ims.data.Student;
 import ims.data.StudentCompany;
 
@@ -44,6 +45,34 @@ public class AdministatingDataSession {
 			session2.close();
 			
 		}
+		
+
+/*		
+		System.out.println("fdfdfdfdfdfdfdf");
+		Session session4 = getSessionFactory().openSession();
+		String SQL_QUERY2 = "from Company";
+		Query query2 = session4.createQuery(SQL_QUERY2);
+		List<Company> list2 = ((org.hibernate.Query) query2).list();
+
+		
+		System.out.println(list2.size()+"list2 fddfdff");
+		
+		for(int i=0;i<list2.size();i++)
+		{
+			Company company=list2.get(i);
+			
+			company.setReceiveCv(true);
+			
+			Session session5 = getSessionFactory().openSession();		
+			session5.beginTransaction();		
+			session5.update(company);			
+			session5.getTransaction().commit();
+			session5.close();
+			
+		}*/
+		
+		
+		
 		
 
 		

@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name="Administration")
 public class Administration {
 	
-	@Id @GeneratedValue(strategy=GenerationType.AUTO)
+	@Id 
 	private int adminId;
 	private boolean internshipRegiPeriod;
 	private String startDate;
