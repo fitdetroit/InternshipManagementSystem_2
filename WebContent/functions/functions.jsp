@@ -4,6 +4,9 @@
 <s:set name="menu" value="menu"/>
 
 <s:if test="%{#page==null}">
+	<%@include file="/jsp/Login.jsp" %>
+</s:if>
+<s:if test="%{#page=='CompanyRegistrationForm.jsp'}">
 	<%@include file="/content/company/CompanyRegistrationForm.jsp" %>
 </s:if>
 <s:if test="%{#page=='RegistedStudent.jsp'}">

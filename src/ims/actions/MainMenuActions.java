@@ -54,11 +54,11 @@ public class MainMenuActions extends ActionSupport{
 				
 				ApplyStudentSummery=menuManageDataSession.companyStateSummary(str);
 				
-				System.out.println("dfdfdfdfdfdfdfdfdfdfdf");
+				//System.out.println("dfdfdfdfdfdfdfdfdfdfdf");
 				List<String> items = Arrays.asList(ApplyStudentSummery.split(","));
 				
 				
-				System.out.println("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+				//System.out.println("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
 				applyStudentCount = Integer.parseInt(items.get(0));
 				notSelectedStudentCount = Integer.parseInt(items.get(1));
 				interviewStudentCount = Integer.parseInt(items.get(2));
@@ -202,7 +202,7 @@ public class MainMenuActions extends ActionSupport{
 		}//internshipActionByStd
 		
 		
-public String MessageAction() {	
+       public String MessageAction() {	
 			
 			// to redirect direct access actions  without login
 			if (str==null) {
@@ -220,7 +220,7 @@ public String MessageAction() {
 
 		}//MessageAction
 
-public String CreateNewMsgCompany() {	
+       public String CreateNewMsgCompany() {	
 	
 	// to redirect direct access actions  without login
 	if (str==null) {
@@ -240,7 +240,7 @@ public String CreateNewMsgCompany() {
 
 
 
-public String InboxCompany() {	
+        public String InboxCompany() {	
 	
 	// to redirect direct access actions  without login
 	if (str==null) {

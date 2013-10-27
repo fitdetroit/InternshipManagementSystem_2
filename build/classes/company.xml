@@ -8,7 +8,8 @@
 
 	<package name="company" namespace="/" extends="struts-default">
 
-		<action name="NewCompany">
+		<action name="NewCompany" class="ims.actions.NewCompany"
+			method="applyForRegistration">
 			<result>/jsp/HomeIndex.jsp</result>
 		</action>
 		<action name="ToRegistration">
@@ -145,6 +146,12 @@
 			<result name="error" type="redirect">../index</result>
 		</action>
 		<action name="CreateNewMsgCompany" class="ims.actions.MainMenuActions" method="CreateNewMsgCompany">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		
+	<!-- New message haddle -->	
+		<action name="MessageFromCompany" class="ims.actions.HandleMassages" method="HandleNewCompanyMessage">
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
