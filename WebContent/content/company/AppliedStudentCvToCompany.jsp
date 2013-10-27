@@ -31,6 +31,7 @@ table.table_info td.col_3 p { padding:0; margin:0;vertical-align:top;padding-lef
 </style>
 
   <div class="page_title"><h2 class="header_profile">Student Profile</h2></div>
+  <div class="nav"><a href="#">Previous</a> | <a href="#">Next</a></div>
     <div class="profile_container">
 		<div class="profile_general">
 			<div class="pro_img_container"><img class="profile_image" src="assets/img/st_profileimg.jpg" alt="company name" width="250"/></div>

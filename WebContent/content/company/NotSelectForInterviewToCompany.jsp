@@ -1,6 +1,6 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
 <div>
-<h2 align="center">Not Selected Student for Interview </h2>
+<h2 align="center">Pending students for Interview </h2>
 <table border="1" align="center">
 <tr >
     <th width="220">Name In Full</th>
