@@ -1,6 +1,5 @@
-<div class="widget_1">
-<div class="side_bar_menu">
-	<h4>Shortcuts</h4>
+<div class="widget_1 widgets">
+<h2>Shortcuts</h2>
     <ul>
       <li class="mein-menu-li home"><img src="assets/img/glyphicons_020_home.png" />HOME</li>
       <li class="mein-menu-li about-us"><img src="assets/img/glyphicons_024_parents.png" />ABOUT US</li>
@@ -9,4 +8,4 @@
       <li><img src="assets/img/glyphicons_020_home.png" />HELP</li>
     </ul>
   </div>
-</div>
+

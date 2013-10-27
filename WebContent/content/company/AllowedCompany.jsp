@@ -1,9 +1,12 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
-<div class="notifi_reg-form">
-      <h2>Welcome to Internship Management System</h2>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
-    </div>
- 
- <h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="LogOut"/>">(logout)</a></h3>
+<div class="notification_area">
+	<h2>Welcome To Internship Management System</h2>
+	<p>When each splash div was set to absolute positioning, but I realised that these would appear in different places in ...</p>
+</div>
+<h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="LogOut"/>">(logout)</a></h3>
 
-    
+  <div class="form_container">
+	<fieldset class="fieldset"> 
+	lkjlkjl
+	</fieldset>
+</div> 
