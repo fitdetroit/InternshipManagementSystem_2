@@ -75,7 +75,7 @@ body {	font-size: 12px; background:#EFF7FF}
 .main_menu ul{ list-style-type:none; margin:0; padding:0;}
 .main_menu ul li{ float:left; padding:10px; margin-right:1px; margin-top:15px; background:url(assets/img/main_menu_bg.png) repeat-x; height:15px;-webkit-border-radius: 5px 5px 0  0;
 border-radius:  5px 5px 0  0; border:1px solid #6986c0; border-bottom:none; border-bottom-raduis: none;text-shadow: 1px 1px 1px #ABBECF;filter: dropshadow(color=#ABBECF, offx=1, offy=1);}
-.main_menu ul li.active_li, .main_menu ul li:hover{ background:#FFFFFF; border:none; border-bottom:1px solid #FFFFFF;border:1px solid #fff; cursor:pointer}
+.main_menu ul li.home, .main_menu ul li:hover{ background:#FFFFFF; border:none; border-bottom:1px solid #FFFFFF;border:1px solid #fff; cursor:pointer}
 .submenu{display: none; width:214px; height:100px; overflow:hidden; background:#f2f5fa; z-index:30; position:absolute;  margin-top: 34px; margin-left: 14px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45); right:0}
 .submenu ul{ display:block}
 .submenu ul li{ display:block; border-bottom:1px solid #CCCCCC; float:none; height:30px; padding:0 0 0 10px; width:204px; font-size:0.9em; cursor:pointer} 
@@ -89,14 +89,16 @@ border-radius:  5px 5px 0  0; border:1px solid #6986c0; border-bottom:none; bord
 .clear{ background:#FFFFFF; width:100%; height:7px; position:relative; z-index:1;}
 .container{ background:#ECECEC; width:100%; position:relative; margin-top:5px; margin-top: 2px; padding-bottom:23px;}
 .main_container{ background:#FFFFFF; width:1080px;position:relative; z-index:; float:left; min-height:500px;-webkit-box-shadow:  0px 0px 3px 3px rgba(0, 0, 0, 0.2);box-shadow:  0px 0px 3px 3px rgba(0, 0, 0, 0.2); padding:10px 0 15px 0;margin-top: -3px;}
-.notification_area{ background:#DBEEEE; margin:0; border:1px solid #9BC7D4; padding:10px; position:relative}
+.notification_area{ background:rgba(227, 252, 221, 1); margin:0; border:1px solid #C2F0C2; padding:10px; position:relative}
 .main_container h2{ color:#006600; font-family:sans-serif; margin:0; padding:0;}
 .form_container{ padding:10px; }
-.fieldset{background-color: #f7f7f7; border: 1px solid #ececec; margin: 10px 0; padding: 7px 0; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; overflow:auto}
+.fieldset{background-color: #f7f7f7; border: 1px solid #ececec; margin: 10px 0; padding: 7px 0; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; overflow:auto;padding: 10px;}
 .fieldset p{ font-size:14px; padding:0; margin:0;}
-.main_container h3{ font-weight:600; padding:0; margin:0;}
+.fieldset p.longtext{ color:#666666; margin-top:15px;}
+.main_container h3{ font-weight:600; padding:0; margin:0; color: #1356AA;}
 .inputrow, .contentrow{ width:100%; margin:auto 0 10px 0;}
 .inputrow{ height:40px;}
+.profile_content .inputrow{ height:20px; margin-bottom:0;}
 .inputrow label.inputlabel{ width: 25%; display: block; float: left; text-align: right; position: relative; top:6px; padding-right:10px;}
 .inputrow .inputarea{float: left; padding: 0; width: 73%;}
 .autocomplete_field{ width: 300px!important;top: 0; border-radius:5px; background-color: #FFF; line-height: 150%;margin: 0; border-top: 1px solid #a0a1a3; border-left: 1px solid #a0a1a3; border-bottom: 1px solid #d1d3d4; border-right: 1px solid #d1d3d4;padding: 7px 4px;-webkit-box-shadow: inset 3px 3px 5px 6px #ccc; box-shadow: inset 1px 1px 2px #CCC; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
@@ -147,6 +149,7 @@ box-shadow: 0px 1px 1px 0px rgba(10, 10, 10, 0.4);padding: 9px 29px;font-weight:
 .sub_container{ width:243px;  float:left; padding-bottom:25px; position:relative;}
 .widgets{ background:#F5F6F7; margin-top:6px; margin-left: 2px; width:99%;-webkit-box-shadow:  0px 0px 10px 10px rgba(0, 0, 0, 0.02); box-shadow:  0px 0px 10px 10px rgba(0, 0, 0, 0.02); padding-bottom:10px;}
 .widgets h2{ font-size:13px; padding:10px 0 10px 10px;}
+.widgets a{text-decoration: none;}
 .widgets ul{ list-style-type:none; padding:0; margin:0 }
 .widgets ul li{ height:30px; padding:5px 0 0 10px; border-bottom:1px solid #CCCCCC; font-weight:600; color:#1356AA}
 /* ==========================================================================
