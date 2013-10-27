@@ -1,32 +1,146 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
- <style>
-.profile_container{ background:#FFFFFF; padding:10px;}
-
-.address { margin-top:-15px; font-weight:bold; color:#666666} 
-.page_title{ background:rgba(227, 252, 221, 1); margin-top:10px; padding:5px 0 0 5px; height:30px;border: 1px solid #C2F0C2;} 
-.profile_body { height:100px; margin:0 auto 0 auto; width: 980px;}
-.td_header{ width:200px; font-weight: bold;}
-.td_body p{ margin-top:0; margin-bottom:0;}
-
-.header_profile {color:#298B1C; margin: 0 auto;font-family: 'MerriweatherSans-Bold'; font-size:22px;}
-.profile_general{ height:150px; padding-top:10px;}
-.pro_img_container{ width:250px;float:left; overflow-y: auto}
-.pro_disc_container{ float:left; width:720px}
-.profile_container .profile_name{ color:#333333; background:none; border:none; font-size:33px; font-weight:bold; font-family: 'segoeuib-Bold'; margin: 0 auto auto -1px;}
-.pro_disc_container .address{ color:#666666; font-size:15px; margin:10px auto auto 10px;}
-.pro_disc_container hr { margin:10px;}
-.pro_disc_container .comp_discription{color: #666666; margin: 10px; font-size: 14px;}
-
-table.table_info{ border:none; margin-left:10px;}
-
-table.table_info th{ text-align:left; color:#3960A5; background: #F5F6F7; font-weight:600}
-table.table_info td{ padding:2px 0 2px 0}
-table.table_info td.col_1{ width:150px; text-align:right; color: #333333; font-weight:600; font-size:15px; padding-right:10px;}
-table.table_info td.col_2{ width:10px; text-align:right; vertical-align:top}
-table.table_info td.col_3{ width:500px; font-size:14px; vertical-align:top}
-table.table_info td.col_3 p { padding:0; margin:0;vertical-align:top;padding-left: 10px;}
-
-
+<h2>Company Profile</h2>
+					<div class="form_container">
+					<fieldset class="fieldset">
+						<div class="contentrow">
+						<div class="profile_image_container">
+							<img src="assets/img/st_profileimg.jpg" alt="student name" class="profileimage" >
+						</div>
+						<div class="profile_header_container student_name">
+							<h4>Charith Hewage</h4>
+							<p>No.44, New Kandy Road Malabe, Sri Lanka.</p>
+							<p class="longtext">Email : charithhewage@gmail.com | Tel : 0771227338 / 07771122883</p>
+						</div>
+						
+						</div>
+					</fieldset>
+					<h3>Genaral Information</h3>
+					<fieldset class="fieldset profile_content">
+							<div class="inputrow">
+								<label class="inputlabel">Username</label>
+								<div class="inputarea">													 
+									 <p>Charith Hewalge</p>
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">No of Vacancies</label>
+								<div class="inputarea">													 
+									 <p>10</p>
+								</div>
+							</div>
+						</fieldset>
+						
+					<h3>Technologies</h3>
+					<fieldset class="fieldset profile_content">
+							<div class="inputrow">
+								<label class="inputlabel">&nbsp;</label>
+								<div class="inputarea">													 
+									 <p>C#, Web Developing, php, java, .Net </p>
+								</div>
+							</div>
+						</fieldset>
+						
+					<h3>Contact Information - Genaral Contacts</h3>
+					<fieldset class="fieldset profile_content">
+							<div class="inputrow">
+								<label class="inputlabel">Telephone</label>
+								<div class="inputarea">													 
+									 <p>0112334432 </p>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Fax</label>
+								<div class="inputarea">													 
+									 <p>0112334432 </p>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">E-mail</label>
+								<div class="inputarea">													 
+									 <p>info@mit.com </p>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Web Site</label>
+								<div class="inputarea">													 
+									 <p>www.mitsrilanka.lk </p>
+								</div>
+							</div>
+						</fieldset>
+						
+						
+					<h3>Contact Information - Contact Person</h3>
+					<fieldset class="fieldset profile_content">
+							<div class="inputrow">
+								<label class="inputlabel">Name</label>
+								<div class="inputarea">													 
+									 <p>KDA. Sarath Perera</p>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Contact Number</label>
+								<div class="inputarea">													 
+									 <p>0777889988</p>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Email</label>
+								<div class="inputarea">													 
+									 <p>sdfsdf@gmail.com</p>
+								</div>
+							</div>
+						</fieldset>
+						
+						
+					<h3>Contact Information - Alternative Contact Person</h3>
+					<fieldset class="fieldset profile_content">
+							<div class="inputrow">
+								<label class="inputlabel">Name</label>
+								<div class="inputarea">													 
+									 <p>KDA. Sarath Perera</p>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Contact Number</label>
+								<div class="inputarea">													 
+									 <p>0777889988</p>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Email</label>
+								<div class="inputarea">													 
+									 <p>sdfsdf@gmail.com</p>
+								</div>
+							</div>
+						</fieldset>
+						
+						
+					</div><!-- /End Form container-->
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
 
 </style>
 
@@ -34,7 +148,7 @@ table.table_info td.col_3 p { padding:0; margin:0;vertical-align:top;padding-lef
   <div class="nav"><a href="#">Previous</a> | <a href="#">Next</a></div>
     <div class="profile_container">
 		<div class="profile_general">
-			<div class="pro_img_container"><img class="profile_image" src="assets/img/st_profileimg.jpg" alt="company name" width="250"/></div>
+			<div class="pro_img_container"></div>
 			<div class="pro_disc_container">
 				<h3 class="profile_name">Charith Hewage</h3>
 				<p class="address">No.44, New Kandy Road Malabe, Sri Lanka.</p>

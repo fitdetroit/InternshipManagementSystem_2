@@ -1,5 +1,5 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
-
+<h2>Company Profile</h2>
 					<div class="form_container">
 					<fieldset class="fieldset">
 						<div class="contentrow">

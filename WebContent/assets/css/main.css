@@ -90,19 +90,22 @@ border-radius:  5px 5px 0  0; border:1px solid #6986c0; border-bottom:none; bord
 .container{ background:#ECECEC; width:100%; position:relative; margin-top:5px; margin-top: 2px; padding-bottom:23px;}
 .main_container{ background:#FFFFFF; width:1080px;position:relative; z-index:; float:left; min-height:500px;-webkit-box-shadow:  0px 0px 3px 3px rgba(0, 0, 0, 0.2);box-shadow:  0px 0px 3px 3px rgba(0, 0, 0, 0.2); padding:10px 0 15px 0;margin-top: -3px;}
 .notification_area{ background:rgba(227, 252, 221, 1); margin:0; border:1px solid #C2F0C2; padding:10px; position:relative}
-.main_container h2{ color:#006600; font-family:sans-serif; margin:0; padding:0;}
+.main_container h2{ font: 100%/150% Arial,Helvetica,sans-serif; font-weight: normal;font-size: 175%; color: #090; margin:0; padding:0; margin-left:10px;}
+.notification_area h2{ margin-left:0;}
 .form_container{ padding:10px; }
 .fieldset{background-color: #f7f7f7; border: 1px solid #ececec; margin: 10px 0; padding: 7px 0; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; overflow:auto;padding: 10px;}
+.importent{ background-color: #FFF4F4; border: 1px solid #FFD8D8; }
 .fieldset p{ font-size:14px; padding:0; margin:0;}
 .fieldset p.longtext{ color:#666666; margin-top:15px;}
-.main_container h3{ font-weight:600; padding:0; margin:0; color: #1356AA;}
+.main_container h3{ font-weight:600; padding:10px 0 10px 0; margin:0; color: #1356AA;}
+.main_container h3.header_importent{  color: #b0281a;}
 .inputrow, .contentrow{ width:100%; margin:auto 0 10px 0;}
 .inputrow{ height:40px;}
 .profile_content .inputrow{ height:20px; margin-bottom:0;}
 .inputrow label.inputlabel{ width: 25%; display: block; float: left; text-align: right; position: relative; top:6px; padding-right:10px;}
 .inputrow .inputarea{float: left; padding: 0; width: 73%;}
 .autocomplete_field{ width: 300px!important;top: 0; border-radius:5px; background-color: #FFF; line-height: 150%;margin: 0; border-top: 1px solid #a0a1a3; border-left: 1px solid #a0a1a3; border-bottom: 1px solid #d1d3d4; border-right: 1px solid #d1d3d4;padding: 7px 4px;-webkit-box-shadow: inset 3px 3px 5px 6px #ccc; box-shadow: inset 1px 1px 2px #CCC; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
-
+.discription_area{ max-width:73%;margin-bottom:10px;}
 .tabel_container{ color:#444444}
 .tabel_container th{ text-align:left; color:#333333}
 .tabel_container tr{border-bottom:1px solid #f1f1f1;}
@@ -115,10 +118,11 @@ border-radius:  5px 5px 0  0; border:1px solid #6986c0; border-bottom:none; bord
 .tabel_container tr td span.birthday{ float:right}
 .tabel_container tr td p.st_name{ font-weight:600; color:#003399}
 
-.profile_image_container{ float:left; width:20%; padding:10px;}
+.profile_image_container{ float:left; width:23%; padding:10px;}
 .profileimage{ width:200px; float:right}
 .profile_header_container{ float:left; width:72%; padding-left:10px;}
 .profile_header_container h4{ font-size:25px; padding:0; margin:0}
+.profile_header_container.student_name h4{ margin-top: 28px;}
 .profile_header_container p{ font-size:14px; color:#1356AA}
 .profile_content label.inputlabel{ top:0; font-size:14px; font-weight:600;}
 /*buttons Styles */
@@ -143,7 +147,11 @@ color: #222;
 -moz-box-shadow: 0px 1px 1px 0px rgba(10, 10, 10, 0.4);
 box-shadow: 0px 1px 1px 0px rgba(10, 10, 10, 0.4);padding: 9px 29px;font-weight:600;}
 .but_change:hover{ background:#E9E6E6}
-.nav_butarea{ height:30px; width:500px;}
+.nav_butarea{ height: 30px;
+width: 118px;
+position: absolute;
+right: 0;
+top: 0;}
 
 
 .sub_container{ width:243px;  float:left; padding-bottom:25px; position:relative;}
@@ -152,6 +160,9 @@ box-shadow: 0px 1px 1px 0px rgba(10, 10, 10, 0.4);padding: 9px 29px;font-weight:
 .widgets a{text-decoration: none;}
 .widgets ul{ list-style-type:none; padding:0; margin:0 }
 .widgets ul li{ height:30px; padding:5px 0 0 10px; border-bottom:1px solid #CCCCCC; font-weight:600; color:#1356AA}
+
+.widgets ul li img{vertical-align: middle; width: 12px; margin-right: 10px; line-height: 1; }
+.widgets p{ margin:10px;}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
