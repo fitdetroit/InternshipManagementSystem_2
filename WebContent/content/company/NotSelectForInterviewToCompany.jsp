@@ -15,10 +15,11 @@
 							  </tr>
 							</thead>
 							<tbody>
-							
+					
+							<s:iterator value="list" var="student">
 								<tr class="tbody"><td>&nbsp;</td>
 									<td>
-									<p class="st_name">Charith Hewalge</p>
+									<p class="st_name"><s:property value="nameInFull"/></p>
 									<p>44, Wadiyagoda, Ranna.44, Wadiyagoda, Ranna.</p>
 									<p>Email : sdfsdf@gmail.com | Mobile : 07188998899,0777337788</p>
 									<p><span>Male</span><span class="birthday">Birth day: 1989.07.20</span></p>
@@ -27,10 +28,25 @@
 									<td>
 									<p>Web apps, Ruby on Rails, PHP based CMSes (Drupal, Expression Engine, Wordpress, Joomla.etc) & Frameworks (CakePHP, CodeIgniter), Machine Learning & Big Data</p>
 									<div class="inputarea action_bottons_area">
-										<input type="submit" value="View Profile" class="action_bottons view_button"/>
-									<input type="submit" value="Call Interview" class=" action_bottons select_button" />
-									<input type="submit" value="Select" class=" action_bottons select_button" />
-									<input type="submit" value="Reject" class="action_bottons reject_button" />
+									
+									<ul>
+										<li>
+											<s:form method="post" action="StudentCvToCompany">
+											<s:hidden label="student user name" name="studentUserName" value="%{studentUserName}"></s:hidden>
+											<input type="submit" value="View Profile" class="action_bottons view_button"/>
+											</s:form>
+										</li>
+										<li><input type="submit" value="Call Interview" class=" action_bottons select_button" /></li>
+										<li>
+											<s:form method="post" action="UpdateStateToInterview" >
+												<s:hidden label="student user name" name="studentUserName" value="%{studentUserName}"></s:hidden>
+												<s:hidden label="Company User Name" name="CompanyUserName" value="%{#session.userName}"></s:hidden>
+												<input type="submit" value="Select" class=" action_bottons select_button" />
+											</s:form>
+										</li>
+										<li><input type="submit" value="Reject" class="action_bottons reject_button" /></li>	
+									</ul>
+									
 									</div>
 									</td>
 									
@@ -38,7 +54,7 @@
 									
 								</tr><!-- /End tr content-->
 								
-								
+</s:iterator>	
 							</tbody>
 						
 						</table>				

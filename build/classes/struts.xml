@@ -39,4 +39,5 @@
 	<include file="student.xml"></include>
 	<include file="company.xml"></include>
 	<include file="admin.xml"></include>
+	<include file="Support.xml"></include>
 </struts>

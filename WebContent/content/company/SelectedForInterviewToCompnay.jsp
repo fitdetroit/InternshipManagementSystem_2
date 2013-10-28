@@ -1,7 +1,5 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
 
-<%@ taglib uri="/struts-tags" prefix="s"%>
-
 <h2>Selected Students for Interviews</h2>
 						
 					

@@ -15,7 +15,7 @@ table.element_container td{ padding-left:30px; width:800px;}
 		<p>Freelancer.com is the world’s #1 outsourcing website and consistently ranks in the Top 250 Sites Worldwide. Advertise to millions of professionals and business decision makers everyday!</p></div>
     <div class="profile_container">
 		<div class="support">
-		<form action="" id="submit_msg">
+		<s:form method="post" action="SupportAction1">
 			<table cellpadding="0" cellspacing="0" class="element_container">
 			<th>Contact Person</th>
 			<tr><td>Mrs: K.H.Kodikara<br>Faculty of Information Technology<br>University of Moratuwa</td></tr>
@@ -30,6 +30,6 @@ table.element_container td{ padding-left:30px; width:800px;}
 			<tr><td><textarea class="msg_content" name="msg"></textarea></td></tr>
 			<tr><td><input type="submit" name="" value="Submit" class="but_submit"/></td></tr>
 			</table>
-		</form>
+		</s:form>
 		</div>
 		</div>

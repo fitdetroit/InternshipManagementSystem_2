@@ -132,7 +132,9 @@ border-radius:  5px 5px 0  0; border:1px solid #6986c0; border-bottom:none; bord
 .tabel_container tr td p{ margin: 0; line-height: 174%;padding: 0;}
 .tabel_container tr td p.st_name{ font-weight: 600; color: #003399; }
 .tabel_container tr td .action_bottons_area{ float:right; position:absolute; bottom:5px; right:5px; padding:0}
-.tabel_container tr td .action_bottons_area .action_bottons{ background: #CCCCCC; border:1px solid #CCCCCC; height:20px;}
+.tabel_container tr td .action_bottons_area ul{ list-style-type:none; padding:0; margin:0}
+.tabel_container tr td .action_bottons_area ul li{ float:left; margin-left:2px;}.
+tabel_container tr td .action_bottons_area ul li .action_bottons{ background: #CCCCCC; border:1px solid #CCCCCC; height:20px;}
 .profile_image_container{ float:left; width:23%; padding:10px;}
 .profileimage{ width:100px; float:right}
 .profile_header_container{ float:left; width:72%; padding-left:10px;}
