@@ -117,6 +117,7 @@ border-radius:  5px 5px 0  0; border:1px solid #6986c0; border-bottom:none; bord
 .profile_subcontent label.inputlabel{ width: 14%; display: block; float:left; position: relative; color:#444444;font-weight:600;}
 .inputrow .inputarea{float: left; padding: 0; width: 73%;}
 .autocomplete_field{ width: 300px!important;top: 0; border-radius:5px; background-color: #FFF; line-height: 150%;margin: 0; border-top: 1px solid #a0a1a3; border-left: 1px solid #a0a1a3; border-bottom: 1px solid #d1d3d4; border-right: 1px solid #d1d3d4;padding: 7px 4px;-webkit-box-shadow: inset 3px 3px 5px 6px #ccc; box-shadow: inset 1px 1px 2px #CCC; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+.input_disabled{ background-color: #EEE;}
 .discription_area{ max-width:73%;margin-bottom:10px;}
 .tabel_container{ color:#444444}
 .tabel_container th{ text-align:left; color:#333333}

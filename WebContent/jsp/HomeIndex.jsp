@@ -42,7 +42,7 @@
 							Veiw Profile</li>
 						  <li>
 							<div class="icon_log_out"></div>
-							Log out</li>
+							<a href="<s:url action="LogOut"/>">Log out</a></li>
 						</ul>
 					  </div><!-- End submenu-->
 					  
