@@ -28,7 +28,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">About Company </label>
 								<div class="inputarea">													 
-									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" ></textarea>
+									 <textarea class="autocomplete_field half discription_area" placeholder="Small discription about Company" ></textarea>
 								</div>
 							</div>
 							
@@ -59,7 +59,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">&nbsp;</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" ></textarea>
 								</div>
 							</div>
 						</fieldset>	
