@@ -18,6 +18,7 @@ public class Support {
 	private String senderEmail;
 	private String senderUserName;
 	private String senderMessage;
+	private String senderName;
 	
 	
 	
@@ -32,6 +33,12 @@ public class Support {
 	
 	
 	
+	public String getSenderName() {
+		return senderName;
+	}
+	public void setSenderName(String senderName) {
+		this.senderName = senderName;
+	}
 	//getters and setters
 	public int getSupportMessageId() {
 		return supportMessageId;

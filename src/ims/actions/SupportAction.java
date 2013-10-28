@@ -23,7 +23,7 @@ public class SupportAction extends ActionSupport{
 	
 	
 	private String senderEmail;
-	private String senderUserName;
+	private String senderName;
 	private String senderMessage;
 	
 	
@@ -43,8 +43,9 @@ public class SupportAction extends ActionSupport{
 		Support support= new Support();
 		
 		support.setSenderEmail(getSenderEmail());
-		support.setSenderUserName(getSenderUserName());
+		support.setSenderUserName(str);
 		support.setSenderMessage(getSenderMessage());
+		support.setSenderName(getSenderName());
 		
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
@@ -77,14 +78,20 @@ public class SupportAction extends ActionSupport{
 	}
 
 
-	public String getSenderUserName() {
-		return senderUserName;
+
+
+	public String getSenderName() {
+		return senderName;
 	}
 
 
-	public void setSenderUserName(String senderUserName) {
-		this.senderUserName = senderUserName;
+
+
+	public void setSenderName(String senderName) {
+		this.senderName = senderName;
 	}
+
+
 
 
 	public String getSenderMessage() {

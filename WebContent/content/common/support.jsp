@@ -27,7 +27,7 @@ table.element_container td{ padding-left:30px; width:800px;}
 			<table cellpadding="0" cellspacing="0" class="element_container">
 			<th>Send a Message</th>
 			<tr><td><input type="text" class="msg_inputs" name="senderEmail" placeholder="Enter your email address.."/></td></tr>
-			<tr><td><input type="text" class="msg_inputs" name="senderUserName" placeholder="Enter your Name.."/></td></tr>
+			<tr><td><input type="text" class="msg_inputs" name="senderName" placeholder="Enter your Name.."/></td></tr>
 			<tr><td><textarea class="msg_content" name="senderMessage"></textarea></td></tr>
 			<tr><td><input type="submit" name="" value="Submit" class="but_submit"/></td></tr>
 			</table>
