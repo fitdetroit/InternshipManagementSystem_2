@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="/struts-tags" prefix="s"%>
 <s:form method="post" action="RegisterCompany" enctype="multipart/form-data">
 					<div class="notification_area">
@@ -21,7 +22,7 @@
 								<label class="inputlabel">Select a Profile Picture</label>
 								<div class="inputarea">													 
 			
-									<input type="file" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture"/>
+									<input type="file" class="autocomplete_field half" name="ProfilePicture"/>
 								</div>
 							</div>
 							
@@ -69,21 +70,21 @@
 							<div class="inputrow">
 								<label class="inputlabel">Telephone</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="companyTelephone"/>
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">Company Address</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
+									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="companyAddress"/>
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">Website URL</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
+									 <input type="text" placeholder="Type project name to find existing" name="companyWeb" class="autocomplete_field half" />
 								</div>
 							</div>
 							
