@@ -156,6 +156,11 @@
 			<result name="error" type="redirect">../index</result>
 		</action>
 		
+	<action name="Support" class="ims.actions.SupportAction" method="support">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		
 		
 		
 		
