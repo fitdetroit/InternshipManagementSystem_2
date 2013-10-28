@@ -57,7 +57,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">&nbsp;</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" value="<%= request.getAttribute("technologies") %>"/>
 								</div>
 							</div>
 						</fieldset>	
@@ -88,7 +88,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">Email Address</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
+									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" value="<%= request.getAttribute("companyEmail") %>"/>
 								</div>
 							</div>
 						</fieldset>
@@ -100,19 +100,19 @@
 							<div class="inputrow">
 								<label class="inputlabel">Name of the Person</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" value="<%= request.getAttribute("contactPerson") %>"/>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Contact Number</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" value="<%= request.getAttribute("contactPersonTelNo") %>"/>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Contact email Address</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" value="<%= request.getAttribute("contactPersonEmail") %>"/>
 								</div>
 							</div>
 							<p>This field is optional</p>
@@ -120,19 +120,19 @@
 							<div class="inputrow">
 								<label class="inputlabel">Name of the Person</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" value="<%= request.getAttribute("alContactPerson") %>"/>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Contact Number</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" value="<%= request.getAttribute("alContactPersonTelNo") %>"/>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Contact email Address</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" value="<%= request.getAttribute("alContactPersonEmail") %>"/>
 								</div>
 							</div>
 						</fieldset>
