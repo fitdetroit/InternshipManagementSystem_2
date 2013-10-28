@@ -36,7 +36,7 @@
 		<div class="login_area grid_5">
 			
 			<div class="login_top">
-				<form method="GET" action="Login" >	
+				<form method="post" action="Login" >	
 				<input type="text" name="userName" class="login_inputs" placeholder="Username"/>			
 				<input type="password" name="password" class="login_inputs"  placeholder="Password" />
 				<s:hidden  name="loginPageType" value="normall"></s:hidden>
