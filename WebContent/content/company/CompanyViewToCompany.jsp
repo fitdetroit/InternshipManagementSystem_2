@@ -19,7 +19,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">Username</label>
 								<div class="inputarea">													 
-									 <p>Charith Hewalge</p>
+									 <p>mit</p>
 								</div>
 							</div>
 							

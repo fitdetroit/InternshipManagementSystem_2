@@ -1,5 +1,4 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
-<h2>Company Registration Form</h2>
 					<div class="notification_area">
 						<h2>Welcome To Internship Management System</h2>
 						<p>When each splash div was set to absolute positioning, but I realised that these would appear in different places in ...</p>

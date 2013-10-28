@@ -63,17 +63,17 @@ body {	font-size: 12px; background:#EFF7FF}
 .header{ width:100%; -webkit-box-shadow:  0px 5px 5px 5px rgba(0, 0, 0, 0.2);
         
         box-shadow:  0px 5px 5px 5px rgba(0, 0, 0, 0.2);}
-.header_top{ background:url(assets/img/header_top_bg.png) repeat-x; width:100%; height:34px;}
+.header_top{ background:url(../img/header_top_bg.png) repeat-x; width:100%; height:34px;}
 .wrapper{ width:1330px; margin:0 auto 0 auto}
 .header_top img{ height:20px; float:left; margin:6px auto}
 .header h1{ font-family: Helvetica,Arial,sans-serif; font-weight: normal; color: #9E9D9D; font-size: 14px; float: left; margin: 7px auto auto 7px;text-shadow: 2px 2px 2px #000000;}
 .header_nav{ float:right; width:500px; height:30px; position:relative}
 .header_nav img{ height:15px; margin:9px auto; float:right}
 .header_nav label{font-family: Helvetica,Arial,sans-serif; font-weight: normal; color: #9E9D9D; font-size: 12px; float: right; margin: 9px auto;text-shadow: 2px 2px 2px #000000; padding-right:10px;}
-.header_bottom{ background:url(assets/img/header_bottom_bg.png) repeat-x; width:100%; height:51px; margin:0; position:relative; z-index:10}
+.header_bottom{ background:url(../img/header_bottom_bg.png) repeat-x; width:100%; height:51px; margin:0; position:relative; z-index:10}
 .main_menu{ float:left}
 .main_menu ul{ list-style-type:none; margin:0; padding:0;}
-.main_menu ul li{ float:left; padding:10px; margin-right:1px; margin-top:15px; background:url(assets/img/main_menu_bg.png) repeat-x; height:15px;-webkit-border-radius: 5px 5px 0  0;
+.main_menu ul li{ float:left; padding:10px; margin-right:1px; margin-top:15px; background:url(../img/main_menu_bg.png) repeat-x; height:15px;-webkit-border-radius: 5px 5px 0  0;
 border-radius:  5px 5px 0  0; border:1px solid #6986c0; border-bottom:none; border-bottom-raduis: none;text-shadow: 1px 1px 1px #ABBECF;filter: dropshadow(color=#ABBECF, offx=1, offy=1);}
 .main_menu ul li.home, .main_menu ul li:hover{ background:#FFFFFF; border:none; border-bottom:1px solid #FFFFFF;border:1px solid #fff; cursor:pointer}
 .submenu{display: none; width:214px; height:100px; overflow:hidden; background:#f2f5fa; z-index:30; position:absolute;  margin-top: 34px; margin-left: 14px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45); right:0}
@@ -81,8 +81,8 @@ border-radius:  5px 5px 0  0; border:1px solid #6986c0; border-bottom:none; bord
 .submenu ul li{ display:block; border-bottom:1px solid #CCCCCC; float:none; height:30px; padding:0 0 0 10px; width:204px; font-size:0.9em; cursor:pointer} 
 .submenu ul li:hover{ background:#0066CC; color:#FFFFFF}
 .icon_view_pro, .icon_log_out{ width:20px; height:20px; float:left; margin: 7px 0px 0 0;}
-.icon_view_pro {background: url(img/glyphicons-halflings.png) no-repeat -168px 0;}
-.icon_log_out {background: url(img/glyphicons-halflings.png) no-repeat -383px 0;}
+.icon_view_pro {background: url(../img/glyphicons-halflings.png) no-repeat -168px 0;}
+.icon_log_out {background: url(../img/glyphicons-halflings.png) no-repeat -383px 0;}
 
 
 
@@ -92,17 +92,29 @@ border-radius:  5px 5px 0  0; border:1px solid #6986c0; border-bottom:none; bord
 .notification_area{ background:rgba(227, 252, 221, 1); margin:0; border:1px solid #C2F0C2; padding:10px; position:relative}
 .main_container h2{ font: 100%/150% Arial,Helvetica,sans-serif; font-weight: normal;font-size: 175%; color: #090; margin:0; padding:0; margin-left:10px;}
 .notification_area h2{ margin-left:0;}
-.form_container{ padding:10px; }
-.fieldset{background-color: #f7f7f7; border: 1px solid #ececec; margin: 10px 0; padding: 7px 0; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; overflow:auto;padding: 10px;}
+.form_container{ padding:15px; }
+.fieldset{background-color: #f7f7f7; border: 1px solid #ececec; margin: 10px 0; padding: 7px 0; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; overflow:auto;padding: 10px; position:relative}
 .importent{ background-color: #FFF4F4; border: 1px solid #FFD8D8; }
-.fieldset p{ font-size:14px; padding:0; margin:0;}
-.fieldset p.longtext{ color:#666666; margin-top:15px;}
-.main_container h3{ font-weight:600; padding:10px 0 10px 0; margin:0; color: #1356AA;}
+.fieldset p{ font-size:14px; padding:0; margin:0; line-height:150%;}
+.fieldset p.longtext{ color:#666666; margin-top:10px;}
+.longtext_container{ margin-top:15px;}
+.fieldset p.profile_subcontent{ color:#333333}
+.profile_header_container hr{ border-top: 4px solid #888888;}
+.social_icon{ background:url(../img/linkedin_logo_default.png) top left no-repeat; width:30px; height:30px; position:absolute; bottom:10px; right:10px; cursor:pointer}
+.social_icon:hover{ background:url(../img/linkedin_logo_active.png) top left no-repeat; }
+.cvcontainer .fieldset{ margin: 10px;}
+.main_container h3{ font-weight:600; padding:10px 0 10px 0; margin:0; color: #444444;} 
 .main_container h3.header_importent{  color: #b0281a;}
+.cvcontainer h3{ margin:20px auto 10px 10px; padding:8px 0;}
+.profile_sub_header img{ float:left; margin:auto 10px auto 10px; width:30px;}
 .inputrow, .contentrow{ width:100%; margin:auto 0 10px 0;}
 .inputrow{ height:40px;}
-.profile_content .inputrow{ height:20px; margin-bottom:0;}
+.profile_content .inputrow{ height:25px; margin-bottom:0;}
+.profile_content ul li{ line-height:150%; font-size:14px; list-style-type: square; width:630px;}
+.profile_content h4{ font-weight:600; padding:0; margin:0;}
+.profile_content ul li label{ padding-left:20px;}
 .inputrow label.inputlabel{ width: 25%; display: block; float: left; text-align: right; position: relative; top:6px; padding-right:10px;}
+.profile_subcontent label.inputlabel{ width: 14%; display: block; float:left; position: relative; color:#444444;font-weight:600;}
 .inputrow .inputarea{float: left; padding: 0; width: 73%;}
 .autocomplete_field{ width: 300px!important;top: 0; border-radius:5px; background-color: #FFF; line-height: 150%;margin: 0; border-top: 1px solid #a0a1a3; border-left: 1px solid #a0a1a3; border-bottom: 1px solid #d1d3d4; border-right: 1px solid #d1d3d4;padding: 7px 4px;-webkit-box-shadow: inset 3px 3px 5px 6px #ccc; box-shadow: inset 1px 1px 2px #CCC; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
 .discription_area{ max-width:73%;margin-bottom:10px;}
@@ -119,10 +131,10 @@ border-radius:  5px 5px 0  0; border:1px solid #6986c0; border-bottom:none; bord
 .tabel_container tr td p.st_name{ font-weight:600; color:#003399}
 
 .profile_image_container{ float:left; width:23%; padding:10px;}
-.profileimage{ width:200px; float:right}
+.profileimage{ width:100px; float:right}
 .profile_header_container{ float:left; width:72%; padding-left:10px;}
 .profile_header_container h4{ font-size:25px; padding:0; margin:0}
-.profile_header_container.student_name h4{ margin-top: 28px;}
+.profile_header_container.student_name h4{ margin-top: 2px;}
 .profile_header_container p{ font-size:14px; color:#1356AA}
 .profile_content label.inputlabel{ top:0; font-size:14px; font-weight:600;}
 /*buttons Styles */
@@ -152,6 +164,12 @@ width: 118px;
 position: absolute;
 right: 0;
 top: 0;}
+
+
+
+.cvcontainer{ width:760px; margin:0 auto 0 auto; border:1px solid #CCCCCC}
+
+
 
 
 .sub_container{ width:243px;  float:left; padding-bottom:25px; position:relative;}

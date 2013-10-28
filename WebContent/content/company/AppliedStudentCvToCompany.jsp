@@ -1,127 +1,133 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
-<h2>Company Profile</h2>
-					<div class="form_container">
+<h2>Student Curriculem vitae</h2>
+			<div class="cvcontainer">
+			
+			
+			<div class="form_container">
 					<fieldset class="fieldset">
 						<div class="contentrow">
 						<div class="profile_image_container">
-							<img src="assets/img/st_profileimg.jpg" alt="student name" class="profileimage" >
+							<img src="assets/img/images.jpg" alt="student name" class="profileimage" >
 						</div>
 						<div class="profile_header_container student_name">
-							<h4>Charith Hewage</h4>
+							<h4>H.K.D.Sehan De Silva</h4>
+							<hr>
 							<p>No.44, New Kandy Road Malabe, Sri Lanka.</p>
-							<p class="longtext">Email : charithhewage@gmail.com | Tel : 0771227338 / 07771122883</p>
+							
+							<div class="longtext_container">
+							<p class="longtext profile_subcontent"><label class="inputlabel">Index No </label>114089N</p>
+							<p class="longtext profile_subcontent"><label class="inputlabel">Email </label> shehandesilva@gmail.com </p>
+							<p class=" longtext profile_subcontent"><label class="inputlabel">Mobile </label> 0771227338 / 07771122883</p>
+							</div>
+							<div class="social_icon"></div>
 						</div>
 						
 						</div>
 					</fieldset>
-					<h3>Genaral Information</h3>
+					
+		
+					<div class="profile_sub_header"><img src="assets/img/biodata_icon.png"/><h3>Personal Deta</h3></div>
 					<fieldset class="fieldset profile_content">
 							<div class="inputrow">
-								<label class="inputlabel">Username</label>
+								<label class="inputlabel">Gender</label>
 								<div class="inputarea">													 
-									 <p>Charith Hewalge</p>
+									 <p>Male</p>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Nationality</label>
+								<div class="inputarea">													 
+									 <p>Sri Lankan</p>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Religion</label>
+								<div class="inputarea">													 
+									 <p>Buddhism</p>
 								</div>
 							</div>
 							
 							<div class="inputrow">
-								<label class="inputlabel">No of Vacancies</label>
+								<label class="inputlabel">Date of Birth</label>
 								<div class="inputarea">													 
-									 <p>10</p>
+									 <p>20.03.1990</p>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">National ID card No</label>
+								<div class="inputarea">													 
+									 <p>982893879V</p>
 								</div>
 							</div>
 						</fieldset>
-						
-					<h3>Technologies</h3>
+						<hr>
+					
+					<div class="profile_sub_header"><img src="assets/img/objectives.png"/><h3>Objectives</h3></div>
 					<fieldset class="fieldset profile_content">
-							<div class="inputrow">
-								<label class="inputlabel">&nbsp;</label>
-								<div class="inputarea">													 
-									 <p>C#, Web Developing, php, java, .Net </p>
-								</div>
-							</div>
+							<ul><li>To excel in a company where my knowledge and innovative capability can be fully utilize to serve the company and community with my full capacity.</li>
+							<li>To excel in a company where my knowledge and innovative capability can be fully utilize to serve the company and community with my full capacity.</li>
+							<li>To excel in a company where my knowledge and innovative capability can be fully utilize to serve the company and community with my full capacity.</li>
+							<li>To excel in a company where my knowledge and innovative capability can be fully utilize to serve the company and community with my full capacity.</li>
+							</ul>
+						</fieldset>
+					<hr>		
+					<div class="profile_sub_header"><img src="assets/img/skills.png"/><h3>Skills & Expertise</h3></div>
+					<fieldset class="fieldset profile_content">
+					<p style="padding-left:10px;">Web apps, Ruby on Rails, PHP based CMSes (Drupal, Expression Engine, Wordpress, Joomla.etc) & Frameworks (CakePHP, CodeIgniter), Machine Learning & Big Data</p>
+								
+						
 						</fieldset>
 						
-					<h3>Contact Information - Genaral Contacts</h3>
+					<hr>	
+					<div class="profile_sub_header"><img src="assets/img/experience.png"/><h3>Experience</h3></div>
 					<fieldset class="fieldset profile_content">
-							<div class="inputrow">
-								<label class="inputlabel">Telephone</label>
-								<div class="inputarea">													 
-									 <p>0112334432 </p>
-								</div>
-							</div>
-							<div class="inputrow">
-								<label class="inputlabel">Fax</label>
-								<div class="inputarea">													 
-									 <p>0112334432 </p>
-								</div>
-							</div>
-							<div class="inputrow">
-								<label class="inputlabel">E-mail</label>
-								<div class="inputarea">													 
-									 <p>info@mit.com </p>
-								</div>
-							</div>
-							<div class="inputrow">
-								<label class="inputlabel">Web Site</label>
-								<div class="inputarea">													 
-									 <p>www.mitsrilanka.lk </p>
-								</div>
-							</div>
+							<ul>
+								<li><h4>Colombo Hotel Discounts</h4>
+									<label>Check & Compare Rates, Reviews. Up to 75% off. Book today!</label></li>
+								<li><h4>Vacancies Australia</h4>
+									<label>Check & Compare Rates, Reviews. Up to 75% off. Book today!</label></li>
+								<li><h4>Colombo Hotel Discounts</h4>
+									<label>Check & Compare Rates, Reviews. Up to 75% off. Book today!</label></li>	
+							</ul>
 						</fieldset>
-						
-						
-					<h3>Contact Information - Contact Person</h3>
+					<hr>
+					<div class="profile_sub_header"><img src="assets/img/projects_icon.png"/><h3>Projects</h3></div>
 					<fieldset class="fieldset profile_content">
-							<div class="inputrow">
-								<label class="inputlabel">Name</label>
-								<div class="inputarea">													 
-									 <p>KDA. Sarath Perera</p>
-								</div>
-							</div>
-							<div class="inputrow">
-								<label class="inputlabel">Contact Number</label>
-								<div class="inputarea">													 
-									 <p>0777889988</p>
-								</div>
-							</div>
-							<div class="inputrow">
-								<label class="inputlabel">Email</label>
-								<div class="inputarea">													 
-									 <p>sdfsdf@gmail.com</p>
-								</div>
-							</div>
+							<ul>
+								<li><h4>Colombo Hotel Discounts</h4>
+									<label>Check & Compare Rates, Reviews. Up to 75% off. Book today!</label></li>
+								<li><h4>Vacancies Australia</h4>
+									<label>Check & Compare Rates, Reviews. Up to 75% off. Book today!</label></li>
+								<li><h4>Colombo Hotel Discounts</h4>
+									<label>Check & Compare Rates, Reviews. Up to 75% off. Book today!</label></li>	
+							</ul>
 						</fieldset>
+					<hr>	
 						
-						
-					<h3>Contact Information - Alternative Contact Person</h3>
+					<div class="profile_sub_header"><img src="assets/img/education.png"/><h3>Education</h3></div>
 					<fieldset class="fieldset profile_content">
-							<div class="inputrow">
-								<label class="inputlabel">Name</label>
-								<div class="inputarea">													 
-									 <p>KDA. Sarath Perera</p>
-								</div>
-							</div>
-							<div class="inputrow">
-								<label class="inputlabel">Contact Number</label>
-								<div class="inputarea">													 
-									 <p>0777889988</p>
-								</div>
-							</div>
-							<div class="inputrow">
-								<label class="inputlabel">Email</label>
-								<div class="inputarea">													 
-									 <p>sdfsdf@gmail.com</p>
-								</div>
-							</div>
+							<ul>
+								<li><h4>Colombo Hotel Discounts</h4>
+									<label>Check & Compare Rates, Reviews. Up to 75% off. Book today!</label></li>
+								<li><h4>Vacancies Australia</h4>
+									<label>Check & Compare Rates, Reviews. Up to 75% off. Book today!</label></li>
+								<li><h4>Colombo Hotel Discounts</h4>
+									<label>Check & Compare Rates, Reviews. Up to 75% off. Book today!</label></li>	
+							</ul>
 						</fieldset>
 						
 						
 					</div><!-- /End Form container-->
-					
-					
-					
-					
-					
+			
+			
+			
+			
+			
+			
+			
+			
+			</div><!-- CV container-->
+		
 					
 					
 					
