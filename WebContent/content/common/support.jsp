@@ -1,3 +1,4 @@
+ <%@ taglib uri="/struts-tags" prefix="s"%>  
    <style>
 .page_title{ background:rgba(227, 252, 221, 1); margin-top:10px; padding:5px 0 0 5px; border: 1px solid #C2F0C2;} 
 .profile_container{ font-size:14px; padding:10px;}
@@ -15,7 +16,10 @@ table.element_container td{ padding-left:30px; width:800px;}
 		<p>Freelancer.com is the world’s #1 outsourcing website and consistently ranks in the Top 250 Sites Worldwide. Advertise to millions of professionals and business decision makers everyday!</p></div>
     <div class="profile_container">
 		<div class="support">
-		<s:form method="post" action="SupportAction1">
+
+
+		<form method="post" action="Support" enctype="multipart/form-data">
+
 			<table cellpadding="0" cellspacing="0" class="element_container">
 			<th>Contact Person</th>
 			<tr><td>Mrs: K.H.Kodikara<br>Faculty of Information Technology<br>University of Moratuwa</td></tr>
@@ -25,9 +29,9 @@ table.element_container td{ padding-left:30px; width:800px;}
 			
 			<table cellpadding="0" cellspacing="0" class="element_container">
 			<th>Send a Message</th>
-			<tr><td><input type="text" class="msg_inputs" name="email" placeholder="Enter your email address.."/></td></tr>
-			<tr><td><input type="text" class="msg_inputs" name="name" placeholder="Enter your Name.."/></td></tr>
-			<tr><td><textarea class="msg_content" name="msg"></textarea></td></tr>
+			<tr><td><input type="text" class="msg_inputs" name="senderEmail" placeholder="Enter your email address.."/></td></tr>
+			<tr><td><input type="text" class="msg_inputs" name="senderName" placeholder="Enter your Name.."/></td></tr>
+			<tr><td><textarea class="msg_content" name="senderMessage"></textarea></td></tr>
 			<tr><td><input type="submit" name="" value="Submit" class="but_submit"/></td></tr>
 			</table>
 		</s:form>

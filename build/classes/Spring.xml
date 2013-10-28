@@ -93,6 +93,11 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
+		<!-- regarding to support message passing -->
+	<bean id="SupportHandle" class="ims.business.SupportDataSession">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
 </beans>
 
 

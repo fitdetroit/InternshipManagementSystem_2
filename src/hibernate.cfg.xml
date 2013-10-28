@@ -44,10 +44,10 @@
 		<mapping class="ims.data.StudentCompany" />
 		<mapping class="ims.data.StudentComplitedProjects" />
 		<mapping class="ims.data.StudentOtherQulification" />
-		<mapping class="ims.data.StudentProfessionalExp" />
-		<mapping class="ims.data.Support" />
+		<mapping class="ims.data.StudentProfessionalExp" />		
 		<mapping class="ims.data.Messages" />
 		<mapping class="ims.data.MessageResponse" />
+		<mapping class="ims.data.Support" />
 
 
 	</session-factory>
