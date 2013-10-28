@@ -1,42 +1,43 @@
 package ims.data;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
 
 
 @Entity
+@org.hibernate.annotations.Entity(selectBeforeUpdate = true)
 @Table(name="Support")
 public class Support {
-
-	@Id
-	private String supMsgId;
+	
+	
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
+	private int supportMessageId;
 	private String senderEmail;
-	private String senderName;
-	private String description;
+	private String senderUserName;
+	private String senderMessage;
 	
-	@ManyToOne
-	@NotFound(action=NotFoundAction.IGNORE)
-	private Student student;
 	
-	@ManyToOne
-	@NotFound(action=NotFoundAction.IGNORE)
-	private Company company;
 	
-	public String getSupMsgId() {
-		return supMsgId;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//getters and setters
+	public int getSupportMessageId() {
+		return supportMessageId;
 	}
-	public void setSupMsgId(String supMsgId) {
-		this.supMsgId = supMsgId;
+	public void setSupportMessageId(int supportMessageId) {
+		this.supportMessageId = supportMessageId;
 	}
 	public String getSenderEmail() {
 		return senderEmail;
@@ -44,18 +45,22 @@ public class Support {
 	public void setSenderEmail(String senderEmail) {
 		this.senderEmail = senderEmail;
 	}
-	public String getSenderName() {
-		return senderName;
+	public String getSenderUserName() {
+		return senderUserName;
 	}
-	public void setSenderName(String senderName) {
-		this.senderName = senderName;
+	public void setSenderUserName(String senderUserName) {
+		this.senderUserName = senderUserName;
 	}
-	public String getDescription() {
-		return description;
+	public String getSenderMessage() {
+		return senderMessage;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setSenderMessage(String senderMessage) {
+		this.senderMessage = senderMessage;
 	}
+	
+	
+	
+	
 	
 	
 
