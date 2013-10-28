@@ -19,7 +19,6 @@ table.element_container td{ padding-left:30px; width:800px;}
 
 
 		<form method="post" action="Support" enctype="multipart/form-data">
-
 			<table cellpadding="0" cellspacing="0" class="element_container">
 			<th>Contact Person</th>
 			<tr><td>Mrs: K.H.Kodikara<br>Faculty of Information Technology<br>University of Moratuwa</td></tr>
@@ -34,6 +33,6 @@ table.element_container td{ padding-left:30px; width:800px;}
 			<tr><td><textarea class="msg_content" name="senderMessage"></textarea></td></tr>
 			<tr><td><input type="submit" name="" value="Submit" class="but_submit"/></td></tr>
 			</table>
-		</s:form>
+		</form>
 		</div>
 		</div>
