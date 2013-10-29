@@ -3,7 +3,7 @@ package ims.actions;
 import java.security.NoSuchAlgorithmException;
 
 import ims.data.Support;
-
+import ims.data.User;
 
 import com.opensymphony.xwork2.ActionSupport;
 

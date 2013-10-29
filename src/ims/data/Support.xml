@@ -6,11 +6,8 @@
 
 <struts>
 
-	<package name="support" namespace="/Support" extends="struts-default">
-	
          <action name="support" class="ims.actions.SupportAction"
 			method="support">
 			<result name="success" type="redirect">../index</result>
 		</action>
-		</package>
 </struts>
