@@ -70,8 +70,8 @@ public class UpdatingStudentCompany extends ActionSupport{
 	public String sendMailToStudentInfromInterview()
 	{
 		
-		final String username = "dkithmal10@gmail.com";
-		final String password = "password";
+		final String username = "fitprojectdetroit@gmail.com";
+		final String password = "detroitrox";
  
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");
@@ -89,7 +89,7 @@ public class UpdatingStudentCompany extends ActionSupport{
 		try {
  
 			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("dkithmal@yahoo.com"));
+			message.setFrom(new InternetAddress("fitprojectdetroit@gmail.com"));
 			message.setRecipients(Message.RecipientType.TO,
 				InternetAddress.parse("dkithmal10@gmail.com"));
 			message.setSubject("Selected For the interview");
@@ -130,8 +130,8 @@ public class UpdatingStudentCompany extends ActionSupport{
 	
 	public String sendMailToStudentInfromSelectedToCompany()
 	{
-		final String username = "dkithmal10@gmail.com";
-		final String password = "password";
+		final String username = "fitprojectdetroit@gmail.com";
+		final String password = "detroitrox";
  
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");
@@ -149,7 +149,7 @@ public class UpdatingStudentCompany extends ActionSupport{
 		try {
  
 			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("dkithmal@yahoo.com"));
+			message.setFrom(new InternetAddress("fitprojectdetroit@gmail.com"));
 			message.setRecipients(Message.RecipientType.TO,
 				InternetAddress.parse("dkithmal10@gmail.com"));
 			message.setSubject("Selected for the Internship ");

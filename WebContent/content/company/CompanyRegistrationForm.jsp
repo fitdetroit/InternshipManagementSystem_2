@@ -28,8 +28,10 @@
 							<div class="inputrow">
 								<label class="inputlabel">About Company </label>
 								<div class="inputarea">													 
-									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" ></textarea>
-								</div>
+
+									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" name="aboutCompany"></textarea>
+
+			</div>
 							</div>
 							
 							<div class="inputrow">
@@ -59,7 +61,10 @@
 							<div class="inputrow">
 								<label class="inputlabel">&nbsp;</label>
 								<div class="inputarea">													 
-									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" ></textarea>
+
+									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" name="technologies"></textarea>
+
+
 								</div>
 							</div>
 						</fieldset>	
@@ -69,28 +74,28 @@
 							<div class="inputrow">
 								<label class="inputlabel">Telephone</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="companyTelephone"/>
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">Company Address</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
+									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="companyAddress"/>
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">Website URL</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
+									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="companyWeb"/>
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">Email Address</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
+									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="companyEmail"/>
 								</div>
 							</div>
 						</fieldset>
@@ -100,28 +105,28 @@
 							<div class="inputrow">
 								<label class="inputlabel">Telephone</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="companyTelephone"/>
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">Company Address</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
+									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half"name="companyAddress" />
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">Website URL</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
+									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="companyWeb"/>
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">Email Address</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
+									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="companyEmail"/>
 								</div>
 							</div>
 						</fieldset>
@@ -132,19 +137,19 @@
 							<div class="inputrow">
 								<label class="inputlabel">Name of the Person</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="contactPerson"/>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Contact Number</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="contactPersonTelNo" />
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Contact email Address</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="contactPersonEmail"/>
 								</div>
 							</div>
 							<p>This field is optional</p>
@@ -152,19 +157,19 @@
 							<div class="inputrow">
 								<label class="inputlabel">Name of the Person</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="alContactPerson"/>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Contact Number</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="alContactPersonTelNo"/>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Contact email Address</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="alContactPersonEmail"/>
 								</div>
 							</div>
 						</fieldset>

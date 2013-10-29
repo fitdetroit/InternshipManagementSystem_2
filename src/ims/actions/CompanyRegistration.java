@@ -30,13 +30,20 @@ public class CompanyRegistration extends ActionSupport{
 	private String companyUserName;
 	private String companyName;
 	private String companyTelephone;
-	private String contactPerson;
 	private String companyAddress;
 	private String companyWeb;
 	private String noOfVacancies;
 	private String password;
 	private String conPassword;
 	private boolean allowed;
+	private String technologies;
+	private String companyEmail;
+	private String contactPerson;
+	private String contactPersonTelNo;
+	private String contactPersonEmail;
+	private String alContactPerson;
+	private String alContactPersonTelNo;
+	private String alContactPersonEmail;
 	
 	Company company = new Company();
 	User user = new User();
@@ -74,6 +81,14 @@ public class CompanyRegistration extends ActionSupport{
 		company.setCompanyWeb(getCompanyWeb());
 		company.setNoOfVacancies(getNoOfVacancies());
 		company.setAllowed(false);
+		company.setTechnologies(getTechnologies());
+		company.setCompanyEmail(getCompanyEmail());
+		company.setContactPerson(getAlContactPerson());
+		company.setContactPersonEmail(getAlContactPersonEmail());
+		company.setContactPersonTelNo(getContactPersonTelNo());
+		company.setAlContactPerson(getAlContactPerson());
+		company.setAlContactPersonEmail(getAlContactPersonEmail());
+		company.setAlContactPersonTelNo(getAlContactPersonTelNo());
 	
 		
 		
@@ -333,6 +348,120 @@ public class CompanyRegistration extends ActionSupport{
 	public void setNoOfVacancies(String noOfVacancies) {
 		this.noOfVacancies = noOfVacancies;
 	}
+
+
+
+
+	public String getMenu() {
+		return menu;
+	}
+
+
+
+
+	public void setMenu(String menu) {
+		this.menu = menu;
+	}
+
+
+
+
+	public String getTechnologies() {
+		return technologies;
+	}
+
+
+
+
+	public void setTechnologies(String technologies) {
+		this.technologies = technologies;
+	}
+
+
+
+
+	public String getCompanyEmail() {
+		return companyEmail;
+	}
+
+
+
+
+	public void setCompanyEmail(String companyEmail) {
+		this.companyEmail = companyEmail;
+	}
+
+
+
+
+	public String getContactPersonTelNo() {
+		return contactPersonTelNo;
+	}
+
+
+
+
+	public void setContactPersonTelNo(String contactPersonTelNo) {
+		this.contactPersonTelNo = contactPersonTelNo;
+	}
+
+
+
+
+	public String getContactPersonEmail() {
+		return contactPersonEmail;
+	}
+
+
+
+
+	public void setContactPersonEmail(String contactPersonEmail) {
+		this.contactPersonEmail = contactPersonEmail;
+	}
+
+
+
+
+	public String getAlContactPerson() {
+		return alContactPerson;
+	}
+
+
+
+
+	public void setAlContactPerson(String alContactPerson) {
+		this.alContactPerson = alContactPerson;
+	}
+
+
+
+
+	public String getAlContactPersonTelNo() {
+		return alContactPersonTelNo;
+	}
+
+
+
+
+	public void setAlContactPersonTelNo(String alContactPersonTelNo) {
+		this.alContactPersonTelNo = alContactPersonTelNo;
+	}
+
+
+
+
+	public String getAlContactPersonEmail() {
+		return alContactPersonEmail;
+	}
+
+
+
+
+	public void setAlContactPersonEmail(String alContactPersonEmail) {
+		this.alContactPersonEmail = alContactPersonEmail;
+	}
+	
+	
 
 
 }
