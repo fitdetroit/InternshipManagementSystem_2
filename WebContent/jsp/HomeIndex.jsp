@@ -84,10 +84,11 @@
 	   
 	   
 
-        <script src="assets/js/main.js"></script>
-		<script src="assets/js/plugins.js"></script>
-			
-			<script src="assets/js/equalheight.js"></script>
+<script type="text/javascript"  src="assets/js/plugins.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript" src="assets/js/jquery.validate.js"></script>
+<script type="text/javascript" src="assets/js/Regpage_validate.js"></script>
+<script src="assets/js/equalheight.js"></script>
 			<script>
 			$(document).ready(function() {
 				$(".equalheights").equalHeights();
