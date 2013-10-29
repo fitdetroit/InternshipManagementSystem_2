@@ -93,6 +93,7 @@ border-radius:  5px 5px 0  0; border:1px solid #6986c0; border-bottom:none; bord
 .main_container h2{ font: 100%/150% Arial,Helvetica,sans-serif; font-weight: normal;font-size: 175%; color: #090; margin:0; padding:0; margin-left:10px;}
 .notification_area h2{ margin-left:0;}
 .form_container{ padding:15px; }
+.editprofile{padding: 15px 90px 15px 90px;}
 .fieldset{background-color: #f7f7f7; border: 1px solid #ececec; margin: 10px 0; padding: 7px 0; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; overflow:auto;padding: 10px; position:relative}
 .importent{ background-color: #FFF4F4; border: 1px solid #FFD8D8; }
 .fieldset p{ font-size:14px; padding:0; margin:0; line-height:150%;}

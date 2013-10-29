@@ -1,15 +1,163 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="/struts-tags" prefix="s"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
+<s:form method="post" action="UpdateStudent" enctype="multipart/form-data" validate="true">
+<s:hidden label="Student User Name" name="studentUserName" value="%{#session.userName}"></s:hidden>
+<h2>Update Curriculum Vitae</h2>					
+					<div class="form_container editprofile">
+			
+			
+			<h3>Genaral Information</h3>
+						<fieldset class="fieldset">
+							<div class="inputrow">
+								<label class="inputlabel">Name In Full</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half"  name="companyName"/>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Name With Initials</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half"  name="companyName"/>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Gender</label>
+								<div class="inputarea">													 
+									
+									 <select class="autocomplete_field half"><option>Male</option><option>Female</option></select>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Marital Status</label>
+								<div class="inputarea">													 
+									
+									 <select class="autocomplete_field half"><option>Married</option><option>Unmarried</option></select>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Date Of birth</label>
+								<div class="inputarea">													 
+			
+									<input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture"/>
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Select a Profile Picture</label>
+								<div class="inputarea">													 
+			
+									<input type="file" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture"/>
+								</div>
+							</div>
+						</fieldset>
+						
+					<h3>Technologies</h3>
+						<fieldset class="fieldset">
+							<div class="inputrow">
+								<label class="inputlabel">&nbsp;</label>
+								<div class="inputarea">													 
+									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" ></textarea>
+								</div>
+							</div>
+						</fieldset>	
+						
+					<h3>Genaral Contact Information</h3>
+						<fieldset class="fieldset">
+							<div class="inputrow">
+								<label class="inputlabel">Telephone</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Company Address</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Website URL</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Email Address</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
+								</div>
+							</div>
+						</fieldset>
+						
+						<h3>Genaral Contact Information</h3>
+						<fieldset class="fieldset">
+							<div class="inputrow">
+								<label class="inputlabel">Telephone</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Company Address</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Website URL</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Email Address</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
+								</div>
+							</div>
+						</fieldset>
+												
+						<fieldset class="fieldset">
+							<div class="inputrow">
+								<input type="checkbox" name="tick"/>
+                <label for="tick">&nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</label>
+ 
+							</div>
+						</fieldset>	
+						
+						
+						<div class="inputrow">
+								<label class="inputlabel">&nbsp;</label>
+								<div class="inputarea">													 
+									 <input type="submit" value="SUBMIT" class="but_submit" id="signUp"/>
+									 
+									 <input type="submit" value="RESET" class="but_create"/>
+								</div>
+						</div>
+						
+						
+					</div><!-- /End Form container-->
+
+</s:form>
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div>
-<h2 align="center">Student Profile Updating Form</h2>
-
-<br/>
 <table>
 <tr><td><h4 >Your personal Details</h4></td></tr>
 <tr><td><s:form method="post" action="UpdateStudent" enctype="multipart/form-data" validate="true">

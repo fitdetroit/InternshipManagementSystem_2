@@ -1,4 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="/struts-tags" prefix="s"%>
 <s:form method="post" action="RegisterCompany" enctype="multipart/form-data">
 					<div class="notification_area">
@@ -10,12 +9,11 @@
 			
 			
 			<h3>Genaral Information</h3>
-			<s:form method="post" action="RegisterCompany" enctype="multipart/form-data" validate="true">
 						<fieldset class="fieldset">
 							<div class="inputrow">
 								<label class="inputlabel">Name of the company</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half"  name="companyName" value="${companyName}"/>
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half"  name="companyName"/>
 								</div>
 							</div>
 							
@@ -23,39 +21,35 @@
 								<label class="inputlabel">Select a Profile Picture</label>
 								<div class="inputarea">													 
 			
-
-
-									<input type="file" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture" />
-
+									<input type="file" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture"/>
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">About Company </label>
 								<div class="inputarea">													 
-									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" value="${companyName}"></textarea>
-
+									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" ></textarea>
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">Username</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" name="companyUserName" class="autocomplete_field half" value="${companyUserName}"/>
+									 <input type="text" placeholder="Type project name to find existing" name="companyUserName" class="autocomplete_field half" />
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">Password</label>
 								<div class="inputarea">													 
-									 <input type="password" id="password" name="password" class="autocomplete_field half" value="${password}"/>
+									 <input type="password" id="password" name="password" class="autocomplete_field half" />
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">Repeat Password</label>
 								<div class="inputarea">													 
-									 <input type="password" name="conPassword" placeholder="Type project name to find existing" class="autocomplete_field half" value="${conPassword}"/>
+									 <input type="password" name="conPassword" placeholder="Type project name to find existing" class="autocomplete_field half" />
 								</div>
 							</div>
 						</fieldset>
@@ -75,21 +69,21 @@
 							<div class="inputrow">
 								<label class="inputlabel">Telephone</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="companyTelephone"/>
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">Company Address</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="companyAddress"/>
+									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">Website URL</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" name="companyWeb" class="autocomplete_field half" />
+									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
 								</div>
 							</div>
 							
@@ -193,11 +187,6 @@
 								</div>
 						</div>
 						
-<<<<<<< HEAD
 						
 					</div><!-- /End Form container-->
 </s:form>
-=======
-						</s:form>
-					</div><!-- /End Form container-->
->>>>>>> origin
