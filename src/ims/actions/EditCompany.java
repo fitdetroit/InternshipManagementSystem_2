@@ -100,8 +100,7 @@ public class EditCompany extends ActionSupport {
 		setContactPersonTelNo(company.getContactPersonTelNo());
 		setAlContactPerson(company.getAlContactPerson());
 		setAlContactPersonEmail(company.getAlContactPersonEmail());
-		setAlContactPersonTelNo(company.getAlContactPersonTelNo());
-		
+		setAlContactPersonTelNo(company.getAlContactPersonTelNo());		
 		setPassword(user.getPassword());		
 		setPassword2(user.getPassword());
 		setConPassword(user.getPassword());
