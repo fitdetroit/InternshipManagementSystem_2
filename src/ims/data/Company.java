@@ -19,11 +19,20 @@ public class Company {
 	@Id
 	private String companyUserName;
 	private String companyName;
-	private String companyTelephone;
-	private String contactPerson;
+	private String companyTelephone;	
 	private String companyAddress;
 	private String companyWeb;
 	private String noOfVacancies;
+	private String aboutCompany;
+	private String technologies;
+	private String companyEmail;
+	private String contactPerson;
+	private String contactPersonTelNo;
+	private String contactPersonEmail;
+	private String alContactPerson;
+	private String alContactPersonTelNo;
+	private String alContactPersonEmail;
+	
 	private boolean allowed;
 	private boolean state;
 	private boolean receiveCv;
@@ -103,5 +112,55 @@ public class Company {
 	public void setNoOfVacancies(String noOfVacancies) {
 		this.noOfVacancies = noOfVacancies;
 	}
+	public String getAboutCompany() {
+		return aboutCompany;
+	}
+	public void setAboutCompany(String aboutCompany) {
+		this.aboutCompany = aboutCompany;
+	}
+	public String getTechnologies() {
+		return technologies;
+	}
+	public void setTechnologies(String technologies) {
+		this.technologies = technologies;
+	}
+	public String getCompanyEmail() {
+		return companyEmail;
+	}
+	public void setCompanyEmail(String companyEmail) {
+		this.companyEmail = companyEmail;
+	}
+	public String getContactPersonTelNo() {
+		return contactPersonTelNo;
+	}
+	public void setContactPersonTelNo(String contactPersonTelNo) {
+		this.contactPersonTelNo = contactPersonTelNo;
+	}
+	public String getContactPersonEmail() {
+		return contactPersonEmail;
+	}
+	public void setContactPersonEmail(String contactPersonEmail) {
+		this.contactPersonEmail = contactPersonEmail;
+	}
+	public String getAlContactPerson() {
+		return alContactPerson;
+	}
+	public void setAlContactPerson(String alContactPerson) {
+		this.alContactPerson = alContactPerson;
+	}
+	public String getAlContactPersonTelNo() {
+		return alContactPersonTelNo;
+	}
+	public void setAlContactPersonTelNo(String alContactPersonTelNo) {
+		this.alContactPersonTelNo = alContactPersonTelNo;
+	}
+	public String getAlContactPersonEmail() {
+		return alContactPersonEmail;
+	}
+	public void setAlContactPersonEmail(String alContactPersonEmail) {
+		this.alContactPersonEmail = alContactPersonEmail;
+	}
+	
+	
 
 }
