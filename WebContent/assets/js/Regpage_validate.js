@@ -10,7 +10,7 @@
         	companyUserName:"required",
         	term:"required",
         	
-        	email:{	
+        	companyEmail:{	
                 required:true,
                 email: true
 
@@ -22,6 +22,40 @@
                     required:true,
                     equalTo: "#password"
                       },
+           companyTelephone:{
+        	   required:true,
+        	   number: true,
+        	   minlength: 10,
+        	},
+        	contactPerson:{
+        		required:true,
+        		
+        	},
+        	contactPersonTelNo:{
+        		required:true,
+        		number: true,
+         	   minlength: 10,
+        	},
+        	contactPersonEmail:{
+        		required:true,
+        		email: true
+        		
+        	},
+        	
+        	alContactPersonTelNo:{
+        		number: true,
+          	   minlength: 10,
+        		
+        	},
+        	contactPersonEmail:{
+        		email: true
+        		
+        	},
+        	checkedbox:{
+        		required:true,
+        		
+        	},
+        	
           },
         errorClass: "help-inline-note" 
       });

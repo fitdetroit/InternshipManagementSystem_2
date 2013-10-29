@@ -74,7 +74,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">Telephone</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="companyTelephone"/>
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" maxlength="10" name="companyTelephone"/>
 								</div>
 							</div>
 							
@@ -82,37 +82,6 @@
 								<label class="inputlabel">Company Address</label>
 								<div class="inputarea">													 
 									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="companyAddress"/>
-								</div>
-							</div>
-							
-							<div class="inputrow">
-								<label class="inputlabel">Website URL</label>
-								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="companyWeb"/>
-								</div>
-							</div>
-							
-							<div class="inputrow">
-								<label class="inputlabel">Email Address</label>
-								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="companyEmail"/>
-								</div>
-							</div>
-						</fieldset>
-						
-						<h3>Genaral Contact Information</h3>
-						<fieldset class="fieldset">
-							<div class="inputrow">
-								<label class="inputlabel">Telephone</label>
-								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="companyTelephone"/>
-								</div>
-							</div>
-							
-							<div class="inputrow">
-								<label class="inputlabel">Company Address</label>
-								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half"name="companyAddress" />
 								</div>
 							</div>
 							
@@ -143,7 +112,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">Contact Number</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="contactPersonTelNo" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" maxlength="10" name="contactPersonTelNo" />
 								</div>
 							</div>
 							<div class="inputrow">
@@ -163,7 +132,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">Contact Number</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="alContactPersonTelNo"/>
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" maxlength="10" name="alContactPersonTelNo"/>
 								</div>
 							</div>
 							<div class="inputrow">
@@ -176,7 +145,7 @@
 						
 						<fieldset class="fieldset">
 							<div class="inputrow">
-								<input type="checkbox" name="tick"/>
+								<input type="checkbox" name="checkedbox"/>
                 <label for="tick">&nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</label>
  
 							</div>
