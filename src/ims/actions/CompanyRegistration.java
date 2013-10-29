@@ -104,8 +104,8 @@ public class CompanyRegistration extends ActionSupport{
 		company.setAllowed(false);
 		company.setTechnologies(getTechnologies());
 		company.setCompanyEmail(getCompanyEmail());
-		company.setContactPerson(getAlContactPerson());
-		company.setContactPersonEmail(getAlContactPersonEmail());
+		company.setContactPerson(getCompanyName());
+		company.setContactPersonEmail(getContactPersonEmail());
 		company.setContactPersonTelNo(getContactPersonTelNo());
 		company.setAlContactPerson(getAlContactPerson());
 		company.setAlContactPersonEmail(getAlContactPersonEmail());

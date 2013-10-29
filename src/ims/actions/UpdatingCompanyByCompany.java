@@ -32,10 +32,18 @@ public class UpdatingCompanyByCompany extends ActionSupport{
 	
 	private String companyUserName=null;
 	private String companyName=null;
-	private String companyTelephone=null;
-	private String contactPerson=null;
+	private String companyTelephone=null;	
 	private String companyAddress;
 	private String companyWeb=null;
+	private String aboutCompany=null;
+	private String technologies=null;
+	private String companyEmail=null;
+	private String contactPerson=null;
+	private String contactPersonTelNo=null;
+	private String contactPersonEmail=null;
+	private String alContactPerson=null;
+	private String alContactPersonTelNo=null;
+	private String alContactPersonEmail=null;
 	private String noOfVacancies=null;
 	private String password =null;
 	private String password2=null;
@@ -128,8 +136,25 @@ public class UpdatingCompanyByCompany extends ActionSupport{
 		company.setCompanyAddress(getCompanyAddress());
 		if(getCompanyWeb()!=null)
 		company.setCompanyWeb(getCompanyWeb());
-		if(getNoOfVacancies()!=null)
+		if(getNoOfVacancies()!=null)			
 		company.setNoOfVacancies(getNoOfVacancies());
+		if(getAboutCompany()!=null)
+		company.setAboutCompany(getAboutCompany());	
+		if(getTechnologies()!=null)
+		company.setTechnologies(getTechnologies());				
+		if(getCompanyEmail()!=null)
+		company.setCompanyEmail(getCompanyEmail());			
+		if(getContactPerson()!=null)			
+		if(getAlContactPersonEmail()!=null)
+		company.setContactPersonEmail(getContactPersonEmail());	
+		if(getContactPersonTelNo()!=null)
+		company.setContactPersonTelNo(getContactPersonTelNo());					
+		if(getAlContactPerson()!=null)
+		company.setAlContactPerson(getAlContactPerson());						
+		if(getAlContactPersonEmail()!=null)
+		company.setAlContactPersonEmail(getAlContactPersonEmail());			
+		if(getAlContactPersonTelNo()!=null)
+		company.setAlContactPersonTelNo(getAlContactPersonTelNo());
 		if(company.isAllowed()==true)
 		company.setAllowed(true);
 		
@@ -182,7 +207,7 @@ public class UpdatingCompanyByCompany extends ActionSupport{
 	
 	
 // this method is used to validate new password and confrom password in updating form	
-	public void validate()
+/*	public void validate()
 	{
 		if(getPassword()!=null)
 		{
@@ -200,7 +225,7 @@ public class UpdatingCompanyByCompany extends ActionSupport{
 
 
 	}
-	
+	*/
 	
 	
 	
@@ -213,6 +238,204 @@ public class UpdatingCompanyByCompany extends ActionSupport{
 	public File getProfilePicture() {
 		return ProfilePicture;
 	}
+
+	public String getRole() {
+		return role;
+	}
+
+
+
+
+
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+
+
+
+
+
+	public String getMenu() {
+		return menu;
+	}
+
+
+
+
+
+
+	public void setMenu(String menu) {
+		this.menu = menu;
+	}
+
+
+
+
+
+
+	public String getAboutCompany() {
+		return aboutCompany;
+	}
+
+
+
+
+
+
+	public void setAboutCompany(String aboutCompany) {
+		this.aboutCompany = aboutCompany;
+	}
+
+
+
+
+
+
+	public String getTechnologies() {
+		return technologies;
+	}
+
+
+
+
+
+
+	public void setTechnologies(String technologies) {
+		this.technologies = technologies;
+	}
+
+
+
+
+
+
+	public String getCompanyEmail() {
+		return companyEmail;
+	}
+
+
+
+
+
+
+	public void setCompanyEmail(String companyEmail) {
+		this.companyEmail = companyEmail;
+	}
+
+
+
+
+
+
+	public String getContactPersonTelNo() {
+		return contactPersonTelNo;
+	}
+
+
+
+
+
+
+	public void setContactPersonTelNo(String contactPersonTelNo) {
+		this.contactPersonTelNo = contactPersonTelNo;
+	}
+
+
+
+
+
+
+	public String getContactPersonEmail() {
+		return contactPersonEmail;
+	}
+
+
+
+
+
+
+	public void setContactPersonEmail(String contactPersonEmail) {
+		this.contactPersonEmail = contactPersonEmail;
+	}
+
+
+
+
+
+
+	public String getAlContactPerson() {
+		return alContactPerson;
+	}
+
+
+
+
+
+
+	public void setAlContactPerson(String alContactPerson) {
+		this.alContactPerson = alContactPerson;
+	}
+
+
+
+
+
+
+	public String getAlContactPersonTelNo() {
+		return alContactPersonTelNo;
+	}
+
+
+
+
+
+
+	public void setAlContactPersonTelNo(String alContactPersonTelNo) {
+		this.alContactPersonTelNo = alContactPersonTelNo;
+	}
+
+
+
+
+
+
+	public String getAlContactPersonEmail() {
+		return alContactPersonEmail;
+	}
+
+
+
+
+
+
+	public void setAlContactPersonEmail(String alContactPersonEmail) {
+		this.alContactPersonEmail = alContactPersonEmail;
+	}
+
+
+
+
+
+
+	public String getMyFileFileName() {
+		return myFileFileName;
+	}
+
+
+
+
+
+
+	public void setMyFileFileName(String myFileFileName) {
+		this.myFileFileName = myFileFileName;
+	}
+
+
+
+
+
 
 	public String getPage() {
 		return page;
