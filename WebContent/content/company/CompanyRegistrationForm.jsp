@@ -8,7 +8,7 @@
 			
 			
 			<h3>Genaral Information</h3>
-			<s:form method="post" action="RegisterCompany" enctype="multipart/form-data" validate="true">
+			<s:form method="post" action="RegisterCompany" enctype="multipart/form-data" validate="false">
 						<fieldset class="fieldset">
 							<div class="inputrow">
 								<label class="inputlabel">Name of the company</label>

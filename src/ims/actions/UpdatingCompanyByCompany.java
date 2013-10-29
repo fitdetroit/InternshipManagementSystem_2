@@ -1,6 +1,7 @@
 package ims.actions;
 
 import java.io.File;
+import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
@@ -10,6 +11,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -45,6 +47,8 @@ public class UpdatingCompanyByCompany extends ActionSupport{
 	private File ProfilePicture;
 	private String ProfilePictureFileName;
 	private String ProfilePictureContentType;
+	private String myFileFileName;
+	private String destPath;
 	
 
 
@@ -85,18 +89,30 @@ public class UpdatingCompanyByCompany extends ActionSupport{
 	
 		
 		
-		// uploading updated profile picture
+		// uploading profile picture
+		myFileFileName=getCompanyUserName();
+		myFileFileName=myFileFileName.concat(".jpg");
+		System.out.println(myFileFileName);
+				
 		ServletContext servletContext = ServletActionContext.getServletContext(); 
-		if (ProfilePicture != null) {
-			String dataDir = servletContext.getRealPath("/WEB-INF/data"); 
-			File existingFile = new File(dataDir, getCompanyUserName()+".gif");
-			existingFile.delete();
-			File savedFile = new File(dataDir, getCompanyUserName()+".gif"); 
-			
-			ProfilePicture.renameTo(savedFile); } 
-		else {
-			System.out.println("its not working");
-		}
+		String dataDir = servletContext.getRealPath("/WEB-INF/../assets/img/ProfileImages"); 
+	      destPath = dataDir;
+        if(!(ProfilePicture==null))
+        {
+  	      try{
+ 	     	 System.out.println("Src File name: " + ProfilePicture);
+ 	     	 System.out.println("Dst File name: " + myFileFileName);
+ 	     	    	 
+ 	     	 File destFile  = new File(destPath, myFileFileName);
+ 	    	 FileUtils.copyFile(ProfilePicture, destFile);
+ 	  
+ 	      }catch(IOException e){
+ 	         e.printStackTrace();
+ 	         return ERROR;
+ 	      }
+ 		
+        	
+        }
 		
 		
 	
