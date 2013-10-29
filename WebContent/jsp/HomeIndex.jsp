@@ -45,8 +45,10 @@
 							<a href="<s:url action="LogOut"/>">Log out</a></li>
 						</ul>
 					  </div><!-- End submenu-->
-					  
-					<label>Hello Millenium Information Thechnologies</label>
+	
+			  
+
+					<label>Hello <s:property value="#session.userFullName"/></label>
 				</nav>
 				
 			</div><!-- /End Wrapper -->		

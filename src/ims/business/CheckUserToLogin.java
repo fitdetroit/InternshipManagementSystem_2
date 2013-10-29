@@ -1,5 +1,6 @@
 package ims.business;
 
+import ims.data.Company;
 import ims.data.Student;
 import ims.data.User;
 
@@ -69,6 +70,31 @@ public class CheckUserToLogin {
 			return "error";
 			
 		}
+		
+	}
+	
+	
+	public String getCompanyName(String userName)
+	{
+
+		Session session = getSessionFactory().openSession();
+		session.beginTransaction();
+		Company company = (Company)session.get(Company.class, userName);
+		session.getTransaction().commit();
+		session.close();
+		
+		return company.getCompanyName();
+	}
+	
+	public String getStudentName(String userName)
+	{
+		Session session = getSessionFactory().openSession();
+		session.beginTransaction();
+		Student student = (Student)session.get(Student.class, userName);
+		session.getTransaction().commit();
+		session.close();
+		
+		return student.getNameWithInitials();
 		
 	}
 	
