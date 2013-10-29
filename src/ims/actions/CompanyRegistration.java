@@ -66,15 +66,17 @@ public class CompanyRegistration extends ActionSupport{
 	public String registration() throws NoSuchAlgorithmException
 	{
 		// uploading profile picture
-		myFileFileName=getCompanyUserName();
-		myFileFileName=myFileFileName.concat(".jpg");
-		System.out.println(myFileFileName);
-				
-		ServletContext servletContext = ServletActionContext.getServletContext(); 
-		String dataDir = servletContext.getRealPath("/WEB-INF/../assets/img/ProfileImages"); 
-	      destPath = dataDir;
+
         if(!(ProfilePicture==null))
         {
+    		myFileFileName=getCompanyUserName();
+    		myFileFileName=myFileFileName.concat(".jpg");
+    		System.out.println(myFileFileName);
+    				
+    		ServletContext servletContext = ServletActionContext.getServletContext(); 
+    		String dataDir = servletContext.getRealPath("/WEB-INF/../assets/img/ProfileImages/Company"); 
+    	      destPath = dataDir;
+    	      
   	      try{
  	     	 System.out.println("Src File name: " + ProfilePicture);
  	     	 System.out.println("Dst File name: " + myFileFileName);
