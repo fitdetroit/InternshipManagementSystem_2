@@ -82,6 +82,10 @@
 <s:if test="%{#page=='Messages_company'}" >
 	<%@include file="/content/company/Messages_company.jsp" %>
 </s:if>
+<s:if test="%{#page=='CompMessageOutBox'}" >
+	<%@include file="/content/company/CompMessageOutBox.jsp" %>
+</s:if>
+
 <s:if test="%{#page=='CreateNewMsgCompany'}" >
 	<%@include file="/content/company/CreateNewMsgCompany.jsp" %>
 </s:if>
