@@ -111,6 +111,10 @@
 	<%@include file="/content/student/MessageDefault.jsp" %>
 </s:if>
 
+<s:if test="%{#page=='MessageOutBoxStudent'}" >
+	<%@include file="/content/student/MessagesOutBoxStudents.jsp" %>
+</s:if>
+
 <s:if test="%{#page=='internshipDefault'}" >
 	<%@include file="/content/student/internshipDefault.jsp" %>
 </s:if>

@@ -1,6 +1,6 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
 
-<h2>Messages > Inbox</h2>
+<h2>Messages > Outbox</h2>
 					
 					
 					<div class="form_container">
