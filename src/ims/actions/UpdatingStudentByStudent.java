@@ -345,7 +345,7 @@ public class UpdatingStudentByStudent extends ActionSupport {
 	}
 	
 
-	public void validate()  {
+/*	public void validate()  {
 		
 
 		if (getPassword().length() != 0) {
@@ -359,7 +359,7 @@ public class UpdatingStudentByStudent extends ActionSupport {
 		}
 
 	}
-	
+	*/
 	
 	
 
