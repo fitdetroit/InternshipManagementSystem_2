@@ -83,7 +83,10 @@ public class CheckUserToLogin {
 		session.getTransaction().commit();
 		session.close();
 		
+		if(company!=null)
 		return company.getCompanyName();
+		else
+		return null;
 	}
 	
 	public String getStudentName(String userName)
@@ -94,7 +97,10 @@ public class CheckUserToLogin {
 		session.getTransaction().commit();
 		session.close();
 		
+		if(student!=null)
 		return student.getNameWithInitials();
+		else
+		return null;
 		
 	}
 	
