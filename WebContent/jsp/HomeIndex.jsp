@@ -48,7 +48,12 @@
 	
 			  
 
-					<label>Hello <s:property value="#session.userFullName"/></label>
+					<label>Hello <s:if test="%{#session.userFullName!=null}">
+	<s:property value="#session.userFullName"/>
+</s:if>
+<s:else>
+<s:property value="#session.userName"/>
+</s:else></label>
 				</nav>
 				
 			</div><!-- /End Wrapper -->		
