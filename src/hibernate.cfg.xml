@@ -48,6 +48,7 @@
 		<mapping class="ims.data.Messages" />
 		<mapping class="ims.data.MessageResponse" />
 		<mapping class="ims.data.Support" />
+		<mapping class="ims.data.Administration" />
 
 
 	</session-factory>
