@@ -149,7 +149,7 @@ public class UpdatingStudentByStudent extends ActionSupport {
     		System.out.println(myFileFileName);
     				
     		ServletContext servletContext = ServletActionContext.getServletContext(); 
-    		String dataDir = servletContext.getRealPath("/WEB-INF/../assets/img/ProfileImages/Student"); 
+    		String dataDir = servletContext.getRealPath("/WEB-INF/../assets/img/ProfileImages"); 
     	      destPath = dataDir;
     	      
     	      File existingFile = new File(dataDir, myFileFileName);
