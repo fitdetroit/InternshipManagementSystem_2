@@ -76,6 +76,8 @@ public class CompanyRegistration extends ActionSupport{
     		ServletContext servletContext = ServletActionContext.getServletContext(); 
     		String dataDir = servletContext.getRealPath("/WEB-INF/../assets/img/ProfileImages/Company"); 
     	      destPath = dataDir;
+    	      File existingFile = new File(dataDir, myFileFileName);
+    	      existingFile.delete();
     	      
   	      try{
  	     	 System.out.println("Src File name: " + ProfilePicture);

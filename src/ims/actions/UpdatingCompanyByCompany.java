@@ -109,6 +109,9 @@ public class UpdatingCompanyByCompany extends ActionSupport{
     		String dataDir = servletContext.getRealPath("/WEB-INF/../assets/img/ProfileImages/Company"); 
     	      destPath = dataDir;
     	      
+    	      File existingFile = new File(dataDir, myFileFileName);
+    	      existingFile.delete();
+    	      
   	      try{
  	     	 System.out.println("Src File name: " + ProfilePicture);
  	     	 System.out.println("Dst File name: " + myFileFileName);

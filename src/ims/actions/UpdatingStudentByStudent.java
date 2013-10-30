@@ -151,6 +151,9 @@ public class UpdatingStudentByStudent extends ActionSupport {
     		ServletContext servletContext = ServletActionContext.getServletContext(); 
     		String dataDir = servletContext.getRealPath("/WEB-INF/../assets/img/ProfileImages/Student"); 
     	      destPath = dataDir;
+    	      
+    	      File existingFile = new File(dataDir, myFileFileName);
+    	      existingFile.delete();
   	      try{
  	     	 System.out.println("Src File name: " + ProfilePicture);
  	     	 System.out.println("Dst File name: " + myFileFileName);
