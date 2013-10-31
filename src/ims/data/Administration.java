@@ -28,7 +28,6 @@ public class Administration {
 	
 	
 	
-	
 	//gettsrs and setters
 	public int getAdminId() {
 		return adminId;
