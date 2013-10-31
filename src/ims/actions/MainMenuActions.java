@@ -237,6 +237,25 @@ public class MainMenuActions extends ActionSupport{
 		return SUCCESS;
 
 }//CreateNewMsgCompany
+       
+       
+       public String CompMessageOutBox() {	
+    		
+    		// to redirect direct access actions  without login
+    		if (str==null) {
+    			return ERROR;
+    				
+    		}	
+    			Map session;
+    			session = ActionContext.getContext().getSession();
+    			String type = (String) session.get("type");
+    			
+    			this.role=(String)session.get("type");
+    			this.page="CompMessageOutBox";
+    			this.menu="messages_comp";
+    			return SUCCESS;
+
+    	}//CompMessageOutBox
 
 
 
@@ -257,6 +276,25 @@ public class MainMenuActions extends ActionSupport{
 		return SUCCESS;
 
 }//InboxCompany
+        
+        
+        public String MessageOutBoxStudent() {	
+        	
+        	// to redirect direct access actions  without login
+        	if (str==null) {
+        		return ERROR;
+        			
+        	}	
+        		Map session;
+        		session = ActionContext.getContext().getSession();
+        		String type = (String) session.get("type");
+        		
+        		this.role=(String)session.get("type");
+        		this.page="MessageOutBoxStudent";
+        		this.menu="Message_st";
+        		return SUCCESS;
+
+        }//MessageOutBoxStudent
 		
 // Side menu actions for Registered Students
 		

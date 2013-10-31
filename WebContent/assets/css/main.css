@@ -117,7 +117,7 @@ border-radius:  5px 5px 0  0; border:1px solid #6986c0; border-bottom:none; bord
 .inputrow label.inputlabel{ width: 25%; display: block; float: left; text-align: right; position: relative; top:6px; padding-right:10px;}
 .profile_subcontent label.inputlabel{ width: 18%; display: block; float:left; position: relative; color:#444444;font-weight:600;}
 .inputrow .inputarea{float: left; padding: 0; width: 73%;}
-.autocomplete_field{ width: 300px!important;top: 0; border-radius:5px; background-color: #FFF; line-height: 150%;margin: 0; border-top: 1px solid #a0a1a3; border-left: 1px solid #a0a1a3; border-bottom: 1px solid #d1d3d4; border-right: 1px solid #d1d3d4;padding: 7px 4px;-webkit-box-shadow: inset 3px 3px 5px 6px #ccc; box-shadow: inset 1px 1px 2px #CCC; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+.autocomplete_field{ width: 300px;top: 0; border-radius:5px; background-color: #FFF; line-height: 150%;margin: 0; border-top: 1px solid #a0a1a3; border-left: 1px solid #a0a1a3; border-bottom: 1px solid #d1d3d4; border-right: 1px solid #d1d3d4;padding: 7px 4px;-webkit-box-shadow: inset 3px 3px 5px 6px #ccc; box-shadow: inset 1px 1px 2px #CCC; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
 .inputarea .input_disabled{ background-color: #EEE;}
 .inputarea .help-inline-note{ color:#ff0000; padding-left: 10px;}
 .discription_area{ max-width:73%;margin-bottom:10px;}
@@ -174,6 +174,41 @@ top: 0;}
 
 .cvcontainer{ width:760px; margin:0 auto 0 auto; border:1px solid #CCCCCC}
 .action_bottons_area{float: right; padding-right: 50px;}
+
+.msg_container .container_top{ height:40px;border-bottom:1px solid #ececec;}
+.msg_container .container_top .but_create{ float:right}
+.msg_left_container{ background:none; width:248px; height:400px; float:left; border-right: 1px solid #ececec;}
+.msg_left_container .sub_menu{height: 40px; margin-bottom:2px; padding-top:10px;}
+.msg_left_container .sub_menu ul{ margin:0; padding:0; list-style-type:none}
+.msg_left_container .sub_menu ul li{ height: 30px;
+margin-bottom: 1px;
+float: left;
+margin-right: 1px;
+width: 71px;
+background: #DAEBBD;}
+
+.msg_left_container .msg_list_container { margin-top:10px}
+.msg_left_container .msg_list_container ul{ list-style-type:none; margin:0; padding:0;}
+
+.msg_container ul a{ text-decoration:none; color: #333333}
+.msg_container ul a:hover{ color:#003399}
+.msg_left_container .msg_list_container ul li{ background:#CCCCCC; padding:5px 0 5px 5px; margin:0 0 1px 5px}
+
+.msg_right_container{ background: #f7f7f7; width:728px; height:400px; float:left;}
+.msg_right_container h3{ background: rgba(227, 252, 221, 1); border: 1px solid #C2F0C2; display: block; padding-left: 10px; margin: 10px; border-radius: 5px;}
+.msg_body_container{  margin:10px; padding:0}
+.msg_body_top{ background-color: #f7f7f7; border: 1px solid #ececec; padding-top:5px; padding-bottom:5px; -webkit-border-radius: 5px 5px 0 0; border-radius: 5px 5px 0 0;}
+.msg_body_top label{ display:block; padding-left:10px; line-height:150%;}
+.msg_body{ background:#FFF; height:100px; border: 1px solid #ececec; -webkit-border-radius: 0 0 5px 5px; border-radius: 0 0 5px 5px;}
+.msg_body p{ padding:10px;}
+
+.newmsg_container{height:300px; width:1000px; margin:auto}
+
+.newmsg_container label.inputlabel{ width:13%}
+.newmsg_container .autocomplete_field.long{ width: 750px;}
+.new_msg_but_container .inputarea{ float: right;
+width: 309px;
+margin-top: 20px;}
 
 
 

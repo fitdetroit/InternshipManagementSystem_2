@@ -40,11 +40,18 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 
-
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>JSPs</web-resource-name>
+			<url-pattern>/jsp/*</url-pattern>
+			
+		</web-resource-collection>
+		<auth-constraint />
+	</security-constraint>
+	
 		<security-constraint>
 		<web-resource-collection>
-			<web-resource-name>JspPages</web-resource-name>
-			<url-pattern>/jsp/*</url-pattern>	
+			<web-resource-name>content</web-resource-name>
 			<url-pattern>/content/*</url-pattern>
 			<url-pattern>/functions/*</url-pattern>			
 			<url-pattern>/header/*</url-pattern>

@@ -40,7 +40,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">Username</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" name="companyUserName" class="autocomplete_field half" />
+									 <input type="text" placeholder="Type project name to find existing" name="companyUserName" id="companyUserName" class="autocomplete_field half" />
 								</div>
 							</div>
 							
@@ -167,3 +167,4 @@
 						
 					</div><!-- /End Form container-->
 </s:form>
+

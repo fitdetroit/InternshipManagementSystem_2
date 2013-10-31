@@ -1,6 +1,6 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
 
-<h2>Messages > Inbox</h2>
+<h2>Messages > Outbox</h2>
 					
 					
 					<div class="form_container">
@@ -12,8 +12,8 @@
 					
 						<div class="msg_left_container">
 							<div class="sub_menu">
-								<ul><a href="<s:url action='MessageAction'/>"><li>Inbox</li></a>
-									<a href="CompMessageOutBox"><li>Outbox</li></a>
+								<ul><a href="<s:url action='MessageActionByStd'/>"><li>Inbox</li></a>
+									<a href="<s:url action='MessageOutBoxStudent'/>"><li>Outbox</li></a>
 								</ul>
 							</div>
 							<div class="msg_list_container">

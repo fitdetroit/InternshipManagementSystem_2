@@ -19,10 +19,14 @@
 
 <style type="text/css">  <%@include file="/assets/css/normalize.css" %>  </style>
 <style type="text/css">  <%@include file="/assets/css/main.css" %>  </style>
+<style type="text/css">  <%@include file="/assets/css/demo.css" %>  </style>
+<style type="text/css">  <%@include file="/assets/css/jquery-te-1.4.0.css" %>  </style>
 
         <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
 		<script src="assets/js/jquery-1.9.1.min.js"></script>
 		<script src="assets/js/dropdown.js"></script>
+		<script src="assets/js/jquery-te-1.4.0.min.js"></script>
+		
 	
     </head>
 	<body class="<s:property value="%{#role}"/> <s:property value="%{#page}"/> <s:property value="%{#menu}"/>">
@@ -101,5 +105,35 @@
 				$(".equalheights").equalHeights();
 			});
 			</script>
+			
+<script type="text/javascript">
+
+var form = $('#form1');
+form.submit(function () {
+
+$.ajax({
+type: form.attr('method'),
+url: "NewUserNameCheck",
+data: {n1:$('#n1').val(),n2:$('#n2').val()},
+success: function (data) {
+var result=data;
+
+if(result == 1){
+	
+	$('#result').attr("value","yes");
+	
+}
+else{
+	
+	$('#result').attr("value","no");
+}
+
+}
+});
+
+return false;
+});
+</script>
+
     </body>
 </html>
