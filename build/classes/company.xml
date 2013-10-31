@@ -143,15 +143,15 @@
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
-		<action name="MessageAction" class="ims.actions.MainMenuActions" method="MessageAction">
+		<action name="MessageAction" class="ims.actions.HandleMassages" method="MessageAction">
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
-		<action name="CompMessageOutBox" class="ims.actions.MainMenuActions" method="CompMessageOutBox">
+		<action name="CompMessageOutBox" class="ims.actions.HandleMassages" method="CompMessageOutBox">
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
-		<action name="CreateNewMsgCompany" class="ims.actions.MainMenuActions" method="CreateNewMsgCompany">
+		<action name="CreateNewMsgCompany" class="ims.actions.HandleMassages" method="CreateNewMsgCompany">
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>

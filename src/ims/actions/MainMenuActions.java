@@ -165,23 +165,7 @@ public class MainMenuActions extends ActionSupport{
 		}//CompanyActionByStd
 		
 		
-		public String MessageActionByStd() {	
-			
-			// to redirect direct access actions  without login
-			if (str==null) {
-				return ERROR;
-					
-			}	
-				Map session;
-				session = ActionContext.getContext().getSession();
-				String type = (String) session.get("type");
-				
-				this.role=(String)session.get("type");
-				this.page="MessageDefault";
-				this.menu="Message_st";
-				return SUCCESS;
 
-		}//MessageActionByStd
 		
 		public String internshipActionByStd() {	
 			
@@ -202,102 +186,8 @@ public class MainMenuActions extends ActionSupport{
 		}//internshipActionByStd
 		
 		
-       public String MessageAction() {	
+
 			
-			// to redirect direct access actions  without login
-			if (str==null) {
-				return ERROR;
-					
-			}	
-				Map session;
-				session = ActionContext.getContext().getSession();
-				String type = (String) session.get("type");
-				
-				this.role=(String)session.get("type");
-				this.page="Messages_company";
-				this.menu="messages_comp";
-				return SUCCESS;
-
-		}//MessageAction
-
-       public String CreateNewMsgCompany() {	
-	
-	// to redirect direct access actions  without login
-	if (str==null) {
-		return ERROR;
-			
-	}	
-		Map session;
-		session = ActionContext.getContext().getSession();
-		String type = (String) session.get("type");
-		
-		this.role=(String)session.get("type");
-		this.page="CreateNewMsgCompany";
-		this.menu="messages_comp";
-		return SUCCESS;
-
-}//CreateNewMsgCompany
-       
-       
-       public String CompMessageOutBox() {	
-    		
-    		// to redirect direct access actions  without login
-    		if (str==null) {
-    			return ERROR;
-    				
-    		}	
-    			Map session;
-    			session = ActionContext.getContext().getSession();
-    			String type = (String) session.get("type");
-    			
-    			this.role=(String)session.get("type");
-    			this.page="CompMessageOutBox";
-    			this.menu="messages_comp";
-    			return SUCCESS;
-
-    	}//CompMessageOutBox
-
-
-
-        public String InboxCompany() {	
-	
-	// to redirect direct access actions  without login
-	if (str==null) {
-		return ERROR;
-			
-	}	
-		Map session;
-		session = ActionContext.getContext().getSession();
-		String type = (String) session.get("type");
-		
-		this.role=(String)session.get("type");
-		this.page="InboxCompany";
-		this.menu="messages_comp";
-		return SUCCESS;
-
-}//InboxCompany
-        
-        
-        public String MessageOutBoxStudent() {	
-        	
-        	// to redirect direct access actions  without login
-        	if (str==null) {
-        		return ERROR;
-        			
-        	}	
-        		Map session;
-        		session = ActionContext.getContext().getSession();
-        		String type = (String) session.get("type");
-        		
-        		this.role=(String)session.get("type");
-        		this.page="MessageOutBoxStudent";
-        		this.menu="Message_st";
-        		return SUCCESS;
-
-        }//MessageOutBoxStudent
-		
-// Side menu actions for Registered Students
-		
 
 
 		public String getRole() {

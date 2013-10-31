@@ -15,13 +15,13 @@ public class Messages {
 	
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private int msgId;
-	private String senderId;
+  	private String senderId;
 	private String receiveId;
 	private String subject;
 	private String content;
 	private String date;
-	private String megCategory;
-	private boolean checked;
+	private String msgCategory;
+	private String checked;
 	//private String time;
 	
 	
@@ -83,18 +83,20 @@ public class Messages {
 	public void setReceiveId(String receiveId) {
 		this.receiveId = receiveId;
 	}
-	public String getMegCategory() {
-		return megCategory;
+
+	public String getMsgCategory() {
+		return msgCategory;
 	}
-	public void setMegCategory(String megCategory) {
-		this.megCategory = megCategory;
+	public void setMsgCategory(String msgCategory) {
+		this.msgCategory = msgCategory;
 	}
-	public boolean isChecked() {
+	public String getChecked() {
 		return checked;
 	}
-	public void setChecked(boolean checked) {
+	public void setChecked(String checked) {
 		this.checked = checked;
 	}
+
 	
 	
 //	public String getTime() {
