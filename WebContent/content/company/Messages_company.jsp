@@ -23,17 +23,20 @@
 							</ul></div>
 						
 						</div>
+						
 						<div class="msg_right_container">
-							<h3 class="msg_header">not register student set login name as userName for not registed student</h3>
+						<s:iterator value="msgList" >
+							<h3 class="msg_header"><s:property value="subject"/></h3>
 							<fieldset class="msg_body_container">
 								<div class="msg_body_top">
-									<label>Sent By : Administrator</label>
-									<label>Date : 2012-12-02 12:34</label>
+									<label>Sent By: <s:property value="senderId"/></label>
+									<label>Date : <s:property value="date"/></label>
 								</div>
 								<div class="msg_body">
-									<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
+									<p><s:property value="content"/></p>
 								</div>
 							</fieldset>
+							</s:iterator>
 						</div>
 						
 					</div>

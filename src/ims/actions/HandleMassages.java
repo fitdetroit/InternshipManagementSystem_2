@@ -2,7 +2,9 @@ package ims.actions;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 import ims.business.HandleMassageDataSession;
@@ -36,6 +38,9 @@ public class HandleMassages extends ActionSupport{
 	private String subject;
 	private String content;
 	private String date;
+	
+	
+	List<Messages> msgList =new ArrayList<Messages>();
 
 	
 
@@ -85,6 +90,10 @@ public class HandleMassages extends ActionSupport{
 				return ERROR;
 					
 			}	
+			
+			
+			msgList=handleMassageDataSession.getCompanyMessages(str);
+			
 				Map session;
 				session = ActionContext.getContext().getSession();
 				String type = (String) session.get("type");
@@ -97,7 +106,21 @@ public class HandleMassages extends ActionSupport{
 		}
     
     
-//when company need to create new msg this method called
+public List<Messages> getMsgList() {
+		return msgList;
+	}
+
+
+
+
+	public void setMsgList(List<Messages> msgList) {
+		this.msgList = msgList;
+	}
+
+
+
+
+	//when company need to create new msg this method called
     public String CreateNewMsgCompany() {	
 	
 	// to redirect direct access actions  without login
