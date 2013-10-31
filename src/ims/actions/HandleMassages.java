@@ -106,16 +106,7 @@ public class HandleMassages extends ActionSupport{
 		}
     
     
-public List<Messages> getMsgList() {
-		return msgList;
-	}
 
-
-
-
-	public void setMsgList(List<Messages> msgList) {
-		this.msgList = msgList;
-	}
 
 
 
@@ -150,6 +141,8 @@ public List<Messages> getMsgList() {
  			Map session;
  			session = ActionContext.getContext().getSession();
  			String type = (String) session.get("type");
+ 			
+ 			msgList=handleMassageDataSession.getCompanySendMessages(str);
  			
  			this.role=(String)session.get("type");
  			this.page="CompMessageOutBox";
@@ -260,25 +253,16 @@ public List<Messages> getMsgList() {
 	}
 
 
+	public List<Messages> getMsgList() {
+		return msgList;
+	}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	public void setMsgList(List<Messages> msgList) {
+		this.msgList = msgList;
+	}
 
 
 
@@ -291,54 +275,9 @@ public List<Messages> getMsgList() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	public String getPage() {
 		return page;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -347,82 +286,14 @@ public List<Messages> getMsgList() {
 	}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	public String getMenu() {
 		return menu;
 	}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	public void setMenu(String menu) {
 		this.menu = menu;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

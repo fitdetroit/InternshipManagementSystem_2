@@ -86,6 +86,22 @@ public class HandleMassageDataSession {
 	
 	
 	
+	public List<Messages> getCompanySendMessages(String userName)
+	{
+		//List<Messages> msgList =new ArrayList<Messages>();
+		//List<Messages> msgListSorted =new ArrayList<Messages>();
+		Session session = getSessionFactory().openSession();
+		String HQL_QUERY = " from Messages msg where msg.senderId='" + userName + "'";
+		Query query = session.createQuery(HQL_QUERY);
+		List<Messages> list = ((org.hibernate.Query) query).list();
+		
+		return list;
+		
+		
+	}
+	
+	
+	
 	
 	
 	
