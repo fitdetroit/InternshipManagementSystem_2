@@ -89,13 +89,25 @@ public class HandleMassageDataSession {
 	public List<Messages> getCompanySendMessages(String userName)
 	{
 		//List<Messages> msgList =new ArrayList<Messages>();
-		//List<Messages> msgListSorted =new ArrayList<Messages>();
+		List<Messages> msgListSorted =new ArrayList<Messages>();
 		Session session = getSessionFactory().openSession();
 		String HQL_QUERY = " from Messages msg where msg.senderId='" + userName + "'";
 		Query query = session.createQuery(HQL_QUERY);
-		List<Messages> list = ((org.hibernate.Query) query).list();
+		List<Messages> msgList = ((org.hibernate.Query) query).list();
 		
-		return list;
+		if(msgList.size()>1)
+		{
+			for(int k=0;k<msgList.size();k++)
+			{
+				msgListSorted.add(msgList.get(msgList.size()-(k+1)));
+				
+			}
+			return msgListSorted;
+			
+		}
+		System.out.println("msg list size"+msgList.size());
+		
+		return msgList;
 		
 		
 	}
@@ -161,13 +173,25 @@ public class HandleMassageDataSession {
 	public List<Messages> getStudentSendMessages(String userName)
 	{
 		//List<Messages> msgList =new ArrayList<Messages>();
-		//List<Messages> msgListSorted =new ArrayList<Messages>();
+		List<Messages> msgListSorted =new ArrayList<Messages>();
 		Session session = getSessionFactory().openSession();
 		String HQL_QUERY = " from Messages msg where msg.senderId='" + userName + "'";
 		Query query = session.createQuery(HQL_QUERY);
-		List<Messages> list = ((org.hibernate.Query) query).list();
+		List<Messages> msgList = ((org.hibernate.Query) query).list();
 		
-		return list;
+		if(msgList.size()>1)
+		{
+			for(int k=0;k<msgList.size();k++)
+			{
+				msgListSorted.add(msgList.get(msgList.size()-(k+1)));
+				
+			}
+			return msgListSorted;
+			
+		}
+		System.out.println("msg list size"+msgList.size());
+		
+		return msgList;
 		
 		
 	}
