@@ -58,6 +58,7 @@ public class HandleMassages extends ActionSupport{
 	message.setSenderId(str);
 	message.setSubject(getSubject());
 	message.setContent(getContent());
+	message.setReceiveId("admin");
 	
 		
   DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -152,7 +153,7 @@ public class HandleMassages extends ActionSupport{
  	}
 
 
-
+/*
      public String InboxCompany() {	
 	
 	// to redirect direct access actions  without login
@@ -169,7 +170,7 @@ public class HandleMassages extends ActionSupport{
 		this.menu="messages_comp";
 		return SUCCESS;
 
-}
+}*/
      
      
      
@@ -185,6 +186,7 @@ public class HandleMassages extends ActionSupport{
 				session = ActionContext.getContext().getSession();
 				String type = (String) session.get("type");
 				
+				msgList=handleMassageDataSession.getStudentMessages(str);
 				this.role=(String)session.get("type");
 				this.page="MessageDefault";
 				this.menu="Message_st";
@@ -204,6 +206,9 @@ public class HandleMassages extends ActionSupport{
      		Map session;
      		session = ActionContext.getContext().getSession();
      		String type = (String) session.get("type");
+     		
+     		
+     		msgList=handleMassageDataSession.getStudentSendMessages(str);
      		
      		this.role=(String)session.get("type");
      		this.page="MessageOutBoxStudent";
