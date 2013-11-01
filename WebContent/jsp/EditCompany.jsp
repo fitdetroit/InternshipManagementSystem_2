@@ -90,10 +90,10 @@
           <tr>
             <td class="user_input_fieldset"><label>Name of the company</label>
               <input type="text" name="companyName" class="form_inputs" value="<%= request.getAttribute("companyName") %>" disabled="disabled"/></td>
-            <td class="input_notif">We'll send you an email to activate your account, so please triple-check that you've typed it correctly.</td>
+            <td class="input_notif">This will be your <b>user name</b> and you can't change it once you set it. We'll send you an email to activate your account</td>
           </tr>
           <tr>
-            <td class="user_input_fieldset file_upload"><label>Select a Profile Picture</label>
+            <td class="user_input_fieldset file_upload"><label>Add company Logo</label>
               <!-- start of image -->
               <div class="controls">
                 <div class="input-prepend"> <span class="add-on"><i class="icon-camera"></i></span>

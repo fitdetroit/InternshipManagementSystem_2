@@ -1,6 +1,7 @@
 package ims.actions;
 
 import java.io.File;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Map;
@@ -19,6 +20,9 @@ import ims.business.RegisterCompany;
 import ims.business.UpdateCompany;
 import ims.data.Company;
 import ims.data.User;
+
+//import net.tanesha.recaptcha.ReCaptchaImpl;
+//import net.tanesha.recaptcha.ReCaptchaResponse; 
 
 public class CompanyRegistration extends ActionSupport{
 	
@@ -145,7 +149,7 @@ public class CompanyRegistration extends ActionSupport{
 			addFieldError("conPassword", "password not match");
 		}
 		
-	
+
 		
 		//for check username is allready in use
 		ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
