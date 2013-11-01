@@ -40,7 +40,7 @@ ServletResponseAware, ServletContextAware{
     public InputStream getInputStream() throws Exception {
     	
         String contentType = "image/gif";
-        String imageDirectory = servletContext.getRealPath("/WEB-INF/data");
+        String imageDirectory = servletContext.getRealPath("/WEB-INF/../assets/img/ProfileImages");
         // The images can be a jpg or gif, 
         // retrieve default image if no file was found
         File file = new File(imageDirectory, userName + ".gif");

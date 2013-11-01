@@ -122,10 +122,17 @@
 			<result name="error" type="redirect">../index</result>
 		</action>
 		
-		<action name="MessageActionByStd" class="ims.actions.MainMenuActions" method="MessageActionByStd">
+		<action name="MessageActionByStd" class="ims.actions.HandleMassages" method="MessageActionByStd">
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
+		
+		<action name="MessageOutBoxStudent" class="ims.actions.HandleMassages" method="MessageOutBoxStudent">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		
+		
 		<action name="internshipActionByStd" class="ims.actions.MainMenuActions" method="internshipActionByStd">
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>

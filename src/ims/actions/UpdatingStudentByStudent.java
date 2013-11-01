@@ -1,6 +1,9 @@
 package ims.actions;
 
 import java.io.File;
+
+import org.apache.commons.io.FileUtils;
+import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
@@ -9,6 +12,7 @@ import java.util.Map;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+
 
 import org.apache.commons.lang3.ObjectUtils.Null;
 import org.apache.struts2.ServletActionContext;
@@ -85,6 +89,8 @@ public class UpdatingStudentByStudent extends ActionSupport {
 	private File ProfilePicture;
 	private String ProfilePictureFileName;
 	private String ProfilePictureContentType;
+	private String myFileFileName;
+	private String destPath;
 	
 	
 	
@@ -134,17 +140,34 @@ public class UpdatingStudentByStudent extends ActionSupport {
 		
 		
 		
-		// uploading updatad profile picture
-		ServletContext servletContext = ServletActionContext.getServletContext(); 
-		if (ProfilePicture != null) {
-			String dataDir = servletContext.getRealPath("/WEB-INF/data");
-			File existingFile = new File(dataDir, getStudentUserName()+".gif");
-			existingFile.delete();
-			File savedFile = new File(dataDir, getStudentUserName()+".gif"); 
-			ProfilePicture.renameTo(savedFile); } 
-		else {
-			System.out.println("its not working");
-		}
+		// uploading profile picture
+
+        if(!(ProfilePicture==null))
+        {
+    		myFileFileName=getStudentUserName();
+    		myFileFileName=myFileFileName.concat(".jpg");
+    		System.out.println(myFileFileName);
+    				
+    		ServletContext servletContext = ServletActionContext.getServletContext(); 
+    		String dataDir = servletContext.getRealPath("/WEB-INF/../assets/img/ProfileImages"); 
+    	      destPath = dataDir;
+    	      
+    	      File existingFile = new File(dataDir, myFileFileName);
+    	      existingFile.delete();
+  	      try{
+ 	     	 System.out.println("Src File name: " + ProfilePicture);
+ 	     	 System.out.println("Dst File name: " + myFileFileName);
+ 	     	    	 
+ 	     	 File destFile  = new File(destPath, myFileFileName);
+ 	    	 FileUtils.copyFile(ProfilePicture, destFile);
+ 	  
+ 	      }catch(IOException e){
+ 	         e.printStackTrace();
+ 	         return ERROR;
+ 	      }
+ 		
+        	
+        }
 		
 		
 
@@ -322,7 +345,7 @@ public class UpdatingStudentByStudent extends ActionSupport {
 	}
 	
 
-	public void validate()  {
+/*	public void validate()  {
 		
 
 		if (getPassword().length() != 0) {
@@ -336,7 +359,7 @@ public class UpdatingStudentByStudent extends ActionSupport {
 		}
 
 	}
-	
+	*/
 	
 	
 

@@ -19,10 +19,14 @@
 
 <style type="text/css">  <%@include file="/assets/css/normalize.css" %>  </style>
 <style type="text/css">  <%@include file="/assets/css/main.css" %>  </style>
+<style type="text/css">  <%@include file="/assets/css/demo.css" %>  </style>
+<style type="text/css">  <%@include file="/assets/css/jquery-te-1.4.0.css" %>  </style>
 
         <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
 		<script src="assets/js/jquery-1.9.1.min.js"></script>
 		<script src="assets/js/dropdown.js"></script>
+		<script src="assets/js/jquery-te-1.4.0.min.js"></script>
+		
 	
     </head>
 	<body class="<s:property value="%{#role}"/> <s:property value="%{#page}"/> <s:property value="%{#menu}"/>">
@@ -45,8 +49,15 @@
 							<a href="<s:url action="LogOut"/>">Log out</a></li>
 						</ul>
 					  </div><!-- End submenu-->
-					  
-					<label>Hello Millenium Information Thechnologies</label>
+	
+			  
+
+					<label>Hello <s:if test="%{#session.userFullName!=null}">
+	<s:property value="#session.userFullName"/>
+</s:if>
+<s:else>
+<s:property value="#session.userName"/>
+</s:else></label>
 				</nav>
 				
 			</div><!-- /End Wrapper -->		
@@ -84,14 +95,45 @@
 	   
 	   
 
-        <script src="assets/js/main.js"></script>
-		<script src="assets/js/plugins.js"></script>
-			
-			<script src="assets/js/equalheight.js"></script>
+<script type="text/javascript"  src="assets/js/plugins.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript" src="assets/js/jquery.validate.js"></script>
+<script type="text/javascript" src="assets/js/Regpage_validate.js"></script>
+<script src="assets/js/equalheight.js"></script>
 			<script>
 			$(document).ready(function() {
 				$(".equalheights").equalHeights();
 			});
 			</script>
+			
+<script type="text/javascript">
+
+var form = $('#form1');
+form.submit(function () {
+
+$.ajax({
+type: form.attr('method'),
+url: "NewUserNameCheck",
+data: {n1:$('#n1').val(),n2:$('#n2').val()},
+success: function (data) {
+var result=data;
+
+if(result == 1){
+	
+	$('#result').attr("value","yes");
+	
+}
+else{
+	
+	$('#result').attr("value","no");
+}
+
+}
+});
+
+return false;
+});
+</script>
+
     </body>
 </html>

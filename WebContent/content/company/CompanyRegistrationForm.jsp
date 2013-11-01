@@ -1,4 +1,5 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
+<<<<<<< HEAD
 <%@ page import="net.tanesha.recaptcha.ReCaptchaImpl" %>
 <%@ page import="net.tanesha.recaptcha.ReCaptchaResponse" %>
 <%@ page import="net.tanesha.recaptcha.ReCaptcha" %>
@@ -6,7 +7,10 @@
 <%@ page import="net.tanesha.recaptcha.ReCaptchaImpl" %>
 <%@ page import="net.tanesha.recaptcha.ReCaptchaResponse" %>
 
-<s:form method="post" action="RegisterCompany" enctype="multipart/form-data">
+
+
+<s:form method="post" action="RegisterCompany" id="signUp" enctype="multipart/form-data">
+
 					<div class="notification_area">
 						<h2>Welcome To Internship Management System</h2>
 						<p>Resister with us by filling out this simple form.</p>
@@ -15,7 +19,12 @@
 					<div class="form_container">
 			
 			
+
 			<h3>General Information</h3>
+
+
+
+
 						<fieldset class="fieldset">
 							<div class="inputrow">
 								<label class="inputlabel">Name of the Company</label>
@@ -44,7 +53,9 @@
 							<div class="inputrow">
 								<label class="inputlabel">Choose your Username</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="You can't change your username once you confrm it" name="companyUserName" class="autocomplete_field half" />
+
+									 <input type="text" placeholder="You can't change your username once you confrm it" name="companyUserName" id="companyUserName" class="autocomplete_field half" />
+
 								</div>
 							</div>
 							
@@ -81,7 +92,10 @@
 							<div class="inputrow">
 								<label class="inputlabel">Telephone</label>
 								<div class="inputarea">													 
-									 <input type="text" class="autocomplete_field half" name="companyTelephone"/>
+
+
+									 <input type="text"  class="autocomplete_field half" maxlength="10" name="companyTelephone"/>
+
 								</div>
 							</div>
 							
@@ -107,10 +121,11 @@
 							</div>
 						</fieldset>
 						
+
 						
 						
 						<h3 class="header_importent">Provide contact details for the use of Administrator</h3>
-						<h3 >Contact Person</h3>
+					<h3 >Contact Person</h3>
 						<fieldset class="fieldset importent">
 							<div class="inputrow">
 								<label class="inputlabel">Name of the Person</label>
@@ -121,7 +136,9 @@
 							<div class="inputrow">
 								<label class="inputlabel">Contact Number</label>
 								<div class="inputarea">													 
-									 <input type="text"  class="autocomplete_field half" name="contactPersonTelNo" />
+
+									 <input type="text"  class="autocomplete_field half" maxlength="10" name="contactPersonTelNo" />
+
 								</div>
 							</div>
 							<div class="inputrow">
@@ -142,7 +159,9 @@
 							<div class="inputrow">
 								<label class="inputlabel">Contact Number</label>
 								<div class="inputarea">													 
-									 <input type="text"  class="autocomplete_field half" name="alContactPersonTelNo"/>
+
+									 <input type="text"  class="autocomplete_field half" maxlength="10" name="alContactPersonTelNo"/>
+
 								</div>
 							</div>
 							<div class="inputrow">
@@ -155,8 +174,11 @@
 						
 						<fieldset class="fieldset">
 							<div class="inputrow">
+
 								<input type="checkbox" name="tick"/>
                 <label for="tick">&nbsp; I agrre to interact with Faculty of Information Technology in the Internship program. </label>
+
+								
  
 							</div>
 						</fieldset>	
@@ -180,3 +202,4 @@
 						
 					</div><!-- /End Form container-->
 </s:form>
+

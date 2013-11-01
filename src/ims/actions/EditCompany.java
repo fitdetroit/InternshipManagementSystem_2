@@ -33,7 +33,6 @@ public class EditCompany extends ActionSupport {
 	private String companyName;
 	private String companyName2;// this variable for not editable value to form
 	private String companyTelephone;
-	private String contactPerson;
 	private String companyAddress;
 	private String companyWeb;
 	private String noOfVacancies;
@@ -41,6 +40,15 @@ public class EditCompany extends ActionSupport {
 	private String password2;
 	private String conPassword;
 	private boolean allowed;
+	private String aboutCompany;
+	private String technologies;
+	private String companyEmail;
+	private String contactPerson;
+	private String contactPersonTelNo;
+	private String contactPersonEmail;
+	private String alContactPerson;
+	private String alContactPersonTelNo;
+	private String alContactPersonEmail;
 
 
 
@@ -84,9 +92,20 @@ public class EditCompany extends ActionSupport {
 		setNoOfVacancies(company.getNoOfVacancies());
 		setAllowed(true);
 		setCompanyName2(company.getCompanyName());
-		setPassword(user.getPassword());
+		setAboutCompany(company.getAboutCompany());
+		setTechnologies(company.getTechnologies());
+		setCompanyEmail(company.getCompanyEmail());
+		setContactPerson(company.getContactPerson());
+		setContactPersonEmail(company.getContactPersonEmail());
+		setContactPersonTelNo(company.getContactPersonTelNo());
+		setAlContactPerson(company.getAlContactPerson());
+		setAlContactPersonEmail(company.getAlContactPersonEmail());
+		setAlContactPersonTelNo(company.getAlContactPersonTelNo());		
+		setPassword(user.getPassword());		
 		setPassword2(user.getPassword());
 		setConPassword(user.getPassword());
+		
+		
 
 		this.role=(String)session.get("type");
 		this.page="EditCompany.jsp";
@@ -308,6 +327,224 @@ public class EditCompany extends ActionSupport {
 		this.updateCompany = updateCompany;
 	}
 
+
+
+
+
+
+
+
+
+	public String getMenu() {
+		return menu;
+	}
+
+
+
+
+
+
+
+
+
+	public void setMenu(String menu) {
+		this.menu = menu;
+	}
+
+
+
+
+
+
+
+
+
+	public String getAboutCompany() {
+		return aboutCompany;
+	}
+
+
+
+
+
+
+
+
+
+	public void setAboutCompany(String aboutCompany) {
+		this.aboutCompany = aboutCompany;
+	}
+
+
+
+
+
+
+
+
+
+	public String getTechnologies() {
+		return technologies;
+	}
+
+
+
+
+
+
+
+
+
+	public void setTechnologies(String technologies) {
+		this.technologies = technologies;
+	}
+
+
+
+
+
+
+
+
+
+	public String getCompanyEmail() {
+		return companyEmail;
+	}
+
+
+
+
+
+
+
+
+
+	public void setCompanyEmail(String companyEmail) {
+		this.companyEmail = companyEmail;
+	}
+
+
+
+
+
+
+
+
+
+	public String getContactPersonTelNo() {
+		return contactPersonTelNo;
+	}
+
+
+
+
+
+
+
+
+
+	public void setContactPersonTelNo(String contactPersonTelNo) {
+		this.contactPersonTelNo = contactPersonTelNo;
+	}
+
+
+
+
+
+
+
+
+
+	public String getContactPersonEmail() {
+		return contactPersonEmail;
+	}
+
+
+
+
+
+
+
+
+
+	public void setContactPersonEmail(String contactPersonEmail) {
+		this.contactPersonEmail = contactPersonEmail;
+	}
+
+
+
+
+
+
+
+
+
+	public String getAlContactPerson() {
+		return alContactPerson;
+	}
+
+
+
+
+
+
+
+
+
+	public void setAlContactPerson(String alContactPerson) {
+		this.alContactPerson = alContactPerson;
+	}
+
+
+
+
+
+
+
+
+
+	public String getAlContactPersonTelNo() {
+		return alContactPersonTelNo;
+	}
+
+
+
+
+
+
+
+
+
+	public void setAlContactPersonTelNo(String alContactPersonTelNo) {
+		this.alContactPersonTelNo = alContactPersonTelNo;
+	}
+
+
+
+
+
+
+
+
+
+	public String getAlContactPersonEmail() {
+		return alContactPersonEmail;
+	}
+
+
+
+
+
+
+
+
+
+	public void setAlContactPersonEmail(String alContactPersonEmail) {
+		this.alContactPersonEmail = alContactPersonEmail;
+	}
+
+	
+	
 
 
 

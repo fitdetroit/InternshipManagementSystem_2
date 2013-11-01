@@ -1,30 +1,50 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
-<style>
-.page_title{ background: #E4FCEA; border: 1px solid #C6E5C9; height:30px; margin-top:10px;}
-.header_profile{ margin:0; padding:0;color: #298B1C; font-family: 'MerriweatherSans-Bold'; margin-left: 10px; padding-top: 2px; }
+<h2>Messages</h2>
+					
+	<s:form id="SendMessagebyCompany" method="post" action="MessageFromCompany" enctype="multipart/form-data" >				
+					<div class="form_container">
+					<fieldset class="fieldset msg_container">
+						<div class="newmsg_container">
+							<div class="inputrow">
+								<label class="inputlabel">Subject</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Enter Your Message Sy=ubject Here" class="autocomplete_field long" name="subject" />
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Message</label>
+								<div class="inputarea">													 
+								<textarea class="jqte-test" name="content"></textarea>
+								<script>
+									$('.jqte-test').jqte();
+									
+									// settings of status
+									var jqteStatus = true;
+									$(".status").click(function()
+									{
+										jqteStatus = jqteStatus ? false : true;
+										$('.jqte-test').jqte({"status" : jqteStatus})
+									});
+								</script>
+								</div>
+								
+							</div>
+							<div class="inputrow new_msg_but_container" >
+								<div class="inputarea">													 
+									 <input type="submit" value="Send" class="but_submit"/>
+									 <input type="submit" value="Cancel" class="but_change"/>
+								</div>
+							</div>
+						
+						</div>
+					</fieldset>
+					
+					</fieldset> <!-- /End msg_container-->
 
 
-.message_body{ margin:10px; overflow:auto}
-.reply_area{ width:885px; padding:10px;}
-.reply_area input[type="submit"]{ float:right; margin:10px auto}
-.reply_field{ min-width:880px; max-width:880px; min-height:150px; border:1px solid #CCCCCC}
-.msg_header{ width:874px; height:30px; font-size:16px; font-weight:600; padding-left:10px; border:1px solid #CCCCCC; margin-bottom:10px;}
-
-</style>
+</div><!-- /End Form container-->
 
 
-<div class="page_title"><h2 class="header_profile">Messages</h2></div>
-    <div class="profile_container">
-		<div class="message_container">
-			<s:form id="SendMessagebyCompany" method="post" action="MessageFromCompany" enctype="multipart/form-data" >
-			<div class="reply_area">
-			<input type="text" class="msg_header"name="subject"/>
-			<textarea class="reply_field" name="content"></textarea>
-			</div>
 
-			<div class="reply_area"><s:submit label="Save" id="signUp" cssClass="but_submit"></s:submit></div>
-			        
-      </s:form>
-		</section>
-		</div>
-</div>
+
+</s:form>

@@ -1,7 +1,14 @@
 package ims.actions;
 
 import java.io.File;
+<<<<<<< HEAD
 
+=======
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.ObjectUtils.Null;
+
+import java.io.IOException; 
+>>>>>>> origin
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Map;
@@ -55,24 +62,43 @@ public class CompanyRegistration extends ActionSupport{
 	//to upload profile picture
 	private File ProfilePicture;
 	private String ProfilePictureFileName;
-	private String ProfilePictureContentType;
-	
-	
+	private String ProfilePictureContentType;	
+   // private File myFile;
+  // private String myFileContentType;
+	private String myFileFileName;
+	private String destPath;
+
 
 	
 	public String registration() throws NoSuchAlgorithmException
 	{
-		
 		// uploading profile picture
-		ServletContext servletContext = ServletActionContext.getServletContext(); 
-		if (ProfilePicture != null) {
-			String dataDir = servletContext.getRealPath("/WEB-INF/data"); 
-			File savedFile = new File(dataDir, getCompanyUserName()+".gif"); 
-			ProfilePicture.renameTo(savedFile); } 
-		else {
-			//System.out.println("its not working");
-		}
-		
+
+        if(!(ProfilePicture==null))
+        {
+    		myFileFileName=getCompanyUserName();
+    		myFileFileName=myFileFileName.concat(".jpg");
+    		System.out.println(myFileFileName);
+    				
+    		ServletContext servletContext = ServletActionContext.getServletContext(); 
+    		String dataDir = servletContext.getRealPath("/WEB-INF/../assets/img/ProfileImages"); 
+    	      destPath = dataDir;
+    	      
+  	      try{
+ 	     	 System.out.println("Src File name: " + ProfilePicture);
+ 	     	 System.out.println("Dst File name: " + myFileFileName);
+ 	     	    	 
+ 	     	 File destFile  = new File(destPath, myFileFileName);
+ 	    	 FileUtils.copyFile(ProfilePicture, destFile);
+ 	  
+ 	      }catch(IOException e){
+ 	         e.printStackTrace();
+ 	         return ERROR;
+ 	      }
+ 		
+        	
+        }
+
 	
 		
 		
@@ -87,8 +113,8 @@ public class CompanyRegistration extends ActionSupport{
 		company.setAllowed(false);
 		company.setTechnologies(getTechnologies());
 		company.setCompanyEmail(getCompanyEmail());
-		company.setContactPerson(getAlContactPerson());
-		company.setContactPersonEmail(getAlContactPersonEmail());
+		company.setContactPerson(getCompanyName());
+		company.setContactPersonEmail(getContactPersonEmail());
 		company.setContactPersonTelNo(getContactPersonTelNo());
 		company.setAlContactPerson(getAlContactPerson());
 		company.setAlContactPersonEmail(getAlContactPersonEmail());
@@ -142,7 +168,7 @@ public class CompanyRegistration extends ActionSupport{
 	
 
 	// this validate method is used to validate passwod and confrom passwod and check username allready in database
-	public void validate()
+/*	public void validate()
 	{
 			
 		if(!(getPassword().equals(getConPassword()))){
@@ -160,7 +186,7 @@ public class CompanyRegistration extends ActionSupport{
 		}
 		
 		
-	}
+	}*/
 	
 
 

@@ -5,6 +5,8 @@
 
 
 <struts>
+	<constant name="struts.devMode" value="true" />
+   	<constant name="struts.multipart.maxSize" value="1000000" />
 
 	<package name="company" namespace="/" extends="struts-default">
 
@@ -141,18 +143,22 @@
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
-		<action name="MessageAction" class="ims.actions.MainMenuActions" method="MessageAction">
+		<action name="MessageAction" class="ims.actions.HandleMassages" method="MessageAction">
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
-		<action name="CreateNewMsgCompany" class="ims.actions.MainMenuActions" method="CreateNewMsgCompany">
+		<action name="CompMessageOutBox" class="ims.actions.HandleMassages" method="CompMessageOutBox">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		<action name="CreateNewMsgCompany" class="ims.actions.HandleMassages" method="CreateNewMsgCompany">
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 		
 	<!-- New message haddle -->	
 		<action name="MessageFromCompany" class="ims.actions.HandleMassages" method="HandleNewCompanyMessage">
-			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="success" type="redirect">CompMessageOutBox</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 		
@@ -161,12 +167,7 @@
 			<result name="error" type="redirect">../index</result>
 		</action>
 		
-		
-		
-		
-		
-		
-		
+	
 		
 
 	</package>

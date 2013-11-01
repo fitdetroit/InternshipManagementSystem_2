@@ -2,7 +2,9 @@ package ims.actions;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 import ims.business.HandleMassageDataSession;
@@ -36,6 +38,9 @@ public class HandleMassages extends ActionSupport{
 	private String subject;
 	private String content;
 	private String date;
+	
+	
+	List<Messages> msgList =new ArrayList<Messages>();
 
 	
 
@@ -53,6 +58,7 @@ public class HandleMassages extends ActionSupport{
 	message.setSenderId(str);
 	message.setSubject(getSubject());
 	message.setContent(getContent());
+	message.setReceiveId("admin");
 	
 		
   DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -73,6 +79,145 @@ public class HandleMassages extends ActionSupport{
 		
 		return SUCCESS;
 	}
+	
+	
+	
+	
+	//Company Message tag clickd then this method call
+    public String MessageAction() {	
+		
+			// to redirect direct access actions  without login
+			if (str==null) {
+				return ERROR;
+					
+			}	
+			
+			
+			msgList=handleMassageDataSession.getCompanyMessages(str);
+			
+				Map session;
+				session = ActionContext.getContext().getSession();
+				String type = (String) session.get("type");
+				
+				this.role=(String)session.get("type");
+				this.page="Messages_company";
+				this.menu="messages_comp";
+				return SUCCESS;
+
+		}
+    
+    
+
+
+
+
+
+	//when company need to create new msg this method called
+    public String CreateNewMsgCompany() {	
+	
+	// to redirect direct access actions  without login
+	if (str==null) {
+		return ERROR;
+			
+	}	
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String type = (String) session.get("type");
+		
+		this.role=(String)session.get("type");
+		this.page="CreateNewMsgCompany";
+		this.menu="messages_comp";
+		return SUCCESS;
+
+}
+    
+    // company need to see outbox this method will called
+    public String CompMessageOutBox() {	
+ 		
+ 		// to redirect direct access actions  without login
+ 		if (str==null) {
+ 			return ERROR;
+ 				
+ 		}	
+ 			Map session;
+ 			session = ActionContext.getContext().getSession();
+ 			String type = (String) session.get("type");
+ 			
+ 			msgList=handleMassageDataSession.getCompanySendMessages(str);
+ 			
+ 			this.role=(String)session.get("type");
+ 			this.page="CompMessageOutBox";
+ 			this.menu="messages_comp";
+ 			return SUCCESS;
+
+ 	}
+
+
+/*
+     public String InboxCompany() {	
+	
+	// to redirect direct access actions  without login
+	if (str==null) {
+		return ERROR;
+			
+	}	
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String type = (String) session.get("type");
+		
+		this.role=(String)session.get("type");
+		this.page="InboxCompany";
+		this.menu="messages_comp";
+		return SUCCESS;
+
+}*/
+     
+     
+     
+     //Student Create new message
+	public String MessageActionByStd() {	
+			
+			// to redirect direct access actions  without login
+			if (str==null) {
+				return ERROR;
+					
+			}	
+				Map session;
+				session = ActionContext.getContext().getSession();
+				String type = (String) session.get("type");
+				
+				msgList=handleMassageDataSession.getStudentMessages(str);
+				this.role=(String)session.get("type");
+				this.page="MessageDefault";
+				this.menu="Message_st";
+				return SUCCESS;
+
+		}
+ 
+	
+ //Student outbox   
+     public String MessageOutBoxStudent() {	
+     	
+     	// to redirect direct access actions  without login
+     	if (str==null) {
+     		return ERROR;
+     			
+     	}	
+     		Map session;
+     		session = ActionContext.getContext().getSession();
+     		String type = (String) session.get("type");
+     		
+     		
+     		msgList=handleMassageDataSession.getStudentSendMessages(str);
+     		
+     		this.role=(String)session.get("type");
+     		this.page="MessageOutBoxStudent";
+     		this.menu="Message_st";
+     		return SUCCESS;
+
+     }
+	
+	
 
 
 	
@@ -113,25 +258,16 @@ public class HandleMassages extends ActionSupport{
 	}
 
 
+	public List<Messages> getMsgList() {
+		return msgList;
+	}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	public void setMsgList(List<Messages> msgList) {
+		this.msgList = msgList;
+	}
 
 
 
@@ -144,54 +280,9 @@ public class HandleMassages extends ActionSupport{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	public String getPage() {
 		return page;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -200,82 +291,14 @@ public class HandleMassages extends ActionSupport{
 	}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	public String getMenu() {
 		return menu;
 	}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	public void setMenu(String menu) {
 		this.menu = menu;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

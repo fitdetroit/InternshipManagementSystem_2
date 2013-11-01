@@ -99,6 +99,7 @@ public class Login extends ActionSupport{
 			        	session = ActionContext.getContext().getSession();
 						  session.put("userName",getUserName());
 						  session.put("type","regiStudent");
+						  session.put("userFullName",checkUserToLogin.getStudentName(UserName) );
 						  
 						  this.role ="regiStudent";
 						  this.page="RegistedStudent.jsp";
@@ -112,6 +113,7 @@ public class Login extends ActionSupport{
 			        	session = ActionContext.getContext().getSession();
 						  session.put("userName",getUserName());
 						  session.put("type","notRegiStudent");
+						  session.put("userFullName",checkUserToLogin.getStudentName(UserName) );
 						  
 						  return "notRegiStudent";
 					 
@@ -122,6 +124,7 @@ public class Login extends ActionSupport{
 			        	session = ActionContext.getContext().getSession();
 						  session.put("userName",getUserName());
 						  session.put("type","allowedCompany");
+						  session.put("userFullName",checkUserToLogin.getCompanyName(UserName) );
 						  
 						  this.role="allowedCompany";
 						  this.page="AllowedCompany.jsp";
@@ -135,6 +138,7 @@ public class Login extends ActionSupport{
 			        	session = ActionContext.getContext().getSession();
 						  session.put("userName",getUserName());
 						  session.put("type","notAllowedCompany");
+						  session.put("userFullName",checkUserToLogin.getCompanyName(UserName) );
 						  
 						  this.role="notAllowedCompany";
 						  this.page="NotAllowedCompany.jsp";
