@@ -1,9 +1,9 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
-<%@ page import="net.tanesha.recaptcha.ReCaptcha" %>
+<!--<%@ page import="net.tanesha.recaptcha.ReCaptcha" %>
 <%@ page import="net.tanesha.recaptcha.ReCaptchaFactory" %>
 <%@ page import="net.tanesha.recaptcha.ReCaptchaImpl" %>
 <%@ page import="net.tanesha.recaptcha.ReCaptchaResponse" %>
-
+-->
 <s:form method="post" action="RegisterCompany" enctype="multipart/form-data">
 					<div class="notification_area">
 						<h2>Welcome To Internship Management System</h2>
@@ -142,19 +142,19 @@
 							<div class="inputrow">
 								<label class="inputlabel">Name of the Person</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="contactPerson"/>
+									 <input type="text"  class="autocomplete_field half" name="contactPerson"/>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Contact Number</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="contactPersonTelNo" />
+									 <input type="text"  class="autocomplete_field half" name="contactPersonTelNo" />
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Contact email Address</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" name="contactPersonEmail"/>
+									 <input type="text"  class="autocomplete_field half" name="contactPersonEmail"/>
 								</div>
 							</div>
 							<p>This field is optional</p>
@@ -187,11 +187,11 @@
 							</div>
 						</fieldset>	
 						
-						<%
+						<!--  <%
           ReCaptcha c = ReCaptchaFactory.newReCaptcha("6LdBcOMSAAAAAFSVyPBnw4FOda-9i60OajHUfwXi ", "6LdBcOMSAAAAAKNo3kfTe_x1G3lcQGpZu3KyMAx0 ", false);
           out.print(c.createRecaptchaHtml(null, null));
        %>
-     
+     -->
 						
 						
 						<div class="inputrow">
