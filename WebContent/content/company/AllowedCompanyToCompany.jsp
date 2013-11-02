@@ -9,8 +9,8 @@
 							<thead>
 								<tr class="theader">
 									<th>No</th>
-									<th>Genaral Detail</th>
-									<th>Discription</th>
+									<th>General Detail</th>
+									<th>Description</th>
 								
 							  </tr>
 							</thead>
