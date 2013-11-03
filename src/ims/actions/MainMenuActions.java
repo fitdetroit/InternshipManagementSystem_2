@@ -146,6 +146,25 @@ public class MainMenuActions extends ActionSupport{
 
 		}//HomeActionByStd
 		
+		
+public String HomeActionByNrStd() {	
+			
+			// to redirect direct access actions  without login
+			if (str==null) {
+				return ERROR;
+					
+			}	
+				Map session;
+				session = ActionContext.getContext().getSession();
+				String type = (String) session.get("type");
+				
+				this.role=(String)session.get("type");
+				this.page="UnRegistedStudent";
+				this.menu="home_nrst";
+				return SUCCESS;
+
+		}//HomeActionByNrStd
+		
 		public String CompanyActionByStd() {	
 			
 			// to redirect direct access actions  without login
@@ -186,7 +205,95 @@ public class MainMenuActions extends ActionSupport{
 		}//internshipActionByStd
 		
 		
+		
+public String internshipActionByNrStd() {	
+			
+			// to redirect direct access actions  without login
+			if (str==null) {
+				return ERROR;
+					
+			}	
+				Map session;
+				session = ActionContext.getContext().getSession();
+				String type = (String) session.get("type");
+				
+				this.role=(String)session.get("type");
+				this.page="internshipDefault";
+				this.menu="internship_nrst";
+				return SUCCESS;
 
+		}//internshipActionByNrStd
+public String CompanyActionByNrStd() {	
+	
+	// to redirect direct access actions  without login
+	if (str==null) {
+		return ERROR;
+			
+	}	
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String type = (String) session.get("type");
+		
+		this.role=(String)session.get("type");
+		this.page="CompanyDefaultnrst";
+		this.menu="company_nrst";
+		return SUCCESS;
+
+} //CompanyActionByNrStd
+public String MessageActionByNrStd() {	
+	
+	// to redirect direct access actions  without login
+	if (str==null) {
+		return ERROR;
+			
+	}	
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String type = (String) session.get("type");
+		
+		this.role=(String)session.get("type");
+		this.page="MessageDefaultnrst";
+		this.menu="messages_nrst";
+		return SUCCESS;
+
+}//MessageActionByNrStd
+/*************Menu Administration*/
+
+public String SetupNewInternship() {	
+	
+	// to redirect direct access actions  without login
+	if (str==null) {
+		return ERROR;
+			
+	}	
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String type = (String) session.get("type");
+		
+		this.role=(String)session.get("type");
+		this.page="SetupNewInternship";
+		this.menu="home_admin";
+		return SUCCESS;
+
+}//SetupNewInternship
+
+public String Message_actionByAdmin() {	
+	
+	// to redirect direct access actions  without login
+	if (str==null) {
+		return ERROR;
+			
+	}	
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String type = (String) session.get("type");
+		
+		this.role=(String)session.get("type");
+		this.page="Message_actionByAdmin";
+		this.menu="message_admin";
+		return SUCCESS;
+
+}//Message_actionByAdmin
 			
 
 

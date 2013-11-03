@@ -6,6 +6,7 @@ package ims.actions;
 import ims.business.ViewCompanyDataSession;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -14,6 +15,7 @@ import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class NewStudent extends ActionSupport{
@@ -36,6 +38,7 @@ public class NewStudent extends ActionSupport{
 	{
 		// to redirect direct access actions  without login
 		if (str==null) {
+			
 			return ERROR;
 				
 		}
@@ -46,6 +49,14 @@ public class NewStudent extends ActionSupport{
 		
 		setList(viewCompanyDataSession.remainingCompanyName());
 		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String type = (String) session.get("type");
+		
+		this.role=(String)session.get("type");
+		this.page="StudentRegistrationForm";
+		this.menu="home_notreg_st";
+	
 		
 		return SUCCESS;
 	}
@@ -79,6 +90,16 @@ public class NewStudent extends ActionSupport{
 
 	public void setPage(String page) {
 		this.page = page;
+	}
+	
+	public String getMenu() {
+		return menu;
+	}
+
+
+
+	public void setMenu(String page) {
+		this.menu = menu;
 	}
 
 

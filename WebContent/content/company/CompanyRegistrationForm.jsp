@@ -1,11 +1,5 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
-<<<<<<< HEAD
-<%@ page import="net.tanesha.recaptcha.ReCaptchaImpl" %>
-<%@ page import="net.tanesha.recaptcha.ReCaptchaResponse" %>
-<%@ page import="net.tanesha.recaptcha.ReCaptcha" %>
-<%@ page import="net.tanesha.recaptcha.ReCaptchaFactory" %>
-<%@ page import="net.tanesha.recaptcha.ReCaptchaImpl" %>
-<%@ page import="net.tanesha.recaptcha.ReCaptchaResponse" %>
+
 
 
 
@@ -183,10 +177,7 @@
 							</div>
 						</fieldset>	
 						
-						  <%
-          ReCaptcha c = ReCaptchaFactory.newReCaptcha("6LdBcOMSAAAAAFSVyPBnw4FOda-9i60OajHUfwXi ", "6LdBcOMSAAAAAKNo3kfTe_x1G3lcQGpZu3KyMAx0 ", false);
-          out.print(c.createRecaptchaHtml(null, null));
-       %>
+
       
 						
 						

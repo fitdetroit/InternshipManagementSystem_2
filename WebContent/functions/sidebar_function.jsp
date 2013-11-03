@@ -24,6 +24,9 @@
 <s:if test="%{#menu=='company_st' }">
 	<%@include file="/header/menus/widget_side_menu_company_st.jsp" %>
 </s:if>
+<s:if test="%{#menu=='home_nrst' || #menu=='internship_nrst' || #menu=='company_nrst'}">
+	<%@include file="/header/menus/widget_side_menu_notallowed_student.jsp" %>
+</s:if>
 
 
 

@@ -10,14 +10,6 @@
 	<p>When each splash div was set to absolute positioning, but I realised that these would appear in different places in ...</p>
 </div>
   
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-
-
 <br>This is a Summary of the applied students
 
 <s:if test="%{#applyStudentCount==0}">
@@ -31,5 +23,3 @@
 <p>not Selected Student Count:</p><p><s:property  value="notSelectedStudentCount" ></s:property></p>
 </s:else>
 
-</body>
-</html> 

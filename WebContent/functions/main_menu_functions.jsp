@@ -15,6 +15,9 @@
 <s:if test="%{#role=='notAllowedCompany'}">
 	<%@include file="/header/menus/main_menu-common.jsp" %>
 </s:if>
+<s:if test="%{#role=='notRegiStudent'}">
+	<%@include file="/header/menus/main_menu_not_reg_student.jsp" %>
+</s:if>
 
 
 

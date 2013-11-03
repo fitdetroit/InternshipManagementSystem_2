@@ -10,7 +10,7 @@
 
 <table cellpadding="0" cellspacing="0" class="content_table">
 			<tr class="table_header">
-				<td>No.</td><td>Company Name</td><td>Address</td><td>Company Telephone</td><td>Contact Persion</td><td>Company Web</td><td>No. of Vacancies</td><td>Action</td>
+				<td>No.</td><td>Company Name</td><td>Address</td><td>Company Telephone</td><td>Contact Persion</td><td>Company Web</td><td>Vac</td><td>Action</td>
 				
 			</tr>
 <s:iterator value="list" var="student">
