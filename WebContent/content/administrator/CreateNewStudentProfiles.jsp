@@ -58,19 +58,6 @@
 </div>
 <div style="float:left;width:15%; height: 672px;background=#333333">
 
-<p align="left"><a href="<s:url action="AdminPage"/>">Admin page</a></p>
-
-<p align="left"><a href="<s:url action="AllStudent"/>">View Student Details</a></p>
-
-
-<p align="left"><a href="<s:url action="AllowedCompany"/>">View Allowed Company Details</a></p>
-
-<p align="left"><a href="<s:url action="NotAllowedCompany"/>">View Not Allowed Company Details</a></p>
-
-<p align="left"><a href="<s:url action="HaddleCv"/>">To Allow And Reject CV</a></p>
-
-<p align="left"><a href="<s:url action="NewStudetProfiles"/>">Enter students to system</a></p>
-
 
 
 <p align="left"><a href="<s:url action="ToRemoveStudetProfiles"/>">Remove students From system</a></p>

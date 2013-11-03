@@ -9,7 +9,7 @@
 						<div class="profile_header_container ">
 							<h4><s:property  value="company.companyName"></s:property></h4>
 							<p><s:property  value="company.companyAddress"></s:property></p>
-							<p class="longtext">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae </p>
+							<p class="longtext"><s:property  value="company.aboutCompany"></s:property></p>
 						</div>
 						
 						</div>
@@ -19,12 +19,12 @@
 							<div class="inputrow">
 								<label class="inputlabel">Username</label>
 								<div class="inputarea">													 
-									 <p>mit</p>
+									 <p><s:property  value="company.companyUserName"></s:property></p>
 								</div>
 							</div>
 							
 							<div class="inputrow">
-								<label class="inputlabel">No of Vacancies</label>
+								<label class="inputlabel">No. of Vacancies</label>
 								<div class="inputarea">													 
 									 <p>10</p>
 								</div>
@@ -36,7 +36,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">&nbsp;</label>
 								<div class="inputarea">													 
-									 <p>C#, Web Developing, php, java, .Net </p>
+									 <p><s:property  value="company.technologies"></s:property> </p>
 								</div>
 							</div>
 						</fieldset>
@@ -46,25 +46,25 @@
 							<div class="inputrow">
 								<label class="inputlabel">Telephone</label>
 								<div class="inputarea">													 
-									 <p>0112334432 </p>
+									 <p><s:property  value="company.companyTelephone"></s:property></p>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Fax</label>
 								<div class="inputarea">													 
-									 <p>0112334432 </p>
+									 <p><s:property  value="company.companyTelephone"></s:property> </p>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">E-mail</label>
 								<div class="inputarea">													 
-									 <p>info@mit.com </p>
+									 <p><s:property  value="company.companyEmail"></s:property></p>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Web Site</label>
 								<div class="inputarea">													 
-									 <p>www.mitsrilanka.lk </p>
+									 <p><s:property  value="company.companyWeb"></s:property></p>
 								</div>
 							</div>
 						</fieldset>
@@ -75,19 +75,19 @@
 							<div class="inputrow">
 								<label class="inputlabel">Name</label>
 								<div class="inputarea">													 
-									 <p>KDA. Sarath Perera</p>
+									 <p><s:property  value="company.contactPerson"></s:property></p>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Contact Number</label>
 								<div class="inputarea">													 
-									 <p>0777889988</p>
+									 <p><s:property  value="company.contactPersonTelNo"></s:property></p>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Email</label>
 								<div class="inputarea">													 
-									 <p>sdfsdf@gmail.com</p>
+									 <p><s:property  value="company.contactPersonEmail"></s:property></p>
 								</div>
 							</div>
 						</fieldset>
@@ -98,19 +98,19 @@
 							<div class="inputrow">
 								<label class="inputlabel">Name</label>
 								<div class="inputarea">													 
-									 <p>KDA. Sarath Perera</p>
+									 <p><s:property  value="company.alContactPerson"></s:property></p>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Contact Number</label>
 								<div class="inputarea">													 
-									 <p>0777889988</p>
+									 <p><s:property  value="company.alContactPersonTelNo"></s:property></p>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Email</label>
 								<div class="inputarea">													 
-									 <p>sdfsdf@gmail.com</p>
+									 <p><s:property  value="company.alContactPersonEmail"></s:property></p>
 								</div>
 							</div>
 						</fieldset>
