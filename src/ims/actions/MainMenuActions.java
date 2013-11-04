@@ -109,6 +109,22 @@ public class MainMenuActions extends ActionSupport{
 				return SUCCESS;
 
 		}//SupportMenu
+		
+		public String AboutAction(){
+			// to redirect direct access actions  without login
+						if (str==null) {
+							return ERROR;
+						}
+						Map session;
+						session = ActionContext.getContext().getSession();
+						String type = (String) session.get("type");
+						
+						this.role=(String)session.get("type");
+						this.page="AboutUs";
+						this.menu="AboutUs";
+						return SUCCESS;
+		}
+		
 		public String UpdateVecancies() {	
 			
 			// to redirect direct access actions  without login

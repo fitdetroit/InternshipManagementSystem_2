@@ -13,7 +13,7 @@ table.element_container td{ padding-left:30px; width:800px;}
 </style>
    
     <div class="page_title"><h2 class="header_profile">Support</h2>
-		<p>Freelancer.com is the world’s #1 outsourcing website and consistently ranks in the Top 250 Sites Worldwide. Advertise to millions of professionals and business decision makers everyday!</p></div>
+		<p> Send a Massage for any inquiry. </p></div>
     <div class="profile_container">
 		<div class="support">
 
@@ -36,3 +36,5 @@ table.element_container td{ padding-left:30px; width:800px;}
 		</form>
 		</div>
 		</div>
+		
+		
