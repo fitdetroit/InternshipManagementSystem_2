@@ -6,6 +6,12 @@
 <s:if test="%{#page==null}">
 	<%@include file="/jsp/Login.jsp" %>
 </s:if>
+<s:if test="%{#page=='NotAllowedCompany'}">
+	<%@include file="/content/company/NotAllowedCompany.jsp" %>
+</s:if>
+
+
+
 <s:if test="%{#page=='CompanyRegistrationForm.jsp'}">
 	<%@include file="/content/company/CompanyRegistrationForm.jsp" %>
 </s:if>

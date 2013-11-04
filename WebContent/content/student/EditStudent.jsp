@@ -102,6 +102,7 @@
 						
 						<h3>Experience</h3>
 						<fieldset class="fieldset">
+						<!-- ----------------------------------- -->
 							<div class="inputrow">
 								<label class="inputlabel">Title</label>
 								<div class="inputarea">													 
@@ -115,6 +116,10 @@
 									 <textarea class="autocomplete_field half discription_area" placeholder="Description" name="" value=""></textarea>
 								</div>
 							</div>
+							
+							<!-- ---------------------------------- -->
+							
+							
 						</fieldset>
 						
 						<h3>Completed Projects</h3>
