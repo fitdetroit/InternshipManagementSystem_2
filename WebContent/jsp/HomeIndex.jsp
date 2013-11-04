@@ -86,7 +86,7 @@
 				<div class="sub_container">
 				<%@include file="/functions/sidebar_function.jsp"%>
 				<div class="widget_2 widgets"><h2>May I help you ?</h2>
-				<p>Go to SUPPORT menu and just send us a message if you have any issue.</p></div>
+				<p>Go to SUPPORT menu and just send us a message if you have any issues.</p></div>
 				<div class="widget_3 widgets">
 				<h2>Related links</h2>
 				<a href="http://www.itfac.mrt.ac.lk/about/">Faculty of Information Technology</a><br><hr>
