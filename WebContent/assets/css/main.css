@@ -172,7 +172,9 @@ position: absolute;
 right: 0;
 top: 0;}
 
-.cvcontainer{ width:760px; margin:0 auto 0 auto; border:1px solid #CCCCCC}
+.cvcontainer{ width:760px; margin:0 auto 0 auto; border:1px solid #CCCCCC;-webkit-box-shadow:  2px 2px 3px 0px rgba(0, 0, 0, 0.3);
+        
+        box-shadow:  2px 2px 3px 0px rgba(0, 0, 0, 0.3);}
 .action_bottons_area{float: right; padding-right: 50px;}
 
 .msg_container .container_top{ height:40px;border-bottom:1px solid #ececec;}
@@ -209,6 +211,14 @@ background: #DAEBBD;}
 .new_msg_but_container .inputarea{ float: right;
 width: 309px;
 margin-top: 20px;}
+
+
+.results_table{ width:200px; margin-left:30px; margin-top:10px;	}
+.results_table tr td{ border:1px solid #EEE; padding:5px;}
+.results_table tr.tab_header{ font-weight:600px; background:#EEE}
+.autocomplete_field.small{width:80px}
+
+
 
 
 

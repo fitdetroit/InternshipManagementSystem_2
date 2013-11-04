@@ -5,25 +5,33 @@
 					<div class="form_container editprofile">
 			
 			
-			<h3>Genaral Information</h3>
+			<h3>General Information</h3>
 						<fieldset class="fieldset">
+							<div class="inputrow">
+								<label class="inputlabel">Index No.</label>
+								<div class="inputarea">
+									<input type="text" value="114455K" disabled="disabled" class="autocomplete_field half input_disabled"  name="indexnumber"/>
+									
+								</div>
+							</div>
+							
 							<div class="inputrow">
 								<label class="inputlabel">Name In Full</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half"  name="companyName"/>
+									 <input type="text" class="autocomplete_field half"  name="nameInFull"  value="<%= request.getAttribute("nameInFull") %>"/>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Name With Initials</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half"  name="companyName"/>
+									 <input type="text"  class="autocomplete_field half"  name="nameWithInitials" value="<%= request.getAttribute("nameWithInitials") %>"/>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Gender</label>
 								<div class="inputarea">													 
 									
-									 <select class="autocomplete_field half"><option>Male</option><option>Female</option></select>
+									 <input type="text" class="autocomplete_field half" name="gender" value="<%= request.getAttribute("gender") %>"/>
 								</div>
 							</div>
 							<div class="inputrow">
@@ -42,7 +50,7 @@
 							</div>
 							
 							<div class="inputrow">
-								<label class="inputlabel">Select a Profile Picture</label>
+								<label class="inputlabel">Change Profile Picture</label>
 								<div class="inputarea">													 
 			
 									<input type="file" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture"/>
@@ -50,7 +58,7 @@
 							</div>
 						</fieldset>
 						
-					<h3>Technologies</h3>
+					<h3>Skills & Expertise</h3>
 						<fieldset class="fieldset">
 							<div class="inputrow">
 								<label class="inputlabel">&nbsp;</label>
@@ -63,21 +71,14 @@
 					<h3>Genaral Contact Information</h3>
 						<fieldset class="fieldset">
 							<div class="inputrow">
-								<label class="inputlabel">Telephone</label>
+								<label class="inputlabel">Address</label>
 								<div class="inputarea">													 
 									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
 								</div>
 							</div>
 							
 							<div class="inputrow">
-								<label class="inputlabel">Company Address</label>
-								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
-								</div>
-							</div>
-							
-							<div class="inputrow">
-								<label class="inputlabel">Website URL</label>
+								<label class="inputlabel">Contact No.</label>
 								<div class="inputarea">													 
 									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
 								</div>
@@ -91,36 +92,158 @@
 							</div>
 						</fieldset>
 						
-						<h3>Genaral Contact Information</h3>
+						<h3>Experience</h3>
 						<fieldset class="fieldset">
 							<div class="inputrow">
-								<label class="inputlabel">Telephone</label>
+								<label class="inputlabel">Title</label>
 								<div class="inputarea">													 
 									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
 								</div>
 							</div>
 							
 							<div class="inputrow">
-								<label class="inputlabel">Company Address</label>
+								<label class="inputlabel">Discription</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
-								</div>
-							</div>
-							
-							<div class="inputrow">
-								<label class="inputlabel">Website URL</label>
-								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
-								</div>
-							</div>
-							
-							<div class="inputrow">
-								<label class="inputlabel">Email Address</label>
-								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
+									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" ></textarea>
 								</div>
 							</div>
 						</fieldset>
+						
+						<h3>Completed Projects</h3>
+						<fieldset class="fieldset">
+							<div class="inputrow">
+								<label class="inputlabel">Title</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Discription</label>
+								<div class="inputarea">													 
+									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" ></textarea>
+								</div>
+							</div>
+						</fieldset>
+
+
+						<h3>Education</h3>
+						<fieldset class="fieldset">
+							<div class="inputrow">
+								<label class="inputlabel">Digree</label>
+								<div class="inputarea">													 
+									 <select class="autocomplete_field half"><option>Bsc(Hons) Information Technology</option>
+									 	<option>Bsc(Hons) Information Technology & Management</option></select>
+									 	&nbsp;Select Batch
+									 	<select class="autocomplete_field small">
+									 	<option>10</option>
+									 	<option>11</option>
+									 	<option>12</option>
+									 	<option>13</option>
+									 	<option>14</option>
+									 	<option>15</option>
+									 	<option>16</option>
+									 	<option>17</option>
+									 	<option>18</option>
+									 	<option>19</option>
+									 	<option>20</option>
+									 	<option>21</option>	
+									 </select>
+									 
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">School</label>
+								<div class="inputarea">													 
+			
+								<input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture"/>
+									&nbsp;Select Year
+									 	<select class="autocomplete_field small">
+									 	<option>2005</option>
+									 	<option>2006</option>
+									 	<option>2007</option>
+									 	<option>2008</option>
+									 	<option>2009</option>
+									 	<option>2010</option>
+									 	<option>2011</option>
+									 	<option>2012</option>
+									 	<option>2013</option>
+									 	<option>2014</option>
+									 	<option>2015</option>
+									 	<option>2016</option>	
+									 </select>
+								</div>
+								<hr>
+															
+								
+							</div>
+							
+							
+							<div class="inputrow">
+								<label class="inputlabel">Your A/L Results</label>
+								<div class="inputarea">													 
+			
+								<input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture"/>
+									&nbsp;Select Result
+									 	<select class="autocomplete_field small">
+									 	<option>A</option>
+									 	<option>B</option>
+									 	<option>C</option>
+									 	<option>S</option>	
+									 </select>
+								</div>							
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">&nbsp;</label>
+								<div class="inputarea">													 
+			
+								<input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture"/>
+									&nbsp;Select Result
+									 	<select class="autocomplete_field small">
+									 	<option>A</option>
+									 	<option>B</option>
+									 	<option>C</option>
+									 	<option>S</option>	
+									 </select>
+								</div>							
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">&nbsp;</label>
+								<div class="inputarea">													 
+			
+								<input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture"/>
+									&nbsp;Select Result
+									 	<select class="autocomplete_field small">
+									 	<option>A</option>
+									 	<option>B</option>
+									 	<option>C</option>
+									 	<option>S</option>	
+									 </select>
+								</div>							
+							</div> 	
+							
+						</fieldset>
+						
+						<h3>Extracurricular  Activities</h3>
+						<fieldset class="fieldset">
+							<div class="inputrow">
+								<label class="inputlabel">Title</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Discription</label>
+								<div class="inputarea">													 
+									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" ></textarea>
+								</div>
+							</div>
+						</fieldset>
+						
+						
+						
+												
 												
 						<fieldset class="fieldset">
 							<div class="inputrow">
@@ -161,7 +284,7 @@
 <table>
 <tr><td><h4 >Your personal Details</h4></td></tr>
 <tr><td><s:form method="post" action="UpdateStudent" enctype="multipart/form-data" validate="true">
-<tr><td><s:hidden label="Student User Name" name="studentUserName" value="%{#session.userName}"></s:hidden></td> </tr> 
+<s:hidden label="Student User Name" name="studentUserName" value="%{#session.userName}"></s:hidden>
 <tr><td><s:textfield label="Name In Full" name="nameInFull" value="%{nameInFull}"></s:textfield></td> </tr>
 <tr><td><s:textfield label="Name With Initials" name="nameWithInitials" value="%{nameWithInitials}"></s:textfield></td> </tr>
 <tr><td><s:select list="{'Male','Female'}" label="Gender" name="gender" value="%{gender}"></s:select> </td></tr>
