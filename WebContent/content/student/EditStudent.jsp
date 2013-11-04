@@ -110,9 +110,9 @@
 							</div>
 							
 							<div class="inputrow">
-								<label class="inputlabel">Discription</label>
+								<label class="inputlabel">Description</label>
 								<div class="inputarea">													 
-									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" ></textarea>
+									 <textarea class="autocomplete_field half discription_area" placeholder="Description" name="" value=""></textarea>
 								</div>
 							</div>
 						</fieldset>
@@ -122,14 +122,14 @@
 							<div class="inputrow">
 								<label class="inputlabel">Title</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Project Title" class="autocomplete_field half"  name="projectTitle1" value="<%= request.getAttribute("projectTitle")%>"/>
+									 <input type="text" placeholder="Project title" class="autocomplete_field half"  name="projectTitle1" value="<%= request.getAttribute("projectTitle")%>"/>
 								</div>
 							</div>
 							
 							<div class="inputrow">
-								<label class="inputlabel">Discription</label>
+								<label class="inputlabel">Description</label>
 								<div class="inputarea">													 
-									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" ></textarea>
+									 <input type="text" class="autocomplete_field half discription_area" placeholder="Description" name="projectDescription" value="<%= request.getAttribute("projectDescription")%>"/></textarea>
 								</div>
 							</div>
 						</fieldset>
@@ -211,7 +211,12 @@
 								<input type="text" class="autocomplete_field half" name="alSubject1" value="<%= request.getAttribute("alSubject1")%>"/>
 							
 									&nbsp;Select Result
-									 	<input type="text" class="autocomplete_field small" name="alResult1" value="<%= request.getAttribute("alResult1")%>"/>	
+									 	<select class="autocomplete_field small">
+									 	<option selected><%= request.getAttribute("alResult1")%></option>
+									 	<option>A</option>
+									 	<option>B</option>
+									 	<option>C</option>
+									 	<option>S</option></select>
 									 	
 								</div>							
 							</div>
@@ -220,8 +225,14 @@
 								<div class="inputarea">													 
 			
 									<input type="text" class="autocomplete_field half" name="alSubject2" value="<%= request.getAttribute("alSubject2")%>"/>
-									&nbsp;Select Result
-									 <input type="text" class="autocomplete_field small" name="alResult2" value="<%= request.getAttribute("alResult2")%>"/>	
+									
+									 &nbsp;Select Result
+									 	<select class="autocomplete_field small">
+									 	<option selected><%= request.getAttribute("alResult2")%></option>
+									 	<option>A</option>
+									 	<option>B</option>
+									 	<option>C</option>
+									 	<option>S</option></select>
 								</div>							
 							</div>
 							<div class="inputrow">
@@ -229,26 +240,33 @@
 								<div class="inputarea">													 
 			
 									<input type="text" class="autocomplete_field half" name="alSubject3" value="<%= request.getAttribute("alSubject3")%>"/>
-									&nbsp;Select Result
-									 <input type="text" class="autocomplete_field small" name="alResult3" value="<%= request.getAttribute("alResult3")%>"/>		
+									
+									 &nbsp;Select Result
+									 	<select class="autocomplete_field small">
+									 	<option selected><%= request.getAttribute("alResult3")%></option>
+									 	<option>A</option>
+									 	<option>B</option>
+									 	<option>C</option>
+									 	<option>S</option>	</select>	
 								</div>							
 							</div> 	
 							
 						</fieldset>
+						
 						
 						<h3>Extracurricular  Activities</h3>
 						<fieldset class="fieldset">
 							<div class="inputrow">
 								<label class="inputlabel">Title</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Activity title" class="autocomplete_field half" name="extraCurricularTitle" value=""/>
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">Discription</label>
 								<div class="inputarea">													 
-									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" ></textarea>
+									 <textarea class="autocomplete_field half discription_area" placeholder="Description" name="extraCurricularDescription" value="extraCurricularDescription"></textarea>
 								</div>
 							</div>
 						</fieldset>
@@ -257,13 +275,7 @@
 						
 												
 												
-						<fieldset class="fieldset">
-							<div class="inputrow">
-								<input type="checkbox" name="tick"/>
-                <label for="tick">&nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</label>
- 
-							</div>
-						</fieldset>	
+						
 						
 						
 						<div class="inputrow">
