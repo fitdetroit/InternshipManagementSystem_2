@@ -10,7 +10,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">Index No.</label>
 								<div class="inputarea">
-									<input type="text" value="114455K" disabled="disabled" class="autocomplete_field half input_disabled"  name="indexnumber"/>
+									<input type="text" value="" disabled="disabled" class="autocomplete_field half input_disabled"  name="indexnumber"/>
 									
 								</div>
 							</div>
@@ -282,8 +282,7 @@
 								<label class="inputlabel">&nbsp;</label>
 								<div class="inputarea">													 
 									 <input type="submit" value="SUBMIT" class="but_submit" id="signUp"/>
-									 
-									 <input type="submit" value="RESET" class="but_create"/>
+							
 								</div>
 						</div>
 						
@@ -294,7 +293,7 @@
 
 
 
-
+<!-- --------------------------
 
 
 
@@ -349,3 +348,5 @@
 </td></tr>
 </table></div>
 
+
+-->
