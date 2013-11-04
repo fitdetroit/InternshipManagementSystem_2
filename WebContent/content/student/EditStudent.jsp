@@ -30,22 +30,29 @@
 							<div class="inputrow">
 								<label class="inputlabel">Gender</label>
 								<div class="inputarea">													 
-									
-									 <input type="text" class="autocomplete_field half" name="gender" value="<%= request.getAttribute("gender") %>"/>
+									<select class="autocomplete_field small">
+									 	<option selected> <%= request.getAttribute("gender")%></option>
+									 	<option>Male</option>
+									 	<option>Female</option>
+									 	</select>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Marital Status</label>
 								<div class="inputarea">													 
 									
-									 <select class="autocomplete_field half"><option>Married</option><option>Unmarried</option></select>
+									 <select class="autocomplete_field small">
+									 	<option selected> <%= request.getAttribute("maritalStatus")%></option>
+									 	<option>Married</option>
+									 	<option>Unmarried</option>
+									 	</select>
 								</div>
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">Date Of birth</label>
 								<div class="inputarea">													 
 			
-									<input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture"/>
+									<input type="text" class="autocomplete_field half" name="dateOfBirth" value="<%= request.getAttribute("dateOfBirth") %>"/>
 								</div>
 							</div>
 							
@@ -57,7 +64,32 @@
 								</div>
 							</div>
 						</fieldset>
+					
 						
+					<h3>Contact Information</h3>
+						<fieldset class="fieldset">
+							<div class="inputrow">
+								<label class="inputlabel">Address</label>
+								<div class="inputarea">													 
+									 <input type="text"  class="autocomplete_field half" name="permanentAddress" value="<%= request.getAttribute("permanentAddress") %>" />
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Contact No.</label>
+								<div class="inputarea">													 
+									 <input type="text"class="autocomplete_field half" name="mobile1" value="<%= request.getAttribute("mobile1")%>" />
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Email Address</label>
+								<div class="inputarea">													 
+									 <input type="text" class="autocomplete_field half" name="email" value="<%= request.getAttribute("email")%>" />
+								</div>
+							</div>
+						</fieldset>
+							
 					<h3>Skills & Expertise</h3>
 						<fieldset class="fieldset">
 							<div class="inputrow">
@@ -68,36 +100,12 @@
 							</div>
 						</fieldset>	
 						
-					<h3>Genaral Contact Information</h3>
-						<fieldset class="fieldset">
-							<div class="inputrow">
-								<label class="inputlabel">Address</label>
-								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
-								</div>
-							</div>
-							
-							<div class="inputrow">
-								<label class="inputlabel">Contact No.</label>
-								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
-								</div>
-							</div>
-							
-							<div class="inputrow">
-								<label class="inputlabel">Email Address</label>
-								<div class="inputarea">													 
-									 <input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" />
-								</div>
-							</div>
-						</fieldset>
-						
 						<h3>Experience</h3>
 						<fieldset class="fieldset">
 							<div class="inputrow">
 								<label class="inputlabel">Title</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half"  name="otherQulification1" value="<%= request.getAttribute("otherQulification1")%>"  />
 								</div>
 							</div>
 							
@@ -114,7 +122,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">Title</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half" />
+									 <input type="text" placeholder="Project Title" class="autocomplete_field half"  name="projectTitle1" value="<%= request.getAttribute("projectTitle")%>"/>
 								</div>
 							</div>
 							
@@ -136,7 +144,7 @@
 									 	<option>Bsc(Hons) Information Technology & Management</option></select>
 									 	&nbsp;Select Batch
 									 	<select class="autocomplete_field small">
-									 	<option>10</option>
+									 	<option selected> <%= request.getAttribute("yearOfAdmission")%></option>
 									 	<option>11</option>
 									 	<option>12</option>
 									 	<option>13</option>
@@ -153,14 +161,32 @@
 								</div>
 							</div>
 							<div class="inputrow">
+								<label class="inputlabel">GPA</label>
+								<div class="inputarea">													 
+							
+									Semester 1:
+									 	<input type="text" class="autocomplete_field small" name="gpaSemester1" value="<%= request.getAttribute("gpaSemester1")%>"/>	
+									Semester 2:
+									 		<input type="text" class="autocomplete_field small" name="gpaSemester2" value="<%= request.getAttribute("gpaSemester2")%>"/>	
+									Semester 3:
+									 	<input type="text" class="autocomplete_field small" name="gpaSemester3" value="<%= request.getAttribute("gpaSemester3")%>"/> 	
+								</div>							
+							</div>
+							
+							
+							
+							
+							
+							<hr>
+							<div class="inputrow">
 								<label class="inputlabel">School</label>
 								<div class="inputarea">													 
-			
-								<input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture"/>
+								 <input type="text" class="autocomplete_field half" name="school" value="<%= request.getAttribute("school")%>" />
+								
 									&nbsp;Select Year
 									 	<select class="autocomplete_field small">
 									 	<option>2005</option>
-									 	<option>2006</option>
+									 	<option selected></option>
 									 	<option>2007</option>
 									 	<option>2008</option>
 									 	<option>2009</option>
@@ -173,8 +199,7 @@
 									 	<option>2016</option>	
 									 </select>
 								</div>
-								<hr>
-															
+														
 								
 							</div>
 							
@@ -182,43 +207,30 @@
 							<div class="inputrow">
 								<label class="inputlabel">Your A/L Results</label>
 								<div class="inputarea">													 
-			
-								<input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture"/>
+								
+								<input type="text" class="autocomplete_field half" name="alSubject1" value="<%= request.getAttribute("alSubject1")%>"/>
+							
 									&nbsp;Select Result
-									 	<select class="autocomplete_field small">
-									 	<option>A</option>
-									 	<option>B</option>
-									 	<option>C</option>
-									 	<option>S</option>	
-									 </select>
+									 	<input type="text" class="autocomplete_field small" name="alResult1" value="<%= request.getAttribute("alResult1")%>"/>	
+									 	
 								</div>							
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">&nbsp;</label>
 								<div class="inputarea">													 
 			
-								<input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture"/>
+									<input type="text" class="autocomplete_field half" name="alSubject2" value="<%= request.getAttribute("alSubject2")%>"/>
 									&nbsp;Select Result
-									 	<select class="autocomplete_field small">
-									 	<option>A</option>
-									 	<option>B</option>
-									 	<option>C</option>
-									 	<option>S</option>	
-									 </select>
+									 <input type="text" class="autocomplete_field small" name="alResult2" value="<%= request.getAttribute("alResult2")%>"/>	
 								</div>							
 							</div>
 							<div class="inputrow">
 								<label class="inputlabel">&nbsp;</label>
 								<div class="inputarea">													 
 			
-								<input type="text" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture"/>
+									<input type="text" class="autocomplete_field half" name="alSubject3" value="<%= request.getAttribute("alSubject3")%>"/>
 									&nbsp;Select Result
-									 	<select class="autocomplete_field small">
-									 	<option>A</option>
-									 	<option>B</option>
-									 	<option>C</option>
-									 	<option>S</option>	
-									 </select>
+									 <input type="text" class="autocomplete_field small" name="alResult3" value="<%= request.getAttribute("alResult3")%>"/>		
 								</div>							
 							</div> 	
 							
@@ -304,10 +316,13 @@
 <tr><td><s:textfield  label="GPA semester 1"  name="gpaSemester1" value="%{gpaSemester1}"></s:textfield> </td></tr>
 <tr><td><s:textfield  label="GPA semester 2"  name="gpaSemester2" value="%{gpaSemester2}"></s:textfield> </td></tr>
 <tr><td><s:textfield  label="GPA semester 3"  name="gpaSemester3" value="%{gpaSemester3}"></s:textfield> </td></tr>
+
 <tr ><td><s:textfield  label="p1 projectTitle"  name="projectTitle1" ></s:textfield> </td><td><s:textfield  label="p1 projectDescription"  name="projectDescription1" ></s:textfield> </td><td><s:textfield label="p1 rojectYear"  name="projectYear1" ></s:textfield> </td></tr>
 <tr ><td><s:textfield  label="p2 projectTitle"  name="projectTitle2" ></s:textfield> </td><td><s:textfield  label="p2 projectDescription"  name="projectDescription2" ></s:textfield> </td><td><s:textfield label="p2 rojectYear"  name="projectYear2" ></s:textfield> </td></tr>
 <tr><td><s:hidden label="project id 1" name="projectId1" value="%{projectId1}"></s:hidden></td> </tr> 
-<tr><td><s:hidden label="project id 1" name="projectId2" value="%{projectId2}"></s:hidden></td> </tr> 
+<tr><td><s:hidden label="project id 1" name="projectId2" value="%{projectId2}"></s:hidden></td> </tr>
+
+ 
 <tr><td><s:textfield  label="Qther qulification 1"  name="otherQulification1" value="%{otherQulification1}" ></s:textfield> </td></tr>
 <tr><td><s:textfield  label="Qther qulification 2"  name="otherQulification2" value="%{otherQulification2}" ></s:textfield> </td></tr>
 <tr><td><s:hidden label="Qther qulification 1 id" name="otherQulificationId1" value="%{otherQulificationId1}"></s:hidden></td> </tr> 
