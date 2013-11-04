@@ -7,6 +7,11 @@
 				<p>CSS Button Generator is an online tool that allows you to create beautiful and stylish CSS buttons in seconds.</p>
 				<a href="<s:url action="SetupNewInternship"/>" class="start_button right_align">Setup Now</a>
 				</section>
+				<section class="item_container ">
+					<h3>Stop Current Internship</h3>
+				<p>CSS Button Generator is an online tool that allows you to create beautiful and stylish CSS buttons in seconds.</p>
+				<a href="<s:url action="StopInternship"/>" class="create_button right_align">Stop Now</a>
+				</section>
 				
 				<section class="item_container ">
 					<h3>Register New Batch</h3>
