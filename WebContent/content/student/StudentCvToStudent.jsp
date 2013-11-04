@@ -22,7 +22,7 @@
 							
 							<div class="longtext_container">
 							<p class="longtext profile_subcontent"><label class="inputlabel">Reg. No </label>1132399N</p>
-							<p class="longtext profile_subcontent"><label class="inputlabel">Email </label> shehandesilva@gmail.com </p>
+							<p class="longtext profile_subcontent"><label class="inputlabel">Email </label> shehandesilva@gma</p>
 							<p class=" longtext profile_subcontent"><label class="inputlabel">Mobile </label> 0771227338 / 07771122883</p>
 							<p class=" longtext profile_subcontent"><label class="inputlabel">Address </label>New kandy rd jdjdhldsdjd.</p>
 							</div>
