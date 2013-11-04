@@ -55,11 +55,11 @@
 <s:if test="%{#page=='AllowedCompanyToStudent'}">
 	<%@include file="/content/student/AllowedCompanyToStudent.jsp" %>
 </s:if>
-<s:if test="%{#page=='editDetails'}">
+<s:if test="%{#page=='EditStudent'}">
 	<%@include file="/content/student/EditStudent.jsp" %>
 </s:if>
 <s:if test="%{#page=='ViewStudentStateOfCompany'}">
-	<%@include file="/content/student/StudentViewToStudent.jsp" %>
+	<%@include file="/content/student/ViewCompanyStateToStudent.jsp" %>
 </s:if>
 
 

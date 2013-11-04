@@ -117,7 +117,7 @@ public class Login extends ActionSupport{
 						  
 						  this.role ="notRegiStudent";
 						  this.page="UnRegistedStudent";
-						  this.menu="home_st";
+						  this.menu="home_nrst";
 						  return "notRegiStudent";
 						  
 

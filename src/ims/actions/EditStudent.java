@@ -225,7 +225,7 @@ public class EditStudent extends ActionSupport{
 		String type = (String) session.get("type");
 		
 		this.role=(String)session.get("type");
-		this.page="ChangeStudentPasswordForm";
+		this.page="EditStudent";
 		this.menu = "home_st";
 
 
