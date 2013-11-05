@@ -237,8 +237,8 @@
                                                 <fieldset class="fieldset">
                                                 <div class="inputrow">
                                                 
-                                                                <label class="inputlabel">Seletct A Company</label>
-                                                                <div class="inputarea">                                                                                                         
+                                                <label class="inputlabel">Seletct A Company</label>
+                                                                                                                                                                         
                                                                    
                                                 <table>
                                                 <tr><td><s:select list="%{list}" name="appliedCompany1"></s:select> </td></tr>
@@ -247,7 +247,7 @@
 													<tr><td><s:select list="%{list}"  name="appliedCompany4"></s:select> </td></tr>
 													<tr><td><s:select list="%{list}" name="appliedCompany5"></s:select> </td></tr>
 												</table>
- </div>
+
                                                         </div>
                                                 </fieldset>
                                                 
