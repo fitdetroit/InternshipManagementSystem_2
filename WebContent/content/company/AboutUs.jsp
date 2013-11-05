@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <s:set name="menu" value="menu"/>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <div class="notification_area">
 	<h2>About Us</h2>
 	<hr>
@@ -41,8 +41,3 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<iframe width="425" height="350" frameborder="1" scrolling="no" marginheight="1" marginwidth="1" src="https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Faculty+of+Information+Technology,+University+of+Moratuwa,+Campus+Rd,+Moratuwa&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=78.658917,173.144531&amp;ie=UTF8&amp;hq=&amp;hnear=Faculty+of+Information+Technology,+Campus+Rd,+Moratuwa,+Colombo,+Western+Province,+Sri+Lanka&amp;t=m&amp;ll=6.797069,79.901934&amp;spn=0.02983,0.036478&amp;z=14&amp;iwloc=A&amp;output=embed" id="I1" border="1" name="I1"></iframe><br>
 <small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Faculty+of+Information+Technology,+University+of+Moratuwa,+Campus+Rd,+Moratuwa&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=78.658917,173.144531&amp;ie=UTF8&amp;hq=&amp;hnear=Faculty+of+Information+Technology,+Campus+Rd,+Moratuwa,+Colombo,+Western+Province,+Sri+Lanka&amp;t=m&amp;ll=6.797069,79.901934&amp;spn=0.02983,0.036478&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small>
 </div>
-
-
-
-
-

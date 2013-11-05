@@ -1,7 +1,9 @@
-<%@ taglib uri="/struts-tags" prefix="s"%>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <s:set name="menu" value="menu"/>
+
 <div class="notification_area">
 	<h2>Welcome To Internship Management System</h2>
 	<hr>

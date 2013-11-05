@@ -168,13 +168,6 @@ margin-bottom: 10px; -webkit-box-shadow: inset 3px 3px 2px 0px rgba(0, 0, 0, 0.1
 .message_body{ background:#FFF; margin:10px; height:400px; padding:10px; -webkit-box-shadow:  0px 0px 3px 0px rgba(0, 0, 0, 0.3); box-shadow:  0px 0px 3px 0px rgba(0, 0, 0, 0.3);}
 
 
-
-
-
-
-
-
-
 .form_container{ padding:15px; }
 .editprofile{padding: 15px 90px 15px 90px;}
 .fieldset{background-color: #f7f7f7; border: 1px solid #ececec; margin: 10px 0; padding: 7px 0; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; overflow:auto;padding: 10px; position:relative}
@@ -236,32 +229,6 @@ tabel_container tr td .action_bottons_area ul li .action_bottons{ background: #C
 .results_table tr td{ border:1px solid #EEE; padding:5px;}
 .results_table tr.tab_header{ font-weight:600px; background:#EEE}
 .autocomplete_field.small{width:80px}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
