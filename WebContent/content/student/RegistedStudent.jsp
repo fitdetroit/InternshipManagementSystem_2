@@ -1,38 +1,23 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
-<div class="notifi_reg-form">
-      <h2>Welcome to Internship Management System</h2>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
-    </div>
- 
- <h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="LogOut"/>">(logout)</a></h3>
-
-    
+<div class="notification_area">
+	<h2>Welcome To Internship Management System</h2>
+	<p>You can manage your account in this page . Following are the recent updates of your account</p>
+</div>
+  
 
 
+<fieldset class="fieldset">
+<div style="border: medium;">
+<center><h1><br> Notice board </h1><center>
+</div>
+</fieldset>
 
-<div style="float:left;width:15%; color:#000000 ">
+<br>
 
-<p align="left"><a href="<s:url action="ViewStudentCV"/>">click here to view cv</a></p>
-
-<p align="left"><a href="<s:url action="ViewToUpdateStudent"/>">click here to update profile</a></p>
-
-<p align="left"><a href="<s:url action="ViewStateOfCompany"/>">view State of company</a></p>
-
-<p align="left"><a href="<s:url action="ViewCompanyProfile"/>">click here to view Company Profiles</a></p>
+<fieldset class="fieldset">
+<div>
+<p> News Feed</p>
+<img alt="99x" src="C:\Harindu\FIT\Level 2\Industry Based Project\Projects\second year project\gitdownoad3\InternshipManagementSystem_2\WebContent\assets\img\internship.jpg" >
 </div>
 
-
-
-<div style="float:left;width:85%; height: 668px;">
-<h3 align="center">Registed Student Privilages</h3>
-<br>
-<p align="center"><a href="<s:url action="ViewStudentCV"/>">click here to view cv</a></p>
-<br>
-
-<p align="center"><a href="<s:url action="ViewToUpdateStudent"/>">click here to update profile</a></p>
-<br>
-
-<p align="center"><a href="<s:url action="ViewCompanyProfile"/>">click here to view Company Profiles</a></p>
-</div>
-
-
+</fieldset>

@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <s:set name="menu" value="menu"/>
+
 <div class="notification_area">
 	<h2>Welcome To Internship Management System</h2>
 	<hr>

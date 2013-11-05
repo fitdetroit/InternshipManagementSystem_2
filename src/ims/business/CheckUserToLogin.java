@@ -1,5 +1,6 @@
 package ims.business;
 
+import ims.data.Administration;
 import ims.data.Company;
 import ims.data.Student;
 import ims.data.User;
@@ -104,6 +105,40 @@ public class CheckUserToLogin {
 		
 	}
 	
+	public boolean checkStudentBatchAllowd(String userName)
+	{
+		Session session = getSessionFactory().openSession();
+		String SQL_QUERY = "from Administration";
+		Query query = session.createQuery(SQL_QUERY);
+		List<Administration> list = ((org.hibernate.Query) query).list();
+		if(list.isEmpty())
+		{
+			return false;
+
+			
+		}
+		else
+		{
+//			Session session2 = getSessionFactory().openSession();
+//			session2.beginTransaction();
+//			Student student = (Student)session2.get(Student.class, userName);
+//			session2.getTransaction().commit();
+//			session2.close();
+			
+			if(userName.startsWith(list.get(0).getBatch()))
+			{
+				
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			
+		}
+
+		
+	}
 	
 	
 	

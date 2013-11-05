@@ -98,6 +98,10 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
+	<bean id="AdministatingSystem" class="ims.business.AdministatingDataSession">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
 	
 	
 </beans>

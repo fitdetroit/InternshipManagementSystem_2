@@ -6,13 +6,14 @@
 			<header class="content_header"><h2>Registered Companies</h2></header>
 			
 			<section class="middle_continer">
+			<form method="post" action="NewInternshipPeriod" enctype="multipart/form-data">
 				<h3>Internship Summery</h3>
 				<hr>
 				<ul><li>Start Date :</li>
 				<li>End Date :</li>
 				<li>Started By :</li>
 				<li>Relevant Batch :
-				<select class="select_batch"><option value="10">10</option>
+				<select class="select_batch" name="newBatch"><option value="10">10</option>
 						<option value="11">11</option>
 						<option value="12">12</option>
 						<option value="13">13</option>
@@ -33,6 +34,7 @@
 			<input type="submit" value="Submit" class="start_button right_align but_submit"/>
 			</div>
 			<p><strong><i>Note:</i></strong>&nbsp; Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+		</form>
 			</section>
 	
 			

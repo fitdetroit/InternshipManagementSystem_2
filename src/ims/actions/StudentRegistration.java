@@ -70,9 +70,40 @@ public class StudentRegistration extends ActionSupport {
 	private String projectDescription2;
 	private String projectYear2;
 	
+	private String projectTitle3;
+	private String projectDescription3;
+	private String projectYear3;
+	private String projectTitle4;
+	private String projectDescription4;
+	private String projectYear4;
+	private String projectTitle5;
+	private String projectDescription5;
+	private String projectYear5;
+	
 	
 	private String otherQulification1;
 	private String otherQulification2;
+	private String otherQulification3;
+	private String otherQulification4;
+	private String otherQulification5;
+	
+	
+	private int professionalExpId1;
+	private String companyName1;
+	private String briefDescription1;
+	private int professionalExpId2;
+	private String companyName2;
+	private String briefDescription2;
+	private int professionalExpId3;
+	private String companyName3;
+	private String briefDescription3;
+	private int professionalExpId4;
+	private String companyName4;
+	private String briefDescription4;
+	private int professionalExpId5;
+	private String companyName5;
+	private String briefDescription5;
+
 	
 	
 
@@ -175,10 +206,33 @@ public class StudentRegistration extends ActionSupport {
 		studentComplitedProjects2.setProjectDescription(getProjectDescription2());
 		studentComplitedProjects2.setProjectYear(getProjectYear2());
 		studentComplitedProjects2.setStudent(getStudent());
+		
+		StudentComplitedProjects studentComplitedProjects3 = new StudentComplitedProjects();
+		studentComplitedProjects3.setProjectTitle(getProjectTitle3());
+		studentComplitedProjects3.setProjectDescription(getProjectDescription3());
+		studentComplitedProjects3.setProjectYear(getProjectYear3());
+		studentComplitedProjects3.setStudent(getStudent());
+		
+		StudentComplitedProjects studentComplitedProjects4 = new StudentComplitedProjects();
+		studentComplitedProjects4.setProjectTitle(getProjectTitle4());
+		studentComplitedProjects4.setProjectDescription(getProjectDescription4());
+		studentComplitedProjects4.setProjectYear(getProjectYear4());
+		studentComplitedProjects4.setStudent(getStudent());
+		
+		StudentComplitedProjects studentComplitedProjects5 = new StudentComplitedProjects();
+		studentComplitedProjects5.setProjectTitle(getProjectTitle5());
+		studentComplitedProjects5.setProjectDescription(getProjectDescription5());
+		studentComplitedProjects5.setProjectYear(getProjectYear5());
+		studentComplitedProjects5.setStudent(getStudent());
+		
+		
 	
 
 		getStudent().getStudentComplitedProjects().add(studentComplitedProjects1);
 		getStudent().getStudentComplitedProjects().add(studentComplitedProjects2);
+		getStudent().getStudentComplitedProjects().add(studentComplitedProjects3);
+		getStudent().getStudentComplitedProjects().add(studentComplitedProjects4);
+		getStudent().getStudentComplitedProjects().add(studentComplitedProjects5);
 		
 		// to save student other qulification
 		
@@ -190,9 +244,25 @@ public class StudentRegistration extends ActionSupport {
 		studentOtherQulification2.setDescription(otherQulification2);
 		studentOtherQulification2.setStudent(getStudent());
 		
+		StudentOtherQulification  studentOtherQulification3= new StudentOtherQulification();
+		studentOtherQulification3.setDescription(otherQulification3);
+		studentOtherQulification3.setStudent(getStudent());
+		
+		
+		StudentOtherQulification  studentOtherQulification4= new StudentOtherQulification();
+		studentOtherQulification4.setDescription(otherQulification4);
+		studentOtherQulification4.setStudent(getStudent());
+		
+		StudentOtherQulification  studentOtherQulification5= new StudentOtherQulification();
+		studentOtherQulification5.setDescription(otherQulification5);
+		studentOtherQulification5.setStudent(getStudent());
+		
 		
 		getStudent().getStudentOtherQulification().add(studentOtherQulification1);
 		getStudent().getStudentOtherQulification().add(studentOtherQulification2);
+		getStudent().getStudentOtherQulification().add(studentOtherQulification3);
+		getStudent().getStudentOtherQulification().add(studentOtherQulification4);
+		getStudent().getStudentOtherQulification().add(studentOtherQulification5);
 		
 
 		StudentCompany studentCompany1 =new StudentCompany();
@@ -574,6 +644,346 @@ public class StudentRegistration extends ActionSupport {
 	public void setAppliedCompany2(String appliedCompany2) {
 		this.appliedCompany2 = appliedCompany2;
 	}
+
+	public String getProjectTitle3() {
+		return projectTitle3;
+	}
+
+
+	public void setProjectTitle3(String projectTitle3) {
+		this.projectTitle3 = projectTitle3;
+	}
+
+
+	public String getProjectDescription3() {
+		return projectDescription3;
+	}
+
+
+	public void setProjectDescription3(String projectDescription3) {
+		this.projectDescription3 = projectDescription3;
+	}
+
+
+	public String getProjectYear3() {
+		return projectYear3;
+	}
+
+
+	public void setProjectYear3(String projectYear3) {
+		this.projectYear3 = projectYear3;
+	}
+
+
+	public String getProjectTitle4() {
+		return projectTitle4;
+	}
+
+
+	public void setProjectTitle4(String projectTitle4) {
+		this.projectTitle4 = projectTitle4;
+	}
+
+
+	public String getProjectDescription4() {
+		return projectDescription4;
+	}
+
+
+	public void setProjectDescription4(String projectDescription4) {
+		this.projectDescription4 = projectDescription4;
+	}
+
+
+	public String getProjectYear4() {
+		return projectYear4;
+	}
+
+
+	public void setProjectYear4(String projectYear4) {
+		this.projectYear4 = projectYear4;
+	}
+
+
+	public String getProjectTitle5() {
+		return projectTitle5;
+	}
+
+
+	public void setProjectTitle5(String projectTitle5) {
+		this.projectTitle5 = projectTitle5;
+	}
+
+
+	public String getProjectDescription5() {
+		return projectDescription5;
+	}
+
+
+	public void setProjectDescription5(String projectDescription5) {
+		this.projectDescription5 = projectDescription5;
+	}
+
+
+	public String getProjectYear5() {
+		return projectYear5;
+	}
+
+
+	public void setProjectYear5(String projectYear5) {
+		this.projectYear5 = projectYear5;
+	}
+
+
+	public String getOtherQulification3() {
+		return otherQulification3;
+	}
+
+
+	public void setOtherQulification3(String otherQulification3) {
+		this.otherQulification3 = otherQulification3;
+	}
+
+
+	public String getOtherQulification4() {
+		return otherQulification4;
+	}
+
+
+	public void setOtherQulification4(String otherQulification4) {
+		this.otherQulification4 = otherQulification4;
+	}
+
+
+	public String getOtherQulification5() {
+		return otherQulification5;
+	}
+
+
+	public void setOtherQulification5(String otherQulification5) {
+		this.otherQulification5 = otherQulification5;
+	}
+
+
+	public int getProfessionalExpId1() {
+		return professionalExpId1;
+	}
+
+
+	public void setProfessionalExpId1(int professionalExpId1) {
+		this.professionalExpId1 = professionalExpId1;
+	}
+
+
+	public String getCompanyName1() {
+		return companyName1;
+	}
+
+
+	public void setCompanyName1(String companyName1) {
+		this.companyName1 = companyName1;
+	}
+
+
+	public String getBriefDescription1() {
+		return briefDescription1;
+	}
+
+
+	public void setBriefDescription1(String briefDescription1) {
+		this.briefDescription1 = briefDescription1;
+	}
+
+
+	public int getProfessionalExpId2() {
+		return professionalExpId2;
+	}
+
+
+	public void setProfessionalExpId2(int professionalExpId2) {
+		this.professionalExpId2 = professionalExpId2;
+	}
+
+
+	public String getCompanyName2() {
+		return companyName2;
+	}
+
+
+	public void setCompanyName2(String companyName2) {
+		this.companyName2 = companyName2;
+	}
+
+
+	public String getBriefDescription2() {
+		return briefDescription2;
+	}
+
+
+	public void setBriefDescription2(String briefDescription2) {
+		this.briefDescription2 = briefDescription2;
+	}
+
+
+	public int getProfessionalExpId3() {
+		return professionalExpId3;
+	}
+
+
+	public void setProfessionalExpId3(int professionalExpId3) {
+		this.professionalExpId3 = professionalExpId3;
+	}
+
+
+	public String getCompanyName3() {
+		return companyName3;
+	}
+
+
+	public void setCompanyName3(String companyName3) {
+		this.companyName3 = companyName3;
+	}
+
+
+	public String getBriefDescription3() {
+		return briefDescription3;
+	}
+
+
+	public void setBriefDescription3(String briefDescription3) {
+		this.briefDescription3 = briefDescription3;
+	}
+
+
+	public int getProfessionalExpId4() {
+		return professionalExpId4;
+	}
+
+
+	public void setProfessionalExpId4(int professionalExpId4) {
+		this.professionalExpId4 = professionalExpId4;
+	}
+
+
+	public String getCompanyName4() {
+		return companyName4;
+	}
+
+
+	public void setCompanyName4(String companyName4) {
+		this.companyName4 = companyName4;
+	}
+
+
+	public String getBriefDescription4() {
+		return briefDescription4;
+	}
+
+
+	public void setBriefDescription4(String briefDescription4) {
+		this.briefDescription4 = briefDescription4;
+	}
+
+
+	public int getProfessionalExpId5() {
+		return professionalExpId5;
+	}
+
+
+	public void setProfessionalExpId5(int professionalExpId5) {
+		this.professionalExpId5 = professionalExpId5;
+	}
+
+
+	public String getCompanyName5() {
+		return companyName5;
+	}
+
+
+	public void setCompanyName5(String companyName5) {
+		this.companyName5 = companyName5;
+	}
+
+
+	public String getBriefDescription5() {
+		return briefDescription5;
+	}
+
+
+	public void setBriefDescription5(String briefDescription5) {
+		this.briefDescription5 = briefDescription5;
+	}
+
+
+	public StudentCompany getStudentCompany1() {
+		return studentCompany1;
+	}
+
+
+	public void setStudentCompany1(StudentCompany studentCompany1) {
+		this.studentCompany1 = studentCompany1;
+	}
+
+
+	public StudentCompany getStudentCompany2() {
+		return studentCompany2;
+	}
+
+
+	public void setStudentCompany2(StudentCompany studentCompany2) {
+		this.studentCompany2 = studentCompany2;
+	}
+
+
+	public StudentCompany getStudentCompany3() {
+		return studentCompany3;
+	}
+
+
+	public void setStudentCompany3(StudentCompany studentCompany3) {
+		this.studentCompany3 = studentCompany3;
+	}
+
+
+	public StudentCompany getStudentCompany4() {
+		return studentCompany4;
+	}
+
+
+	public void setStudentCompany4(StudentCompany studentCompany4) {
+		this.studentCompany4 = studentCompany4;
+	}
+
+
+	public StudentCompany getStudentCompany5() {
+		return studentCompany5;
+	}
+
+
+	public void setStudentCompany5(StudentCompany studentCompany5) {
+		this.studentCompany5 = studentCompany5;
+	}
+
+
+	public String getMyFileFileName() {
+		return myFileFileName;
+	}
+
+
+	public void setMyFileFileName(String myFileFileName) {
+		this.myFileFileName = myFileFileName;
+	}
+
+
+	public String getDestPath() {
+		return destPath;
+	}
+
+
+	public void setDestPath(String destPath) {
+		this.destPath = destPath;
+	}
+
 
 	public String getAppliedCompany3() {
 		return appliedCompany3;

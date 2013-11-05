@@ -20,34 +20,34 @@
 		
 		<action name="LogOut" class="ims.actions.Login"
 			method="logOut">
-			<result name="success" type="redirect">../index</result>
+			<result name="success" type="redirect">index</result>
 		</action>
 
 		<action name="RegisterCompany" class="ims.actions.CompanyRegistration"
 			method="registration">
 			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="input">/content/company/CompanyRegistrationForm.jsp</result>
-		<result name="error" type="redirect">../index</result>
+		<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="ViewToUpdateCompany" class="ims.actions.EditCompany"
 			method="editDetails">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="UpdateCompany" class="ims.actions.UpdatingCompanyByCompany"
 			method="updateCompany">
-			<result name="success" type="redirect">../index</result>
+			<result name="success" type="redirect">index</result>
 			<result name="input">/content/company/EditCompany.jsp</result>
 			<result name="UnRegisted">/content/company/NotAllowedCompany.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="ViewCompany" class="ims.actions.ViewCompany"
 			method="viewCompanyToCompany">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="GetImageCompany" class="ims.actions.GetProfilePicture">
@@ -66,112 +66,112 @@
 			method="appliedStudentToCompany">
 			<result name="success">/content/company/views/AppliedStudentToCompany.jsp</result>
 			<result name="NoAccess">/content/company/AllowedCompany.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 
 		<action name="StudentCvToCompany" class="ims.actions.ViewStudent"
 			method="studentCvToCompany">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="AllowedCompanyToCompany" class="ims.actions.ViewCompany"
 			method="allowedCompanyToCompany">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-		<result name="error" type="redirect">../index</result>
+		<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="FullCompanyProfileToCompany" class="ims.actions.ViewCompany"
 			method="FullProfileToCompany">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="CompanyPage" class="ims.actions.Login">
-			<result name="success" type="redirect" >../index</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="success" type="redirect" >index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="SelectForInterview" class="ims.actions.ViewStudent"
 			method="notSelectedForInterview">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="SelectedForInterview" class="ims.actions.ViewStudent"
 			method="selctedForInterview">
 			<result name="success">/jsp/HomeIndex.jsp
 			</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		
 			<action name="SelectedForInternship" class="ims.actions.ViewStudent"
 			method="selctedForInternship">
 			<result name="success">/jsp/HomeIndex.jsp
 			</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="UpdateStateToInterview" class="ims.actions.UpdatingStudentCompany"
 			method="UpdateStateToInterview">
 			<result name="success" type="redirect">SelectForInterview</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		
 		<action name="UpdateStateToSelected" class="ims.actions.UpdatingStudentCompany"
 			method="UpdateStateToSelected">
 			<result name="success" type="redirect">SelectedForInterview</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		
 <!-- Menu Manage -->
 		<action name="ManageAction" class="ims.actions.MainMenuActions" method="MenuManage">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		<action name="HomeAction" class="ims.actions.MainMenuActions" method="HomeMenu">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		<action name="SupportAction" class="ims.actions.MainMenuActions" method="SupportMenu">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		
 		<action name="UpdateVecancies" class="ims.actions.MainMenuActions" method="UpdateVecancies">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		
 		<action name="AboutAction" class="ims.actions.MainMenuActions" method="AboutAction">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		
 		<action name="MessageAction" class="ims.actions.HandleMassages" method="MessageAction">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		
 		<action name="CompMessageOutBox" class="ims.actions.HandleMassages" method="CompMessageOutBox">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		<action name="CreateNewMsgCompany" class="ims.actions.HandleMassages" method="CreateNewMsgCompany">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		
 	<!-- New message haddle -->	
 		<action name="MessageFromCompany" class="ims.actions.HandleMassages" method="HandleNewCompanyMessage">
 			<result name="success" type="redirect">CompMessageOutBox</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		
 	<action name="Support" class="ims.actions.SupportAction" method="support">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		
 	

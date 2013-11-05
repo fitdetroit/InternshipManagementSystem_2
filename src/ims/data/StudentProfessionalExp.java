@@ -20,10 +20,7 @@ public class StudentProfessionalExp {
 	
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private int professionalExpId;
-
 	private String companyName;
-	private String workingPeriod;
-	private String profession;
 	private String briefDescription;
 	
 	
@@ -61,18 +58,7 @@ public class StudentProfessionalExp {
 	public void setCompanyName(String companyName) {
 		this.companyName = companyName;
 	}
-	public String getWorkingPeriod() {
-		return workingPeriod;
-	}
-	public void setWorkingPeriod(String workingPeriod) {
-		this.workingPeriod = workingPeriod;
-	}
-	public String getProfession() {
-		return profession;
-	}
-	public void setProfession(String profession) {
-		this.profession = profession;
-	}
+
 	public String getBriefDescription() {
 		return briefDescription;
 	}
