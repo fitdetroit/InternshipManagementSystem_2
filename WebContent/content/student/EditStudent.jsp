@@ -11,6 +11,12 @@
 								<label class="inputlabel">Index No.</label>
 								<div class="inputarea">
 									<input type="text" disabled="disabled" class="autocomplete_field half input_disabled"  name="indexnumber" value="<%= request.getAttribute("#session.userName") %>"/> 
+
+				<s:url id="url" action="GetImageStudent">
+                  <s:param name="userName"><s:property value="%{#session.userName}"/> </s:param>
+                </s:url>
+                <img src="<s:property value='#url'/>"  width="200px" height="250px"/>
+
 									
 								</div>
 							</div>
@@ -102,6 +108,7 @@
 						
 						<h3>Experience</h3>
 						<fieldset class="fieldset">
+						<!-- ----------------------------------- -->
 							<div class="inputrow">
 								<label class="inputlabel">Name of the Company/Organization</label>
 								<div class="inputarea">													 
@@ -115,21 +122,79 @@
 									 <textarea class="autocomplete_field half discription_area" placeholder="Description" name="experienceDescription" value="<%= request.getAttribute("briefDescriptoin1")%>"></textarea>
 								</div>
 							</div>
+							
+							<!-- ---------------------------------- -->
+							
+							
 						</fieldset>
 						
 						<h3>Completed Projects</h3>
 						<fieldset class="fieldset">
+
 							<div class="inputrow">
 								<label class="inputlabel">Title</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Project title" class="autocomplete_field half"  name="projectTitle1" value="<%= request.getAttribute("projectTitle")%>"/>
+									 <input type="text" placeholder="Project title" class="autocomplete_field half"  name="projectTitle1" value="<%= request.getAttribute("projectTitle1")%>"/>
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">Description</label>
 								<div class="inputarea">													 
-									 <input type="text" class="autocomplete_field half discription_area" placeholder="Description" name="projectDescription" value="<%= request.getAttribute("projectDescription")%>"/></textarea>
+									 <input type="text" class="autocomplete_field half discription_area" placeholder="Description" name="projectDescription1" value="<%= request.getAttribute("projectDescription1")%>"/></textarea>
+								</div>
+							</div>
+														<div class="inputrow">
+								<label class="inputlabel">Title</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Project title" class="autocomplete_field half"  name="projectTitle2" value="<%= request.getAttribute("projectTitle2")%>"/>
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Description</label>
+								<div class="inputarea">													 
+									 <input type="text" class="autocomplete_field half discription_area" placeholder="Description" name="projectDescription2" value="<%= request.getAttribute("projectDescription2")%>"/></textarea>
+								</div>
+							</div>
+														<div class="inputrow">
+								<label class="inputlabel">Title</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Project title" class="autocomplete_field half"  name="projectTitle3" value="<%= request.getAttribute("projectTitle3")%>"/>
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Description</label>
+								<div class="inputarea">													 
+									 <input type="text" class="autocomplete_field half discription_area" placeholder="Description" name="projectDescription3" value="<%= request.getAttribute("projectDescription3")%>"/></textarea>
+								</div>
+							</div>
+														<div class="inputrow">
+								<label class="inputlabel">Title</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Project title" class="autocomplete_field half"  name="projectTitle4" value="<%= request.getAttribute("projectTitle4")%>"/>
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Description</label>
+								<div class="inputarea">													 
+									 <input type="text" class="autocomplete_field half discription_area" placeholder="Description" name="projectDescription4" value="<%= request.getAttribute("projectDescription")%>"/></textarea>
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Title</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Project title" class="autocomplete_field half"  name="projectTitle5" value="<%= request.getAttribute("projectTitle5")%>"/>
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Description</label>
+								<div class="inputarea">													 
+									 <input type="text" class="autocomplete_field half discription_area" placeholder="Description" name="projectDescription5" value="<%= request.getAttribute("projectDescription5")%>"/></textarea>
 								</div>
 							</div>
 						</fieldset>

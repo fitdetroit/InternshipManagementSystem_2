@@ -11,12 +11,12 @@
 	<package name="student" namespace="/" extends="struts-default">
 		<action name="LogOut" class="ims.actions.Login"
 			method="logOut">
-			<result name="success" type="redirect">../index</result>
+			<result name="success" type="redirect">index</result>
 		</action>
 
 		<action name="NewStudent" class="ims.actions.NewStudent">
-			<result>/jsp/StudentRegistrationForm.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result>/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="RegisterStudent" class="ims.actions.StudentRegistration"
@@ -27,7 +27,7 @@
 			</interceptor-ref>
 			<result name="success">/jsp/RegistedStudent.jsp</result>
 			<result name="input">/jsp/StudentRegistrationForm.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 
@@ -35,26 +35,26 @@
 			method="editDetails">
 			<result name="success" >/jsp/HomeIndex.jsp</result>
 			<result name="input">../jsp/Login.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="UpdateStudent" class="ims.actions.UpdatingStudentByStudent"
 			method="updateStudent">
-			<result name="success" type="redirect">../index</result>
+			<result name="success" type="redirect">index</result>
 			<result name="input">/jsp/EditStudent.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="ViewProfileSt" class="ims.actions.ViewStudent"
 			method="viewStudentToStudent">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="ViewStudentCV" class="ims.actions.ViewStudent"
 			method="viewStudentToStudent">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 
@@ -76,75 +76,101 @@
 		<action name="ViewCompanyProfile" class="ims.actions.ViewCompany"
 			method="allowedCompanyToStudent">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 
 		<action name="FullCompanyProfileToStudent" class="ims.actions.ViewCompany"
 			method="FullProfileToStudent">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="updateStudentPassword" class="ims.actions.UpdatingUnRegiStudent"
 			method="changeStudentPassword">
-			<result name="success">/jsp/UnRegistedStudent.jsp</result>
+			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="input">/jsp/ChangeStudentPasswordForm.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="ToChangePasswordStudent" class="ims.actions.EditStudent">
-			<result name="success">/jsp/ChangeStudentPasswordForm.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 
 		<action name="AllowedStudentPage" class="ims.actions.Login">
 			<result name="success">/jsp/RegistedStudent.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		
 		<action name="ViewStateOfCompany" class="ims.actions.ViewStudentStateOfCompany" method="viewStudentAppliedCompanyState">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		
 			<action name="UpdateNewApplyCompany" class="ims.actions.UpdateNewlyAppliedCompany" method="updateNewlyAppliedCompany">
-			<result name="success" type="redirect">../index</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="success" type="redirect">index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 	<!-- Main menu actions by students -->
 		<action name="HomeActionByStd" class="ims.actions.MainMenuActions" method="HomeActionByStd">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		<action name="CompanyActionByStd" class="ims.actions.MainMenuActions" method="CompanyActionByStd">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		
 		<action name="MessageActionByStd" class="ims.actions.HandleMassages" method="MessageActionByStd">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		
 		<action name="MessageOutBoxStudent" class="ims.actions.HandleMassages" method="MessageOutBoxStudent">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
 		
 		
 		<action name="internshipActionByStd" class="ims.actions.MainMenuActions" method="internshipActionByStd">
 			<result name="success">/jsp/HomeIndex.jsp</result>
-			<result name="error" type="redirect">../index</result>
+			<result name="error" type="redirect">index</result>
 		</action>
+		
+
 		
 <!-- Side menu for registered Students -->
 	
 		
+<!-- Not Registered Students Main Menu-->	
+		<action name="HomeActionByNrStd" class="ims.actions.MainMenuActions" method="HomeActionByNrStd">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		<action name="internshipActionByNrStd" class="ims.actions.MainMenuActions" method="internshipActionByNrStd">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		<action name="CompanyActionByNrStd" class="ims.actions.MainMenuActions" method="CompanyActionByNrStd">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		<action name="MessageActionByNrStd" class="ims.actions.MainMenuActions" method="MessageActionByNrStd">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
 		
+		
+		
+		
+		
+				
 		
 	
-
+<!-- /End Not Registered Students Main Menu-->
+	
+	
 	</package>
 
 </struts>

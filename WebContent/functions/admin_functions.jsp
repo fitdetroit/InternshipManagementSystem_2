@@ -26,16 +26,23 @@
 <s:if test="%{#page=='studentCvToAdmin'}"> 
 	<%@include file="/content/administrator/StudentCvToAdmin.jsp" %>
 </s:if>
-<s:if test="%{#page=='ToRemoveStudetProfiles'}"> 
-	<%@include file="/content/administrator/RemoveStudentProfiles.jsp" %>
-</s:if>
-<s:if test="%{#page=='createStudentProfiles'}"> 
+
+<s:if test="%{#page=='CreateNewStudentProfiles'}"> 
 	<%@include file="/content/administrator/CreateNewStudentProfiles.jsp" %>
 </s:if>
-
+<s:if test="%{#page=='deleteStudentProfile'}"> 
+	<%@include file="/content/administrator/RemoveStudentProfiles.jsp" %>
+</s:if>
 <s:if test="%{#page=='allowAndRemoveCv'}"> 
 	<%@include file="/content/administrator/AllowOrRemoveCvToComp.jsp" %>
 </s:if>
+<s:if test="%{#page=='SetupNewInternship'}"> 
+	<%@include file="/content/administrator/SetupNewInternship.jsp" %>
+</s:if>
+<s:if test="%{#page=='Message_actionByAdmin'}"> 
+	<%@include file="/content/administrator/Message_actionByAdmin.jsp" %>
+</s:if>
+
 
 
 

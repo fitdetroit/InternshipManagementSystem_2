@@ -32,6 +32,7 @@ public class UpdateStudent {
 			// this x , y initialize becose othervise its not fetch the object from this tables
 			int x =student.getStudentOtherQulification().size();
 			int y =student.getStudentComplitedProjects().size();
+			int k =student.getStudentProfessionalExp().size();
 			int z= student.getStudentCompany().size();
 
 			session.getTransaction().commit();

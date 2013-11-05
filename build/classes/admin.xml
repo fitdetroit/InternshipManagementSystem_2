@@ -160,11 +160,44 @@
 			<result name="success">/jsp/Admin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
+		<action name="SetupNewInternship" class="ims.actions.Login">
+			<result name="success">/jsp/Admin.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
 
+
+		<action name="SetupNewInternship" class="ims.actions.MainMenuActions" method="SetupNewInternship">
+			<result name="success">/jsp/Admin.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+		<action name="Message_actionByAdmin" class="ims.actions.MainMenuActions" method="Message_actionByAdmin">
+			<result name="success">/jsp/Admin.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+		
+		
+		
+		
+		
+		
 		<action name="AdminPage" class="ims.actions.Login">
 			<result name="success">/jsp/Admin.jsp</result>
 			<result name="error">/jsp/AdminLogin.jsp</result>
 		</action>
+		
+		<action name="NewInternshipPeriod" class="ims.actions.AdminstratingSystem" method="newInternshipPeriod">
+			<result name="success">/jsp/Admin.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+		
+		
+		<action name="StopInternship" class="ims.actions.AdminstratingSystem" method="stopInternshipPeriod">
+			<result name="success">/jsp/Admin.jsp</result>
+			<result name="error">/jsp/AdminLogin.jsp</result>
+		</action>
+		
+		
+		
 	</package>
 
 

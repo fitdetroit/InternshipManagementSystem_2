@@ -6,6 +6,12 @@
 <s:if test="%{#page==null}">
 	<%@include file="/jsp/Login.jsp" %>
 </s:if>
+<s:if test="%{#page=='NotAllowedCompany'}">
+	<%@include file="/content/company/NotAllowedCompany.jsp" %>
+</s:if>
+
+
+
 <s:if test="%{#page=='CompanyRegistrationForm.jsp'}">
 	<%@include file="/content/company/CompanyRegistrationForm.jsp" %>
 </s:if>
@@ -55,11 +61,11 @@
 <s:if test="%{#page=='AllowedCompanyToStudent'}">
 	<%@include file="/content/student/AllowedCompanyToStudent.jsp" %>
 </s:if>
-<s:if test="%{#page=='editDetails'}">
+<s:if test="%{#page=='EditStudent'}">
 	<%@include file="/content/student/EditStudent.jsp" %>
 </s:if>
 <s:if test="%{#page=='ViewStudentStateOfCompany'}">
-	<%@include file="/content/student/StudentViewToStudent.jsp" %>
+	<%@include file="/content/student/ViewCompanyStateToStudent.jsp" %>
 </s:if>
 
 
@@ -122,6 +128,32 @@
 <s:if test="%{#page=='internshipDefault'}" >
 	<%@include file="/content/student/internshipDefault.jsp" %>
 </s:if>
+<s:if test="%{#page=='UnRegistedStudent'}" >
+	<%@include file="/content/student/UnRegistedStudent.jsp" %>
+</s:if>
+
+<s:if test="%{#page=='StudentRegistrationForm'}" >
+	<%@include file="/content/student/StudentRegistrationForm.jsp" %>
+</s:if>
+<s:if test="%{#page=='ChangeStudentPasswordForm'}" >
+	<%@include file="/content/student/ChangeStudentPasswordForm.jsp" %>
+</s:if>
+<s:if test="%{#page=='internshipDefaultNrSt'}" >
+	<%@include file="/content/student/internshipDefaultNrSt.jsp" %>
+</s:if>
+<s:if test="%{#page=='CompanyDefaultnrst'}" >
+	<%@include file="/content/student/CompanyDefaultnrst.jsp" %>
+</s:if>
+<s:if test="%{#page=='MessageDefaultnrst'}" >
+	<%@include file="/content/student/MessageDefaultnrst.jsp" %>
+</s:if>
+
+
+
+
+
+
+
 
 
 

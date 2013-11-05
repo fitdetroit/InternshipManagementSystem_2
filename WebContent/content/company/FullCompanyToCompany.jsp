@@ -7,12 +7,17 @@
 					<fieldset class="fieldset">
 						<div class="contentrow">
 						<div class="profile_image_container">
-							<img src="assets/img/comp_logo_mit.jpg" class="profileimage" >
+			<s:url id="url" action="GetImageStudent">
+            <s:param name="userName"><s:property value="%{#session.userName}"/> </s:param>
+                </s:url>
+               <img src="<s:property value='#url'/>"  width="200px" height="250px"/>
 						</div>
 						<div class="profile_header_container ">
 							<h4><s:property  value="company.companyName"></s:property></h4>
 							<p><s:property  value="company.companyAddress"></s:property></p>
-							<p class="longtext"> omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae </p>
+
+							<p class="longtext"><s:property  value="company.aboutCompany"></s:property></p>
+
 						</div>
 						
 						</div>

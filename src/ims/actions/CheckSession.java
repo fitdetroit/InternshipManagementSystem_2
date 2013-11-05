@@ -53,7 +53,7 @@ public class CheckSession extends ActionSupport {
 			else if (type == "notRegiStudent") {
 				
 				this.role=(String)session.get("type");
-
+				this.page="UnRegistedStudent";
 				this.menu ="home_st";
 				return "notRegiStudent";
 

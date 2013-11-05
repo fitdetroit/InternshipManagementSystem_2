@@ -95,27 +95,61 @@ public class Login extends ActionSupport{
 				
 				 if (checkUserToLogin.findUser(getUserName(),sb.toString())=="registedStudent")
 				 {
-			        	// create new session for registed student
-			        	session = ActionContext.getContext().getSession();
-						  session.put("userName",getUserName());
-						  session.put("type","regiStudent");
-						  session.put("userFullName",checkUserToLogin.getStudentName(UserName) );
-						  
-						  this.role ="regiStudent";
-						  this.page="RegistedStudent.jsp";
-						  this.menu="home_st";
-						  return "regiStudent";
+
+					
+						  if(checkUserToLogin.checkStudentBatchAllowd(UserName))
+						  {
+					        	// create new session for registed student
+					        session = ActionContext.getContext().getSession();
+							session.put("userName",getUserName());
+							session.put("type","regiStudent");
+							session.put("userFullName",checkUserToLogin.getStudentName(UserName) );
+								  
+							  this.role ="regiStudent";
+							  this.page="RegistedStudent.jsp";
+							  this.menu="home_st";
+							  return "regiStudent";
+							  
+						  }
+						  else
+						  {
+							  return "error";
+							  
+						  }
+						 
+
 					 
 				 }
 				 if (checkUserToLogin.findUser(getUserName(),sb.toString())=="notRegistedStudent")
 				 {
-			        	// create new session for unregisted student
-			        	session = ActionContext.getContext().getSession();
-						  session.put("userName",getUserName());
-						  session.put("type","notRegiStudent");
-						  session.put("userFullName",checkUserToLogin.getStudentName(UserName) );
+
 						  
-						  return "notRegiStudent";
+
+						  if(checkUserToLogin.checkStudentBatchAllowd(UserName))
+						  {
+					        	// create new session for unregisted student
+					        	session = ActionContext.getContext().getSession();
+								session.put("userName",getUserName());
+								session.put("type","notRegiStudent");
+								session.put("userFullName",checkUserToLogin.getStudentName(UserName) );
+								  
+								  this.role ="notRegiStudent";
+								  this.page="UnRegistedStudent";
+								  this.menu="home_nrst";
+								  return "notRegiStudent";
+							  
+						  }
+						  else
+						  {
+							  return "error";
+							  
+						  }
+
+
+
+
+						  
+
 					 
 				 }
 				 if (checkUserToLogin.findUser(getUserName(),sb.toString())=="allowedCompany")
