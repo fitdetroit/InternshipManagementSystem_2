@@ -10,7 +10,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">Index No.</label>
 								<div class="inputarea">
-									<input type="text" value="" disabled="disabled" class="autocomplete_field half input_disabled"  name="indexnumber"/>
+									<input type="text" disabled="disabled" class="autocomplete_field half input_disabled"  name="indexnumber" value="<%= request.getAttribute("#session.userName") %>"/> 
 									
 								</div>
 							</div>
@@ -95,7 +95,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">&nbsp;</label>
 								<div class="inputarea">													 
-									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" ></textarea>
+									 <textarea class="autocomplete_field half discription_area" placeholder="Skills & Expertise" name="skills" value=<%= request.getAttribute("skills")%>" ></textarea>
 								</div>
 							</div>
 						</fieldset>	
@@ -138,10 +138,13 @@
 						<h3>Education</h3>
 						<fieldset class="fieldset">
 							<div class="inputrow">
-								<label class="inputlabel">Digree</label>
+								<label class="inputlabel">Title of the Degree</label>
 								<div class="inputarea">													 
-									 <select class="autocomplete_field half"><option>Bsc(Hons) Information Technology</option>
-									 	<option>Bsc(Hons) Information Technology & Management</option></select>
+									 <select class="autocomplete_field half">
+									 <option selected><%= request.getAttribute("digreeTitle")%></option>
+									 <option>Bsc(Hons) Information Technology</option>
+									 <option>Bsc(Hons) Information Technology & Management</option></select>
+									 
 									 	&nbsp;Select Batch
 									 	<select class="autocomplete_field small">
 									 	<option selected> <%= request.getAttribute("yearOfAdmission")%></option>
@@ -185,8 +188,9 @@
 								
 									&nbsp;Select Year
 									 	<select class="autocomplete_field small">
+									 	<option selected><%= request.getAttribute("yearOfAl")%></option>
 									 	<option>2005</option>
-									 	<option selected></option>
+									 	<option>2006</option>
 									 	<option>2007</option>
 									 	<option>2008</option>
 									 	<option>2009</option>
@@ -292,7 +296,7 @@
 </s:form>
 
 
-
+<s:hidden label="Student User Name" name="studentUserName" value="%{#session.userName}"></s:hidden>
 <!-- --------------------------
 
 
