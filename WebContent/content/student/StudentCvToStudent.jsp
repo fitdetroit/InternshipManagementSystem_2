@@ -71,31 +71,12 @@
 							</div>
 						
 							<div class="inputrow">
-								<label class="inputlabel">Nationality</label>
-								<div class="inputarea">													 
-									 <p>Sri Lankan</p>
-								</div>
-							</div>
-							<div class="inputrow">
-								<label class="inputlabel">Religion</label>
-								<div class="inputarea">													 
-									 <p>Buddhism</p>
+								<label class="inputlabel">Date of Birth</label>
+								<div class="inputarea">	
+								<p><s:property  value="student.dateOfBirth"></s:property></p>												 
 								</div>
 							</div>
 							
-							<div class="inputrow">
-								<ul><li>
-								<p class=" longtext profile_subcontent"><label class="inputlabel">Date of Birth</label><s:property  value="student.dateOfBirth"></s:property></p>
-								</li></ul>					 
-								
-							</div>
-							
-							<div class="inputrow">
-								<label class="inputlabel">National ID card No</label>
-								<div class="inputarea">													 
-									 <p>982893879V</p>
-								</div>
-							</div>
 						</fieldset>
 						<hr>
 							

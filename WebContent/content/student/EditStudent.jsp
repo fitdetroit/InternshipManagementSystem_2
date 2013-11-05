@@ -103,16 +103,16 @@
 						<h3>Experience</h3>
 						<fieldset class="fieldset">
 							<div class="inputrow">
-								<label class="inputlabel">Title</label>
+								<label class="inputlabel">Name of the Company/Organization</label>
 								<div class="inputarea">													 
-									 <input type="text" placeholder="Name of the company" class="autocomplete_field half"  name="otherQulification1" value="<%= request.getAttribute("otherQulification1")%>"  />
+									 <input type="text" placeholder="Name of the company/organization" class="autocomplete_field half"  name="companyName1" value="<%= request.getAttribute("companyName1")%>"  />
 								</div>
 							</div>
 							
 							<div class="inputrow">
 								<label class="inputlabel">Description</label>
 								<div class="inputarea">													 
-									 <textarea class="autocomplete_field half discription_area" placeholder="Description" name="" value=""></textarea>
+									 <textarea class="autocomplete_field half discription_area" placeholder="Description" name="experienceDescription" value="<%= request.getAttribute("briefDescriptoin1")%>"></textarea>
 								</div>
 							</div>
 						</fieldset>
@@ -260,27 +260,15 @@
 						
 						<h3>Extracurricular  Activities</h3>
 						<fieldset class="fieldset">
-							<div class="inputrow">
-								<label class="inputlabel">Title</label>
-								<div class="inputarea">													 
-									 <input type="text" placeholder="Activity title" class="autocomplete_field half" name="extraCurricularTitle" value=""/>
-								</div>
-							</div>
+							
 							
 							<div class="inputrow">
-								<label class="inputlabel">Discription</label>
+								<label class="inputlabel">Description</label>
 								<div class="inputarea">													 
-									 <textarea class="autocomplete_field half discription_area" placeholder="Description" name="extraCurricularDescription" value="extraCurricularDescription"></textarea>
+									 <textarea class="autocomplete_field half discription_area" placeholder="Description" name="extraCurricularDescription" value="otherQulification1"></textarea>
 								</div>
 							</div>
 						</fieldset>
-						
-						
-						
-												
-												
-						
-						
 						
 						<div class="inputrow">
 								<label class="inputlabel">&nbsp;</label>
