@@ -2,6 +2,7 @@ package ims.actions;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Map;
 
 import javax.persistence.Column;
 import javax.servlet.ServletContext;
@@ -11,6 +12,7 @@ import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 import ims.business.RegisterStudent;
@@ -229,25 +231,21 @@ public class StudentRegistration extends ActionSupport {
 		
 		// to save student in student table 
 		registerStudent.saveStudent(student);
-	
 		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String type = (String) session.get("type");
 		
-	
+		this.role=(String)session.get("type");
+		this.page="AllowedCompany";
+		this.menu="home_st";
 		return SUCCESS;
+		
+		
 
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	// getters and setters
 	
 	public String getOtherQulification1() {
@@ -259,61 +257,24 @@ public class StudentRegistration extends ActionSupport {
 		return role;
 	}
 
-
-
-
-
-
-
-
-
-
-
-
 	public void setRole(String role) {
 		this.role = role;
 	}
-
-
-
-
-
-
-
-
-
-
-
 
 	public String getPage() {
 		return page;
 	}
 
-
-
-
-
-
-
-
-
-
-
-
 	public void setPage(String page) {
 		this.page = page;
 	}
+	public String getMenu() {
+		return menu;
+	}
 
-
-
-
-
-
-
-
-
-
-
+	public void setMenu(String menu) {
+		this.menu = menu;
+	}
 
 	public void setOtherQulification1(String otherQulification1) {
 		this.otherQulification1 = otherQulification1;

@@ -115,7 +115,12 @@ public class Login extends ActionSupport{
 						  session.put("type","notRegiStudent");
 						  session.put("userFullName",checkUserToLogin.getStudentName(UserName) );
 						  
+						  this.role ="notRegiStudent";
+						  this.page="UnRegistedStudent";
+						  this.menu="home_nrst";
 						  return "notRegiStudent";
+						  
+
 					 
 				 }
 				 if (checkUserToLogin.findUser(getUserName(),sb.toString())=="allowedCompany")

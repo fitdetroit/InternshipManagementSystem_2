@@ -75,7 +75,8 @@ body {	font-size: 12px; background:#EFF7FF}
 .main_menu ul{ list-style-type:none; margin:0; padding:0;}
 .main_menu ul li{ float:left; padding:10px; margin-right:1px; margin-top:15px; background:url(assets/img/main_menu_bg.png) repeat-x; height:15px;-webkit-border-radius: 5px 5px 0  0;
 border-radius:  5px 5px 0  0; border:1px solid #6986c0; border-bottom:none; border-bottom-raduis: none;text-shadow: 1px 1px 1px #ABBECF;filter: dropshadow(color=#ABBECF, offx=1, offy=1);}
-.main_menu ul li.home, .main_menu ul li:hover{ background:#FFFFFF; border:none; border-bottom:1px solid #FFFFFF;border:1px solid #fff; cursor:pointer}
+.home_st li.home, .Message_st li.messages, .main_menu ul li:hover{ background:#FFFFFF; border:none; border-bottom:1px solid #FFFFFF;border:1px solid #fff; cursor:pointer}
+
 .submenu{display: none; width:214px; height:100px; overflow:hidden; background:#f2f5fa; z-index:30; position:absolute;  margin-top: 34px; margin-left: 14px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45); right:0}
 .submenu ul{ display:block}
 .submenu ul li{ display:block; border-bottom:1px solid #CCCCCC; float:none; height:30px; padding:0 0 0 10px; width:204px; font-size:0.9em; cursor:pointer} 
@@ -172,7 +173,9 @@ position: absolute;
 right: 0;
 top: 0;}
 
-.cvcontainer{ width:760px; margin:0 auto 0 auto; border:1px solid #CCCCCC}
+.cvcontainer{ width:760px; margin:0 auto 0 auto; border:1px solid #CCCCCC;-webkit-box-shadow:  2px 2px 3px 0px rgba(0, 0, 0, 0.3);
+        
+        box-shadow:  2px 2px 3px 0px rgba(0, 0, 0, 0.3);}
 .action_bottons_area{float: right; padding-right: 50px;}
 
 .msg_container .container_top{ height:40px;border-bottom:1px solid #ececec;}
@@ -209,6 +212,14 @@ background: #DAEBBD;}
 .new_msg_but_container .inputarea{ float: right;
 width: 309px;
 margin-top: 20px;}
+
+
+.results_table{ width:200px; margin-left:30px; margin-top:10px;	}
+.results_table tr td{ border:1px solid #EEE; padding:5px;}
+.results_table tr.tab_header{ font-weight:600px; background:#EEE}
+.autocomplete_field.small{width:80px}
+
+
 
 
 

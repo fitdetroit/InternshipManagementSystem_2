@@ -34,13 +34,9 @@ public class UpdatingUnRegiStudent extends ActionSupport{
 	private String password;
 	private String conPassword;
 	
-
 	ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
 	UpdateStudent updateStudent = (UpdateStudent) context.getBean("UpdateStudent");
 	
-	
-	
-
 	// this method is used to change password by unregisterd student
 	public String changeStudentPassword() throws NoSuchAlgorithmException
 	{
@@ -73,10 +69,16 @@ public class UpdatingUnRegiStudent extends ActionSupport{
 		 
 		       // System.out.println("Digest(in hex format):: " + sb.toString());
 			user.setPassword(sb.toString());
-		
-		
-		
+			
 		updateStudent.changeStudentPassword(userName, user);
+		
+		Map session;
+		session = ActionContext.getContext().getSession();
+		String type = (String) session.get("type");
+		
+		this.role=(String)session.get("type");
+		this.page="UnRegistedStudent";
+		this.menu = "home_st";
 		
 		return SUCCESS;
 	}
@@ -97,8 +99,6 @@ public class UpdatingUnRegiStudent extends ActionSupport{
 			addFieldError("conPassword", "please enter conform password");
 			
 		}
-		
-		
 
 		if (getPassword().length() != 0) {
 
@@ -110,11 +110,7 @@ public class UpdatingUnRegiStudent extends ActionSupport{
 		}
 
 	}
-	
-	
-	
-	
-	
+		
 	
 	//getters and setters
 	
@@ -122,30 +118,27 @@ public class UpdatingUnRegiStudent extends ActionSupport{
 	public String getStudentUserName() {
 		return studentUserName;
 	}
-
 	public String getRole() {
 		return role;
 	}
-
-
-
 	public void setRole(String role) {
 		this.role = role;
 	}
-
-
-
 	public String getPage() {
 		return page;
 	}
 
-
-
 	public void setPage(String page) {
 		this.page = page;
 	}
+	
+	public String getMenu() {
+		return menu;
+	}
 
-
+	public void setMenu(String menu) {
+		this.menu = menu;
+	}
 
 	public void setStudentUserName(String studentUserName) {
 		this.studentUserName = studentUserName;

@@ -1,124 +1,303 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="/struts-tags" prefix="s"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Internship Management System</title>
-<style type="text/css">
-	.heading
-	{
-	color:silver;
-	font-family:Cambria;
-	font-size:30px;
-	}
-	.ldm
-	{
-	font-family:Cambria;
-	color:gray;
-	text-align:right;
-	}
-	.tags
-	{
-	color:white;
-	font-family:Cambria;
-	font-size:15px;
-	background-color:#3E3E3E;
-	text-align:right;
-	}
-	.ankers
-	{
-	font-family:Cambria;
-	font-style:italic;
-	font-size:20px;
-	color:orange;
-	}
-	.content1
-	{
-	color:black;
-	font-family:Calibri;
-	font-size:15px;
-	text-align:left;
-	background-color:#808080;
-	}
-	a:link{color:white;}
-	a:visited{color:white;}
-	a:hover{color:yellow;}
-	a:active{color:gray;}
-</style>
-</head>
+<s:form method="post" action="RegisterStudent" enctype="multipart/form-data">				
+<div class="form_container editprofile">
+			
+			
+			<h3>General Information</h3>
+						<fieldset class="fieldset">
+							<div class="inputrow">
+								<label class="inputlabel">Index No.</label>
+								<div class="inputarea">
+									<input type="text" value="114455K" disabled="disabled" class="autocomplete_field half input_disabled"  name="indexnumber"/>
+									
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Name In Full</label>
+								<div class="inputarea">													 
+									 <input type="text" class="autocomplete_field half"  name="nameInFull"  value=""/>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Name With Initials</label>
+								<div class="inputarea">													 
+									 <input type="text"  class="autocomplete_field half"  name="nameWithInitials" value=""/>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Gender</label>
+								<div class="inputarea">													 
+									<select class="autocomplete_field small">
+									 	<option value="Male">Male</option>
+									 	<option value="Female">Female</option>
+									</select>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Marital Status</label>
+								<div class="inputarea">													 
+									
+									 <select class="autocomplete_field small">
+									 	<option value="Married">Married</option>
+									 	<option value="Unmaried">Unmarried</option>
+									 	</select>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Date Of birth</label>
+								<div class="inputarea">													 
+			
+									<input type="text" class="autocomplete_field half" name="dateOfBirth" value=""/>
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Select a Profile Picture</label>
+								<div class="inputarea">													 
+			
+									<input type="file" placeholder="Type project name to find existing" class="autocomplete_field half" name="ProfilePicture"/>
+								</div>
+							</div>
+						</fieldset>
+					
+						
+					<h3>Contact Information</h3>
+						<fieldset class="fieldset">
+							<div class="inputrow">
+								<label class="inputlabel">Address</label>
+								<div class="inputarea">													 
+									 <input type="text"  class="autocomplete_field half" name="permanentAddress" value="" />
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Contact No.</label>
+								<div class="inputarea">													 
+									 <input type="text"class="autocomplete_field half" name="mobile1" value="" />
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Email Address</label>
+								<div class="inputarea">													 
+									 <input type="text" class="autocomplete_field half" name="email" value="" />
+								</div>
+							</div>
+						</fieldset>
+							
+					<h3>Skills & Expertise</h3>
+						<fieldset class="fieldset">
+							<div class="inputrow">
+								<label class="inputlabel">&nbsp;</label>
+								<div class="inputarea">													 
+									 <textarea class="autocomplete_field half discription_area" placeholder="Type project name to find existing" ></textarea>
+								</div>
+							</div>
+						</fieldset>	
+						
+						<h3>Experience</h3>
+						<fieldset class="fieldset">
+							
+							<!-- -------------------------------------- -->
+							<div class="inputrow">
+								<label class="inputlabel">Title</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Name of the company" class="autocomplete_field half"  name="otherQulification1" value=""  />
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Description</label>
+								<div class="inputarea">													 
+									 <textarea class="autocomplete_field half discription_area" placeholder="Description" name="" value=""></textarea>
+								</div>
+							</div>
+							
+							<!-- ------------------------------------- -->
+							
+							
+						
+						</fieldset>
+						
+						<h3>Completed Projects</h3>
+						<fieldset class="fieldset">
+							<!-- ------------------------------------- -->
+							<div class="inputrow">
+								<label class="inputlabel">Title</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Project title" class="autocomplete_field half"  name="projectTitle1" value=""/>
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Description</label>
+								<div class="inputarea">													 
+									 <input type="text" class="autocomplete_field half discription_area" placeholder="Description" name="projectDescription" value=""/></textarea>
+								</div>
+							</div>
+							<!-- ------------------------------------- -->
+						</fieldset>
 
-<body bgcolor="gray">
 
-
-
-<div style="height: 118px; background:gray" >
-<h2 align="center">Internship Management System</h2>
-<p align="center">(un registed Student)</p>
-<h3 align="right">Welcome! <s:property value="%{#session.userName}"/> <a href="<s:url action="../LogOut"/>">(logout)</a></h3>
-</div>
-
-
-
-<div style="float:left;width:15%; height: 672px;background=#333333">
-
-
-<p align="left"><a href="<s:url action="ViewCompanyProfile"/>">click here to view Company Profiles</a></p>
-
-<p align="left"><a href="<s:url action="NewStudent"/>">click here to new register student</a><p>
-
-<p align="left"><a href="<s:url action="ToChangePasswordStudent"/>">click here to change password</a><p>
-</div>
-
-
-
-<div style="float:left;width:85%; height: 1400px;background:silver">
-<h2 align="center">Student Register Form</h2>
-
-<table align="center">
-<tr><td><h4 >Your personal Details</h4></td></tr>
-<tr><td><s:form method="post" action="RegisterStudent" enctype="multipart/form-data" validate="true">
-<tr><td><s:hidden label="Student User Name" name="studentUserName" value="%{#session.userName}"></s:hidden></td> </tr> 
-<tr><td><s:textfield label="Name In Full" name="nameInFull"></s:textfield></td> </tr>
-<tr><td><s:textfield label="Name With Initials" name="nameWithInitials"></s:textfield></td> </tr>
-<tr><td><s:file label="Profile Picture" name="ProfilePicture"/></td> </tr>
-<tr><td><s:select list="{'Male','Female'}" label="Gender" name="gender" ></s:select> </td></tr>
-<tr><td><s:select list="{'single','married'}" label="maritalStatus" name="maritalStatus" ></s:select> </td></tr>
-<tr><td><s:textfield  label="Date of Birth"  name="dateOfBirth"></s:textfield> </td></tr>
-<tr><td><s:textfield label="Permanent Address" name="permanentAddress"></s:textfield></td> </tr>
-<tr><td><s:textfield label="Mobile No 1" name="mobile1"></s:textfield></td> </tr>
-<tr><td><s:textfield label="Mobile No 2" name="mobile2"></s:textfield></td> </tr>
-<tr><td><s:textfield label="Telephone" name="telephone"></s:textfield></td> </tr>
-<tr><td><s:textfield label="Email" name="email"></s:textfield></td> </tr>
-<tr><td><s:textfield label="School" name="school"></s:textfield></td> </tr>
-<tr><td><s:textfield label="A/L Subject 1" name="alSubject1"></s:textfield> <s:select list="{'A','B','C','S','F'}" label="Result" name="alResult1" ></s:select> </td></tr>
-<tr><td><s:textfield label="A/L Subject 2" name="alSubject2"></s:textfield> <s:select list="{'A','B','C','S','F'}" label="Result" name="alResult2" ></s:select> </td></tr>
-<tr><td><s:textfield label="A/L Subject 3" name="alSubject3"></s:textfield> <s:select list="{'A','B','C','S','F'}" label="Result" name="alResult3" ></s:select> </td></tr>
-<tr><td><s:select list="{'Information Technology','Information Technology and Management'}" label="Digree Title" name="digreeTitle" ></s:select> </td></tr>
-<tr><td><s:textfield  label="Year Of Admission"  name="yearOfAdmission"></s:textfield> </td></tr>
-<tr><td><s:textfield  label="GPA semester 1"  name="gpaSemester1"></s:textfield> </td></tr>
-<tr><td><s:textfield  label="GPA semester 2"  name="gpaSemester2"></s:textfield> </td></tr>
-<tr><td><s:textfield  label="GPA semester 3"  name="gpaSemester3"></s:textfield> </td></tr>
-<!--<tr><td><s:textarea  label="Working Expirience"  name="workingExperience" cols="50" rows="10"></s:textarea> </td></tr>-->
-<!--  <tr><td><s:textarea  label="Projects"  name="projects" cols="50" rows="10"></s:textarea> </td></tr>-->
-<tr ><td><s:textfield  label="p1 projectTitle"  name="projectTitle1" ></s:textfield> </td><td><s:textfield  label="p1 projectDescription"  name="projectDescription1" ></s:textfield> </td><td><s:textfield label="p1 rojectYear"  name="projectYear1" ></s:textfield> </td></tr>
-<tr ><td><s:textfield  label="p2 projectTitle"  name="projectTitle2" ></s:textfield> </td><td><s:textfield  label="p2 projectDescription"  name="projectDescription2" ></s:textfield> </td><td><s:textfield label="p2 rojectYear"  name="projectYear2" ></s:textfield> </td></tr>
-<tr><td><s:textfield  label="Qther qulification 1"  name="otherQulification1"></s:textfield> </td></tr>
-<tr><td><s:textfield  label="Qther qulification 2"  name="otherQulification2"></s:textfield> </td></tr>
-<tr><td><s:select list="%{list}"   label="Company Name 1" name="appliedCompany1"></s:select> </td></tr>
-<tr><td><s:select list="%{list}"   label="Company Name 2" name="appliedCompany2"></s:select> </td></tr>
-<tr><td><s:select list="%{list}"   label="Company Name 3" name="appliedCompany3"></s:select> </td></tr>
-<tr><td><s:select list="%{list}"   label="Company Name 4" name="appliedCompany4"></s:select> </td></tr>
-<tr><td><s:select list="%{list}"   label="Company Name 5" name="appliedCompany5"></s:select> </td></tr>
-<tr><td align="center"><s:submit label="Save" align="center" ></s:submit></td></tr>
+						<h3>Education</h3>
+						<fieldset class="fieldset">
+							<div class="inputrow">
+								<label class="inputlabel">Digree</label>
+								<div class="inputarea">													 
+									 <select class="autocomplete_field half"><option>Bsc(Hons) Information Technology</option>
+									 	<option>Bsc(Hons) Information Technology & Management</option></select>
+									 	&nbsp;Select Batch
+									 	<select class="autocomplete_field small">
+									 	<option>11</option>
+									 	<option>12</option>
+									 	<option>13</option>
+									 	<option>14</option>
+									 	<option>15</option>
+									 	<option>16</option>
+									 	<option>17</option>
+									 	<option>18</option>
+									 	<option>19</option>
+									 	<option>20</option>
+									 	<option>21</option>	
+									 </select>
+									 
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">GPA</label>
+								<div class="inputarea">													 
+							
+									Semester 1:
+									 	<input type="text" class="autocomplete_field small" name="gpaSemester1" value=""/>	
+									Semester 2:
+									 		<input type="text" class="autocomplete_field small" name="gpaSemester2" value=""/>	
+									Semester 3:
+									 	<input type="text" class="autocomplete_field small" name="gpaSemester3" value=""/> 	
+								</div>							
+							</div>
+							
+							
+							
+							
+							
+							<hr>
+							<div class="inputrow">
+								<label class="inputlabel">School</label>
+								<div class="inputarea">													 
+								 <input type="text" class="autocomplete_field half" name="school" value="" />
+								
+									&nbsp;Select Year
+									 	<select class="autocomplete_field small">
+									 	<option>2005</option>
+									 	<option selected></option>
+									 	<option>2007</option>
+									 	<option>2008</option>
+									 	<option>2009</option>
+									 	<option>2010</option>
+									 	<option>2011</option>
+									 	<option>2012</option>
+									 	<option>2013</option>
+									 	<option>2014</option>
+									 	<option>2015</option>
+									 	<option>2016</option>	
+									 </select>
+								</div>
+														
+								
+							</div>
+							
+							
+							<div class="inputrow">
+								<label class="inputlabel">Your A/L Results</label>
+								<div class="inputarea">													 
+								
+								<input type="text" class="autocomplete_field half" name="alSubject1" value=""/>
+							
+									&nbsp;Select Result
+									 	<select class="autocomplete_field small">
+									 	<option>A</option>
+									 	<option>B</option>
+									 	<option>C</option>
+									 	<option>S</option></select>
+									 	
+								</div>							
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">&nbsp;</label>
+								<div class="inputarea">													 
+			
+									<input type="text" class="autocomplete_field half" name="alSubject2" value=""/>
+									
+									 &nbsp;Select Result
+									 	<select class="autocomplete_field small">
+									 	<option>A</option>
+									 	<option>B</option>
+									 	<option>C</option>
+									 	<option>S</option></select>
+								</div>							
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">&nbsp;</label>
+								<div class="inputarea">													 
+			
+									<input type="text" class="autocomplete_field half" name="alSubject3" value=""/>
+									
+									 &nbsp;Select Result
+									 	<select class="autocomplete_field small">
+									 	<option>A</option>
+									 	<option>B</option>
+									 	<option>C</option>
+									 	<option>S</option>	</select>	
+								</div>							
+							</div> 	
+							
+						</fieldset>
+						
+						
+						<h3>Extracurricular  Activities</h3>
+						<fieldset class="fieldset">
+						
+							<!-- ------------------------------------- -->
+							<div class="inputrow">
+								<label class="inputlabel">Title</label>
+								<div class="inputarea">													 
+									 <input type="text" placeholder="Activity title" class="autocomplete_field half" name="extraCurricularTitle" value=""/>
+								</div>
+							</div>
+							
+							<div class="inputrow">
+								<label class="inputlabel">Discription</label>
+								<div class="inputarea">													 
+									 <textarea class="autocomplete_field half discription_area" placeholder="Description" name="extraCurricularDescription" value="extraCurricularDescription"></textarea>
+								</div>
+							</div>
+							<!-- ------------------------------------- -->
+						</fieldset>
+						
+						<div class="inputrow">
+								<label class="inputlabel">&nbsp;</label>
+								<div class="inputarea">													 
+									 <input type="submit" value="SUBMIT" class="but_submit" id="signUp"/>
+									 
+									 <input type="submit" value="RESET" class="but_create"/>
+								</div>
+						</div>
+						
+						
+					</div><!-- /End Form container-->
 
 </s:form>
-</td></tr>
-</table></div>
 
 
 
-</body>
 
-</html>
+
+
+
+
+
+
+

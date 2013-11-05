@@ -50,7 +50,7 @@ public class CreateAndDeleteStudentProfiles extends ActionSupport {
 		String userName = (String) session.get("userName");
 		
 		this.role= (String)session.get("type");
-		this.page = "ToRemoveStudetProfiles";
+		this.page = "CreateNewStudentProfiles";
 		this.menu = "students_admin";
 
 		return SUCCESS;
@@ -101,7 +101,7 @@ public class CreateAndDeleteStudentProfiles extends ActionSupport {
 		String userName = (String) session.get("userName");
 
 		this.role= (String)session.get("type");
-		this.page = "createStudentProfiles";
+		this.page = "CreateNewStudentProfiles";
 		this.menu = "students_admin";
 		return SUCCESS;
 

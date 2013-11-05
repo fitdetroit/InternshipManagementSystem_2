@@ -15,7 +15,7 @@
 		</action>
 
 		<action name="NewStudent" class="ims.actions.NewStudent">
-			<result>/jsp/StudentRegistrationForm.jsp</result>
+			<result>/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
@@ -88,13 +88,13 @@
 
 		<action name="updateStudentPassword" class="ims.actions.UpdatingUnRegiStudent"
 			method="changeStudentPassword">
-			<result name="success">/jsp/UnRegistedStudent.jsp</result>
+			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="input">/jsp/ChangeStudentPasswordForm.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
 		<action name="ToChangePasswordStudent" class="ims.actions.EditStudent">
-			<result name="success">/jsp/ChangeStudentPasswordForm.jsp</result>
+			<result name="success">/jsp/HomeIndex.jsp</result>
 			<result name="error" type="redirect">../index</result>
 		</action>
 
@@ -138,13 +138,39 @@
 			<result name="error" type="redirect">../index</result>
 		</action>
 		
+
+		
 <!-- Side menu for registered Students -->
 	
 		
+<!-- Not Registered Students Main Menu-->	
+		<action name="HomeActionByNrStd" class="ims.actions.MainMenuActions" method="HomeActionByNrStd">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		<action name="internshipActionByNrStd" class="ims.actions.MainMenuActions" method="internshipActionByNrStd">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		<action name="CompanyActionByNrStd" class="ims.actions.MainMenuActions" method="CompanyActionByNrStd">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
+		<action name="MessageActionByNrStd" class="ims.actions.MainMenuActions" method="MessageActionByNrStd">
+			<result name="success">/jsp/HomeIndex.jsp</result>
+			<result name="error" type="redirect">../index</result>
+		</action>
 		
+		
+		
+		
+		
+				
 		
 	
-
+<!-- /End Not Registered Students Main Menu-->
+	
+	
 	</package>
 
 </struts>
