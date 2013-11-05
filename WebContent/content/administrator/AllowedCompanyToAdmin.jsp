@@ -5,7 +5,7 @@
 
 
 <div class="content_wrapper">
-			<header class="content_header"><h2>Allowed Company Details</h2></header>
+			<header class="content_header"><h2>Registered Companies</h2></header>
 			<section>
 
 <table cellpadding="0" cellspacing="0" class="content_table">
