@@ -76,7 +76,7 @@
                                                         <div class="inputrow">
                                                                 <label class="inputlabel">Contact No.</label>
                                                                 <div class="inputarea">                                                                                                         
-                                                                         <input type="text"class="autocomplete_field half" name="mobile1" value="" />
+                                                                         <input type="text"class="autocomplete_field half" name="mobile1" value="" maxlength="10" />
                                                                 </div>
                                                         </div>
                                                         
@@ -232,6 +232,41 @@
                                                 <div id="Activity_container"></div>
                                                 <span id="addExtraq">Add Variable</span>
                                                 </fieldset>
+                                                
+                                                <h3>Extracurricular  Activities</h3>
+                                                <fieldset class="fieldset">
+                                                <div class="inputrow">
+                                                
+                                                                <label class="inputlabel">Seletct A Company</label>
+                                                                <div class="inputarea">                                                                                                         
+                                                                   
+                                                <table>
+                                                <tr><td><s:select list="%{list}" name="appliedCompany1"></s:select> </td></tr>
+													<tr><td><s:select list="%{list}" name="appliedCompany2"></s:select> </td></tr>
+													<tr><td><s:select list="%{list}" name="appliedCompany3"></s:select> </td></tr>
+													<tr><td><s:select list="%{list}"  name="appliedCompany4"></s:select> </td></tr>
+													<tr><td><s:select list="%{list}" name="appliedCompany5"></s:select> </td></tr>
+												</table>
+ </div>
+                                                        </div>
+                                                </fieldset>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
                                                 
                                                 <div class="inputrow">
                                                                 <label class="inputlabel">&nbsp;</label>
