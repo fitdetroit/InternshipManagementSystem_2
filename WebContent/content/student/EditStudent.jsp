@@ -10,7 +10,7 @@
 							<div class="inputrow">
 								<label class="inputlabel">Index No.</label>
 								<div class="inputarea">
-									<input type="text" value="114455K" disabled="disabled" class="autocomplete_field half input_disabled"  name="indexnumber"/>
+									<input type="text" value="<%= request.getAttribute("student.studentUserName") %>" disabled="disabled" class="autocomplete_field half input_disabled"  name="indexnumber"/>
 									
 								</div>
 							</div>

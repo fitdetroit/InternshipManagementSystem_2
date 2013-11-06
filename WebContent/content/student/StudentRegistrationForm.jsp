@@ -10,7 +10,7 @@
                                                         <div class="inputrow">
                                                                 <label class="inputlabel">Index No.</label>
                                                                 <div class="inputarea">
-                                                                        <input type="text" value="114455K" disabled="disabled" class="autocomplete_field half input_disabled"  name="indexnumber"/>
+                                                                        <input type="text" value="<s:property value="%{#session.userName}"/>" disabled="disabled" class="autocomplete_field half input_disabled"  name="indexnumber"/>
                                                                         
                                                                 </div>
                                                         </div>
@@ -254,20 +254,7 @@
                                                 
                                                 
                                                 
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+                                                                                 
                                                 <div class="inputrow">
                                                                 <label class="inputlabel">&nbsp;</label>
                                                                 <div class="inputarea">                                                                                                         
