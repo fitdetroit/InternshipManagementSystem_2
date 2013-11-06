@@ -1,12 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="/struts-tags" prefix="s"%>
+<h2>Company State Details</h2>
 
-
-<div>
-
-<h4 align="center">Company State Details</h4>
-
+<fieldset class="fieldset">
 <table align="center" border="1" >
 <tr >
     <th width="220">Company Name:</th>
@@ -44,5 +41,4 @@
 
 </table>
 
-</div>
-
+</fieldset>

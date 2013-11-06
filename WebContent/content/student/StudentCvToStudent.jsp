@@ -12,7 +12,10 @@
 					<fieldset class="fieldset">
 						<div class="contentrow">
 						<div class="profile_image_container">
-							<img src="assets/img/images.jpg" alt="student name" class="profileimage" >
+							<s:url id="url" action="GetImageStudent">
+            <s:param name="userName"><s:property value="%{#session.userName}"/> </s:param>
+                </s:url>
+               <img src="<s:property value='#url'/>"  class="profileimage" />
 						</div>
 						<div class="profile_header_container student_name">
 							<h4><s:property  value="student.nameWithInitials"></s:property></h4>

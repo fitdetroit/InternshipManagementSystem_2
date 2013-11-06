@@ -89,8 +89,8 @@
 				<p>Go to SUPPORT menu and just send us a message if you have any issues.</p></div>
 				<div class="widget_3 widgets">
 				<h2>Related links</h2>
-				<a href="http://www.itfac.mrt.ac.lk/about/">Faculty of Information Technology</a><br><hr>
-				<a href="http://www.mrt.ac.lk/web/">University of Moratuwa</a>
+				&nbsp;&nbsp;&nbsp;<a href="http://www.itfac.mrt.ac.lk/about/" style="text-decoration:none;">Faculty of Information Technology</a><br><hr>
+				&nbsp;&nbsp;&nbsp;<a href="http://www.mrt.ac.lk/web/" style="text-decoration:none;">University of Moratuwa</a>
 				</div>
 				</div><!-- /End sub container -->
 		

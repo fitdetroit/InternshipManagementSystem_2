@@ -7,9 +7,9 @@ box-shadow: 0px 5px 15px 1px rgba(00, 00, 00, 0.3); border-top:5px solid #517FCC
 @font-face { font-family: 'MerriweatherSans-Bold'; src:  url('../fonts/MerriweatherSans-Bold.ttf'); format('truetype'); }
 /*--------------------*/
 .uni_logo{ width: 25px; height: 30px; margin-top: 8px; float: left;}
-.header_text{ font-family:Anaheim-Regular; float:left; color:#CCCCCC; font-size:1.2em; padding-left:10px; padding-top:0;text-shadow: -2px 2px 2px #000000;
+.header_text{ font-family:Anaheim-Regular; float:left; color:#CCCCCC; font-size:18px; padding-left:10px; padding-top:0;text-shadow: -2px 2px 2px #000000;
         filter: dropshadow(color=#000000, offx=-2, offy=2);}
-.site_name{ font-family: "Courier New"; color:#0586bd; padding-top:20px; font-size:1.5em}
+.site_name{ font-family: "Courier New"; color:#0586bd; padding-top:20px; font-size:25px}
 .header_area ul{ margin-top:32px; position:absolute; left:780px;}
 .header_area ul li { list-style:none; list-style-type:none; display:inline; color:#FFFFFF; padding-right:5px; padding-left:5px; border-left:1px solid #444444; font-size:0.75em; position:relative;}
 .header_area ul li a{ color:#FFFFFF; text-decoration:none}
@@ -43,7 +43,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', end
 .login_bottom .we-are-comp{ color:#666666; margin-left:10px}
 .login_inputs{ width:350px; height:35px; margin-left:auto; margin-right:auto; padding-left:10px; display:block; -webkit-border-radius: 3px; border-radius: 3px; border:1px solid #CCCCCC; color:#666666}
 .password{ margin-top:5px;}
-.but_login{ background: #0033FF; width:100px; height:35px; -webkit-border-radius: 3px; border-radius: 3px; border:1px solid #0033CC; color:#FFFFFF; margin-left:271px; margin-top:10px;}
+.but_login{ background: #4789EB;
+width: 100px;
+height: 35px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+border: 1px solid #166FB6;
+color: #FFFFFF;
+float: right;
+margin-right: 9px;
+margin-top: 10px;}
 .but_login:hover{ background:#003399; cursor:pointer}
 .but_signup{ background: #3b9e07; width:300px; height:35px; -webkit-border-radius: 3px; border-radius: 3px; border:1px solid #3b9e07; color:#FFFFFF; position:relative; margin-left:43px; margin-right:auto; margin-top:10px; font-weight:600; font-size:1.1em }
 .but_signup:hover{ background: #006600; cursor:pointer}

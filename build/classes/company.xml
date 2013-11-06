@@ -40,7 +40,8 @@
 			method="updateCompany">
 			<result name="success" type="redirect">index</result>
 			<result name="input">/content/company/EditCompany.jsp</result>
-			<result name="UnRegisted">/content/company/NotAllowedCompany.jsp</result>
+			<result name="UnRegisted">jsp/Login.jsp</result>
+	<!--  		<result name="UnRegisted">/content/company/NotAllowedCompany.jsp</result>		-->
 			<result name="error" type="redirect">index</result>
 		</action>
 

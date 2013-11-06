@@ -178,7 +178,7 @@
 								<div class="inputarea">													 
 									 <input type="submit" value="SUBMIT" class="but_submit" id="signUp"/>
 									 
-									 <input type="submit" value="RESET" class="but_create"/>
+									 <span class="but_create" style="cursor:pointer" id="rest_button">RESET</span>
 								</div>
 						</div>
 						
@@ -188,73 +188,18 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h1>Ajax with Jquery Simple Example</h1>
-<h3>madushankaperera.wordpress.com</h3>
-<br>
-<form name="form1" method="GET" action="NewUserNameCheck" id="form1">
-<table>
-<tr>
-<td>Number 1</td><td><input type="text" name="n1" id ="n1"/></td>
-</tr>
-<tr>
-<td>Number 2</td><td><input type="text" name="n2" id ="n2"/></td>
-</tr>
-<tr>
-<td></td><td><input type="submit" value="Calculate"/></td>
-</tr>
-<tr>
-<td>Result</td><td><input type="text" value="" id="result"/></td>
-</tr>
-</table>
-</form>
-</body>
-</html>
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript">
-
-var form = $('#form1');
-form.submit(function () {
-
-$.ajax({
-type: form.attr('method'),
-url: "NewUserNameCheck",
-data: {n1:$('#n1').val(),n2:$('#n2').val()},
-success: function (data) {
-var result=data;
-
-if(result == 1){
+<script>
+$(document).ready(function(){
 	
-	$('#result').attr("value","yes");
+	$("#rest_button").click(function(){
+		
+		//alert("sldkfjslkdfj");
+		$(".autocomplete_field").val("");
+		
+	});
 	
-}
-else{
 	
-	$('#result').attr("value","no");
-}
-
-}
+	
 });
 
-return false;
-});
 </script>
-
-

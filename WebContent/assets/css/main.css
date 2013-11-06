@@ -74,8 +74,8 @@ body {	font-size: 12px; background:#EFF7FF}
 .main_menu{ float:left}
 .main_menu ul{ list-style-type:none; margin:0; padding:0;}
 .main_menu ul li{ float:left; padding:10px; margin-right:1px; margin-top:15px; background:url(assets/img/main_menu_bg.png) repeat-x; height:15px;-webkit-border-radius: 5px 5px 0  0;
-border-radius:  5px 5px 0  0; border:1px solid #6986c0; border-bottom:none; border-bottom-raduis: none;text-shadow: 1px 1px 1px #ABBECF;filter: dropshadow(color=#ABBECF, offx=1, offy=1);}
-.home_st li.home, .Message_st li.messages, .main_menu ul li:hover{ background:#FFFFFF; border:none; border-bottom:1px solid #FFFFFF;border:1px solid #fff; cursor:pointer}
+border-radius:  5px 5px 0  0; border:1px solid #6986c0;color:#fff; border-bottom:none; border-bottom-raduis: none;text-shadow: 1px 1px 1px #ABBECF;filter: dropshadow(color=#ABBECF, offx=1, offy=1);}
+.home_st li.home, .Message_st li.messages, .main_menu ul li:hover{ background:#FFFFFF; border:none; color:#000; border-bottom:1px solid #FFFFFF;border:1px solid #fff; cursor:pointer}
 
 .submenu{display: none; width:214px; height:100px; overflow:hidden; background:#f2f5fa; z-index:30; position:absolute;  margin-top: 34px; margin-left: 14px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45); right:0}
 .submenu ul{ display:block}
@@ -229,7 +229,6 @@ margin-top: 20px;}
 .widgets a{text-decoration: none;}
 .widgets ul{ list-style-type:none; padding:0; margin:0 }
 .widgets ul li{ height:30px; padding:5px 0 0 10px; border-bottom:1px solid #CCCCCC; font-weight:600; color:#1356AA}
-
 .widgets ul li img{vertical-align: middle; width: 12px; margin-right: 10px; line-height: 1; }
 .widgets p{ margin:10px;}
 /* ==========================================================================

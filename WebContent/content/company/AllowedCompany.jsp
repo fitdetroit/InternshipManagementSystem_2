@@ -4,13 +4,21 @@
 <s:set name="menu" value="menu"/>
 <div class="notification_area">
 	<h2>Welcome To Internship Management System</h2>
-	<hr>
+	<p>It is a great pleasure that your company registered in the Internship Management System of Faculty of Information Technology.</p>
+</div>
+
+<div class="form_container">
+	<fieldset class="fieldset">
+		<h2>Administrator's Message</h2>	
+		<p>confirmOn plugin shows a confirmation box when the provided events are triggered. It works exactly like jQuery's .on() but with a confirmation step between the event and the handler. When the user clicks yes the handler is called, when the user clicks no the confirmation box hides itself and nothing else happens.</p>		
+	</fieldset>
+					
 </div>
   
 
 
 
-<br><h3>It is a great pleasure that your company registered in the Internship Management System of Faculty of Information Technology.</h3> <br>
+
 
 
 <s:if test="%{#applyStudentCount==0}">

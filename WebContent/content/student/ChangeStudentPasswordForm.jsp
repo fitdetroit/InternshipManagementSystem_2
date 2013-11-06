@@ -2,19 +2,32 @@
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="/struts-tags" prefix="s"%>
 
+<h3>General Information</h3>
 
 
-<div>
-<h2 align="center">Student Password Update Form</h2>
-<br/>
-<table align="center">
-<tr><td><s:form method="post" action="updateStudentPassword" enctype="multipart/form-data">
-<tr><td><s:password name="password" label="New password" /></td></tr>
-<tr><td><s:password name="conPassword" label="Conform New password" /></td></tr>
-<tr><td><s:hidden label="only update password" name="updateOnlyPassword" value="true" ></s:hidden></td> </tr> 
-<tr><td align="center"><s:submit value="update"></s:submit></td></tr>
 
-</s:form>
-</td></tr>
-</table></div>
 
+						<fieldset class="fieldset">
+						<s:form method="post" action="updateStudentPassword" enctype="multipart/form-data">
+							<div class="inputrow">
+								<label class="inputlabel">New Password</label>
+								<div class="inputarea">													 
+									 <input type="password"  class="autocomplete_field half"  name="password"/>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Confirm Password</label>
+								<div class="inputarea">													 
+									 <input type="password"  class="autocomplete_field half"  name="conPassword"/>
+									 <s:hidden label="only update password" name="updateOnlyPassword" value="true" ></s:hidden>
+								</div>
+							</div>
+							<div class="inputrow">
+								<label class="inputlabel">Confirm Password</label>
+								<div class="inputarea">													 
+									 <input type="submit"  class="but_submit"  name="update" value="Change"/>
+									
+								</div>
+							</div>
+						</s:form>
+						</fieldset>

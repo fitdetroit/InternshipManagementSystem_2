@@ -125,8 +125,8 @@
 	<%@include file="/content/student/internshipDefault.jsp" %>
 </s:if>
 
-<s:if test="%{#page=='internshipDefault'}" >
-	<%@include file="/content/student/internshipDefault.jsp" %>
+<s:if test="%{#page=='internshipDefaultNrSt'}" >
+	<%@include file="/content/student/internshipDefaultNrSt.jsp" %>
 </s:if>
 <s:if test="%{#page=='UnRegistedStudent'}" >
 	<%@include file="/content/student/UnRegistedStudent.jsp" %>
@@ -138,9 +138,7 @@
 <s:if test="%{#page=='ChangeStudentPasswordForm'}" >
 	<%@include file="/content/student/ChangeStudentPasswordForm.jsp" %>
 </s:if>
-<s:if test="%{#page=='internshipDefaultNrSt'}" >
-	<%@include file="/content/student/internshipDefaultNrSt.jsp" %>
-</s:if>
+
 <s:if test="%{#page=='CompanyDefaultnrst'}" >
 	<%@include file="/content/student/CompanyDefaultnrst.jsp" %>
 </s:if>

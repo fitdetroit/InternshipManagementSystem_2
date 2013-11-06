@@ -234,7 +234,7 @@ public String internshipActionByNrStd() {
 				String type = (String) session.get("type");
 				
 				this.role=(String)session.get("type");
-				this.page="internshipDefault";
+				this.page="internshipDefaultNrSt";
 				this.menu="internship_nrst";
 				return SUCCESS;
 

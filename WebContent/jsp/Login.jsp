@@ -33,26 +33,44 @@
 			<h2 class="site_name">Welcome to </h2><p>Faculty of Information Technology Internship Management System</p>
 		</div>
 		
+		
+		
+		
 		<div class="login_area grid_5">
-			
 			<div class="login_top">
-				<form method="post" action="Login" >	
-				<input type="text" name="userName" class="login_inputs" placeholder="Username"/>			
-				<input type="password" name="password" class="login_inputs"  placeholder="Password" />
+			<form method="post" action="Login" >
+				<input type="text" name="userName" class="login_inputs" placeholder="Username.."/>
+				<input type="password" name="password" class="login_inputs password" placeholder="Password.."/>
 				<s:hidden  name="loginPageType" value="normall"></s:hidden>
+				<div><input type="checkbox" name="checkbox" style="margin-left:10px; margin-top:10px"/><label for="checkbox" style="font-size:10px; color:#333333; line-height:1">Keep me sign in</label>
+				&nbsp;<a href="#" style="text-decoration:none; font-size:10px; color:#0066FF;">Forget password</a>
+				<input type="submit" class="but_login" value="Sign in"/></div>
+			</form>
 				
-				<s:submit value="Sign in"  cssClass="but_login"></s:submit>
-				</form>
 			</div>
 			<div class="login_bottom">
 				<label class="we-are-comp">We are a Company</label>
 				<s:form method="GET" action="NewCompany" >
-				<s:submit  value="Register with Us" cssClass="but_signup" align="center"></s:submit>
+				<input type="submit" class="but_signup" value="Register with Us" />
 				</s:form>
-				
 			</div>
-		
 		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
 		
 		
 		<div class="footer_site-map grid_6">
